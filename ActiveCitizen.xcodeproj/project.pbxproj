@@ -13,6 +13,11 @@
 		C523600D239641D9002D9783 /* ExampleUIViewWithXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = C523600C239641D9002D9783 /* ExampleUIViewWithXib.xib */; };
 		C52360102396430C002D9783 /* UIView+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523600F2396430C002D9783 /* UIView+Attributes.swift */; };
 		C5236012239644FD002D9783 /* IBDesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5236011239644FD002D9783 /* IBDesignableView.swift */; };
+		C523601423964F05002D9783 /* ReportsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523601323964F05002D9783 /* ReportsListViewController.swift */; };
+		C523601623964F11002D9783 /* ReportsMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523601523964F11002D9783 /* ReportsMapViewController.swift */; };
+		C52360182396513C002D9783 /* BaseNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52360172396513C002D9783 /* BaseNetworkManager.swift */; };
+		C523601A2396593D002D9783 /* ReportsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52360192396593D002D9783 /* ReportsManager.swift */; };
+		C523601C23965D5C002D9783 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523601B23965D5C002D9783 /* Report.swift */; };
 		C52CE64B2395440F004760EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52CE64A2395440F004760EF /* AppDelegate.swift */; };
 		C52CE6522395440F004760EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52CE6502395440F004760EF /* Main.storyboard */; };
 		C52CE65423954411004760EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C52CE65323954411004760EF /* Assets.xcassets */; };
@@ -49,6 +54,11 @@
 		C523600C239641D9002D9783 /* ExampleUIViewWithXib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleUIViewWithXib.xib; sourceTree = "<group>"; };
 		C523600F2396430C002D9783 /* UIView+Attributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Attributes.swift"; sourceTree = "<group>"; };
 		C5236011239644FD002D9783 /* IBDesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBDesignableView.swift; sourceTree = "<group>"; };
+		C523601323964F05002D9783 /* ReportsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsListViewController.swift; sourceTree = "<group>"; };
+		C523601523964F11002D9783 /* ReportsMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsMapViewController.swift; sourceTree = "<group>"; };
+		C52360172396513C002D9783 /* BaseNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkManager.swift; sourceTree = "<group>"; };
+		C52360192396593D002D9783 /* ReportsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsManager.swift; sourceTree = "<group>"; };
+		C523601B23965D5C002D9783 /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
 		C52CE6472395440F004760EF /* ActiveCitizen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActiveCitizen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C52CE64A2395440F004760EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C52CE6512395440F004760EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -209,6 +219,8 @@
 			isa = PBXGroup;
 			children = (
 				C52CE68023954AA5004760EF /* ReportsListContainerViewController.swift */,
+				C523601323964F05002D9783 /* ReportsListViewController.swift */,
+				C523601523964F11002D9783 /* ReportsMapViewController.swift */,
 			);
 			path = ReportsList;
 			sourceTree = "<group>";
@@ -276,6 +288,8 @@
 		C52CE69523956008004760EF /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				C52360172396513C002D9783 /* BaseNetworkManager.swift */,
+				C52360192396593D002D9783 /* ReportsManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -283,6 +297,7 @@
 		C52CE69623956012004760EF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C523601B23965D5C002D9783 /* Report.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -441,11 +456,14 @@
 				C52CE68923954FBE004760EF /* UIFont+Style.swift in Sources */,
 				C52CE68123954AA5004760EF /* ReportsListContainerViewController.swift in Sources */,
 				C52CE68F23955740004760EF /* BaseViewController+TextFieldNavigation.swift in Sources */,
+				C52360182396513C002D9783 /* BaseNetworkManager.swift in Sources */,
 				C52CE673239548C1004760EF /* BaseMakeReportViewController.swift in Sources */,
 				C52CE69323955F95004760EF /* RootTabBarController.swift in Sources */,
+				C523601A2396593D002D9783 /* ReportsManager.swift in Sources */,
 				C523600B2396419C002D9783 /* ExampleUIViewWithXib.swift in Sources */,
 				C52CE68323954B01004760EF /* UsersListViewController.swift in Sources */,
 				C52CE679239548F0004760EF /* BaseUsersViewController.swift in Sources */,
+				C523601623964F11002D9783 /* ReportsMapViewController.swift in Sources */,
 				C52CE67B239548FD004760EF /* BaseMoreViewController.swift in Sources */,
 				C52CE67D239549AF004760EF /* MakeReportMapViewController.swift in Sources */,
 				C52CE677239548E6004760EF /* BaseReportsListViewController.swift in Sources */,
@@ -453,6 +471,8 @@
 				C52CE64B2395440F004760EF /* AppDelegate.swift in Sources */,
 				C52CE68D23955331004760EF /* UITabBarController+Animation.swift in Sources */,
 				C52360102396430C002D9783 /* UIView+Attributes.swift in Sources */,
+				C523601C23965D5C002D9783 /* Report.swift in Sources */,
+				C523601423964F05002D9783 /* ReportsListViewController.swift in Sources */,
 				C523600823963C24002D9783 /* UIViewWithXib.swift in Sources */,
 				C52CE661239544E4004760EF /* BaseViewController.swift in Sources */,
 			);

@@ -10,21 +10,19 @@ import UIKit
 
 class ReportsListContainerViewController: BaseReportsListViewController {
 
+    @IBOutlet weak var modeSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var mapContainerView: UIView!
+    @IBOutlet weak var listContainerView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func modeSegmentedControlValueChanged(_ sender: Any) {
+        
+        let showList = modeSegmentedControl.selectedSegmentIndex == 0
+        mapContainerView.isHidden = showList
+        listContainerView.isHidden = !showList
     }
-    */
-
+    
 }
