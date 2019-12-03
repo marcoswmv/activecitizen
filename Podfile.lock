@@ -1,16 +1,24 @@
 PODS:
   - Alamofire (5.0.0-rc.3)
+  - YandexMapKit (3.4):
+    - YandexRuntime (= 3.4)
+  - YandexRuntime (3.4)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-rc.3)
+  - YandexMapKit
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
+    - YandexMapKit
+    - YandexRuntime
 
 SPEC CHECKSUMS:
   Alamofire: ca8c0de6906873be89d6deec5c8de279e00bf872
+  YandexMapKit: f222923561fe159dd8480d927f61950fc5ff3b8d
+  YandexRuntime: 2547d72a3ce4757f16ad188cfbe8a124ae13d806
 
-PODFILE CHECKSUM: dcb199d95bfa8ea34b1c43236f4629332e647b45
+PODFILE CHECKSUM: 96adb279131e9c927adaf19a843c99888a3277d5
 
 COCOAPODS: 1.8.4

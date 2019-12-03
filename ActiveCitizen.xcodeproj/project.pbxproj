@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		626B4A55AD0E0CD9ED3E803F /* Pods_ActiveCitizen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42360D9804E970B4B61D3308 /* Pods_ActiveCitizen.framework */; };
+		C523600823963C24002D9783 /* UIViewWithXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523600723963C24002D9783 /* UIViewWithXib.swift */; };
+		C523600B2396419C002D9783 /* ExampleUIViewWithXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523600A2396419C002D9783 /* ExampleUIViewWithXib.swift */; };
+		C523600D239641D9002D9783 /* ExampleUIViewWithXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = C523600C239641D9002D9783 /* ExampleUIViewWithXib.xib */; };
+		C52360102396430C002D9783 /* UIView+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523600F2396430C002D9783 /* UIView+Attributes.swift */; };
+		C5236012239644FD002D9783 /* IBDesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5236011239644FD002D9783 /* IBDesignableView.swift */; };
 		C52CE64B2395440F004760EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52CE64A2395440F004760EF /* AppDelegate.swift */; };
-		C52CE64F2395440F004760EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52CE64E2395440F004760EF /* ViewController.swift */; };
 		C52CE6522395440F004760EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52CE6502395440F004760EF /* Main.storyboard */; };
 		C52CE65423954411004760EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C52CE65323954411004760EF /* Assets.xcassets */; };
 		C52CE65723954412004760EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52CE65523954412004760EF /* LaunchScreen.storyboard */; };
@@ -40,9 +44,13 @@
 /* Begin PBXFileReference section */
 		42360D9804E970B4B61D3308 /* Pods_ActiveCitizen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ActiveCitizen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2355D48FC3D005665FDBD9A /* Pods-ActiveCitizen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActiveCitizen.debug.xcconfig"; path = "Target Support Files/Pods-ActiveCitizen/Pods-ActiveCitizen.debug.xcconfig"; sourceTree = "<group>"; };
+		C523600723963C24002D9783 /* UIViewWithXib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewWithXib.swift; sourceTree = "<group>"; };
+		C523600A2396419C002D9783 /* ExampleUIViewWithXib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleUIViewWithXib.swift; sourceTree = "<group>"; };
+		C523600C239641D9002D9783 /* ExampleUIViewWithXib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleUIViewWithXib.xib; sourceTree = "<group>"; };
+		C523600F2396430C002D9783 /* UIView+Attributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Attributes.swift"; sourceTree = "<group>"; };
+		C5236011239644FD002D9783 /* IBDesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBDesignableView.swift; sourceTree = "<group>"; };
 		C52CE6472395440F004760EF /* ActiveCitizen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActiveCitizen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C52CE64A2395440F004760EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C52CE64E2395440F004760EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C52CE6512395440F004760EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C52CE65323954411004760EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C52CE65623954412004760EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,6 +109,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C523600923963C2A002D9783 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C523600723963C24002D9783 /* UIViewWithXib.swift */,
+				C5236011239644FD002D9783 /* IBDesignableView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		C523600E239641DD002D9783 /* ExampleUIViewWithXib */ = {
+			isa = PBXGroup;
+			children = (
+				C523600A2396419C002D9783 /* ExampleUIViewWithXib.swift */,
+				C523600C239641D9002D9783 /* ExampleUIViewWithXib.xib */,
+			);
+			path = ExampleUIViewWithXib;
+			sourceTree = "<group>";
+		};
 		C52CE63E2395440F004760EF = {
 			isa = PBXGroup;
 			children = (
@@ -128,7 +154,6 @@
 				C52CE69423955FF6004760EF /* Data */,
 				C52CE66723954581004760EF /* Storyboards */,
 				C52CE64A2395440F004760EF /* AppDelegate.swift */,
-				C52CE64E2395440F004760EF /* ViewController.swift */,
 				C52CE65323954411004760EF /* Assets.xcassets */,
 				C52CE65523954412004760EF /* LaunchScreen.storyboard */,
 				C52CE65823954412004760EF /* Info.plist */,
@@ -220,6 +245,8 @@
 		C52CE68623954D69004760EF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C523600923963C2A002D9783 /* Base */,
+				C523600E239641DD002D9783 /* ExampleUIViewWithXib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -227,6 +254,7 @@
 		C52CE68723954F89004760EF /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				C523600F2396430C002D9783 /* UIView+Attributes.swift */,
 				C52CE68823954FBE004760EF /* UIFont+Style.swift */,
 				C52CE68A23954FCB004760EF /* UIColor+Style.swift */,
 				C52CE68C23955331004760EF /* UITabBarController+Animation.swift */,
@@ -278,6 +306,7 @@
 				C52CE6442395440F004760EF /* Frameworks */,
 				C52CE6452395440F004760EF /* Resources */,
 				76E124B0F3641AC6519C4987 /* [CP] Embed Pods Frameworks */,
+				700AFFEF33DA7A0C08F06EC0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -330,6 +359,7 @@
 				C52CE671239545C8004760EF /* More.storyboard in Resources */,
 				C52CE66D239545B7004760EF /* ReportsList.storyboard in Resources */,
 				C52CE65723954412004760EF /* LaunchScreen.storyboard in Resources */,
+				C523600D239641D9002D9783 /* ExampleUIViewWithXib.xib in Resources */,
 				C52CE65423954411004760EF /* Assets.xcassets in Resources */,
 				C52CE66B239545A6004760EF /* Profile.storyboard in Resources */,
 				C52CE66923954595004760EF /* MakeReport.storyboard in Resources */,
@@ -340,6 +370,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		700AFFEF33DA7A0C08F06EC0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ActiveCitizen/Pods-ActiveCitizen-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ActiveCitizen/Pods-ActiveCitizen-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ActiveCitizen/Pods-ActiveCitizen-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		76E124B0F3641AC6519C4987 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -387,15 +434,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C52CE68B23954FCB004760EF /* UIColor+Style.swift in Sources */,
-				C52CE64F2395440F004760EF /* ViewController.swift in Sources */,
 				C52CE68523954B7E004760EF /* MoreViewController.swift in Sources */,
 				C52CE675239548D7004760EF /* BaseProfileViewController.swift in Sources */,
+				C5236012239644FD002D9783 /* IBDesignableView.swift in Sources */,
 				C52CE67F23954A03004760EF /* ProfileViewController.swift in Sources */,
 				C52CE68923954FBE004760EF /* UIFont+Style.swift in Sources */,
 				C52CE68123954AA5004760EF /* ReportsListContainerViewController.swift in Sources */,
 				C52CE68F23955740004760EF /* BaseViewController+TextFieldNavigation.swift in Sources */,
 				C52CE673239548C1004760EF /* BaseMakeReportViewController.swift in Sources */,
 				C52CE69323955F95004760EF /* RootTabBarController.swift in Sources */,
+				C523600B2396419C002D9783 /* ExampleUIViewWithXib.swift in Sources */,
 				C52CE68323954B01004760EF /* UsersListViewController.swift in Sources */,
 				C52CE679239548F0004760EF /* BaseUsersViewController.swift in Sources */,
 				C52CE67B239548FD004760EF /* BaseMoreViewController.swift in Sources */,
@@ -404,6 +452,8 @@
 				C52CE69123955EE2004760EF /* BaseNavigationController.swift in Sources */,
 				C52CE64B2395440F004760EF /* AppDelegate.swift in Sources */,
 				C52CE68D23955331004760EF /* UITabBarController+Animation.swift in Sources */,
+				C52360102396430C002D9783 /* UIView+Attributes.swift in Sources */,
+				C523600823963C24002D9783 /* UIViewWithXib.swift in Sources */,
 				C52CE661239544E4004760EF /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

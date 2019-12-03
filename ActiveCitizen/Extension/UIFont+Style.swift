@@ -12,22 +12,22 @@ extension UIFont {
     
     open class var regularFontFmily: String {
         get {
-            return UIFont.systemFont(ofSize: 16, weight: .regular).fontName
-            // return @"ArialMT";
+            //return UIFont.systemFont(ofSize: 16, weight: .regular).fontName
+            return "ArialMT";
         }
     }
     
     open class var boldFontFmily: String {
         get {
-            return UIFont.systemFont(ofSize: 16, weight: .bold).fontName
-            // return @"Arial-BoldMT";
+            //return UIFont.systemFont(ofSize: 16, weight: .bold).fontName
+            return "Arial-BoldMT";
         }
     }
     
     open class var italicFontFmily: String {
         get {
-            return UIFont.italicSystemFont(ofSize: 16).fontName
-            // return @"Arial-ItalicMT";
+            //return UIFont.italicSystemFont(ofSize: 16).fontName
+            return "Arial-ItalicMT";
         }
     }
 
