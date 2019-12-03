@@ -11,7 +11,7 @@ import UIKit
 class ReportsListDataSource: BaseDataSource {
 
     private let manager = ReportsManager()
-    private var data: [Report]?
+    private(set) var data: [Report]?
     
     override func setup() {
         super.setup()

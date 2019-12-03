@@ -17,7 +17,7 @@ class BaseViewController: UIViewController, UITextFieldDelegate, NVActivityIndic
     @IBInspectable var authenticationRequred = true
     
     /// Hide navigation bar back button
-    @IBInspectable var hideBackButton = false
+    //@IBInspectable var hideBackButton = false
     
     /// Hide navigation bar
     @IBInspectable var hideNavigationBar = false
@@ -29,7 +29,8 @@ class BaseViewController: UIViewController, UITextFieldDelegate, NVActivityIndic
     @IBInspectable var textFieldNavigation = false
     
     /// Automaticly change scrollView insets and keyboardheightConstraint depends of keyboad state. Don't forget set IBOutlet contentScrollView or/and keyboardheightConstraint
-    @IBInspectable var keyboardManagment = false
+    // @IBInspectable var keyboardManagment = false
+    
     // TODO
     /*
     -(void)setKeyboardManagment:(BOOL)keyboardManagment {
@@ -45,19 +46,8 @@ class BaseViewController: UIViewController, UITextFieldDelegate, NVActivityIndic
         }
     }*/
     
-    /// String that displayed when tableview is empty. Dont forget set DZNEmptyDataSetSource and DZNEmptyDataSetDelegate
-    @IBInspectable var tableViewEmptyDataHint: String?
-    
-    /// Use background image
-    @IBInspectable var useBackgoundImage = false
-    
-    /// Use fade animation on pop view controller
-    @IBInspectable var useFadeBack = false
-    
-    /// Navigation bar tint. Default: white
-    @IBInspectable var navigationBarTintColor: UIColor?
-    
-    /// Is view is stil appearing. (Beyound WillAppear and DidAppear
+
+    /// Is view is stil appearing. (Beyound WillAppear and DidAppear)
     private(set) var viewWillAppearInProgress = false
     
     /// Is screen is visible
@@ -151,12 +141,12 @@ class BaseViewController: UIViewController, UITextFieldDelegate, NVActivityIndic
         return "Main"
     }
 
-    class func instantiate() -> BaseViewController? {
+    class func instantiate() -> BaseViewController {
 
         let storyboard = UIStoryboard(name: self.storyboardName() ?? "", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: NSStringFromClass(self)) as? BaseViewController
+        let vc = storyboard.instantiateViewController(withIdentifier: String(describing: self)) as? BaseViewController
         assert(vc != nil, "Cannot find \(NSStringFromClass(self.self)) in \(self.storyboardName() ?? "").storyboard")
-        return vc
+        return vc!
     }
 
     // MARK: - TextField navigation

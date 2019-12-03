@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReportsListViewController: BaseReportsListViewController {
+class ReportsListViewController: BaseReportsListViewController, UITableViewDelegate {
 
     var dataSource: ReportsListDataSource?
     @IBOutlet weak var tableView: UITableView!
@@ -20,5 +20,14 @@ class ReportsListViewController: BaseReportsListViewController {
             self.displayLoading(loading: isLoading)
         }
         dataSource?.reload()
+        
+        self.tableView.delegate = self
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let vc = ReportDetailsViewController.instantiate() as! ReportDetailsViewController
+        vc.report = dataSource?.data![indexPath.row]
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

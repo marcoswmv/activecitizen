@@ -163,6 +163,22 @@
             </objects>
             <point key="canvasLocation" x="845.60000000000002" y="533.88305847076469"/>
         </scene>
+        <!--Подробности-->
+        <scene sceneID="OPE-os-rf1">
+            <objects>
+                <viewController storyboardIdentifier="ReportDetailsViewController" title="Подробности" id="8sF-my-QvU" customClass="ReportDetailsViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ybu-oM-IXP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ly1-EX-chd"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KYx-GL-foc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="846" y="1222"/>
+        </scene>
         <!--Reports Map View Controller-->
         <scene sceneID="3cR-zx-ovI">
             <objects>

@@ -24,6 +24,7 @@
 		C523602623967420002D9783 /* ReportsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523602523967420002D9783 /* ReportsListTableViewCell.swift */; };
 		C523602823967EB0002D9783 /* UIApplication+TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523602723967EB0002D9783 /* UIApplication+TopViewController.swift */; };
 		C523602A23967F5A002D9783 /* UIApplication+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523602923967F5A002D9783 /* UIApplication+Loading.swift */; };
+		C523602C239687E6002D9783 /* ReportDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523602B239687E6002D9783 /* ReportDetailsViewController.swift */; };
 		C52CE64B2395440F004760EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52CE64A2395440F004760EF /* AppDelegate.swift */; };
 		C52CE6522395440F004760EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52CE6502395440F004760EF /* Main.storyboard */; };
 		C52CE65423954411004760EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C52CE65323954411004760EF /* Assets.xcassets */; };
@@ -71,6 +72,7 @@
 		C523602523967420002D9783 /* ReportsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsListTableViewCell.swift; sourceTree = "<group>"; };
 		C523602723967EB0002D9783 /* UIApplication+TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+TopViewController.swift"; sourceTree = "<group>"; };
 		C523602923967F5A002D9783 /* UIApplication+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Loading.swift"; sourceTree = "<group>"; };
+		C523602B239687E6002D9783 /* ReportDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportDetailsViewController.swift; sourceTree = "<group>"; };
 		C52CE6472395440F004760EF /* ActiveCitizen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActiveCitizen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C52CE64A2395440F004760EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C52CE6512395440F004760EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 				C52CE68023954AA5004760EF /* ReportsListContainerViewController.swift */,
 				C523601323964F05002D9783 /* ReportsListViewController.swift */,
 				C523601523964F11002D9783 /* ReportsMapViewController.swift */,
+				C523602B239687E6002D9783 /* ReportDetailsViewController.swift */,
 			);
 			path = ReportsList;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 				C52CE67D239549AF004760EF /* MakeReportMapViewController.swift in Sources */,
 				C52CE677239548E6004760EF /* BaseReportsListViewController.swift in Sources */,
 				C52CE69123955EE2004760EF /* BaseNavigationController.swift in Sources */,
+				C523602C239687E6002D9783 /* ReportDetailsViewController.swift in Sources */,
 				C52CE64B2395440F004760EF /* AppDelegate.swift in Sources */,
 				C52CE68D23955331004760EF /* UITabBarController+Animation.swift in Sources */,
 				C52360102396430C002D9783 /* UIView+Attributes.swift in Sources */,
