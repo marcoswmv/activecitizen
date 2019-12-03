@@ -16,6 +16,9 @@ class ReportsListViewController: BaseReportsListViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         dataSource = ReportsListDataSource(tableView: self.tableView)
+        dataSource?.onLoading = { (isLoading) in
+            self.displayLoading(loading: isLoading)
+        }
         dataSource?.reload()
     }
 }

@@ -22,6 +22,8 @@
 		C52360212396700F002D9783 /* ReportsListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52360202396700F002D9783 /* ReportsListDataSource.swift */; };
 		C5236024239672CD002D9783 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5236023239672CD002D9783 /* BaseTableViewCell.swift */; };
 		C523602623967420002D9783 /* ReportsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523602523967420002D9783 /* ReportsListTableViewCell.swift */; };
+		C523602823967EB0002D9783 /* UIApplication+TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523602723967EB0002D9783 /* UIApplication+TopViewController.swift */; };
+		C523602A23967F5A002D9783 /* UIApplication+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523602923967F5A002D9783 /* UIApplication+Loading.swift */; };
 		C52CE64B2395440F004760EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52CE64A2395440F004760EF /* AppDelegate.swift */; };
 		C52CE6522395440F004760EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52CE6502395440F004760EF /* Main.storyboard */; };
 		C52CE65423954411004760EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C52CE65323954411004760EF /* Assets.xcassets */; };
@@ -67,6 +69,8 @@
 		C52360202396700F002D9783 /* ReportsListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsListDataSource.swift; sourceTree = "<group>"; };
 		C5236023239672CD002D9783 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		C523602523967420002D9783 /* ReportsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsListTableViewCell.swift; sourceTree = "<group>"; };
+		C523602723967EB0002D9783 /* UIApplication+TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+TopViewController.swift"; sourceTree = "<group>"; };
+		C523602923967F5A002D9783 /* UIApplication+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Loading.swift"; sourceTree = "<group>"; };
 		C52CE6472395440F004760EF /* ActiveCitizen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActiveCitizen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C52CE64A2395440F004760EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C52CE6512395440F004760EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -289,6 +293,8 @@
 				C52CE68A23954FCB004760EF /* UIColor+Style.swift */,
 				C52CE68C23955331004760EF /* UITabBarController+Animation.swift */,
 				C52CE68E23955740004760EF /* BaseViewController+TextFieldNavigation.swift */,
+				C523602723967EB0002D9783 /* UIApplication+TopViewController.swift */,
+				C523602923967F5A002D9783 /* UIApplication+Loading.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -471,6 +477,7 @@
 				C52CE68B23954FCB004760EF /* UIColor+Style.swift in Sources */,
 				C523602623967420002D9783 /* ReportsListTableViewCell.swift in Sources */,
 				C52CE68523954B7E004760EF /* MoreViewController.swift in Sources */,
+				C523602A23967F5A002D9783 /* UIApplication+Loading.swift in Sources */,
 				C52CE675239548D7004760EF /* BaseProfileViewController.swift in Sources */,
 				C5236012239644FD002D9783 /* IBDesignableView.swift in Sources */,
 				C52CE67F23954A03004760EF /* ProfileViewController.swift in Sources */,
@@ -483,6 +490,7 @@
 				C52CE69323955F95004760EF /* RootTabBarController.swift in Sources */,
 				C523601A2396593D002D9783 /* ReportsManager.swift in Sources */,
 				C523600B2396419C002D9783 /* ExampleUIViewWithXib.swift in Sources */,
+				C523602823967EB0002D9783 /* UIApplication+TopViewController.swift in Sources */,
 				C52CE68323954B01004760EF /* UsersListViewController.swift in Sources */,
 				C52CE679239548F0004760EF /* BaseUsersViewController.swift in Sources */,
 				C523601623964F11002D9783 /* ReportsMapViewController.swift in Sources */,

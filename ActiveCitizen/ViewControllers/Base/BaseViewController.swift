@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
-class BaseViewController: UIViewController, UITextFieldDelegate {
+class BaseViewController: UIViewController, UITextFieldDelegate, NVActivityIndicatorViewable {
 
     // MARK: - Variables
     
@@ -136,6 +137,11 @@ class BaseViewController: UIViewController, UITextFieldDelegate {
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent;
+    }
+    
+    // MARK: - UI
+    func displayLoading(loading: Bool, color: UIColor = .white) {
+        UIApplication.displayLoading(loading: loading, color: color)
     }
     
     // MARK: - Instantiate
