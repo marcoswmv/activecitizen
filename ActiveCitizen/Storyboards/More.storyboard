@@ -15,13 +15,96 @@
                     <view key="view" contentMode="scaleToFill" id="v2k-g6-gjR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ghh-dP-cJm">
+                                <rect key="frame" x="0.0" y="54" width="375" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLU-BV-eoR">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="xyZ-Gn-CyQ"/>
+                                        </constraints>
+                                        <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Опросы и голосования">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="ium-jH-CzS" kind="show" id="MKX-Fs-T9q"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UO9-Jw-WSx">
+                                        <rect key="frame" x="0.0" y="60" width="375" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="9SJ-uv-qd0"/>
+                                        </constraints>
+                                        <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="О программе">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="uqd-yf-rTo" kind="show" id="wh7-2p-uJf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ghh-dP-cJm" firstAttribute="leading" secondItem="NiM-6m-l31" secondAttribute="leading" id="DaX-4T-3yS"/>
+                            <constraint firstItem="Ghh-dP-cJm" firstAttribute="top" secondItem="NiM-6m-l31" secondAttribute="top" constant="10" id="cMR-SA-moP"/>
+                            <constraint firstItem="NiM-6m-l31" firstAttribute="trailing" secondItem="Ghh-dP-cJm" secondAttribute="trailing" id="nUl-WJ-kCS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="NiM-6m-l31"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="juJ-QR-MZq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="93" y="121"/>
+        </scene>
+        <!--Опросы и голосования-->
+        <scene sceneID="T44-RM-ol1">
+            <objects>
+                <viewController storyboardIdentifier="VotingViewController" title="Опросы и голосования" id="ium-jH-CzS" customClass="VotingViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3gg-81-Kih">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="3uN-1h-3WH"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="liT-e8-4PN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w29-76-L3R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-351" y="940"/>
+        </scene>
+        <!--О программе-->
+        <scene sceneID="PeA-fW-ZI9">
+            <objects>
+                <viewController storyboardIdentifier="AboutViewController" title="О программе" id="uqd-yf-rTo" customClass="AboutViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kir-Np-i6N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="О программе" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sip-i9-ufm">
+                                <rect key="frame" x="133" y="323" width="109" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="sip-i9-ufm" firstAttribute="centerX" secondItem="Kir-Np-i6N" secondAttribute="centerX" id="Sc6-0D-xqx"/>
+                            <constraint firstItem="sip-i9-ufm" firstAttribute="centerY" secondItem="Kir-Np-i6N" secondAttribute="centerY" id="qhA-XH-x22"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4YM-67-BvO"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WgX-KL-wlh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UjL-SV-y8d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="527" y="940"/>
         </scene>
     </scenes>
 </document>
