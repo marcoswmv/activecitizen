@@ -16,22 +16,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MakeReportMapViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pxj-Cs-yFq">
-                                <rect key="frame" x="68.5" y="323" width="238" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Tm-Lv-tRW" customClass="YMKMapView">
+                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Pxj-Cs-yFq" firstAttribute="centerX" secondItem="V6k-hS-4Tb" secondAttribute="centerX" id="1BH-Bq-tYR"/>
-                            <constraint firstItem="Pxj-Cs-yFq" firstAttribute="centerY" secondItem="V6k-hS-4Tb" secondAttribute="centerY" id="3Ps-vK-k4D"/>
+                            <constraint firstItem="muV-GI-mPC" firstAttribute="bottom" secondItem="5Tm-Lv-tRW" secondAttribute="bottom" id="3pI-Q9-dDO"/>
+                            <constraint firstItem="muV-GI-mPC" firstAttribute="trailing" secondItem="5Tm-Lv-tRW" secondAttribute="trailing" id="MBS-ca-tTT"/>
+                            <constraint firstItem="5Tm-Lv-tRW" firstAttribute="top" secondItem="muV-GI-mPC" secondAttribute="top" id="XjY-U7-1t8"/>
+                            <constraint firstItem="5Tm-Lv-tRW" firstAttribute="leading" secondItem="muV-GI-mPC" secondAttribute="leading" id="aar-Hn-Ghf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="muV-GI-mPC"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="5Tm-Lv-tRW" id="4Ya-dl-JAz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uDM-UL-7L7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
