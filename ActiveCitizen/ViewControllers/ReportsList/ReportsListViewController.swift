@@ -10,18 +10,12 @@ import UIKit
 
 class ReportsListViewController: BaseReportsListViewController {
 
-    let manager = ReportsManager()
+    var dataSource: ReportsListDataSource?
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        manager.getReportsList { (result, error) in
-            
-            if error != nil {
-                print(error!)
-            }else {
-                print(result!)
-            }
-        }
+        dataSource = ReportsListDataSource(tableView: self.tableView)
+        dataSource?.reload()
     }
 }
