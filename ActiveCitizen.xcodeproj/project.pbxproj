@@ -53,6 +53,7 @@
 		C52CE69323955F95004760EF /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52CE69223955F95004760EF /* RootTabBarController.swift */; };
 		C593175923978DE50043F68C /* UIImage+MapMarkers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C593175823978DE50043F68C /* UIImage+MapMarkers.swift */; };
 		C593177D2397A4D90043F68C /* String+DateParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C593177C2397A4D90043F68C /* String+DateParse.swift */; };
+		C593177F2397A7890043F68C /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C593177E2397A7890043F68C /* Date+Formatter.swift */; };
 		C5A3A77123968E4A0006997D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A3A77023968E4A0006997D /* AboutViewController.swift */; };
 		C5A3A77323968E580006997D /* VotingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A3A77223968E580006997D /* VotingViewController.swift */; };
 /* End PBXBuildFile section */
@@ -107,6 +108,7 @@
 		C52CE69223955F95004760EF /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 		C593175823978DE50043F68C /* UIImage+MapMarkers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+MapMarkers.swift"; sourceTree = "<group>"; };
 		C593177C2397A4D90043F68C /* String+DateParse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+DateParse.swift"; sourceTree = "<group>"; };
+		C593177E2397A7890043F68C /* Date+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatter.swift"; sourceTree = "<group>"; };
 		C5A3A77023968E4A0006997D /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		C5A3A77223968E580006997D /* VotingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingViewController.swift; sourceTree = "<group>"; };
 		E9489D3B0AFFD2E9B4255859 /* Pods-ActiveCitizen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActiveCitizen.release.xcconfig"; path = "Target Support Files/Pods-ActiveCitizen/Pods-ActiveCitizen.release.xcconfig"; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 				C523602923967F5A002D9783 /* UIApplication+Loading.swift */,
 				C593175823978DE50043F68C /* UIImage+MapMarkers.swift */,
 				C593177C2397A4D90043F68C /* String+DateParse.swift */,
+				C593177E2397A7890043F68C /* Date+Formatter.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 				C523601423964F05002D9783 /* ReportsListViewController.swift in Sources */,
 				C523600823963C24002D9783 /* UIViewWithXib.swift in Sources */,
 				C5236024239672CD002D9783 /* BaseTableViewCell.swift in Sources */,
+				C593177F2397A7890043F68C /* Date+Formatter.swift in Sources */,
 				C52CE661239544E4004760EF /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
