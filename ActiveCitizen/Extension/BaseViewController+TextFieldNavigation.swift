@@ -62,6 +62,12 @@ extension BaseViewController {
             self.nextTextFieldAction()
             return false;
         }
+        
+        if((textField as UITextField).returnKeyType == .done){
+            resignKeyboard()
+            return false;
+        }
+        
         return false
     }
         

@@ -16,12 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ProfileViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYq-Dm-f7h">
-                                <rect key="frame" x="107" y="323" width="161" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Fx-cX-lby" customClass="ExampleUIViewWithXib" customModule="ActiveCitizen" customModuleProvider="target">
                                 <rect key="frame" x="20" y="20" width="335" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -59,21 +53,62 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wzm-K8-Ez7">
+                                <rect key="frame" x="20" y="160" width="335" height="166"/>
+                                <subviews>
+                                    <textField opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Navigation example" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hg8-bn-fVP">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Ct7-lF-QZw" id="CM6-1D-IWC"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Set 'tags', delegate" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kwY-4w-LlQ">
+                                        <rect key="frame" x="0.0" y="44" width="335" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Ct7-lF-QZw" id="OCd-cd-FeT"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="and enable textfield navigation in VC" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2W2-Mi-8sd">
+                                        <rect key="frame" x="0.0" y="88" width="335" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Ct7-lF-QZw" id="6ba-sD-Stp"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last textfield" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ROj-C4-gzn">
+                                        <rect key="frame" x="0.0" y="132" width="335" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Ct7-lF-QZw" id="JDJ-y4-Xjj"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="8Fx-cX-lby" firstAttribute="leading" secondItem="oup-fO-AZU" secondAttribute="leading" constant="20" id="1K3-7B-1RW"/>
                             <constraint firstItem="JbM-Wz-RWf" firstAttribute="leading" secondItem="oup-fO-AZU" secondAttribute="leading" constant="20" id="1gZ-40-Ve9"/>
-                            <constraint firstItem="UYq-Dm-f7h" firstAttribute="centerX" secondItem="yBQ-rz-Aac" secondAttribute="centerX" id="BU8-b8-z8x"/>
+                            <constraint firstItem="wzm-K8-Ez7" firstAttribute="leading" secondItem="oup-fO-AZU" secondAttribute="leading" constant="20" id="9Wl-Un-sgh"/>
                             <constraint firstItem="oup-fO-AZU" firstAttribute="trailing" secondItem="JbM-Wz-RWf" secondAttribute="trailing" constant="20" id="Ciy-W4-ecb"/>
                             <constraint firstItem="8Fx-cX-lby" firstAttribute="top" secondItem="oup-fO-AZU" secondAttribute="top" constant="20" id="Cjl-8l-3yP"/>
                             <constraint firstItem="oup-fO-AZU" firstAttribute="trailing" secondItem="8Fx-cX-lby" secondAttribute="trailing" constant="20" id="Db0-ah-CtQ"/>
-                            <constraint firstItem="UYq-Dm-f7h" firstAttribute="centerY" secondItem="yBQ-rz-Aac" secondAttribute="centerY" id="Y0W-jX-SV4"/>
+                            <constraint firstItem="wzm-K8-Ez7" firstAttribute="top" secondItem="JbM-Wz-RWf" secondAttribute="bottom" constant="20" id="J4w-2h-DLz"/>
                             <constraint firstItem="JbM-Wz-RWf" firstAttribute="top" secondItem="8Fx-cX-lby" secondAttribute="bottom" constant="20" id="ibO-Ba-APf"/>
+                            <constraint firstItem="oup-fO-AZU" firstAttribute="trailing" secondItem="wzm-K8-Ez7" secondAttribute="trailing" constant="20" id="oon-x8-2wc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oup-fO-AZU"/>
                     </view>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="textFieldNavigation" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zUo-jl-awr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

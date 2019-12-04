@@ -14,19 +14,19 @@ class BaseViewController: UIViewController, UITextFieldDelegate, NVActivityIndic
     // MARK: - Variables
     
     /// Automatic authentication check. Logout if needed
-    @IBInspectable var authenticationRequred = true
+    @IBInspectable var authenticationRequred: Bool = true
     
     /// Hide navigation bar back button
     //@IBInspectable var hideBackButton = false
     
     /// Hide navigation bar
-    @IBInspectable var hideNavigationBar = false
+    @IBInspectable var hideNavigationBar: Bool  = false
     
     /// Hide tab bar
-    @IBInspectable var hideTabBar = false
+    @IBInspectable var hideTabBar: Bool  = false
     
     /// Enable navigation via keyboard toolbar. Movement based on UITexField tags. Don't forget set tags
-    @IBInspectable var textFieldNavigation = false
+    @IBInspectable var textFieldNavigation: Bool  = false
     
     /// Automaticly change scrollView insets and keyboardheightConstraint depends of keyboad state. Don't forget set IBOutlet contentScrollView or/and keyboardheightConstraint
     // @IBInspectable var keyboardManagment = false
