@@ -11,104 +11,139 @@
         <!--Profile View Controller-->
         <scene sceneID="0ls-sh-JZQ">
             <objects>
-                <viewController storyboardIdentifier="ProfileViewController" id="Ct7-lF-QZw" customClass="ProfileViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" automaticallyAdjustsScrollViewInsets="NO" id="Ct7-lF-QZw" customClass="ProfileViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yBQ-rz-Aac">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Fx-cX-lby" customClass="ExampleUIViewWithXib" customModule="ActiveCitizen" customModuleProvider="target">
-                                <rect key="frame" x="20" y="20" width="335" height="50"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="GmX-oj-GCq"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JbM-Wz-RWf" customClass="IBDesignableView" customModule="ActiveCitizen" customModuleProvider="target">
-                                <rect key="frame" x="20" y="90" width="335" height="50"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="kK7-Kd-0de"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.0" green="0.73536074159999998" blue="0.458511591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                        <color key="value" cocoaTouchSystemColor="darkTextColor"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="0.5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                        <size key="value" width="10" height="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wzm-K8-Ez7">
-                                <rect key="frame" x="20" y="160" width="335" height="166"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hTw-qx-gpV">
+                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
                                 <subviews>
-                                    <textField opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Navigation example" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hg8-bn-fVP">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="Ct7-lF-QZw" id="CM6-1D-IWC"/>
-                                        </connections>
-                                    </textField>
-                                    <textField opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Set 'tags', delegate" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kwY-4w-LlQ">
-                                        <rect key="frame" x="0.0" y="44" width="335" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="Ct7-lF-QZw" id="OCd-cd-FeT"/>
-                                        </connections>
-                                    </textField>
-                                    <textField opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="and enable textfield navigation in VC" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2W2-Mi-8sd">
-                                        <rect key="frame" x="0.0" y="88" width="335" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="Ct7-lF-QZw" id="6ba-sD-Stp"/>
-                                        </connections>
-                                    </textField>
-                                    <textField opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last textfield" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ROj-C4-gzn">
-                                        <rect key="frame" x="0.0" y="132" width="335" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="Ct7-lF-QZw" id="JDJ-y4-Xjj"/>
-                                        </connections>
-                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1XA-d3-Qca">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="427"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Dqs-u3-iXL">
+                                                <rect key="frame" x="20" y="20" width="335" height="387"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Fx-cX-lby" customClass="ExampleUIViewWithXib" customModule="ActiveCitizen" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="GmX-oj-GCq"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JbM-Wz-RWf" customClass="IBDesignableView" customModule="ActiveCitizen" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="70" width="335" height="50"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="kK7-Kd-0de"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.0" green="0.73536074159999998" blue="0.458511591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                <real key="value" value="0.5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                                <size key="value" width="10" height="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wzm-K8-Ez7">
+                                                        <rect key="frame" x="0.0" y="140" width="335" height="166"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Navigation example" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hg8-bn-fVP">
+                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="34"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="Ct7-lF-QZw" id="CM6-1D-IWC"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <textField opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Set 'tags', delegate" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kwY-4w-LlQ">
+                                                                <rect key="frame" x="0.0" y="44" width="335" height="34"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="Ct7-lF-QZw" id="OCd-cd-FeT"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <textField opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="and enable textfield navigation in VC" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2W2-Mi-8sd">
+                                                                <rect key="frame" x="0.0" y="88" width="335" height="34"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="Ct7-lF-QZw" id="6ba-sD-Stp"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <textField opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last textfield" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ROj-C4-gzn">
+                                                                <rect key="frame" x="0.0" y="132" width="335" height="34"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="Ct7-lF-QZw" id="JDJ-y4-Xjj"/>
+                                                                </connections>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setup content scrollview and keyboard management bool to observe keyboard height and change content insets" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHE-Ka-9yG">
+                                                        <rect key="frame" x="0.0" y="326" width="335" height="61"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Dqs-u3-iXL" secondAttribute="trailing" constant="20" id="Hjk-dq-J9K"/>
+                                            <constraint firstAttribute="bottom" secondItem="Dqs-u3-iXL" secondAttribute="bottom" constant="20" id="Kpr-t5-Gpn"/>
+                                            <constraint firstItem="Dqs-u3-iXL" firstAttribute="top" secondItem="1XA-d3-Qca" secondAttribute="top" constant="20" id="ibo-La-7th"/>
+                                            <constraint firstItem="Dqs-u3-iXL" firstAttribute="leading" secondItem="1XA-d3-Qca" secondAttribute="leading" constant="20" id="nXN-fB-IZN"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                            </stackView>
+                                <constraints>
+                                    <constraint firstItem="1XA-d3-Qca" firstAttribute="leading" secondItem="hTw-qx-gpV" secondAttribute="leading" id="2aK-Mf-4m3"/>
+                                    <constraint firstItem="1XA-d3-Qca" firstAttribute="top" secondItem="hTw-qx-gpV" secondAttribute="top" id="EFl-Be-Xhy"/>
+                                    <constraint firstAttribute="bottom" secondItem="1XA-d3-Qca" secondAttribute="bottom" id="aes-eo-MNa"/>
+                                    <constraint firstItem="1XA-d3-Qca" firstAttribute="centerX" secondItem="hTw-qx-gpV" secondAttribute="centerX" id="dfA-bs-2zA"/>
+                                    <constraint firstAttribute="trailing" secondItem="1XA-d3-Qca" secondAttribute="trailing" id="nFO-of-2dh"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="8Fx-cX-lby" firstAttribute="leading" secondItem="oup-fO-AZU" secondAttribute="leading" constant="20" id="1K3-7B-1RW"/>
-                            <constraint firstItem="JbM-Wz-RWf" firstAttribute="leading" secondItem="oup-fO-AZU" secondAttribute="leading" constant="20" id="1gZ-40-Ve9"/>
-                            <constraint firstItem="wzm-K8-Ez7" firstAttribute="leading" secondItem="oup-fO-AZU" secondAttribute="leading" constant="20" id="9Wl-Un-sgh"/>
-                            <constraint firstItem="oup-fO-AZU" firstAttribute="trailing" secondItem="JbM-Wz-RWf" secondAttribute="trailing" constant="20" id="Ciy-W4-ecb"/>
-                            <constraint firstItem="8Fx-cX-lby" firstAttribute="top" secondItem="oup-fO-AZU" secondAttribute="top" constant="20" id="Cjl-8l-3yP"/>
-                            <constraint firstItem="oup-fO-AZU" firstAttribute="trailing" secondItem="8Fx-cX-lby" secondAttribute="trailing" constant="20" id="Db0-ah-CtQ"/>
-                            <constraint firstItem="wzm-K8-Ez7" firstAttribute="top" secondItem="JbM-Wz-RWf" secondAttribute="bottom" constant="20" id="J4w-2h-DLz"/>
-                            <constraint firstItem="JbM-Wz-RWf" firstAttribute="top" secondItem="8Fx-cX-lby" secondAttribute="bottom" constant="20" id="ibO-Ba-APf"/>
-                            <constraint firstItem="oup-fO-AZU" firstAttribute="trailing" secondItem="wzm-K8-Ez7" secondAttribute="trailing" constant="20" id="oon-x8-2wc"/>
+                            <constraint firstItem="hTw-qx-gpV" firstAttribute="leading" secondItem="yBQ-rz-Aac" secondAttribute="leading" id="Sin-Uf-bew"/>
+                            <constraint firstItem="oup-fO-AZU" firstAttribute="bottom" secondItem="hTw-qx-gpV" secondAttribute="bottom" id="WjR-tM-4Mf"/>
+                            <constraint firstItem="hTw-qx-gpV" firstAttribute="top" secondItem="oup-fO-AZU" secondAttribute="top" id="Z7j-SV-kNG"/>
+                            <constraint firstAttribute="trailing" secondItem="hTw-qx-gpV" secondAttribute="trailing" id="ijx-aE-Y5q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oup-fO-AZU"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="textFieldNavigation" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="keyboardManagment" value="YES"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="contentScrollView" destination="hTw-qx-gpV" id="BHi-pc-4Ce"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zUo-jl-awr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

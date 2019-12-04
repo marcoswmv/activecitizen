@@ -29,24 +29,18 @@ class BaseViewController: UIViewController, UITextFieldDelegate, NVActivityIndic
     @IBInspectable var textFieldNavigation: Bool  = false
     
     /// Automaticly change scrollView insets and keyboardheightConstraint depends of keyboad state. Don't forget set IBOutlet contentScrollView or/and keyboardheightConstraint
-    // @IBInspectable var keyboardManagment = false
+    @IBInspectable var keyboardManagment: Bool = false
+    {
+        didSet {
+            
+            NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+            NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+            
+            NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(sender:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil) 
+        }
+    }
     
-    // TODO
-    
-    //    -(void)setKeyboardManagment:(BOOL)keyboardManagment {
-    //
-    //        if(_keyboardManagment != keyboardManagment){
-    //            if(keyboardManagment){
-    //                [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
-    //                [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
-    //            }else{
-    //                [[NSNotificationCenter defaultCenter] removeObserver:self];
-    //            }
-    //            _keyboardManagment = keyboardManagment;
-    //        }
-    //    }
-    
-
     /// Is view is stil appearing. (Beyound WillAppear and DidAppear)
     private(set) var viewWillAppearInProgress = false
     
@@ -57,9 +51,19 @@ class BaseViewController: UIViewController, UITextFieldDelegate, NVActivityIndic
         }
     }
     
+    /// Keyboard
+    ///
     /// Keyboard height if keyboard is present
     private(set) var keyboardHeight: CGFloat = 0.0
     
+    /// Automaticly change constraint with keyboard height
+    @IBOutlet var keyboardHeightConstraint: NSLayoutConstraint?
+    
+    /// Automaticly change insets with keyboard height
+    @IBOutlet var contentScrollView: UIScrollView?
+    
+    /// TextField
+    ///
     /// Current textfield for textfield navigation
     var currentTextField: UITextField?
     
@@ -171,60 +175,60 @@ class BaseViewController: UIViewController, UITextFieldDelegate, NVActivityIndic
     
     // MARK: - Keyboard managment
 
-    func keyboardWillShow(sender: NSNotification) {
-        /*
-        CGFloat height = [[sender.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height;
-        _keyboardHeight = height;
+    @objc func keyboardWillShow(sender: NSNotification) {
         
-        if(self.tabBarController.tabBar && !self.tabBarController.tabBar.hidden){
-            height -= self.tabBarController.tabBar.frame.size.height;
+
+        var height = (sender.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue.size.height
+        keyboardHeight = height
+
+        if tabBarController?.tabBar != nil && !(tabBarController?.tabBar.isHidden ?? false) {
+            height -= tabBarController?.tabBar.frame.size.height ?? 0.0
         }
-        
-        NSTimeInterval duration = [[sender.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-        
-        if(self.keyboardheightConstraint){
-            self.keyboardheightConstraint.constant = height;
+
+        let duration = TimeInterval((sender.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue ?? 0.0)
+
+        if keyboardHeightConstraint != nil {
+            keyboardHeightConstraint!.constant = height
         }
-        
-        [UIView animateWithDuration:duration animations:^{
-            //  ilya fedorov: fix for iPhone 6+ (10.0.1). This device have non-zero .contentInset.top value before keyboard will shown
-            UIEdgeInsets edgeInsets = self.contentScrollView.contentInset;//UIEdgeInsetsMake(0, 0, height + 20, 0);
-            edgeInsets.bottom = height + 20;
-            if(self.contentScrollView){
-                self.contentScrollView.contentInset = edgeInsets;
-                self.contentScrollView.scrollIndicatorInsets = edgeInsets;
-            }
+
+        UIView.animate(withDuration: duration, animations: {
             
-            if(self.keyboardheightConstraint && !self.viewWillAppearInProgress){
-                [self.view layoutSubviews];
+            if self.contentScrollView != nil {
+                var edgeInsets = self.contentScrollView!.contentInset //UIEdgeInsetsMake(0, 0, height + 20, 0);
+                edgeInsets.bottom = height + 20
+                self.contentScrollView!.contentInset = edgeInsets
+                self.contentScrollView!.scrollIndicatorInsets = edgeInsets
             }
-        }];*/
+
+            if self.keyboardHeightConstraint != nil && !self.viewWillAppearInProgress {
+                self.view.layoutSubviews()
+            }
+        })
     }
     
-    func keyboardWillHide(sender: NSNotification) {
+    @objc func keyboardWillHide(sender: NSNotification) {
         
-        /*
-        NSTimeInterval duration = [[sender.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-        _keyboardHeight = 0;
+        let duration = TimeInterval((sender.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue ?? 0.0)
+        keyboardHeight = 0
         
-        if(self.keyboardheightConstraint){
-            self.keyboardheightConstraint.constant = 0;
+        if keyboardHeightConstraint != nil {
+            keyboardHeightConstraint!.constant = 0;
         }
         
-        [UIView animateWithDuration:duration animations:^{
-            //  ilya fedorov: fix for iPhone 6+ (10.0.1)
-            UIEdgeInsets edgeInsets = self.contentScrollView.contentInset;//UIEdgeInsetsZero;
+        UIView.animate(withDuration: duration, animations: {
+        
+            var edgeInsets = self.contentScrollView!.contentInset //UIEdgeInsetsMake(0, 0, height + 20, 0);
             edgeInsets.bottom = 0;  //  possible problem for iPhone 6+ (10.0.1) because this device have non-zero .contentInset.bottom value before keyboard will shown
-            if(self.contentScrollView){
-                self.contentScrollView.contentInset = edgeInsets;
-                self.contentScrollView.scrollIndicatorInsets = edgeInsets;
+            
+            if self.contentScrollView != nil{
+                self.contentScrollView!.contentInset = edgeInsets;
+                self.contentScrollView!.scrollIndicatorInsets = edgeInsets;
             }
             
-            if(self.keyboardheightConstraint && !self.viewWillAppearInProgress){
-                [self.view layoutSubviews];
+            if self.keyboardHeightConstraint != nil && !self.viewWillAppearInProgress {
+                self.view.layoutSubviews()
             }
-        }];
-         */
+        })
     }
     
     deinit {
