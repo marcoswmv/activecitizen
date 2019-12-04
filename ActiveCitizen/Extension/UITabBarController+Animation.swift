@@ -10,7 +10,8 @@ import UIKit
 
 extension UITabBarController {
     
-    // TODO
+    // Set and hide tab bar with animation
+    // TODO: port to swift
     /*
     -(void)setTabBarVisible:(BOOL)visible duration:(CGFloat)duration animated:(BOOL)animated {
         if ([self tabBarIsVisible] == visible) { return; }

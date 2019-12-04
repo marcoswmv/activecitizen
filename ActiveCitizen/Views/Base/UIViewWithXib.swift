@@ -9,6 +9,7 @@
 import UIKit
 
 
+/// Load view with xib file.
 @IBDesignable
 class UIViewWithXib: UIView {
 

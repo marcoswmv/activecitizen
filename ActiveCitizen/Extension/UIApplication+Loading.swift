@@ -11,6 +11,7 @@ import NVActivityIndicatorView
 
 extension UIApplication {
 
+    /// Display fullscreen loading indicator
     class func displayLoading(loading: Bool, color: UIColor = .white) {
     
         if loading {

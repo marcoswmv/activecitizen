@@ -16,9 +16,6 @@ class BaseViewController: UIViewController, UITextFieldDelegate, NVActivityIndic
     /// Automatic authentication check. Logout if needed
     @IBInspectable var authenticationRequred: Bool = true
     
-    /// Hide navigation bar back button
-    //@IBInspectable var hideBackButton = false
-    
     /// Hide navigation bar
     @IBInspectable var hideNavigationBar: Bool  = false
     
@@ -33,6 +30,7 @@ class BaseViewController: UIViewController, UITextFieldDelegate, NVActivityIndic
     {
         didSet {
             
+            // Remove old observers
             NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
             NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
             
@@ -95,7 +93,7 @@ class BaseViewController: UIViewController, UITextFieldDelegate, NVActivityIndic
         //navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "back-button-with-padding")
 
 
-        // navigationController?.navigationBar.shadowImage = UIImage() Remove shadow
+        // navigationController?.navigationBar.shadowImage = UIImage() Remove shadow if needed
         navigationController?.navigationBar.isTranslucent = false
     }
     
@@ -106,7 +104,7 @@ class BaseViewController: UIViewController, UITextFieldDelegate, NVActivityIndic
         // Hide / show s navigation / tab bar
         self.navigationController?.setNavigationBarHidden(self.hideNavigationBar, animated: true)
         self.tabBarController?.tabBar.isHidden = self.hideTabBar
-        // TODO: animation. See UITabBarController+Animation
+        // TODO: tab hide/show animation. Need to port UITabBarController+Animation
            
         // Auth
         // TODO: Logout
@@ -140,11 +138,13 @@ class BaseViewController: UIViewController, UITextFieldDelegate, NVActivityIndic
     
     // MARK: - Instantiate
 
+    /// Sotryboard name. Used in instantiate
     class func storyboardName() -> String? {
         // Override me
         return "Main"
     }
 
+    /// Create instance of view controller with storyboard UI
     class func instantiate() -> BaseViewController {
 
         let storyboard = UIStoryboard(name: self.storyboardName() ?? "", bundle: nil)
@@ -154,6 +154,7 @@ class BaseViewController: UIViewController, UITextFieldDelegate, NVActivityIndic
     }
 
     // MARK: - TextField navigation
+    // Text fields navigation bar. Main implementstion: BaseViewController+TextFieldNavigation
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         if(self.textFieldNavigation){
@@ -174,7 +175,8 @@ class BaseViewController: UIViewController, UITextFieldDelegate, NVActivityIndic
 
     
     // MARK: - Keyboard managment
-
+    // Observe keyboard height
+    
     @objc func keyboardWillShow(sender: NSNotification) {
         
 
@@ -232,7 +234,7 @@ class BaseViewController: UIViewController, UITextFieldDelegate, NVActivityIndic
     }
     
     deinit {
-        //[[NSNotificationCenter defaultCenter] removeObserver:self];
+        NotificationCenter.default.removeObserver(self)
     }
 
 }

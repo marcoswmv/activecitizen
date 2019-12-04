@@ -77,14 +77,7 @@ extension BaseViewController {
             
             let index = self.currentTextField!.tag
             let prevTextField = self.getTextControlWithTag(tag: index+1)
-            //let oldTextControl = self.currentTextField
             prevTextField?.becomeFirstResponder()
-
-            // TODO
-            /*
-            if(self.textControlChanged){
-                self.textControlChanged(oldTextControl, prevTextField);
-            }*/
         }
     }
     
@@ -94,14 +87,7 @@ extension BaseViewController {
             
             let index = self.currentTextField!.tag
             let prevTextField = self.getTextControlWithTag(tag: index-1)
-            //let oldTextControl = self.currentTextField
             prevTextField?.becomeFirstResponder()
-
-            // TODO
-            /*
-            if(self.textControlChanged){
-                self.textControlChanged(oldTextControl, prevTextField);
-            }*/
         }
     }
 
@@ -110,12 +96,6 @@ extension BaseViewController {
         if(self.currentTextField != nil){
             self.currentTextField?.resignFirstResponder()
             self.currentTextField = nil;
-
-            // TODO:
-            /*
-            if(self.keyboardResigned){
-                self.keyboardResigned();
-            }*/
         }
     }
 
@@ -126,22 +106,5 @@ extension BaseViewController {
             return view as? UIControl;
         }
         return nil;
-    }
-
-
-//    -(BOOL)textControlShouldReturn:(UIView *)textControl {
-//
-//        if([textControl isKindOfClass:UITextField.class] || [textControl isKindOfClass:UITextView.class]){
-//
-//            if(((UITextField*)textControl).returnKeyType == UIReturnKeyNext){
-//                [self nextTextField];
-//                return NO;
-//            }
-//
-//            [((UITextField*)textControl) resignFirstResponder];
-//        }
-//        return YES;
-//    }
-
-    
+    }  
 }

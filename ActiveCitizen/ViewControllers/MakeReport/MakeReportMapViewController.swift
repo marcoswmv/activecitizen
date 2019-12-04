@@ -17,7 +17,7 @@ class MakeReportMapViewController: BaseMakeReportViewController {
         super.viewDidLoad()
         
         mapView.mapWindow.map.move(with: YMKCameraPosition.init(target: YMKPoint(latitude: 55.751574, longitude: 37.573856), zoom: 15, azimuth: 0, tilt: 0),
-                                   animationType: YMKAnimation(type: YMKAnimationType.smooth, duration: 5),
+                                   animationType: YMKAnimation(type: YMKAnimationType.smooth, duration: 0.5),
                                    cameraCallback: nil)
     }
 }
