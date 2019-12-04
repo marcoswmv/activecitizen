@@ -35,8 +35,8 @@ class Report {
         
         if let coordsString = dictionary["coordinates"] as? String {
             let coords = coordsString.split(separator: ",");
-            latitude = Double(coords.first!.base)
-            longitude = Double(coords.last!.base)
+            latitude = Double(String(coords.first!))
+            longitude = Double(String(coords.last!))
         }
     }
     
