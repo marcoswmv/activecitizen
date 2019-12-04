@@ -25,7 +25,7 @@ class Report {
     init(dictionary: [String : Any]) {
         
         id = dictionary["id"] as? Int
-//        "created": "2019-12-02T19:13:16.167+0000",
+        created = (dictionary["created"] as? String)?.parseISO8601()
         categoryId = dictionary["categoryId"] as? Int
         categoryName = dictionary["categoryName"] as? String
         subcategoryId = dictionary["subcategoryId"] as? Int

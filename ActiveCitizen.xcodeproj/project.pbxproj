@@ -52,6 +52,7 @@
 		C52CE69123955EE2004760EF /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52CE69023955EE2004760EF /* BaseNavigationController.swift */; };
 		C52CE69323955F95004760EF /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52CE69223955F95004760EF /* RootTabBarController.swift */; };
 		C593175923978DE50043F68C /* UIImage+MapMarkers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C593175823978DE50043F68C /* UIImage+MapMarkers.swift */; };
+		C593177D2397A4D90043F68C /* String+DateParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C593177C2397A4D90043F68C /* String+DateParse.swift */; };
 		C5A3A77123968E4A0006997D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A3A77023968E4A0006997D /* AboutViewController.swift */; };
 		C5A3A77323968E580006997D /* VotingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A3A77223968E580006997D /* VotingViewController.swift */; };
 /* End PBXBuildFile section */
@@ -105,6 +106,7 @@
 		C52CE69023955EE2004760EF /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		C52CE69223955F95004760EF /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 		C593175823978DE50043F68C /* UIImage+MapMarkers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+MapMarkers.swift"; sourceTree = "<group>"; };
+		C593177C2397A4D90043F68C /* String+DateParse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+DateParse.swift"; sourceTree = "<group>"; };
 		C5A3A77023968E4A0006997D /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		C5A3A77223968E580006997D /* VotingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingViewController.swift; sourceTree = "<group>"; };
 		E9489D3B0AFFD2E9B4255859 /* Pods-ActiveCitizen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActiveCitizen.release.xcconfig"; path = "Target Support Files/Pods-ActiveCitizen/Pods-ActiveCitizen.release.xcconfig"; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 				C523602723967EB0002D9783 /* UIApplication+TopViewController.swift */,
 				C523602923967F5A002D9783 /* UIApplication+Loading.swift */,
 				C593175823978DE50043F68C /* UIImage+MapMarkers.swift */,
+				C593177C2397A4D90043F68C /* String+DateParse.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				C523602823967EB0002D9783 /* UIApplication+TopViewController.swift in Sources */,
 				C52CE68323954B01004760EF /* UsersListViewController.swift in Sources */,
 				C52CE679239548F0004760EF /* BaseUsersViewController.swift in Sources */,
+				C593177D2397A4D90043F68C /* String+DateParse.swift in Sources */,
 				C523601623964F11002D9783 /* ReportsMapViewController.swift in Sources */,
 				C52360212396700F002D9783 /* ReportsListDataSource.swift in Sources */,
 				C52CE67B239548FD004760EF /* BaseMoreViewController.swift in Sources */,
