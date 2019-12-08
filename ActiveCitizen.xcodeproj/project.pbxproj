@@ -56,6 +56,18 @@
 		C593177F2397A7890043F68C /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C593177E2397A7890043F68C /* Date+Formatter.swift */; };
 		C5A3A77123968E4A0006997D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A3A77023968E4A0006997D /* AboutViewController.swift */; };
 		C5A3A77323968E580006997D /* VotingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A3A77223968E580006997D /* VotingViewController.swift */; };
+		F722EB38239D2FB300718397 /* UIButton+Highlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = F722EB37239D2FB300718397 /* UIButton+Highlight.swift */; };
+		F722EB3E239D491B00718397 /* MakeReportMapViewController+TextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F722EB3D239D491B00718397 /* MakeReportMapViewController+TextViewDelegate.swift */; };
+		F722EB40239D8EF500718397 /* MakeReportMapViewController+TextViewHideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F722EB3F239D8EF500718397 /* MakeReportMapViewController+TextViewHideKeyboard.swift */; };
+		F75E4898239AA524007BDD47 /* MakeReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E4897239AA524007BDD47 /* MakeReport.swift */; };
+		F75E489C239AC9B0007BDD47 /* UIView+DashedBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E489B239AC9B0007BDD47 /* UIView+DashedBorder.swift */; };
+		F75E48A5239AD082007BDD47 /* GothaProLig.otf in Resources */ = {isa = PBXBuildFile; fileRef = F75E489E239AD082007BDD47 /* GothaProLig.otf */; };
+		F75E48A6239AD082007BDD47 /* GothaProBla.otf in Resources */ = {isa = PBXBuildFile; fileRef = F75E489F239AD082007BDD47 /* GothaProBla.otf */; };
+		F75E48A7239AD082007BDD47 /* GothaProBol.otf in Resources */ = {isa = PBXBuildFile; fileRef = F75E48A0239AD082007BDD47 /* GothaProBol.otf */; };
+		F75E48A8239AD082007BDD47 /* GothaProReg.otf in Resources */ = {isa = PBXBuildFile; fileRef = F75E48A1239AD082007BDD47 /* GothaProReg.otf */; };
+		F75E48A9239AD082007BDD47 /* GothamProMediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F75E48A2239AD082007BDD47 /* GothamProMediumItalic.ttf */; };
+		F75E48AA239AD082007BDD47 /* GothaProMed.otf in Resources */ = {isa = PBXBuildFile; fileRef = F75E48A3239AD082007BDD47 /* GothaProMed.otf */; };
+		F75E48AB239AD082007BDD47 /* GothaProLigIta.otf in Resources */ = {isa = PBXBuildFile; fileRef = F75E48A4239AD082007BDD47 /* GothaProLigIta.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +124,18 @@
 		C5A3A77023968E4A0006997D /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		C5A3A77223968E580006997D /* VotingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingViewController.swift; sourceTree = "<group>"; };
 		E9489D3B0AFFD2E9B4255859 /* Pods-ActiveCitizen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActiveCitizen.release.xcconfig"; path = "Target Support Files/Pods-ActiveCitizen/Pods-ActiveCitizen.release.xcconfig"; sourceTree = "<group>"; };
+		F722EB37239D2FB300718397 /* UIButton+Highlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Highlight.swift"; sourceTree = "<group>"; };
+		F722EB3D239D491B00718397 /* MakeReportMapViewController+TextViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MakeReportMapViewController+TextViewDelegate.swift"; sourceTree = "<group>"; };
+		F722EB3F239D8EF500718397 /* MakeReportMapViewController+TextViewHideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MakeReportMapViewController+TextViewHideKeyboard.swift"; sourceTree = "<group>"; };
+		F75E4897239AA524007BDD47 /* MakeReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeReport.swift; sourceTree = "<group>"; };
+		F75E489B239AC9B0007BDD47 /* UIView+DashedBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+DashedBorder.swift"; sourceTree = "<group>"; };
+		F75E489E239AD082007BDD47 /* GothaProLig.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothaProLig.otf; sourceTree = "<group>"; };
+		F75E489F239AD082007BDD47 /* GothaProBla.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothaProBla.otf; sourceTree = "<group>"; };
+		F75E48A0239AD082007BDD47 /* GothaProBol.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothaProBol.otf; sourceTree = "<group>"; };
+		F75E48A1239AD082007BDD47 /* GothaProReg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothaProReg.otf; sourceTree = "<group>"; };
+		F75E48A2239AD082007BDD47 /* GothamProMediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamProMediumItalic.ttf; sourceTree = "<group>"; };
+		F75E48A3239AD082007BDD47 /* GothaProMed.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothaProMed.otf; sourceTree = "<group>"; };
+		F75E48A4239AD082007BDD47 /* GothaProLigIta.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothaProLigIta.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +215,7 @@
 		C52CE6492395440F004760EF /* ActiveCitizen */ = {
 			isa = PBXGroup;
 			children = (
+				F75E489D239AD082007BDD47 /* FontFamily */,
 				C52CE68723954F89004760EF /* Extension */,
 				C52CE68623954D69004760EF /* Views */,
 				C52CE65E239544CC004760EF /* ViewControllers */,
@@ -293,6 +318,7 @@
 		C52CE68623954D69004760EF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F75E4896239AA507007BDD47 /* MakeReport */,
 				C523600923963C2A002D9783 /* Base */,
 				C5236022239672B5002D9783 /* Cells */,
 				C523600E239641DD002D9783 /* ExampleUIViewWithXib */,
@@ -303,6 +329,7 @@
 		C52CE68723954F89004760EF /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				F75E489B239AC9B0007BDD47 /* UIView+DashedBorder.swift */,
 				C523600F2396430C002D9783 /* UIView+Attributes.swift */,
 				C52CE68823954FBE004760EF /* UIFont+Style.swift */,
 				C52CE68A23954FCB004760EF /* UIColor+Style.swift */,
@@ -313,6 +340,9 @@
 				C593175823978DE50043F68C /* UIImage+MapMarkers.swift */,
 				C593177C2397A4D90043F68C /* String+DateParse.swift */,
 				C593177E2397A7890043F68C /* Date+Formatter.swift */,
+				F722EB37239D2FB300718397 /* UIButton+Highlight.swift */,
+				F722EB3D239D491B00718397 /* MakeReportMapViewController+TextViewDelegate.swift */,
+				F722EB3F239D8EF500718397 /* MakeReportMapViewController+TextViewHideKeyboard.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -352,6 +382,29 @@
 			);
 			path = DataSource;
 			sourceTree = "<group>";
+		};
+		F75E4896239AA507007BDD47 /* MakeReport */ = {
+			isa = PBXGroup;
+			children = (
+				F75E4897239AA524007BDD47 /* MakeReport.swift */,
+			);
+			path = MakeReport;
+			sourceTree = "<group>";
+		};
+		F75E489D239AD082007BDD47 /* FontFamily */ = {
+			isa = PBXGroup;
+			children = (
+				F75E489E239AD082007BDD47 /* GothaProLig.otf */,
+				F75E489F239AD082007BDD47 /* GothaProBla.otf */,
+				F75E48A0239AD082007BDD47 /* GothaProBol.otf */,
+				F75E48A1239AD082007BDD47 /* GothaProReg.otf */,
+				F75E48A2239AD082007BDD47 /* GothamProMediumItalic.ttf */,
+				F75E48A3239AD082007BDD47 /* GothaProMed.otf */,
+				F75E48A4239AD082007BDD47 /* GothaProLigIta.otf */,
+			);
+			name = FontFamily;
+			path = ActiveCitizen/FontFamily;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -416,13 +469,20 @@
 			files = (
 				C52CE66F239545C0004760EF /* Users.storyboard in Resources */,
 				C52CE671239545C8004760EF /* More.storyboard in Resources */,
+				F75E48A6239AD082007BDD47 /* GothaProBla.otf in Resources */,
 				C52CE66D239545B7004760EF /* ReportsList.storyboard in Resources */,
 				C52CE65723954412004760EF /* LaunchScreen.storyboard in Resources */,
+				F75E48A5239AD082007BDD47 /* GothaProLig.otf in Resources */,
+				F75E48A8239AD082007BDD47 /* GothaProReg.otf in Resources */,
+				F75E48AB239AD082007BDD47 /* GothaProLigIta.otf in Resources */,
 				C523600D239641D9002D9783 /* ExampleUIViewWithXib.xib in Resources */,
+				F75E48A7239AD082007BDD47 /* GothaProBol.otf in Resources */,
 				C52CE65423954411004760EF /* Assets.xcassets in Resources */,
+				F75E48AA239AD082007BDD47 /* GothaProMed.otf in Resources */,
 				C52CE66B239545A6004760EF /* Profile.storyboard in Resources */,
 				C52CE66923954595004760EF /* MakeReport.storyboard in Resources */,
 				C52CE6522395440F004760EF /* Main.storyboard in Resources */,
+				F75E48A9239AD082007BDD47 /* GothamProMediumItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,9 +554,11 @@
 			files = (
 				C52CE68B23954FCB004760EF /* UIColor+Style.swift in Sources */,
 				C523602623967420002D9783 /* ReportsListTableViewCell.swift in Sources */,
+				F722EB38239D2FB300718397 /* UIButton+Highlight.swift in Sources */,
 				C52CE68523954B7E004760EF /* MoreViewController.swift in Sources */,
 				C5A3A77123968E4A0006997D /* AboutViewController.swift in Sources */,
 				C523602A23967F5A002D9783 /* UIApplication+Loading.swift in Sources */,
+				F722EB40239D8EF500718397 /* MakeReportMapViewController+TextViewHideKeyboard.swift in Sources */,
 				C52CE675239548D7004760EF /* BaseProfileViewController.swift in Sources */,
 				C5236012239644FD002D9783 /* IBDesignableView.swift in Sources */,
 				C52CE67F23954A03004760EF /* ProfileViewController.swift in Sources */,
@@ -509,11 +571,13 @@
 				C52CE69323955F95004760EF /* RootTabBarController.swift in Sources */,
 				C523601A2396593D002D9783 /* ReportsManager.swift in Sources */,
 				C523600B2396419C002D9783 /* ExampleUIViewWithXib.swift in Sources */,
+				F722EB3E239D491B00718397 /* MakeReportMapViewController+TextViewDelegate.swift in Sources */,
 				C523602823967EB0002D9783 /* UIApplication+TopViewController.swift in Sources */,
 				C52CE68323954B01004760EF /* UsersListViewController.swift in Sources */,
 				C52CE679239548F0004760EF /* BaseUsersViewController.swift in Sources */,
 				C593177D2397A4D90043F68C /* String+DateParse.swift in Sources */,
 				C523601623964F11002D9783 /* ReportsMapViewController.swift in Sources */,
+				F75E489C239AC9B0007BDD47 /* UIView+DashedBorder.swift in Sources */,
 				C52360212396700F002D9783 /* ReportsListDataSource.swift in Sources */,
 				C52CE67B239548FD004760EF /* BaseMoreViewController.swift in Sources */,
 				C5A3A77323968E580006997D /* VotingViewController.swift in Sources */,
@@ -529,6 +593,7 @@
 				C523601423964F05002D9783 /* ReportsListViewController.swift in Sources */,
 				C523600823963C24002D9783 /* UIViewWithXib.swift in Sources */,
 				C5236024239672CD002D9783 /* BaseTableViewCell.swift in Sources */,
+				F75E4898239AA524007BDD47 /* MakeReport.swift in Sources */,
 				C593177F2397A7890043F68C /* Date+Formatter.swift in Sources */,
 				C52CE661239544E4004760EF /* BaseViewController.swift in Sources */,
 			);
@@ -606,7 +671,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -660,7 +725,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -675,6 +740,7 @@
 			baseConfigurationReference = B2355D48FC3D005665FDBD9A /* Pods-ActiveCitizen.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7GWKN9T43H;
 				INFOPLIST_FILE = ActiveCitizen/Info.plist;
@@ -695,6 +761,7 @@
 			baseConfigurationReference = E9489D3B0AFFD2E9B4255859 /* Pods-ActiveCitizen.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7GWKN9T43H;
 				INFOPLIST_FILE = ActiveCitizen/Info.plist;

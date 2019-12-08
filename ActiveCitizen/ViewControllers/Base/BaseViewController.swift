@@ -22,7 +22,7 @@ class BaseViewController: UIViewController, UITextFieldDelegate, NVActivityIndic
     /// Hide tab bar
     @IBInspectable var hideTabBar: Bool  = false
     
-    /// Enable navigation via keyboard toolbar. Movement based on UITexField tags. Don't forget set tags
+    /// Enable navigation via keyboard toolbar. Movement based on UITextField tags. Don't forget set tags
     @IBInspectable var textFieldNavigation: Bool  = false
     
     /// Automaticly change scrollView insets and keyboardheightConstraint depends of keyboad state. Don't forget set IBOutlet contentScrollView or/and keyboardheightConstraint
@@ -64,6 +64,9 @@ class BaseViewController: UIViewController, UITextFieldDelegate, NVActivityIndic
     ///
     /// Current textfield for textfield navigation
     var currentTextField: UITextField?
+    
+    /// Current textView
+    var currentTextView: UITextView?
     
     
     // MARK: - Init, Appear, Override
@@ -218,11 +221,9 @@ class BaseViewController: UIViewController, UITextFieldDelegate, NVActivityIndic
         }
         
         UIView.animate(withDuration: duration, animations: {
-        
-            var edgeInsets = self.contentScrollView!.contentInset //UIEdgeInsetsMake(0, 0, height + 20, 0);
-            edgeInsets.bottom = 0;  //  possible problem for iPhone 6+ (10.0.1) because this device have non-zero .contentInset.bottom value before keyboard will shown
-            
             if self.contentScrollView != nil{
+                var edgeInsets = self.contentScrollView!.contentInset //UIEdgeInsetsMake(0, 0, height + 20, 0);
+                edgeInsets.bottom = 0;  //  possible problem for iPhone 6+ (10.0.1) because this device have non-zero .contentInset.bottom value before keyboard will shown
                 self.contentScrollView!.contentInset = edgeInsets;
                 self.contentScrollView!.scrollIndicatorInsets = edgeInsets;
             }

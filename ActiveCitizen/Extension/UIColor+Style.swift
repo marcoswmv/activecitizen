@@ -10,7 +10,6 @@ import UIKit
 
 extension UIColor {
     
-    
     open class var mainColor: UIColor {
         get {
             return .blue
