@@ -158,6 +158,9 @@
                                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="s57-OV-7xI" id="fRQ-8Z-h5m"/>
+                                                </connections>
                                             </textView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eig-Hq-hHw" userLabel="Dashed Separator">
                                                 <rect key="frame" x="12" y="414" width="363" height="1"/>
@@ -324,6 +327,7 @@
                         <outlet property="chooseCategory" destination="mDu-PF-9Gc" id="8HF-3F-Obw"/>
                         <outlet property="contentScrollView" destination="2Lq-Yr-HrM" id="YUU-TM-FJP"/>
                         <outlet property="dashedSeparator" destination="Eig-Hq-hHw" id="n2r-si-hcY"/>
+                        <outlet property="keyboardHeightConstraint" destination="pMG-8p-f5a" id="0Uc-Y0-dna"/>
                         <outlet property="makeReport" destination="aRM-Ag-aC0" id="Yaq-Ao-giL"/>
                         <outlet property="mapView" destination="5Tm-Lv-tRW" id="4Ya-dl-JAz"/>
                         <outlet property="maxLength" destination="ShB-bk-ij1" id="1wS-yw-xpZ"/>
