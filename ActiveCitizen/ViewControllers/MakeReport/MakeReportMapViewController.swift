@@ -14,12 +14,11 @@ class MakeReportMapViewController: BaseMakeReportViewController {
     @IBOutlet weak var mapView: YMKMapView!
     @IBOutlet weak var dashedSeparator: UIView!
     @IBOutlet weak var reportDescription: UITextView!
-    
     @IBOutlet weak var addAddress: UIButton!
     @IBOutlet weak var chooseCategory: UIButton!
     @IBOutlet weak var addPhoto: UIButton!
     @IBOutlet weak var makeReport: UIButton!
-    
+    @IBOutlet weak var scrollViewContentHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var maxLength: UILabel!
     
     override func viewDidLoad() {
@@ -45,10 +44,22 @@ class MakeReportMapViewController: BaseMakeReportViewController {
             addPhoto.isHighlighted = true
         }
         
-        maxLength.text = "0/700"
+        maxLength.text = "0 / 1000"
         reportDescription.text = "Текст сообщения"
         reportDescription.textColor = .lightGray
+        
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if let height = self.contentScrollView?.frame.size.height {
+            print(height)
+            self.scrollViewContentHeightConstraint.constant = height
+            self.view.layoutSubviews()
+        }
+    }
+    
     @IBAction func myPositionOnTouchUpInside(_ sender: Any) {
         print("Showing user's position on map")
     }

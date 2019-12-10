@@ -25,14 +25,9 @@ extension MakeReportMapViewController: UITextViewDelegate {
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         let newText = (textView.text as NSString).replacingCharacters(in: range, with: text)
-        var numberOfChars = newText.count
+        let numberOfChars = newText.count
 
-        if text == "\n" {
-            numberOfChars -= 1
-            textView.resignFirstResponder()
-            return false
-        }
-        maxLength.text = "\(numberOfChars)/700"
-        return numberOfChars < 700;
+        maxLength.text = "\(numberOfChars) / 1000"
+        return numberOfChars < 1000;
     }
 }
