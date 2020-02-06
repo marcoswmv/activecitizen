@@ -20,6 +20,7 @@ class MakeReportMapViewController: BaseMakeReportViewController {
     @IBOutlet weak var makeReport: UIButton!
     @IBOutlet weak var scrollViewContentHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var maxLength: UILabel!
+    @IBOutlet weak var navBarTransparentView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +48,7 @@ class MakeReportMapViewController: BaseMakeReportViewController {
         maxLength.text = "0 / 1000"
         reportDescription.text = "Текст сообщения"
         reportDescription.textColor = .lightGray
+        self.navigationController?.navigationBar.bringSubviewToFront(navBarTransparentView)
         
     }
     
@@ -54,7 +56,7 @@ class MakeReportMapViewController: BaseMakeReportViewController {
         super.viewDidLayoutSubviews()
         
         if let height = self.contentScrollView?.frame.size.height {
-            print(height)
+//            print(height)
             self.scrollViewContentHeightConstraint.constant = height
             self.view.layoutSubviews()
         }

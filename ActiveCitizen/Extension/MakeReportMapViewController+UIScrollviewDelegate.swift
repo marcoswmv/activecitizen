@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension MakeReportMapViewController: UIScrollViewDelegate {
+extension MakeReportMapViewController {
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         let offset: CGFloat = 225

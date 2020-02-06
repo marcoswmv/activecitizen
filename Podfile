@@ -19,4 +19,5 @@ target 'ActiveCitizen' do
     #pod ‘YandexMapKitSearch’
     #pod ‘YandexMapKitTransport’
     pod 'NVActivityIndicatorView'
+    pod 'RESegmentedControl', '~> 0.2.1'
 end

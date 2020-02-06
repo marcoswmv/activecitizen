@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReportsListViewController: BaseReportsListViewController, UITableViewDelegate {
+class ReportsListViewController: BaseReportsListViewController {
 
     var dataSource: ReportsListDataSource?
     @IBOutlet weak var tableView: UITableView!
@@ -21,7 +21,7 @@ class ReportsListViewController: BaseReportsListViewController, UITableViewDeleg
         }
         dataSource?.reload()
         
-        self.tableView.delegate = self
+//        self.tableView.delegate = self
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

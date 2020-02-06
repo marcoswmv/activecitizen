@@ -3,6 +3,7 @@ PODS:
   - NVActivityIndicatorView (4.8.0):
     - NVActivityIndicatorView/Presenter (= 4.8.0)
   - NVActivityIndicatorView/Presenter (4.8.0)
+  - RESegmentedControl (0.2.1)
   - YandexMapKit (3.4):
     - YandexRuntime (= 3.4)
   - YandexRuntime (3.4)
@@ -10,21 +11,24 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-rc.3)
   - NVActivityIndicatorView
+  - RESegmentedControl (~> 0.2.1)
   - YandexMapKit
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - NVActivityIndicatorView
+    - RESegmentedControl
     - YandexMapKit
     - YandexRuntime
 
 SPEC CHECKSUMS:
   Alamofire: ca8c0de6906873be89d6deec5c8de279e00bf872
   NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
+  RESegmentedControl: d72f65246f932c3d03e18d3c9858af8f0e88fb10
   YandexMapKit: f222923561fe159dd8480d927f61950fc5ff3b8d
   YandexRuntime: 2547d72a3ce4757f16ad188cfbe8a124ae13d806
 
-PODFILE CHECKSUM: 99694c74cad813c97afab6a7eaf692f2d1b87be0
+PODFILE CHECKSUM: 7dce587dfbf18abf9f5df46393ad40481cf89db6
 
 COCOAPODS: 1.8.4

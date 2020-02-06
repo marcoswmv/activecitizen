@@ -13,7 +13,6 @@ class BaseNetworkManager: NSObject {
 
     let baseUrl = "https://active-citizen.ru/rest"
     
-
     typealias GenericNetworkCompletionHandler = (_ value:Any?, _ error:Error?) -> Void
     
     override init() {

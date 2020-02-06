@@ -8,9 +8,15 @@
 
 import UIKit
 import NVActivityIndicatorView
+import RESegmentedControl
 
 class BaseViewController: UIViewController, UITextFieldDelegate, NVActivityIndicatorViewable {
 
+    @IBOutlet weak var containerTableView: UITableView!
+    @IBOutlet weak var searchBarView: UIView!
+    
+    var searchController = UISearchController()
+    
     // MARK: - Variables
     
     /// Automatic authentication check. Logout if needed

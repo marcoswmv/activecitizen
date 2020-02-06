@@ -30,7 +30,6 @@
 		C52CE65423954411004760EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C52CE65323954411004760EF /* Assets.xcassets */; };
 		C52CE65723954412004760EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52CE65523954412004760EF /* LaunchScreen.storyboard */; };
 		C52CE661239544E4004760EF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52CE660239544E4004760EF /* BaseViewController.swift */; };
-		C52CE66923954595004760EF /* MakeReport.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52CE66823954595004760EF /* MakeReport.storyboard */; };
 		C52CE66B239545A6004760EF /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52CE66A239545A6004760EF /* Profile.storyboard */; };
 		C52CE66D239545B7004760EF /* ReportsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52CE66C239545B7004760EF /* ReportsList.storyboard */; };
 		C52CE66F239545C0004760EF /* Users.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52CE66E239545C0004760EF /* Users.storyboard */; };
@@ -56,6 +55,7 @@
 		C593177F2397A7890043F68C /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C593177E2397A7890043F68C /* Date+Formatter.swift */; };
 		C5A3A77123968E4A0006997D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A3A77023968E4A0006997D /* AboutViewController.swift */; };
 		C5A3A77323968E580006997D /* VotingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A3A77223968E580006997D /* VotingViewController.swift */; };
+		F716107A23EC654100F89D26 /* MakeReport.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F716107923EC654100F89D26 /* MakeReport.storyboard */; };
 		F722EB38239D2FB300718397 /* UIButton+Highlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = F722EB37239D2FB300718397 /* UIButton+Highlight.swift */; };
 		F722EB3E239D491B00718397 /* MakeReportMapViewController+TextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F722EB3D239D491B00718397 /* MakeReportMapViewController+TextViewDelegate.swift */; };
 		F722EB40239D8EF500718397 /* MakeReportMapViewController+TextViewHideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F722EB3F239D8EF500718397 /* MakeReportMapViewController+TextViewHideKeyboard.swift */; };
@@ -68,7 +68,10 @@
 		F75E48A9239AD082007BDD47 /* GothamProMediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F75E48A2239AD082007BDD47 /* GothamProMediumItalic.ttf */; };
 		F75E48AA239AD082007BDD47 /* GothaProMed.otf in Resources */ = {isa = PBXBuildFile; fileRef = F75E48A3239AD082007BDD47 /* GothaProMed.otf */; };
 		F75E48AB239AD082007BDD47 /* GothaProLigIta.otf in Resources */ = {isa = PBXBuildFile; fileRef = F75E48A4239AD082007BDD47 /* GothaProLigIta.otf */; };
+		F76209C823ABA1B300BEB8DE /* NotificationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76209C723ABA1B300BEB8DE /* NotificationsTableViewController.swift */; };
+		F76209CA23ABA1CD00BEB8DE /* ReportsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76209C923ABA1CD00BEB8DE /* ReportsTableViewController.swift */; };
 		F77187C0239FAD3300AAA1C6 /* MakeReportScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77187BF239FAD3300AAA1C6 /* MakeReportScrollView.swift */; };
+		F77EF21823A7B36700938A3B /* SegmentedControl+MaterialPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77EF21723A7B36700938A3B /* SegmentedControl+MaterialPreset.swift */; };
 		F7A7811A239E9B7700EE2000 /* MakeReportMapViewController+UIScrollviewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A78119239E9B7700EE2000 /* MakeReportMapViewController+UIScrollviewDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -99,7 +102,6 @@
 		C52CE65623954412004760EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C52CE65823954412004760EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C52CE660239544E4004760EF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		C52CE66823954595004760EF /* MakeReport.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MakeReport.storyboard; sourceTree = "<group>"; };
 		C52CE66A239545A6004760EF /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		C52CE66C239545B7004760EF /* ReportsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReportsList.storyboard; sourceTree = "<group>"; };
 		C52CE66E239545C0004760EF /* Users.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Users.storyboard; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		C5A3A77023968E4A0006997D /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		C5A3A77223968E580006997D /* VotingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingViewController.swift; sourceTree = "<group>"; };
 		E9489D3B0AFFD2E9B4255859 /* Pods-ActiveCitizen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActiveCitizen.release.xcconfig"; path = "Target Support Files/Pods-ActiveCitizen/Pods-ActiveCitizen.release.xcconfig"; sourceTree = "<group>"; };
+		F716107923EC654100F89D26 /* MakeReport.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MakeReport.storyboard; sourceTree = "<group>"; };
 		F722EB37239D2FB300718397 /* UIButton+Highlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Highlight.swift"; sourceTree = "<group>"; };
 		F722EB3D239D491B00718397 /* MakeReportMapViewController+TextViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MakeReportMapViewController+TextViewDelegate.swift"; sourceTree = "<group>"; };
 		F722EB3F239D8EF500718397 /* MakeReportMapViewController+TextViewHideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MakeReportMapViewController+TextViewHideKeyboard.swift"; sourceTree = "<group>"; };
@@ -138,7 +141,10 @@
 		F75E48A2239AD082007BDD47 /* GothamProMediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamProMediumItalic.ttf; sourceTree = "<group>"; };
 		F75E48A3239AD082007BDD47 /* GothaProMed.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothaProMed.otf; sourceTree = "<group>"; };
 		F75E48A4239AD082007BDD47 /* GothaProLigIta.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothaProLigIta.otf; sourceTree = "<group>"; };
+		F76209C723ABA1B300BEB8DE /* NotificationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewController.swift; sourceTree = "<group>"; };
+		F76209C923ABA1CD00BEB8DE /* ReportsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsTableViewController.swift; sourceTree = "<group>"; };
 		F77187BF239FAD3300AAA1C6 /* MakeReportScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeReportScrollView.swift; sourceTree = "<group>"; };
+		F77EF21723A7B36700938A3B /* SegmentedControl+MaterialPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SegmentedControl+MaterialPreset.swift"; sourceTree = "<group>"; };
 		F7A78119239E9B7700EE2000 /* MakeReportMapViewController+UIScrollviewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MakeReportMapViewController+UIScrollviewDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -273,6 +279,8 @@
 			isa = PBXGroup;
 			children = (
 				C52CE67E23954A03004760EF /* ProfileViewController.swift */,
+				F76209C723ABA1B300BEB8DE /* NotificationsTableViewController.swift */,
+				F76209C923ABA1CD00BEB8DE /* ReportsTableViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -310,7 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				C52CE6502395440F004760EF /* Main.storyboard */,
-				C52CE66823954595004760EF /* MakeReport.storyboard */,
+				F716107923EC654100F89D26 /* MakeReport.storyboard */,
 				C52CE66A239545A6004760EF /* Profile.storyboard */,
 				C52CE66C239545B7004760EF /* ReportsList.storyboard */,
 				C52CE66E239545C0004760EF /* Users.storyboard */,
@@ -348,6 +356,7 @@
 				F722EB3D239D491B00718397 /* MakeReportMapViewController+TextViewDelegate.swift */,
 				F722EB3F239D8EF500718397 /* MakeReportMapViewController+TextViewHideKeyboard.swift */,
 				F7A78119239E9B7700EE2000 /* MakeReportMapViewController+UIScrollviewDelegate.swift */,
+				F77EF21723A7B36700938A3B /* SegmentedControl+MaterialPreset.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -473,6 +482,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F716107A23EC654100F89D26 /* MakeReport.storyboard in Resources */,
 				C52CE66F239545C0004760EF /* Users.storyboard in Resources */,
 				C52CE671239545C8004760EF /* More.storyboard in Resources */,
 				F75E48A6239AD082007BDD47 /* GothaProBla.otf in Resources */,
@@ -486,7 +496,6 @@
 				C52CE65423954411004760EF /* Assets.xcassets in Resources */,
 				F75E48AA239AD082007BDD47 /* GothaProMed.otf in Resources */,
 				C52CE66B239545A6004760EF /* Profile.storyboard in Resources */,
-				C52CE66923954595004760EF /* MakeReport.storyboard in Resources */,
 				C52CE6522395440F004760EF /* Main.storyboard in Resources */,
 				F75E48A9239AD082007BDD47 /* GothamProMediumItalic.ttf in Resources */,
 			);
@@ -569,6 +578,7 @@
 				C5236012239644FD002D9783 /* IBDesignableView.swift in Sources */,
 				C52CE67F23954A03004760EF /* ProfileViewController.swift in Sources */,
 				C52CE68923954FBE004760EF /* UIFont+Style.swift in Sources */,
+				F76209CA23ABA1CD00BEB8DE /* ReportsTableViewController.swift in Sources */,
 				C52CE68123954AA5004760EF /* ReportsListContainerViewController.swift in Sources */,
 				C52CE68F23955740004760EF /* BaseViewController+TextFieldNavigation.swift in Sources */,
 				C52360182396513C002D9783 /* BaseNetworkManager.swift in Sources */,
@@ -591,12 +601,14 @@
 				C52CE67D239549AF004760EF /* MakeReportMapViewController.swift in Sources */,
 				C593175923978DE50043F68C /* UIImage+MapMarkers.swift in Sources */,
 				C52CE677239548E6004760EF /* BaseReportsListViewController.swift in Sources */,
+				F77EF21823A7B36700938A3B /* SegmentedControl+MaterialPreset.swift in Sources */,
 				C52CE69123955EE2004760EF /* BaseNavigationController.swift in Sources */,
 				C523602C239687E6002D9783 /* ReportDetailsViewController.swift in Sources */,
 				C52CE64B2395440F004760EF /* AppDelegate.swift in Sources */,
 				C52CE68D23955331004760EF /* UITabBarController+Animation.swift in Sources */,
 				C52360102396430C002D9783 /* UIView+Attributes.swift in Sources */,
 				C523601C23965D5C002D9783 /* Report.swift in Sources */,
+				F76209C823ABA1B300BEB8DE /* NotificationsTableViewController.swift in Sources */,
 				C523601423964F05002D9783 /* ReportsListViewController.swift in Sources */,
 				F7A7811A239E9B7700EE2000 /* MakeReportMapViewController+UIScrollviewDelegate.swift in Sources */,
 				C523600823963C24002D9783 /* UIViewWithXib.swift in Sources */,
