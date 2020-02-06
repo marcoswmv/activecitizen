@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="s57-OV-7xI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="s57-OV-7xI">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -27,6 +27,24 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Tm-Lv-tRW" customClass="YMKMapView">
                                 <rect key="frame" x="0.0" y="88" width="375" height="225"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fvr-TS-thu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.29999999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jf-Lk-Xqk">
                                 <rect key="frame" x="317" y="255" width="50" height="50"/>
@@ -329,14 +347,18 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="2Lq-Yr-HrM" firstAttribute="trailing" secondItem="5Tm-Lv-tRW" secondAttribute="trailing" id="03B-6G-3uy"/>
+                            <constraint firstItem="Fvr-TS-thu" firstAttribute="leading" secondItem="V6k-hS-4Tb" secondAttribute="leading" id="3DN-Cn-F20"/>
                             <constraint firstItem="5Tm-Lv-tRW" firstAttribute="bottom" secondItem="0jf-Lk-Xqk" secondAttribute="bottom" constant="8" id="Ewv-hp-sDL"/>
+                            <constraint firstItem="5Tm-Lv-tRW" firstAttribute="top" secondItem="Fvr-TS-thu" secondAttribute="bottom" id="F2p-Cj-xTQ"/>
                             <constraint firstItem="2Lq-Yr-HrM" firstAttribute="top" secondItem="muV-GI-mPC" secondAttribute="top" priority="999" id="J54-X2-eJR"/>
                             <constraint firstAttribute="bottom" secondItem="2Lq-Yr-HrM" secondAttribute="bottom" id="Ks8-pg-zOA"/>
                             <constraint firstItem="muV-GI-mPC" firstAttribute="trailing" secondItem="0jf-Lk-Xqk" secondAttribute="trailing" constant="8" id="Nzs-ho-aE1"/>
                             <constraint firstItem="2Lq-Yr-HrM" firstAttribute="leading" secondItem="5Tm-Lv-tRW" secondAttribute="leading" id="QwX-DI-diQ"/>
+                            <constraint firstItem="Fvr-TS-thu" firstAttribute="top" secondItem="V6k-hS-4Tb" secondAttribute="top" id="Shm-G9-73E"/>
                             <constraint firstItem="2Lq-Yr-HrM" firstAttribute="trailing" secondItem="muV-GI-mPC" secondAttribute="trailing" id="ZaP-KC-2mx"/>
                             <constraint firstItem="5Tm-Lv-tRW" firstAttribute="top" secondItem="muV-GI-mPC" secondAttribute="top" id="ciF-Bg-O5w"/>
                             <constraint firstItem="2Lq-Yr-HrM" firstAttribute="leading" secondItem="muV-GI-mPC" secondAttribute="leading" id="lTC-Cb-fkT"/>
+                            <constraint firstAttribute="trailing" secondItem="Fvr-TS-thu" secondAttribute="trailing" id="pEX-Eq-GgV"/>
                             <constraint firstItem="0jf-Lk-Xqk" firstAttribute="top" secondItem="muV-GI-mPC" secondAttribute="top" constant="167" id="sil-Dp-SYJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="muV-GI-mPC"/>
@@ -356,6 +378,7 @@
                         <outlet property="makeReport" destination="aRM-Ag-aC0" id="Yaq-Ao-giL"/>
                         <outlet property="mapView" destination="5Tm-Lv-tRW" id="4Ya-dl-JAz"/>
                         <outlet property="maxLength" destination="ShB-bk-ij1" id="1wS-yw-xpZ"/>
+                        <outlet property="navBarTransparentView" destination="Fvr-TS-thu" id="IuP-Gc-JMS"/>
                         <outlet property="reportDescription" destination="Mhy-xL-RAk" id="ajD-d7-FI7"/>
                         <outlet property="scrollViewContentHeightConstraint" destination="AJT-jU-ved" id="lQY-P6-bqu"/>
                     </connections>
