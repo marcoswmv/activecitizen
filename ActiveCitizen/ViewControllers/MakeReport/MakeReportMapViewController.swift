@@ -9,18 +9,19 @@
 import UIKit
 import YandexMapKit
 
-class MakeReportMapViewController: BaseMakeReportViewController {
+class MakeReportMapViewController: BaseMakeReportViewController, AddressDelegate {
 
     @IBOutlet weak var mapView: YMKMapView!
     @IBOutlet weak var dashedSeparator: UIView!
     @IBOutlet weak var reportDescription: UITextView!
-    @IBOutlet weak var addAddress: UIButton!
-    @IBOutlet weak var chooseCategory: UIButton!
-    @IBOutlet weak var addPhoto: UIButton!
-    @IBOutlet weak var makeReport: UIButton!
     @IBOutlet weak var scrollViewContentHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var maxLength: UILabel!
-    @IBOutlet weak var navBarTransparentView: UIView!
+    
+    @IBOutlet weak var cityAddress: UILabel!
+    @IBOutlet weak var streetAddress: UILabel!
+    
+    
+    let specifyAddressViewController = SpecifyAddressViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,20 +36,14 @@ class MakeReportMapViewController: BaseMakeReportViewController {
         
         self.hideKeyboardWhenTappedAround()
         
-        if makeReport.isTouchInside {
-            makeReport.isHighlighted = true
-        } else if addAddress.isTouchInside {
-            addAddress.isHighlighted = true
-        } else if chooseCategory.isTouchInside {
-            chooseCategory.isHighlighted = true
-        } else if addPhoto.isTouchInside {
-            addPhoto.isHighlighted = true
-        }
-        
         maxLength.text = "0 / 1000"
         reportDescription.text = "Текст сообщения"
         reportDescription.textColor = .lightGray
-        self.navigationController?.navigationBar.bringSubviewToFront(navBarTransparentView)
+        specifyAddressViewController.selectAddressDelegate = self
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         
     }
     
@@ -56,7 +51,6 @@ class MakeReportMapViewController: BaseMakeReportViewController {
         super.viewDidLayoutSubviews()
         
         if let height = self.contentScrollView?.frame.size.height {
-//            print(height)
             self.scrollViewContentHeightConstraint.constant = height
             self.view.layoutSubviews()
         }
@@ -66,25 +60,14 @@ class MakeReportMapViewController: BaseMakeReportViewController {
         print("Showing user's position on map")
     }
     
-    @IBAction func addAddressOnTouchUpInside(_ sender: Any) {
-        print("Adding address manually")
-    }
-    
-    @IBAction func specifyAddressOnTouchUpInside(_ sender: Any) {
-        print("Specifying address on map")
-    }
-    
-    @IBAction func chooseCategoryOnTouchUpInside(_ sender: Any) {
-        print("Changing category")
-    }
-    
-    @IBAction func addPhotoOnTouchUpInside(_ sender: Any) {
-        print("Adding photo to the report")
-    }
-    
     @IBAction func makeReportOnTouchUpInside(_ sender: Any) {
         print("Making report")
 
     }
     
+    func setAddress(with street: String, and city: String) {
+        print("City: ", city, "and street: ", street)
+        self.cityAddress.text = city
+        self.streetAddress.text = street
+    }
 }
