@@ -9,7 +9,8 @@
 import UIKit
 import YandexMapKit
 
-class MakeReportMapViewController: BaseMakeReportViewController, AddressDelegate {
+
+class MakeReportMapViewController: BaseMakeReportViewController {
 
     @IBOutlet weak var mapView: YMKMapView!
     @IBOutlet weak var dashedSeparator: UIView!
@@ -20,14 +21,13 @@ class MakeReportMapViewController: BaseMakeReportViewController, AddressDelegate
     @IBOutlet weak var cityAddress: UILabel!
     @IBOutlet weak var streetAddress: UILabel!
     
-    
-    let specifyAddressViewController = SpecifyAddressViewController()
+    let TARGET_LOCATION = YMKPoint(latitude: 55.751574, longitude: 37.573856)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mapView.mapWindow.map.move(with: YMKCameraPosition.init(target: YMKPoint(latitude: 55.751574, longitude: 37.573856), zoom: 15, azimuth: 0, tilt: 0),
-                                   animationType: YMKAnimation(type: YMKAnimationType.smooth, duration: 0.5),
+        mapView.mapWindow.map.move(with: YMKCameraPosition.init(target: TARGET_LOCATION, zoom: 15, azimuth: 0, tilt: 0),
+                                   animationType: YMKAnimation(type: YMKAnimationType.smooth, duration: 1),
                                    cameraCallback: nil)
         mapView.mapWindow.map.logo.setAlignmentWith(YMKLogoAlignment(horizontalAlignment: YMKLogoHorizontalAlignment.left,
                                                                      verticalAlignment: YMKLogoVerticalAlignment.bottom))
@@ -39,12 +39,7 @@ class MakeReportMapViewController: BaseMakeReportViewController, AddressDelegate
         maxLength.text = "0 / 1000"
         reportDescription.text = "Текст сообщения"
         reportDescription.textColor = .lightGray
-        specifyAddressViewController.selectAddressDelegate = self
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
+        setupNavigationBarShadow()
     }
     
     override func viewDidLayoutSubviews() {
@@ -56,6 +51,23 @@ class MakeReportMapViewController: BaseMakeReportViewController, AddressDelegate
         }
     }
     
+    @IBAction func enterAddressOnTouchUpInside(_ sender: Any) {
+        let makeReportStoryboard = UIStoryboard(name: "MakeReport", bundle: nil)
+        let enterAddressViewController = makeReportStoryboard.instantiateViewController(withIdentifier: "EnterAddressViewController") as! EnterAddressViewController
+        let enterAddressManuallyViewController = makeReportStoryboard.instantiateViewController(withIdentifier: "EnterAddressManuallyViewController") as! EnterAddressManuallyViewController
+        
+        enterAddressViewController.completionHandler = { street, city in
+            self.streetAddress.text = street
+            self.cityAddress.text = city
+        }
+        enterAddressManuallyViewController.completionHandler = { street, city in
+        self.streetAddress.text = street
+            self.cityAddress.text = city
+        }
+        
+        navigationController?.pushViewController(enterAddressViewController, animated: true)
+    }
+    
     @IBAction func myPositionOnTouchUpInside(_ sender: Any) {
         print("Showing user's position on map")
     }
@@ -63,11 +75,5 @@ class MakeReportMapViewController: BaseMakeReportViewController, AddressDelegate
     @IBAction func makeReportOnTouchUpInside(_ sender: Any) {
         print("Making report")
 
-    }
-    
-    func setAddress(with street: String, and city: String) {
-        print("City: ", city, "and street: ", street)
-        self.cityAddress.text = city
-        self.streetAddress.text = street
     }
 }

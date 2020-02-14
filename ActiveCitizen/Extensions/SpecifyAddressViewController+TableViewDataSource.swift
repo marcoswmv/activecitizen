@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension SpecifyAddressViewController: UITableViewDataSource {
+extension EnterAddressViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -21,24 +21,12 @@ extension SpecifyAddressViewController: UITableViewDataSource {
 
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AddressCell") as! SpecifyAddressTableViewCell
-
-        cell.setDataForCell(street: testStreets[indexPath.row], city: testCities[indexPath.row])
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AddressCell") as! EnterAddressTableViewCell
         
-        cell.contentView.cornerRadius = 12
-        cell.contentView.clipsToBounds = true
-        cell.eachCell.cornerRadius = 12
-        cell.eachCell.clipsToBounds = true
-
+        cell.cityAddress.text = testCities[indexPath.row]
+        cell.streetAddress.text = testStreets[indexPath.row]
+        
         cell.selectionStyle = .none
-        
-        if cell.isSelected {
-            cell.shadowLayer.isHidden = true
-            cell.streetAddress.textColor = .black
-            cell.backgroundColor = .white
-            cell.contentView.borderColor = .gray
-            cell.contentView.borderWidth = 1
-        }
         
         return cell
     }

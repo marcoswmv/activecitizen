@@ -56,6 +56,11 @@ extension UIView {
         set { clipsToBounds = newValue }
         get { return clipsToBounds }
     }
+    
+    @IBInspectable var masksToBounds: Bool {
+        set { layer.masksToBounds = newValue }
+        get { return layer.masksToBounds }
+    }
 }
 
 extension CGColor {
