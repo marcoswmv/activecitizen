@@ -10,10 +10,6 @@ import Foundation
 import UIKit
 
 extension EnterAddressViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(130.0)
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedCell = (tableView.cellForRow(at: indexPath) as! EnterAddressTableViewCell)
         
@@ -35,9 +31,8 @@ extension EnterAddressViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.contentView.layer.masksToBounds = true
-        
-        selectedCell = cell as? EnterAddressTableViewCell
+        let cell = cell as! EnterAddressTableViewCell
+        selectedCell = cell
         
         guard let wasSelected = selectedCell!.defaultValues.value(forKey: Keys.selectedCell) as? Bool else { return }
         guard let selectedCellRow = selectedCell!.defaultValues.value(forKey: Keys.selectedCellRow) as? Int else { return }
@@ -45,6 +40,9 @@ extension EnterAddressViewController: UITableViewDelegate {
         if selectedCellRow == indexPath.row && wasSelected {
             cell.setCustomStyleOnSelection()
             selectedCell?.streetAddress.textColor = .black
+            selectedCell?.mapPin.image = UIImage(named: "map_pin")
+        } else {
+            cell.setCustomCellStyle()
         }
     }
     

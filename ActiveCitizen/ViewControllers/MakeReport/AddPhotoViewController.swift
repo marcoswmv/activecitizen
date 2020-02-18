@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddPhotoViewController: UIViewController {
+class AddPhotoViewController: BaseMakeReportViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,15 +17,6 @@ class AddPhotoViewController: UIViewController {
         setupCustomBackButton()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    // Take a picture or choose from user's photos
 
 }

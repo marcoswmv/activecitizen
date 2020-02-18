@@ -54,14 +54,9 @@ class MakeReportMapViewController: BaseMakeReportViewController {
     @IBAction func enterAddressOnTouchUpInside(_ sender: Any) {
         let makeReportStoryboard = UIStoryboard(name: "MakeReport", bundle: nil)
         let enterAddressViewController = makeReportStoryboard.instantiateViewController(withIdentifier: "EnterAddressViewController") as! EnterAddressViewController
-        let enterAddressManuallyViewController = makeReportStoryboard.instantiateViewController(withIdentifier: "EnterAddressManuallyViewController") as! EnterAddressManuallyViewController
         
         enterAddressViewController.completionHandler = { street, city in
             self.streetAddress.text = street
-            self.cityAddress.text = city
-        }
-        enterAddressManuallyViewController.completionHandler = { street, city in
-        self.streetAddress.text = street
             self.cityAddress.text = city
         }
         

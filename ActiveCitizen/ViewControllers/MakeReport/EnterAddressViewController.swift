@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EnterAddressViewController: UIViewController {
+class EnterAddressViewController: BaseMakeReportViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -37,5 +37,9 @@ class EnterAddressViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
+        
+//        Important to make the row's height vary depending on the size of the view along with the constraints in the IB
+        self.tableView.estimatedRowHeight = 84
+        self.tableView.rowHeight = UITableView.automaticDimension
     }
 }

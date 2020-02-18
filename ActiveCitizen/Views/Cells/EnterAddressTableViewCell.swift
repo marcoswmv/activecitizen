@@ -15,23 +15,38 @@ struct Keys {
 
 class EnterAddressTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var subContentView: UIView!
+    @IBOutlet weak var mapPin: UIImageView!
     @IBOutlet weak var cityAddress: UILabel!
     @IBOutlet weak var streetAddress: UILabel!
     
     var defaultValues = UserDefaults.standard
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.setCustomCellStyle()
-    }
+    func setCustomCellStyle() {
+        // add shadow on cell
+        subContentView.backgroundColor = .clear // very important
+        subContentView.layer.masksToBounds = false
+        subContentView.layer.shadowOpacity = 0.2
+        subContentView.layer.shadowRadius = 4
+        subContentView.layer.shadowOffset = CGSize(width: 0, height: 2)
+        subContentView.layer.shadowColor = UIColor.black.cgColor
 
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        self.setCustomCellStyle()
+        // add corner radius on `contentView`
+        subContentView.backgroundColor = .white
+        subContentView.layer.cornerRadius = 12
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 16, left: 18, bottom: 6, right: 18))
+    func setCustomStyleOnSelection() {
+        // add shadow on cell
+        subContentView.backgroundColor = .clear // very important
+        subContentView.layer.shadowOpacity = 0
+        subContentView.layer.shadowRadius = 0
+
+        // add corner radius on `contentView`
+        subContentView.backgroundColor = .white
+        subContentView.borderColor = UIColor(red: 211/255, green: 219/255, blue: 230/255, alpha: 1.0)
+        subContentView.borderWidth = 1
+        subContentView.layer.cornerRadius = 12
     }
+    
 }

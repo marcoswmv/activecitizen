@@ -1,18 +1,22 @@
 //
-//  ShowAddressOnMapViewController.swift
+//  FillFieldViewController.swift
 //  ActiveCitizen
 //
-//  Created by Marcos Vicente on 08.02.2020.
+//  Created by Marcos Vicente on 17.02.2020.
 //  Copyright © 2020 Antares Software. All rights reserved.
 //
 
 import UIKit
 
-class ShowAddressOnMapViewController: BaseMakeReportViewController {
+class FillFieldViewController: UIViewController {
 
+    var navigationBarTitle: String? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupCustomBackButton()
+
+        setupCustomBackButton(titleText: navigationBarTitle!)
+        setupNavigationBarShadow()
     }
     
 

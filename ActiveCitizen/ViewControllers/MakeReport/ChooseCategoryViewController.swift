@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChooseCategoryViewController: UIViewController {
+class ChooseCategoryViewController: BaseMakeReportViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

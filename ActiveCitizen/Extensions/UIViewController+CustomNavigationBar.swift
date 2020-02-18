@@ -14,12 +14,14 @@ extension UIViewController {
         self.navigationController?.navigationBar.layer.shadowColor = UIColor.black.cgColor
         self.navigationController?.navigationBar.layer.shadowOpacity = 0.3
         self.navigationController?.navigationBar.layer.shadowOffset = .zero
-        self.navigationController?.navigationBar.layer.shadowRadius = 5
+        self.navigationController?.navigationBar.layer.shadowRadius = 3
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
     }
     
     func setupCustomBackButton(titleText: String = "") {
         let backButton = UIButton(type: .system)
-        backButton.setImage( UIImage(named: "back.png")?.withRenderingMode(.alwaysOriginal), for: .normal)
+        backButton.setImage(UIImage(named: "back")?.withRenderingMode(.alwaysOriginal), for: .normal)
         backButton.addTarget(self, action: #selector(handlePop), for: .touchUpInside)
         
         let title = UILabel()
@@ -28,8 +30,10 @@ extension UIViewController {
         
         let barButton = UIBarButtonItem(customView: backButton)
         let navBarTitle = UIBarButtonItem(customView: title)
+        let space = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+        space.width = 30.0
   
-        navigationItem.leftBarButtonItems = [barButton, navBarTitle]
+        navigationItem.leftBarButtonItems = [barButton, space, navBarTitle]
     }
     
     @objc func handlePop() {
