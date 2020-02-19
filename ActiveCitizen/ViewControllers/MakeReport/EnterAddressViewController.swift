@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EnterAddressViewController: BaseMakeReportViewController {
+class EnterAddressViewController: BaseViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -16,12 +16,18 @@ class EnterAddressViewController: BaseMakeReportViewController {
         let makeReportStoryboard = UIStoryboard(name: "MakeReport", bundle: nil)
         let enterAddressManuallyViewController = makeReportStoryboard.instantiateViewController(withIdentifier: "EnterAddressManuallyViewController") as! EnterAddressManuallyViewController
         
+        enterAddressManuallyViewController.completionHandler = { street, city in
+//            Data for test
+            self.testStreets.append(street)
+            self.testCities.append(city)
+            self.tableView.reloadData()
+        }
         navigationController?.pushViewController(enterAddressManuallyViewController, animated: true)
     }
     
-    //        Data for test
-    let testStreets: [String] = ["Большая Санкт-Петербургская прармооо, 12", "Завокзальная улица, 13", "Ломоновская улица, 45", "Хутынская улица, 1", "Несквий проспект опрмгиооронр анмеагпнп, 12"]
-    let testCities: [String] = ["Великий Новгород, Новгородская область, Россия", "Тамбов, Россия",
+//        Data for test
+    var testStreets: [String] = ["Большая Санкт-Петербургская прармооо, 12", "Завокзальная улица, 13", "Ломоновская улица, 45", "Хутынская улица, 1", "Несквий проспект опрмгиооронр анмеагпнп, 12"]
+    var testCities: [String] = ["Великий Новгород, Новгородская область, Россия", "Тамбов, Россия",
                                 "Москва, Московская Область, Россия", "Волгоград, Волгоградская Область, Россия", "Санкт-Петербург, Ленинградская Область, Россия"]
 
     var completionHandler: ((String, String) -> Void)?

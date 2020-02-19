@@ -20,7 +20,5 @@ extension MakeReportMapViewController {
         if scrollView.contentOffset.y < offset/2.0 {
             scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
         }
-        
     }
-    
 }

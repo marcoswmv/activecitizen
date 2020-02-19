@@ -17,28 +17,28 @@ extension EnterAddressManuallyViewController: UITableViewDataSource {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "RegionCell")!
             
-            region = cell.detailTextLabel?.text
+            cell.detailTextLabel?.text = region
             cell.textLabel?.text = "Район/Округ"
             
             return cell
         } else if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CityCell")!
             
-            city = cell.detailTextLabel?.text
+            cell.detailTextLabel?.text = city
             cell.textLabel?.text = "Населенный пункт"
             
             return cell
         } else if indexPath.row == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "StreetCell")!
             
-            street = cell.detailTextLabel?.text
+            cell.detailTextLabel?.text = street
             cell.textLabel?.text = "Улица"
             
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "DomCell")!
             
-            dom = cell.detailTextLabel?.text
+            cell.detailTextLabel?.text = dom
             cell.textLabel?.text = "Дом"
             
             return cell

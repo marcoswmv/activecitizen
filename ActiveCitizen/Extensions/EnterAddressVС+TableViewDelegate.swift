@@ -14,9 +14,7 @@ extension EnterAddressViewController: UITableViewDelegate {
         selectedCell = (tableView.cellForRow(at: indexPath) as! EnterAddressTableViewCell)
         
         if let cell = selectedCell, cell.isSelected {
-            cell.defaultValues.set(true, forKey: Keys.selectedCell)
             cell.defaultValues.set(indexPath.row, forKey: Keys.selectedCellRow)
-            cell.setCustomStyleOnSelection()
         }
         
         // Data for test
@@ -34,10 +32,7 @@ extension EnterAddressViewController: UITableViewDelegate {
         let cell = cell as! EnterAddressTableViewCell
         selectedCell = cell
         
-        guard let wasSelected = selectedCell!.defaultValues.value(forKey: Keys.selectedCell) as? Bool else { return }
-        guard let selectedCellRow = selectedCell!.defaultValues.value(forKey: Keys.selectedCellRow) as? Int else { return }
-        
-        if selectedCellRow == indexPath.row && wasSelected {
+        if let selectedCellRow = selectedCell!.defaultValues.value(forKey: Keys.selectedCellRow) as? Int, selectedCellRow == indexPath.row {
             cell.setCustomStyleOnSelection()
             selectedCell?.streetAddress.textColor = .black
             selectedCell?.mapPin.image = UIImage(named: "map_pin")

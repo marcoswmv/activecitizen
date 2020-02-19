@@ -13,12 +13,10 @@ extension EnterAddressViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
-//    there's only one row in every section
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return testStreets.count
     }
-
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AddressCell") as! EnterAddressTableViewCell

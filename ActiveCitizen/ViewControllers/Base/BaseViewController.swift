@@ -20,7 +20,7 @@ class BaseViewController: UIViewController, UITextFieldDelegate, NVActivityIndic
     // MARK: - Variables
     
     /// Automatic authentication check. Logout if needed
-    @IBInspectable var authenticationRequred: Bool = true
+    @IBInspectable var authenticationRequired: Bool = true
     
     /// Hide navigation bar
     @IBInspectable var hideNavigationBar: Bool  = false

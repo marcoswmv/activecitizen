@@ -8,12 +8,12 @@
 
 import UIKit
 
-class EnterAddressManuallyViewController: BaseMakeReportViewController {
+class EnterAddressManuallyViewController: BaseViewController {
 
-    var region: String? = nil
-    var city: String? = nil
-    var street: String? = nil
-    var dom: String? = nil
+    var region = ""
+    var city = ""
+    var street = ""
+    var dom = ""
     
     var completionHandler: ((String, String) -> Void)?
     
@@ -21,9 +21,8 @@ class EnterAddressManuallyViewController: BaseMakeReportViewController {
         let cityAddress = "\(String(describing: city)), \(String(describing: region))"
         let streetAddress = "\(String(describing: street)), \(String(describing: dom))"
         
-        if let passData = completionHandler {
-            passData(streetAddress, cityAddress)
-        }
+        completionHandler!(streetAddress, cityAddress)
+        
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -32,5 +31,6 @@ class EnterAddressManuallyViewController: BaseMakeReportViewController {
 
         setupCustomBackButton(titleText: "Укажите адрес")
         setupNavigationBarShadow()
+        self.hideTabBar = true
     }
 }

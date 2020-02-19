@@ -20,35 +20,26 @@ class MakeReportMapViewController: BaseMakeReportViewController {
     
     @IBOutlet weak var cityAddress: UILabel!
     @IBOutlet weak var streetAddress: UILabel!
+    @IBOutlet weak var scrollView: MakeReportScrollView!
     
-    let TARGET_LOCATION = YMKPoint(latitude: 55.751574, longitude: 37.573856)
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        mapView.mapWindow.map.move(with: YMKCameraPosition.init(target: TARGET_LOCATION, zoom: 15, azimuth: 0, tilt: 0),
-                                   animationType: YMKAnimation(type: YMKAnimationType.smooth, duration: 1),
-                                   cameraCallback: nil)
-        mapView.mapWindow.map.logo.setAlignmentWith(YMKLogoAlignment(horizontalAlignment: YMKLogoHorizontalAlignment.left,
-                                                                     verticalAlignment: YMKLogoVerticalAlignment.bottom))
-
-        dashedSeparator.addDashedBorder()
-        
-        self.hideKeyboardWhenTappedAround()
-        
-        maxLength.text = "0 / 1000"
-        reportDescription.text = "Текст сообщения"
-        reportDescription.textColor = .lightGray
-        setupNavigationBarShadow()
+    @IBAction func showMyPositionOnTouchUpInside(_ sender: Any) {
+        print("Showing user's position on map")
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
+    @IBAction func showAddressOnMapOnTouchUpInside(_ sender: Any) {
+        let makeReportStoryboard = UIStoryboard(name: "MakeReport", bundle: nil)
+        let showAddressOnMapViewController = makeReportStoryboard.instantiateViewController(withIdentifier: "ShowAddressOnMapViewController")  as! ShowAddressOnMapViewController
         
-        if let height = self.contentScrollView?.frame.size.height {
-            self.scrollViewContentHeightConstraint.constant = height
-            self.view.layoutSubviews()
+        showAddressOnMapViewController.completionHandler = { street, city in
+            self.streetAddress.text = street
+            self.cityAddress.text = city
         }
+        navigationController?.pushViewController(showAddressOnMapViewController, animated: true)
+    }
+    
+    @IBAction func makeReportOnTouchUpInside(_ sender: Any) {
+        print("Making report")
+
     }
     
     @IBAction func enterAddressOnTouchUpInside(_ sender: Any) {
@@ -63,12 +54,46 @@ class MakeReportMapViewController: BaseMakeReportViewController {
         navigationController?.pushViewController(enterAddressViewController, animated: true)
     }
     
-    @IBAction func myPositionOnTouchUpInside(_ sender: Any) {
-        print("Showing user's position on map")
+    let TARGET_LOCATION = YMKPoint(latitude: 55.751574, longitude: 37.573856)
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        mapView.mapWindow.map.move(with: YMKCameraPosition.init(target: TARGET_LOCATION, zoom: 15, azimuth: 0, tilt: 0),
+                                   animationType: YMKAnimation(type: YMKAnimationType.smooth, duration: 0.5),
+                                   cameraCallback: nil)
+        mapView.mapWindow.map.logo.setAlignmentWith(YMKLogoAlignment(horizontalAlignment: YMKLogoHorizontalAlignment.left,
+                                                                     verticalAlignment: YMKLogoVerticalAlignment.bottom))
+
+        dashedSeparator.addDashedBorder()
+        
+        self.hideKeyboardWhenTappedAround()
+        
+        maxLength.text = "0 / 1000"
+        reportDescription.text = "Текст сообщения"
+        reportDescription.textColor = .lightGray
+        setupNavigationBarShadow()
+        setupNavigationBarTitle()
     }
     
-    @IBAction func makeReportOnTouchUpInside(_ sender: Any) {
-        print("Making report")
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if let height = self.contentScrollView?.frame.size.height {
+            self.scrollViewContentHeightConstraint.constant = height
+            self.view.layoutSubviews()
+        }
+    }
+    
+    func setupNavigationBarTitle() {
+        let title = UILabel()
+        title.text = "Сообщить"
+        title.font = .boldSystemFont(ofSize: 17.0)
+        
+        let navBarTitle = UIBarButtonItem(customView: title)
+        let space = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+        space.width = 30.0
 
+        navigationItem.leftBarButtonItems = [space, navBarTitle]
     }
 }

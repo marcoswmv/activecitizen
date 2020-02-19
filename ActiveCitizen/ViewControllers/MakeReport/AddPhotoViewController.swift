@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddPhotoViewController: BaseMakeReportViewController {
+class AddPhotoViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

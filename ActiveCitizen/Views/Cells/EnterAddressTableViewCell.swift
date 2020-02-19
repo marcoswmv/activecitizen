@@ -9,7 +9,6 @@
 import UIKit
 
 struct Keys {
-    static var selectedCell = "selectedCell"
     static var selectedCellRow = "selectedCellRow"
 }
 
