@@ -11,8 +11,7 @@ import UIKit
 extension EnterAddressManuallyViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let makeReportStoryboard = UIStoryboard(name: "MakeReport", bundle: nil)
-        let fillFieldViewController = makeReportStoryboard.instantiateViewController(withIdentifier: "FillFieldViewController") as! FillFieldViewController
+        let fillFieldViewController = FillFieldViewController.instantiate() as! FillFieldViewController
         
         switch indexPath.row {
         case 0:

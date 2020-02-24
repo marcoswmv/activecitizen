@@ -16,7 +16,6 @@ class ReportsManager: BaseNetworkManager {
     @discardableResult
     func getReportsList(completion: @escaping ReportsListCompletionHandler) -> DataRequest {
         
-
         // TODO: pages
         let params = ["firstResult": 0, "maxResults": 10]
         return request(apiEndpoint: "complain/filter", method: .post, parameters: params, completion: { (response, error) in

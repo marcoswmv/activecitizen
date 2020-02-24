@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EnterAddressManuallyViewController: BaseViewController {
+class EnterAddressManuallyViewController: BaseEnterAddressManuallyViewController {
 
     var region = ""
     var city = ""

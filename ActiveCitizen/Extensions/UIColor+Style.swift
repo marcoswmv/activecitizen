@@ -12,7 +12,7 @@ extension UIColor {
     
     open class var mainColor: UIColor {
         get {
-            return .blue
+            return UIColor(named: "App Blue")!
             // TODO: style
         }
     }

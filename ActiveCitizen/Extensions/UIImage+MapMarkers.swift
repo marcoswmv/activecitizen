@@ -54,6 +54,6 @@ extension UIImage {
     
     // TODO: category
     class func markerImage() -> UIImage {
-        return UIImage(named: "map-marker")!
+        return UIImage(named: "map_pin_green")!
     }
 }

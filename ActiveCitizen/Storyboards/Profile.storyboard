@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ct7-lF-QZw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ct7-lF-QZw">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +19,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Профиль-->
+        <!--Delegate-->
         <scene sceneID="0ls-sh-JZQ">
             <objects>
                 <viewController storyboardIdentifier="ProfileViewController" title="Профиль" automaticallyAdjustsScrollViewInsets="NO" id="Ct7-lF-QZw" customClass="ProfileViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
@@ -142,7 +142,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="klU-3k-Zyy" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="855"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LF8-FV-YDc">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LF8-FV-YDc" userLabel="Profile View">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="156"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" translatesAutoresizingMaskIntoConstraints="NO" id="094-gM-rqc" userLabel="Profile photo">
@@ -299,24 +299,37 @@
                                                 </constraints>
                                             </view>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fR3-P7-Dmv">
-                                                <rect key="frame" x="0.0" y="205" width="375" height="650"/>
+                                                <rect key="frame" x="0.0" y="204" width="375" height="651"/>
                                                 <connections>
                                                     <segue destination="Psr-vo-3MZ" kind="embed" id="vcB-SU-vAs"/>
                                                 </connections>
                                             </containerView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xer-eI-3mm" customClass="RESegmentedControl" customModule="RESegmentedControl">
-                                                <rect key="frame" x="0.0" y="156" width="375" height="49"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="49" id="Jji-aU-Wa4"/>
-                                                </constraints>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PbP-mA-NQa">
+                                                <rect key="frame" x="0.0" y="156" width="375" height="48"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="0.20000000000000001"/>
+                                                    </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                        <size key="value" width="0.0" height="5"/>
+                                                        <size key="value" width="0.0" height="4"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xer-eI-3mm" customClass="MDCTabBar">
+                                                <rect key="frame" x="0.0" y="156" width="375" height="48"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="Jji-aU-Wa4"/>
+                                                </constraints>
                                                 <connections>
-                                                    <action selector="selectSegmentOnValueChanged:" destination="Ct7-lF-QZw" eventType="valueChanged" id="1GO-0L-aYf"/>
+                                                    <outlet property="delegate" destination="Ct7-lF-QZw" id="Mvo-aY-AaF"/>
                                                 </connections>
                                             </view>
                                         </subviews>
@@ -324,15 +337,19 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="LF8-FV-YDc" secondAttribute="trailing" id="8s7-mR-nL5"/>
                                             <constraint firstItem="xer-eI-3mm" firstAttribute="leading" secondItem="klU-3k-Zyy" secondAttribute="leading" id="974-19-kT9"/>
+                                            <constraint firstItem="PbP-mA-NQa" firstAttribute="top" secondItem="LF8-FV-YDc" secondAttribute="bottom" id="CSe-7D-Au1"/>
+                                            <constraint firstAttribute="trailing" secondItem="PbP-mA-NQa" secondAttribute="trailing" id="CXf-Ji-zgI"/>
                                             <constraint firstItem="fR3-P7-Dmv" firstAttribute="leading" secondItem="klU-3k-Zyy" secondAttribute="leading" id="Cx3-Vz-JSB"/>
                                             <constraint firstItem="LF8-FV-YDc" firstAttribute="leading" secondItem="klU-3k-Zyy" secondAttribute="leading" id="FSI-9c-mss"/>
                                             <constraint firstItem="fR3-P7-Dmv" firstAttribute="top" secondItem="xer-eI-3mm" secondAttribute="bottom" id="Idl-51-F85"/>
                                             <constraint firstAttribute="trailing" secondItem="fR3-P7-Dmv" secondAttribute="trailing" id="NTr-15-K46"/>
+                                            <constraint firstItem="fR3-P7-Dmv" firstAttribute="top" secondItem="PbP-mA-NQa" secondAttribute="bottom" id="Upx-WV-Ac6"/>
                                             <constraint firstAttribute="height" constant="855" id="afM-hr-PDW"/>
                                             <constraint firstItem="xer-eI-3mm" firstAttribute="top" secondItem="LF8-FV-YDc" secondAttribute="bottom" id="ck5-YC-CAM"/>
                                             <constraint firstAttribute="trailing" secondItem="xer-eI-3mm" secondAttribute="trailing" id="eGe-3c-doY"/>
                                             <constraint firstAttribute="bottom" secondItem="fR3-P7-Dmv" secondAttribute="bottom" id="g1o-y7-Fxk"/>
                                             <constraint firstItem="LF8-FV-YDc" firstAttribute="top" secondItem="klU-3k-Zyy" secondAttribute="top" id="j3F-Rx-lS3"/>
+                                            <constraint firstItem="PbP-mA-NQa" firstAttribute="leading" secondItem="klU-3k-Zyy" secondAttribute="leading" id="yoI-dM-pdW"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -368,7 +385,7 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="contentScrollView" destination="siZ-KD-IJK" id="kAP-en-gWt"/>
-                        <outlet property="segmentedControl" destination="xer-eI-3mm" id="sOp-Or-q6S"/>
+                        <outlet property="segmentedControl" destination="xer-eI-3mm" id="DCj-bV-O3L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zUo-jl-awr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -380,21 +397,21 @@
             <objects>
                 <viewController storyboardIdentifier="ReportsTableViewController" id="Psr-vo-3MZ" customClass="ReportsTableViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oje-1c-kBb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="650"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="651"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Y36-KW-EpD">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="650"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="651"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="rdU-WE-c1u">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="fAp-bl-Gtf">
-                                            <rect key="frame" x="8" y="7.5" width="359" height="35"/>
+                                            <rect key="frame" x="8" y="8" width="359" height="69"/>
                                             <subviews>
                                                 <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Поиск" translatesAutoresizingMaskIntoConstraints="NO" id="gq0-85-bfP">
-                                                    <rect key="frame" x="0.0" y="0.0" width="326" height="35"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="326" height="69"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
@@ -402,7 +419,7 @@
                                                     </connections>
                                                 </searchBar>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filter" translatesAutoresizingMaskIntoConstraints="NO" id="6PD-Y4-h3q">
-                                                    <rect key="frame" x="329" y="0.0" width="30" height="35"/>
+                                                    <rect key="frame" x="329" y="0.0" width="30" height="69"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="8LC-lu-549"/>
                                                         <constraint firstAttribute="width" constant="30" id="S9X-4e-8CW"/>
@@ -414,9 +431,9 @@
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="fAp-bl-Gtf" firstAttribute="leading" secondItem="rdU-WE-c1u" secondAttribute="leading" constant="8" id="AEE-ZM-Uui"/>
-                                        <constraint firstAttribute="bottom" secondItem="fAp-bl-Gtf" secondAttribute="bottom" constant="7.5" id="caO-dE-EgP"/>
+                                        <constraint firstAttribute="bottom" secondItem="fAp-bl-Gtf" secondAttribute="bottom" constant="8" id="caO-dE-EgP"/>
                                         <constraint firstAttribute="trailing" secondItem="fAp-bl-Gtf" secondAttribute="trailing" constant="8" id="dT6-8k-31j"/>
-                                        <constraint firstItem="fAp-bl-Gtf" firstAttribute="top" secondItem="rdU-WE-c1u" secondAttribute="top" constant="7.5" id="iMB-TW-H8V"/>
+                                        <constraint firstItem="fAp-bl-Gtf" firstAttribute="top" secondItem="rdU-WE-c1u" secondAttribute="top" constant="8" id="iMB-TW-H8V"/>
                                     </constraints>
                                 </view>
                             </tableView>
@@ -437,14 +454,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g1W-FU-noa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1250" y="-97"/>
+            <point key="canvasLocation" x="1166" y="-114"/>
         </scene>
     </scenes>
     <resources>
-        <image name="edit" width="48" height="48"/>
-        <image name="filter" width="72" height="72"/>
-        <image name="map_pin_small" width="24" height="33"/>
+        <image name="edit" width="16" height="16"/>
+        <image name="filter" width="24" height="24"/>
+        <image name="map_pin_small" width="8" height="11"/>
         <image name="person.fill" width="77.5" height="77.5"/>
-        <image name="stat_small" width="21" height="18"/>
+        <image name="stat_small" width="7" height="6"/>
     </resources>
 </document>

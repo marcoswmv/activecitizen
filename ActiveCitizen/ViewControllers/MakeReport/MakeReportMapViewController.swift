@@ -19,6 +19,8 @@ class MakeReportMapViewController: BaseMakeReportViewController {
     @IBOutlet weak var maxLength: UILabel!
     
     @IBOutlet weak var cityAddress: UILabel!
+    @IBOutlet weak var categoryIcon: UIImageView!
+    @IBOutlet weak var category: UILabel!
     @IBOutlet weak var streetAddress: UILabel!
     @IBOutlet weak var scrollView: MakeReportScrollView!
     
@@ -27,8 +29,7 @@ class MakeReportMapViewController: BaseMakeReportViewController {
     }
     
     @IBAction func showAddressOnMapOnTouchUpInside(_ sender: Any) {
-        let makeReportStoryboard = UIStoryboard(name: "MakeReport", bundle: nil)
-        let showAddressOnMapViewController = makeReportStoryboard.instantiateViewController(withIdentifier: "ShowAddressOnMapViewController")  as! ShowAddressOnMapViewController
+        let showAddressOnMapViewController = ShowAddressOnMapViewController.instantiate()  as! ShowAddressOnMapViewController
         
         showAddressOnMapViewController.completionHandler = { street, city in
             self.streetAddress.text = street
@@ -43,21 +44,31 @@ class MakeReportMapViewController: BaseMakeReportViewController {
     }
     
     @IBAction func enterAddressOnTouchUpInside(_ sender: Any) {
-        let makeReportStoryboard = UIStoryboard(name: "MakeReport", bundle: nil)
-        let enterAddressViewController = makeReportStoryboard.instantiateViewController(withIdentifier: "EnterAddressViewController") as! EnterAddressViewController
+        let enterAddressViewController = EnterAddressViewController.instantiate() as! EnterAddressViewController
         
         enterAddressViewController.completionHandler = { street, city in
             self.streetAddress.text = street
             self.cityAddress.text = city
         }
-        
         navigationController?.pushViewController(enterAddressViewController, animated: true)
+    }
+    
+    @IBAction func chooseCategoryOnTouchUpInside(_ sender: Any) {
+        let chooseCategoryViewController = ChooseCategoryViewController.instantiate() as! ChooseCategoryViewController
+        
+        chooseCategoryViewController.completionHandler = { icon, chosenCategory in
+            self.categoryIcon.isHidden = false
+            self.categoryIcon.image = icon
+            self.category.text = chosenCategory
+        }
+        navigationController?.pushViewController(chooseCategoryViewController, animated: true)
     }
     
     let TARGET_LOCATION = YMKPoint(latitude: 55.751574, longitude: 37.573856)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         mapView.mapWindow.map.move(with: YMKCameraPosition.init(target: TARGET_LOCATION, zoom: 15, azimuth: 0, tilt: 0),
                                    animationType: YMKAnimation(type: YMKAnimationType.smooth, duration: 0.5),
@@ -72,6 +83,7 @@ class MakeReportMapViewController: BaseMakeReportViewController {
         maxLength.text = "0 / 1000"
         reportDescription.text = "Текст сообщения"
         reportDescription.textColor = .lightGray
+        categoryIcon.isHidden = true
         setupNavigationBarShadow()
         setupNavigationBarTitle()
     }
@@ -83,17 +95,5 @@ class MakeReportMapViewController: BaseMakeReportViewController {
             self.scrollViewContentHeightConstraint.constant = height
             self.view.layoutSubviews()
         }
-    }
-    
-    func setupNavigationBarTitle() {
-        let title = UILabel()
-        title.text = "Сообщить"
-        title.font = .boldSystemFont(ofSize: 17.0)
-        
-        let navBarTitle = UIBarButtonItem(customView: title)
-        let space = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
-        space.width = 30.0
-
-        navigationItem.leftBarButtonItems = [space, navBarTitle]
     }
 }

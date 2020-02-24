@@ -8,13 +8,12 @@
 
 import UIKit
 
-class EnterAddressViewController: BaseViewController {
+class EnterAddressViewController: BaseEnterAddressViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func enterAddressManuallyOnTouchUpInside(_ sender: Any) {
-        let makeReportStoryboard = UIStoryboard(name: "MakeReport", bundle: nil)
-        let enterAddressManuallyViewController = makeReportStoryboard.instantiateViewController(withIdentifier: "EnterAddressManuallyViewController") as! EnterAddressManuallyViewController
+        let enterAddressManuallyViewController = EnterAddressManuallyViewController.instantiate() as! EnterAddressManuallyViewController
         
         enterAddressManuallyViewController.completionHandler = { street, city in
 //            Data for test
@@ -44,8 +43,5 @@ class EnterAddressViewController: BaseViewController {
         tableView.dataSource = self
         tableView.separatorStyle = .none
         
-//        Important to make the row's height vary depending on the size of the view along with the constraints in the IB
-        self.tableView.estimatedRowHeight = 84
-        self.tableView.rowHeight = UITableView.automaticDimension
     }
 }

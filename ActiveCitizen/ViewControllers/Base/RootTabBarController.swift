@@ -12,6 +12,7 @@ class RootTabBarController: UITabBarController /*, UITabBarDelegate*/ {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTabBarShadow()
     }
     
     // TODO:

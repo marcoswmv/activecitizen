@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddPhotoViewController: BaseViewController {
+class AddPhotoViewController: BaseAddPhotoViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

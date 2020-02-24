@@ -43,7 +43,6 @@ class BaseNetworkManager: NSObject {
         return AF.request(url, method: method, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON  { response in
             completion(response.value, response.error)
            }
-        
     }
     
 }

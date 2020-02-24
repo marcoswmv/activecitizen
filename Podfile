@@ -21,5 +21,5 @@ target "ActiveCitizen" do
     pod "NVActivityIndicatorView"
     pod "RESegmentedControl", "~> 0.2.1"
     pod "MaterialComponents/TextFields"
-    #pod "TextFieldEffects"
+    pod 'MaterialComponents/Tabs'
 end

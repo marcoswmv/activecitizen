@@ -39,8 +39,7 @@ class Report {
             longitude = Double(String(coords.last!))
         }
     }
-    
-    
+ 
 //    {
 //        "id": 3958,
 //        "caseId": "27903ce1-1537-11ea-87f0-0242ac110002",

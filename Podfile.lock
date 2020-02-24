@@ -1,5 +1,62 @@
 PODS:
   - Alamofire (5.0.0-rc.3)
+  - MaterialComponents/AnimationTiming (99.0.2)
+  - MaterialComponents/Buttons (99.0.2):
+    - MaterialComponents/Elevation
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Math
+    - MaterialComponents/Ripple
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Shapes
+    - MaterialComponents/Typography
+    - MDFInternationalization
+    - MDFTextAccessibility
+  - MaterialComponents/Elevation (99.0.2):
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/Ink (99.0.2):
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/Palettes (99.0.2)
+  - MaterialComponents/private/Application (99.0.2)
+  - MaterialComponents/private/Color (99.0.2)
+  - MaterialComponents/private/Math (99.0.2)
+  - MaterialComponents/Ripple (99.0.2):
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/ShadowElevations (99.0.2)
+  - MaterialComponents/ShadowLayer (99.0.2):
+    - MaterialComponents/ShadowElevations
+  - MaterialComponents/Shapes (99.0.2):
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowLayer
+  - MaterialComponents/Tabs (99.0.2):
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/Elevation
+    - MaterialComponents/Ink
+    - MaterialComponents/Palettes
+    - MaterialComponents/private/Math
+    - MaterialComponents/Ripple
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Typography
+    - MDFInternationalization
+  - MaterialComponents/TextFields (99.0.2):
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/Buttons
+    - MaterialComponents/Elevation
+    - MaterialComponents/Palettes
+    - MaterialComponents/private/Math
+    - MaterialComponents/Typography
+    - MDFInternationalization
+  - MaterialComponents/Typography (99.0.2):
+    - MaterialComponents/private/Application
+    - MaterialComponents/private/Math
+  - MDFInternationalization (2.0.0)
+  - MDFTextAccessibility (2.0.0)
   - NVActivityIndicatorView (4.8.0):
     - NVActivityIndicatorView/Presenter (= 4.8.0)
   - NVActivityIndicatorView/Presenter (4.8.0)
@@ -10,6 +67,8 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-rc.3)
+  - MaterialComponents/Tabs
+  - MaterialComponents/TextFields
   - NVActivityIndicatorView
   - RESegmentedControl (~> 0.2.1)
   - YandexMapKit
@@ -17,6 +76,9 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
+    - MaterialComponents
+    - MDFInternationalization
+    - MDFTextAccessibility
     - NVActivityIndicatorView
     - RESegmentedControl
     - YandexMapKit
@@ -24,11 +86,14 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: ca8c0de6906873be89d6deec5c8de279e00bf872
+  MaterialComponents: c73f19443683254e7450eadd79b42b10a198864f
+  MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
+  MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
   NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
   RESegmentedControl: d72f65246f932c3d03e18d3c9858af8f0e88fb10
   YandexMapKit: f222923561fe159dd8480d927f61950fc5ff3b8d
   YandexRuntime: 2547d72a3ce4757f16ad188cfbe8a124ae13d806
 
-PODFILE CHECKSUM: 7dce587dfbf18abf9f5df46393ad40481cf89db6
+PODFILE CHECKSUM: 70d6f63b09d5febcb904a577f4c88b84605d5e23
 
 COCOAPODS: 1.8.4

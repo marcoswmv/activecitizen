@@ -10,8 +10,10 @@ import UIKit
 
 class ReportsListViewController: BaseReportsListViewController {
 
-    var dataSource: ReportsListDataSource?
+    
     @IBOutlet weak var tableView: UITableView!
+    
+    var dataSource: ReportsListDataSource?
     
     override func viewDidLoad() {
         super.viewDidLoad()
