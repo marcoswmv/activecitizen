@@ -14,12 +14,14 @@ use_frameworks!
 target "ActiveCitizen" do
     pod "Alamofire", "~> 5.0.0-rc.3"
     pod "YandexMapKit"
-    #pod ‘YandexMapKitDirections’
-    #pod ‘YandexMapKitPlaces’
-    #pod ‘YandexMapKitSearch’
-    #pod ‘YandexMapKitTransport’
+    pod "YandexMapKitSearch"
     pod "NVActivityIndicatorView"
     pod "RESegmentedControl", "~> 0.2.1"
     pod "MaterialComponents/TextFields"
     pod 'MaterialComponents/Tabs'
+    
+    
+    #pod ‘YandexMapKitDirections’
+    #pod ‘YandexMapKitPlaces’
+    #pod ‘YandexMapKitTransport’
 end

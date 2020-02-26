@@ -25,12 +25,4 @@ class EnterAddressManuallyViewController: BaseEnterAddressManuallyViewController
         
         self.navigationController?.popViewController(animated: true)
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        setupCustomBackButton(titleText: "Укажите адрес")
-        setupNavigationBarShadow()
-        self.hideTabBar = true
-    }
 }

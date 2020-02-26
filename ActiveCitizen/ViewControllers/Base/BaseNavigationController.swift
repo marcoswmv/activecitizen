@@ -18,18 +18,6 @@ class BaseNavigationController: UINavigationController {
     
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+        return .default
     }
-    
-    /*
-    -(__kindof UIViewController*)getViewControllerOfClass:(Class)classVar {
-        
-        for (__kindof UIViewController *vc in self.viewControllers) {
-            if([vc isKindOfClass:classVar]){
-                return vc;
-            }
-        }
-        return nil;
-    }*/
-
 }

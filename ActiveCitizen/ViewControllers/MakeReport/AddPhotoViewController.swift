@@ -12,9 +12,7 @@ class AddPhotoViewController: BaseAddPhotoViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        setupCustomBackButton()
+        
     }
     
     // Take a picture or choose from user's photos

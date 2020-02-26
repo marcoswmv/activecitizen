@@ -8,7 +8,7 @@
 
 import UIKit
 import YandexMapKit
-
+import CoreLocation
 
 class MakeReportMapViewController: BaseMakeReportViewController {
 
@@ -25,7 +25,7 @@ class MakeReportMapViewController: BaseMakeReportViewController {
     @IBOutlet weak var scrollView: MakeReportScrollView!
     
     @IBAction func showMyPositionOnTouchUpInside(_ sender: Any) {
-        print("Showing user's position on map")
+        setCenterMapForLocation(userLocation)
     }
     
     @IBAction func showAddressOnMapOnTouchUpInside(_ sender: Any) {
@@ -64,26 +64,21 @@ class MakeReportMapViewController: BaseMakeReportViewController {
         navigationController?.pushViewController(chooseCategoryViewController, animated: true)
     }
     
-    let TARGET_LOCATION = YMKPoint(latitude: 55.751574, longitude: 37.573856)
+    
+    lazy var map: YMKMap = { return self.mapView.mapWindow.map }()
+    lazy var mapWindow: YMKMapWindow = { return self.mapView.mapWindow }()
+    
+    let locationManager = CLLocationManager()
+    var userLocation = YMKPoint()
+    var previousLocation: CLLocation?
+    var zoom: Float = 17.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        mapView.mapWindow.map.move(with: YMKCameraPosition.init(target: TARGET_LOCATION, zoom: 15, azimuth: 0, tilt: 0),
-                                   animationType: YMKAnimation(type: YMKAnimationType.smooth, duration: 0.5),
-                                   cameraCallback: nil)
-        mapView.mapWindow.map.logo.setAlignmentWith(YMKLogoAlignment(horizontalAlignment: YMKLogoHorizontalAlignment.left,
-                                                                     verticalAlignment: YMKLogoVerticalAlignment.bottom))
-
-        dashedSeparator.addDashedBorder()
-        
-        self.hideKeyboardWhenTappedAround()
-        
-        maxLength.text = "0 / 1000"
-        reportDescription.text = "Текст сообщения"
-        reportDescription.textColor = .lightGray
-        categoryIcon.isHidden = true
+        setupMap()
+        checkLocationServices()
+        setupUIElements()
         setupNavigationBarShadow()
         setupNavigationBarTitle()
     }
@@ -91,6 +86,19 @@ class MakeReportMapViewController: BaseMakeReportViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
+        setupScrollView()
+    }
+    
+    func setupUIElements() {
+        dashedSeparator.addDashedBorder()
+        self.hideKeyboardWhenTappedAround()
+        maxLength.text = "0 / 1000"
+        reportDescription.text = "Текст сообщения"
+        reportDescription.textColor = .lightGray
+        categoryIcon.isHidden = true
+    }
+    
+    func setupScrollView() {
         if let height = self.contentScrollView?.frame.size.height {
             self.scrollViewContentHeightConstraint.constant = height
             self.view.layoutSubviews()

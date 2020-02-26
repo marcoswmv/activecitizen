@@ -19,7 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // TODO: production key
         YMKMapKit.setApiKey("a806cf9b-7e08-4ab3-8690-493ec0a1c973")
-        
         return true
     }
 }

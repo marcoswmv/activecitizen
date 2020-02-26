@@ -13,5 +13,11 @@ class BaseAddPhotoViewController: BaseViewController {
     override class func storyboardName() -> String? {
         return "MakeReport"
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        setupCustomBackButton()
+    }
 
 }

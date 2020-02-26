@@ -13,5 +13,12 @@ class BaseChooseSubCategoryViewController: BaseViewController {
     override class func storyboardName() -> String? {
         return "MakeReport"
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupCustomBackButton(titleText: "Подкатегории")
+        setupNavigationBarShadow()
+    }
 
 }

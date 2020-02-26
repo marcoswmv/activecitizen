@@ -37,8 +37,6 @@ class EnterAddressViewController: BaseEnterAddressViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupCustomBackButton(titleText: "Уточните адрес")
-        setupNavigationBarShadow()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
