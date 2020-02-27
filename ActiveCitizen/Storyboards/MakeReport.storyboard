@@ -271,22 +271,6 @@
             </objects>
             <point key="canvasLocation" x="1569" y="148"/>
         </scene>
-        <!--Add Photo View Controller-->
-        <scene sceneID="0y7-Vp-wyp">
-            <objects>
-                <viewController storyboardIdentifier="AddPhotoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cwk-Qh-SQB" customClass="AddPhotoViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="lNR-Kh-uI6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="AWW-L3-lAu"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="dr0-Rf-9A3"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vtm-pW-adE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2942" y="148"/>
-        </scene>
         <!--Choose Sub Category View Controller-->
         <scene sceneID="MlV-F2-wGK">
             <objects>
@@ -576,6 +560,9 @@
                                                 <state key="normal" title="  Добавить фото" image="Photo">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="addPhotoOnTouchUpInside:" destination="s57-OV-7xI" eventType="touchUpInside" id="RvK-fg-Bwp"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTf-fU-UJe">
                                                 <rect key="frame" x="18" y="474" width="339" height="46"/>

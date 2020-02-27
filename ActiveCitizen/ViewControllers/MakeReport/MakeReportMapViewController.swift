@@ -38,9 +38,14 @@ class MakeReportMapViewController: BaseMakeReportViewController {
         navigationController?.pushViewController(showAddressOnMapViewController, animated: true)
     }
     
+    @IBAction func addPhotoOnTouchUpInside(_ sender: Any) {
+//        TODO: Upload photo to server
+        choosePhotoSourceAlertController()
+    }
+    
     @IBAction func makeReportOnTouchUpInside(_ sender: Any) {
         print("Making report")
-
+//        TODO: Connect to server to make the report
     }
     
     @IBAction func enterAddressOnTouchUpInside(_ sender: Any) {
@@ -73,6 +78,8 @@ class MakeReportMapViewController: BaseMakeReportViewController {
     var previousLocation: CLLocation?
     var zoom: Float = 17.0
     
+    let districtsManager = DistrictsManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -81,12 +88,17 @@ class MakeReportMapViewController: BaseMakeReportViewController {
         setupUIElements()
         setupNavigationBarShadow()
         setupNavigationBarTitle()
+        
+        districtsManager.getDistrictsList { (report, error) in
+            print("Got inside")
+        }
+        
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        setupScrollView()
+        setupScrollViewContent()
     }
     
     func setupUIElements() {
@@ -98,7 +110,7 @@ class MakeReportMapViewController: BaseMakeReportViewController {
         categoryIcon.isHidden = true
     }
     
-    func setupScrollView() {
+    func setupScrollViewContent() {
         if let height = self.contentScrollView?.frame.size.height {
             self.scrollViewContentHeightConstraint.constant = height
             self.view.layoutSubviews()

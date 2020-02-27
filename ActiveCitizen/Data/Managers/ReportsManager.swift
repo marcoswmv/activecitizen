@@ -30,6 +30,10 @@ class ReportsManager: BaseNetworkManager {
                 var result: [Report] = []
                 
                 if let responseDict = response as? [String: Any] {
+                    for (key, value) in responseDict {
+                        print(key, value)
+                    }
+                    
                     if let reportsArray = responseDict["data"] as? [[String: Any]] {
                       
                         for element in reportsArray {
