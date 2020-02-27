@@ -7,27 +7,43 @@
 //
 
 import UIKit
+import MaterialComponents
 
-class FillFieldViewController: UIViewController {
+class FillFieldViewController: BaseFillFieldViewController {
+    
+    @IBOutlet weak var textFieldToFill: MDCTextField!
+    
+    @IBAction func returnOnPrimaryActionTriggered(_ sender: UITextField) {
+        completionHandler!(sender.text!)
+        navigationController?.popViewController(animated: true)
+    }
+    
+    var textFieldToFillController: MDCTextInputControllerFilled?
 
     var navigationBarTitle: String? = nil
+    var textFieldPlaceholder: String? = nil
+    var completionHandler: ((String) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupCustomBackButton(titleText: navigationBarTitle!)
         setupNavigationBarShadow()
+        self.tabBarController?.hidesBottomBarWhenPushed = true
+        self.hideTabBar = true
+        
+        setupTextField()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupTextField() {
+        textFieldToFill.becomeFirstResponder()
+        textFieldToFillController = MDCTextInputControllerFilled(textInput: textFieldToFill)
+        textFieldToFillController?.placeholderText = textFieldPlaceholder
+        textFieldToFillController?.floatingPlaceholderActiveColor = UIColor(named: "App Blue")
+        textFieldToFillController?.roundedCorners = .init()
+        textFieldToFillController?.activeColor = UIColor(named: "App Blue")
+        textFieldToFillController?.textInput?.textColor = .darkGray
+        textFieldToFillController?.textInput?.font = UIFont(name: UIFont.regularFontFmily, size: 17.0)
     }
-    */
-
+    
 }

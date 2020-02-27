@@ -7,23 +7,54 @@
 //
 
 import UIKit
+import YandexMapKit
+import YandexMapKitSearch
+import CoreLocation
 
-class ShowAddressOnMapViewController: BaseMakeReportViewController {
+class ShowAddressOnMapViewController: BaseShowAddressOnMapViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupCustomBackButton()
+    @IBOutlet weak var mapView: YMKMapView!
+    @IBOutlet weak var cityAddress: UILabel!
+    @IBOutlet weak var streetAddress: UILabel!
+    @IBOutlet weak var warningLabel: UILabel!
+    
+    @IBAction func doneOnTouchUpInside(_ sender: Any) {
+        completionHandler!(streetAddress.text!, cityAddress.text!)
+        navigationController?.popViewController(animated: true)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func showMyPositionOnTouchUpInside(_ sender: Any) {
+        setCenterMapForLocation(userLocation)
     }
-    */
+    
+    lazy var map: YMKMap = { return self.mapView.mapWindow.map }()
+    lazy var mapWindow: YMKMapWindow = { return self.mapView.mapWindow }()
+    
+    let locationManager = CLLocationManager()
+    var userLocation = YMKPoint()
+    var previousLocation: CLLocation?
+    var zoom: Float = 17.0
 
+    var completionHandler: ((String, String) -> Void)?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupMap()
+        checkLocationServices()
+        setupNavigationBar()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        makeNavigationBarInvisible()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        makeNavigationBarVisible()
+    }
+    
+    
 }
