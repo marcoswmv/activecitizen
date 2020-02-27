@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReportsTableViewController: BaseViewController, UISearchBarDelegate {
+class ReportsTableViewController: BaseViewController, UITableViewDelegate {
 
     @IBOutlet weak var searchBar: UISearchBar!
     
@@ -18,57 +18,7 @@ class ReportsTableViewController: BaseViewController, UISearchBarDelegate {
         super.viewDidLoad()
     }
     
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
-        cancelSearchTimer()
-        search(query: searchBar.text)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Hello from didSelectRowAt")
     }
-
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        cancelSearchTimer()
-        search(query: searchBar.text)
-    }
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
-        cancelSearchTimer()
-        search(query: nil)
-        searchBar.text = ""
-    }
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        searchIfNedded(query: searchText)
-    }
-    
-    func cancelSearchTimer()  {
-        if timer != nil, timer!.isValid {
-            timer?.invalidate()
-            timer = nil
-        }
-        
-    }
-    
-    func searchIfNedded(query: String?) {
-        cancelSearchTimer()
-        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { (timer) in
-            self.search(query: query)
-        })
-    }
-    
-    func search(query: String?)  {
-        print(query ?? "none")
-    }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
