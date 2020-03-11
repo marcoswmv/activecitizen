@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import MaterialComponents.MDCTabBar
+import MaterialComponents.MaterialTabs
 
 class ProfileViewController: BaseProfileViewController {
     
@@ -15,9 +15,11 @@ class ProfileViewController: BaseProfileViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setSegmentedControl()
+        
+        setupSegmentedControl()
         hideNavigationBar = true
     }
+    
     
     @IBAction func editNameOnTouchUpInside(_ sender: Any) {
         print("Editing name")

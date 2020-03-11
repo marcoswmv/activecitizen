@@ -31,7 +31,7 @@ extension ShowAddressOnMapViewController: CLLocationManagerDelegate {
         }
         
         func showUserLocationOnMap() {
-            let mapKit = YMKMapKit.sharedInstance()!
+            let mapKit = YMKMapKit.sharedInstance()
             let userLocationLayer = mapKit.createUserLocationLayer(with: mapWindow)
             
             userLocationLayer.setVisibleWithOn(true)
@@ -72,7 +72,7 @@ extension ShowAddressOnMapViewController: CLLocationManagerDelegate {
     func startTrackingUserLocation() {
         centerViewOnUserLocation()
         locationManager.startUpdatingLocation()
-        previousLocation = getCenterLocation(for: map)
+        previousLocation = getCenterLocationFromCameraPosition(for: map)
     }
     
     func centerViewOnUserLocation() {
@@ -83,7 +83,7 @@ extension ShowAddressOnMapViewController: CLLocationManagerDelegate {
                  cameraCallback: nil)
     }
     
-    func getCenterLocation(for map: YMKMap) -> CLLocation {
+    func getCenterLocationFromCameraPosition(for map: YMKMap) -> CLLocation {
         let latitude = map.cameraPosition.target.latitude
         let longitude = map.cameraPosition.target.longitude
         

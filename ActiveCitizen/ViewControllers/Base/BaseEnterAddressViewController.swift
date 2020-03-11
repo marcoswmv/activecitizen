@@ -17,8 +17,8 @@ class BaseEnterAddressViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupCustomBackButton(titleText: "Уточните адрес")
-        setupNavigationBarShadow()
+        setupCustomBackButton(with: "Уточните адрес", icon: "back")
+        setupNavigationBarShadow(activate: true)
     }
 
 }

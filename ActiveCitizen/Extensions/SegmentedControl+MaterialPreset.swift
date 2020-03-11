@@ -6,16 +6,16 @@
 //  Copyright © 2019 Antares Software. All rights reserved.
 //
 
-import RESegmentedControl
+//import RESegmentedControl
 
 //TO DO: Make my own preset to be more reusable
 
-extension MaterialPreset {
-    mutating func configure() {
-        self.segmentItemStyle.textColor = .black
-        self.segmentItemStyle.tintColor = .black
-        self.segmentItemStyle.font = .systemFont(ofSize: 15, weight: .regular)
-        
-        self.segmentSelectedItemStyle.size = .height(3, position: .bottom)
-    }
-}
+//extension MaterialPreset {
+//    mutating func configure() {
+//        segmentItemStyle.textColor = .black
+//        segmentItemStyle.tintColor = .black
+//        segmentItemStyle.font = .systemFont(ofSize: 15, weight: .regular)
+//        
+//        segmentSelectedItemStyle.size = .height(3, position: .bottom)
+//    }
+//}

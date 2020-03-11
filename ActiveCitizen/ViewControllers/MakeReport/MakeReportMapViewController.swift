@@ -31,7 +31,7 @@ class MakeReportMapViewController: BaseMakeReportViewController {
     @IBAction func showAddressOnMapOnTouchUpInside(_ sender: Any) {
         let showAddressOnMapViewController = ShowAddressOnMapViewController.instantiate()  as! ShowAddressOnMapViewController
         
-        showAddressOnMapViewController.completionHandler = { street, city in
+        showAddressOnMapViewController.completionHandler = { street, city, location in
             self.streetAddress.text = street
             self.cityAddress.text = city
         }
@@ -50,6 +50,8 @@ class MakeReportMapViewController: BaseMakeReportViewController {
     
     @IBAction func enterAddressOnTouchUpInside(_ sender: Any) {
         let enterAddressViewController = EnterAddressViewController.instantiate() as! EnterAddressViewController
+        
+        enterAddressViewController.dataSource?.coordinate = self.locationFromPin
         
         enterAddressViewController.completionHandler = { street, city in
             self.streetAddress.text = street
@@ -78,21 +80,15 @@ class MakeReportMapViewController: BaseMakeReportViewController {
     var previousLocation: CLLocation?
     var zoom: Float = 17.0
     
-    let districtsManager = DistrictsManager()
+    let addressesManager = AddressesManager()
+    var locationFromPin: CLLocation?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupMap()
         checkLocationServices()
-        setupUIElements()
-        setupNavigationBarShadow()
-        setupNavigationBarTitle()
-        
-        districtsManager.getDistrictsList { (report, error) in
-            print("Got inside")
-        }
-        
+        setupUIElementsInContentView()
     }
     
     override func viewDidLayoutSubviews() {
@@ -101,7 +97,7 @@ class MakeReportMapViewController: BaseMakeReportViewController {
         setupScrollViewContent()
     }
     
-    func setupUIElements() {
+    func setupUIElementsInContentView() {
         dashedSeparator.addDashedBorder()
         self.hideKeyboardWhenTappedAround()
         maxLength.text = "0 / 1000"

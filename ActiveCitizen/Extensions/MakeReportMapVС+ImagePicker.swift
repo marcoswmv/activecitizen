@@ -11,10 +11,10 @@ import UIKit
 extension MakeReportMapViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func choosePhotoSourceAlertController() {
-        let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default) { (action) in
+        let photoLibraryAction = UIAlertAction(title: "Галерея", style: .default) { (action) in
             self.showImagePickerController(sourceType: .photoLibrary)
         }
-        let cameraAction = UIAlertAction(title: "Take a Picture", style: .default) { (action) in
+        let cameraAction = UIAlertAction(title: "Камера", style: .default) { (action) in
             if UIImagePickerController.isSourceTypeAvailable(.camera) {
                 self.showImagePickerController(sourceType: .camera)
             } else {
@@ -33,10 +33,11 @@ extension MakeReportMapViewController: UIImagePickerControllerDelegate, UINaviga
             }
         }
 */
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: "Отменить", style: .cancel, handler: nil)
         
-        Alert.showAlert(style: .actionSheet,
-                        title: "Choose a source",
+        Alert.showAlert(on: self,
+                        style: .actionSheet,
+                        title: "Выбрать источник",
                         message: nil,
                         actions: [photoLibraryAction, cameraAction, cancelAction],
                         completion: nil)

@@ -13,5 +13,12 @@ class BaseProfileViewController: BaseViewController {
     override class func storyboardName() -> String? {
         return "Profile"
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupNavigationBarTitle(with: "Профиль")
+        setupNavigationBarShadow(activate: true)
+    }
 
 }

@@ -12,6 +12,7 @@ import Alamofire
 class BaseNetworkManager: NSObject {
 
     let baseUrl = "https://active-citizen.ru/rest"
+    let geocodeURL = "https://geocode-maps.yandex.ru/1.x/?"
     
     typealias GenericNetworkCompletionHandler = (_ value:Any?, _ error:Error?) -> Void
     
@@ -24,6 +25,7 @@ class BaseNetworkManager: NSObject {
     func request(apiEndpoint: String, method:HTTPMethod, parameters: Parameters?, completion: @escaping GenericNetworkCompletionHandler) -> DataRequest  {
     
         let url = URL(string: baseUrl + "/" + apiEndpoint)!
+        
         return request(url: url, method: method, parameters: parameters, completion: completion)
     }
     
@@ -41,6 +43,16 @@ class BaseNetworkManager: NSObject {
         ]
         
         return AF.request(url, method: method, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON  { response in
+            completion(response.value, response.error)
+           }
+    }
+    
+    @discardableResult
+    func requestToGeocoder(method: HTTPMethod, parameters: Parameters?, completion: @escaping GenericNetworkCompletionHandler) -> DataRequest  {
+        
+        let url = URL(string: geocodeURL)!
+        
+        return AF.request(url, method: method, parameters: parameters).responseJSON  { response in
             completion(response.value, response.error)
            }
     }

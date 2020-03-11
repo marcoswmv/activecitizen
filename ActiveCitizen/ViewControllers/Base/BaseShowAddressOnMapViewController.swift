@@ -14,14 +14,11 @@ class BaseShowAddressOnMapViewController: BaseViewController {
         return "MakeReport"
     }
     
-    func setupNavigationBar() {
-        let backButton = UIButton(type: .system)
-        backButton.setImage(UIImage(named: "baseline_clear_black_18pt")?.withRenderingMode(.alwaysOriginal), for: .normal)
-        backButton.addTarget(self, action: #selector(handlePop), for: .touchUpInside)
-
-        let barButton = UIBarButtonItem(customView: backButton)
-
-        navigationItem.leftBarButtonItems = [barButton]
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupCustomBackButton(with: "", icon: "baseline_clear_black_18pt")
+        setupNavigationBarShadow(activate: true)
     }
     
     func makeNavigationBarInvisible() {

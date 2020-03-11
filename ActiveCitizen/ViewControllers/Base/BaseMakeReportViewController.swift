@@ -13,16 +13,12 @@ class BaseMakeReportViewController: BaseViewController {
     override class func storyboardName() -> String? {
         return "MakeReport"
     }
-
-    func setupNavigationBarTitle() {
-        let title = UILabel()
-        title.text = "Сообщить"
-        title.font = .boldSystemFont(ofSize: 17.0)
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        let navBarTitle = UIBarButtonItem(customView: title)
-        let space = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
-        space.width = 30.0
-
-        navigationItem.leftBarButtonItems = [space, navBarTitle]
+        setupNavigationBarTitle(with: "Сообщить")
+        setupNavigationBarShadow(activate: true)
     }
+
 }

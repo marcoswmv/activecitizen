@@ -13,5 +13,11 @@ class BaseMoreViewController: BaseViewController {
     override class func storyboardName() -> String? {
         return "More"
     }
-
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupNavigationBarTitle(with: "Ещё")
+        setupNavigationBarShadow(activate: true)
+    }
 }

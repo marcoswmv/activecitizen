@@ -22,7 +22,7 @@ extension MakeReportMapViewController: YMKMapCameraListener {
             guard let previousLocation = self.previousLocation else { return }
             guard center.distance(from: previousLocation) > 10 else { return }
             self.previousLocation = center
-            
+            self.locationFromPin = center
             
             geocoder.reverseGeocodeLocation(center) { [weak self] (placemarks, error) in
                 guard let self = self else { return }

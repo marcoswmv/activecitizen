@@ -27,11 +27,7 @@ class FillFieldViewController: BaseFillFieldViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupCustomBackButton(titleText: navigationBarTitle!)
-        setupNavigationBarShadow()
-        self.tabBarController?.hidesBottomBarWhenPushed = true
-        self.hideTabBar = true
-        
+        setupCustomBackButton(with: navigationBarTitle!, icon: "back")
         setupTextField()
     }
     

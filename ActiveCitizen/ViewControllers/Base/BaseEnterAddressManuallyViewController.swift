@@ -17,8 +17,8 @@ class BaseEnterAddressManuallyViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupCustomBackButton(titleText: "Укажите адрес")
-        setupNavigationBarShadow()
+        setupCustomBackButton(with: "Укажите адрес", icon: "back")
+        setupNavigationBarShadow(activate: true)
         self.hideTabBar = true
     }
 

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class EnterAddressViewController: BaseEnterAddressViewController {
 
@@ -15,31 +16,48 @@ class EnterAddressViewController: BaseEnterAddressViewController {
     @IBAction func enterAddressManuallyOnTouchUpInside(_ sender: Any) {
         let enterAddressManuallyViewController = EnterAddressManuallyViewController.instantiate() as! EnterAddressManuallyViewController
         
-        enterAddressManuallyViewController.completionHandler = { street, city in
-//            Data for test
-            self.testStreets.append(street)
-            self.testCities.append(city)
+        enterAddressManuallyViewController.completionHandler = { addressDictionary in
+            if let returnedStreet = addressDictionary["street"],
+                let returnedHouse = addressDictionary["house"],
+                let returnedCity = addressDictionary["locality"],
+                let returnedDistrict = addressDictionary["province"] {
+            
+                let street = returnedStreet != "" ? "\(returnedStreet)" : ""
+                let house = returnedHouse != "" ? "+\(returnedHouse)" : ""
+                let city = returnedCity != "" ? "+\(returnedCity)" : ""
+                let district = returnedDistrict != "" ? "+\(returnedDistrict)" : ""
+                
+                print("City: ", city, district)
+                self.address = "\(street)\(house)\(city)\(district)"
+            }
+            
             self.tableView.reloadData()
         }
         navigationController?.pushViewController(enterAddressManuallyViewController, animated: true)
     }
     
-//        Data for test
-    var testStreets: [String] = ["Большая Санкт-Петербургская прармооо, 12", "Завокзальная улица, 13", "Ломоновская улица, 45", "Хутынская улица, 1", "Несквий проспект опрмгиооронр анмеагпнп, 12"]
-    var testCities: [String] = ["Великий Новгород, Новгородская область, Россия", "Тамбов, Россия",
-                                "Москва, Московская Область, Россия", "Волгоград, Волгоградская Область, Россия", "Санкт-Петербург, Ленинградская Область, Россия"]
-
-    var completionHandler: ((String, String) -> Void)?
+    var completionHandler: ((String?, String?) -> Void)?
     var selectedCity: String?
     var selectedStreet: String?
-    var selectedCell: EnterAddressTableViewCell? = nil
+    var selectedCell: AddressesTableViewCell? = nil
+    
+    var dataSource: AddressesDataSource?
+    
+    var address: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.delegate = self
-        tableView.dataSource = self
+        setupDataSource()
         tableView.separatorStyle = .none
+    }
+    
+    func setupDataSource() {
+        dataSource = AddressesDataSource(tableView: self.tableView)
+        dataSource?.onLoading = { isLoading in
+            self.displayLoading(loading: isLoading)
+        }
         
+        dataSource?.reload()
     }
 }

@@ -19,10 +19,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Delegate-->
+        <!--Profile View Controller-->
         <scene sceneID="0ls-sh-JZQ">
             <objects>
-                <viewController storyboardIdentifier="ProfileViewController" title="Профиль" automaticallyAdjustsScrollViewInsets="NO" id="Ct7-lF-QZw" customClass="ProfileViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ct7-lF-QZw" customClass="ProfileViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yBQ-rz-Aac">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="948"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -142,6 +142,30 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="klU-3k-Zyy" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="855"/>
                                         <subviews>
+                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fR3-P7-Dmv">
+                                                <rect key="frame" x="0.0" y="204" width="375" height="651"/>
+                                                <connections>
+                                                    <segue destination="Psr-vo-3MZ" kind="embed" id="vcB-SU-vAs"/>
+                                                </connections>
+                                            </containerView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PbP-mA-NQa" userLabel="Shadow view SC">
+                                                <rect key="frame" x="0.0" y="156" width="375" height="48"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="0.29999999999999999"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="0.0" height="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LF8-FV-YDc" userLabel="Profile View">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="156"/>
                                                 <subviews>
@@ -298,39 +322,12 @@
                                                     <constraint firstAttribute="trailing" secondItem="o0Q-lY-6Ko" secondAttribute="trailing" id="x7g-vk-i8u"/>
                                                 </constraints>
                                             </view>
-                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fR3-P7-Dmv">
-                                                <rect key="frame" x="0.0" y="204" width="375" height="651"/>
-                                                <connections>
-                                                    <segue destination="Psr-vo-3MZ" kind="embed" id="vcB-SU-vAs"/>
-                                                </connections>
-                                            </containerView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PbP-mA-NQa">
-                                                <rect key="frame" x="0.0" y="156" width="375" height="48"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                        <real key="value" value="3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                        <real key="value" value="0.20000000000000001"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                        <size key="value" width="0.0" height="4"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xer-eI-3mm" customClass="MDCTabBar">
                                                 <rect key="frame" x="0.0" y="156" width="375" height="48"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="Jji-aU-Wa4"/>
                                                 </constraints>
-                                                <connections>
-                                                    <outlet property="delegate" destination="Ct7-lF-QZw" id="Mvo-aY-AaF"/>
-                                                </connections>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -385,7 +382,7 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="contentScrollView" destination="siZ-KD-IJK" id="kAP-en-gWt"/>
-                        <outlet property="segmentedControl" destination="xer-eI-3mm" id="DCj-bV-O3L"/>
+                        <outlet property="segmentedControl" destination="xer-eI-3mm" id="78j-FU-lTw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zUo-jl-awr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -404,14 +401,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="651"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="rdU-WE-c1u">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="fAp-bl-Gtf">
-                                            <rect key="frame" x="8" y="8" width="359" height="69"/>
+                                            <rect key="frame" x="8" y="8" width="359" height="64"/>
                                             <subviews>
                                                 <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Поиск" translatesAutoresizingMaskIntoConstraints="NO" id="gq0-85-bfP">
-                                                    <rect key="frame" x="0.0" y="0.0" width="326" height="69"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="326" height="64"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
@@ -419,7 +416,7 @@
                                                     </connections>
                                                 </searchBar>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filter" translatesAutoresizingMaskIntoConstraints="NO" id="6PD-Y4-h3q">
-                                                    <rect key="frame" x="329" y="0.0" width="30" height="69"/>
+                                                    <rect key="frame" x="329" y="0.0" width="30" height="64"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="8LC-lu-549"/>
                                                         <constraint firstAttribute="width" constant="30" id="S9X-4e-8CW"/>
@@ -454,7 +451,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g1W-FU-noa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1166" y="-114"/>
+            <point key="canvasLocation" x="1230" y="-116"/>
         </scene>
     </scenes>
     <resources>

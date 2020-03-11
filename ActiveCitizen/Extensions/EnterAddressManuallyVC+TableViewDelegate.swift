@@ -18,7 +18,7 @@ extension EnterAddressManuallyViewController: UITableViewDelegate {
             fillFieldViewController.navigationBarTitle = "Район/Округ"
             fillFieldViewController.textFieldPlaceholder = "Район/Округ"
             fillFieldViewController.completionHandler = { region in
-                self.region = region
+                self.district = region
                 tableView.reloadData()
             }
         case 1:
@@ -39,7 +39,7 @@ extension EnterAddressManuallyViewController: UITableViewDelegate {
             fillFieldViewController.navigationBarTitle = "Дом"
             fillFieldViewController.textFieldPlaceholder = "Дом"
             fillFieldViewController.completionHandler = { dom in
-                self.dom = dom
+                self.house = dom
                 tableView.reloadData()
             }
         default:

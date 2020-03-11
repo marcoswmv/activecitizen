@@ -9,7 +9,8 @@
 import UIKit
 
 class Alert {
-    static func showAlert(style: UIAlertController.Style,
+    static func showAlert(on viewController: UIViewController,
+                          style: UIAlertController.Style,
                           title: String?,
                           message: String?,
                           actions: [UIAlertAction] = [UIAlertAction(title: "Ok",
@@ -23,11 +24,6 @@ class Alert {
             alert.addAction(action)
         }
         
-        if let topVC = UIApplication.topViewController() {
-            alert.popoverPresentationController?.sourceView = topVC.view
-            alert.popoverPresentationController?.sourceRect = CGRect(x: topVC.view.bounds.midX, y: topVC.view.bounds.midY, width: 0, height: 0)
-            alert.popoverPresentationController?.permittedArrowDirections = []
-            topVC.present(alert, animated: true, completion: completion)
-        }
+        DispatchQueue.main.async { viewController.present(alert, animated: true, completion: completion) }
     }
 }

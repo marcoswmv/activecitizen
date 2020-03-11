@@ -24,10 +24,10 @@ extension ShowAddressOnMapViewController: YMKMapCameraListener {
             }
             
             let geocoder = CLGeocoder()
-            let center = getCenterLocation(for: map) // From pin location
+            let center = getCenterLocationFromCameraPosition(for: map) // From pin location
             
             guard let previousLocation = self.previousLocation else { return }
-            guard center.distance(from: previousLocation) > 10 else { return }
+            guard center.distance(from: previousLocation) > 5 else { return }
             self.previousLocation = center
             
             

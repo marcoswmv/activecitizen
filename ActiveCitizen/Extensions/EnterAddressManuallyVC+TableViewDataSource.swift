@@ -17,7 +17,7 @@ extension EnterAddressManuallyViewController: UITableViewDataSource {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "RegionCell")!
             
-            cell.detailTextLabel?.text = region
+            cell.detailTextLabel?.text = district
             cell.textLabel?.text = "Район/Округ"
             
             return cell
@@ -38,7 +38,7 @@ extension EnterAddressManuallyViewController: UITableViewDataSource {
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "DomCell")!
             
-            cell.detailTextLabel?.text = dom
+            cell.detailTextLabel?.text = house
             cell.textLabel?.text = "Дом"
             
             return cell

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseDataSource: NSObject, UITableViewDataSource {
+class BaseDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     
     private(set) var tableView: UITableView
     var onError: ((_ error: Error) -> ())?
@@ -23,7 +23,7 @@ class BaseDataSource: NSObject, UITableViewDataSource {
     
     func setup() {
         self.tableView.dataSource = self
-        self.tableView.tableFooterView = UIView(frame: .zero)
+//        self.tableView.tableFooterView = UIView(frame: .zero)
     }
     
     func reload() {

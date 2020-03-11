@@ -59,7 +59,7 @@
 		F716107C23EC7B6100F89D26 /* EnterAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F716107B23EC7B6100F89D26 /* EnterAddressViewController.swift */; };
 		F716107F23ED80C500F89D26 /* EnterAddressVС+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F716107E23ED80C500F89D26 /* EnterAddressVС+TableViewDelegate.swift */; };
 		F716108123ED80D300F89D26 /* EnterAddressVС+TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F716108023ED80D300F89D26 /* EnterAddressVС+TableViewDataSource.swift */; };
-		F716108323ED89E700F89D26 /* EnterAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F716108223ED89E700F89D26 /* EnterAddressTableViewCell.swift */; };
+		F716108323ED89E700F89D26 /* AddressesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F716108223ED89E700F89D26 /* AddressesTableViewCell.swift */; };
 		F722EB38239D2FB300718397 /* UIButton+Highlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = F722EB37239D2FB300718397 /* UIButton+Highlight.swift */; };
 		F722EB3E239D491B00718397 /* MakeReportMapVС+TextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F722EB3D239D491B00718397 /* MakeReportMapVС+TextViewDelegate.swift */; };
 		F722EB40239D8EF500718397 /* MakeReportMapVС+TextViewHideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F722EB3F239D8EF500718397 /* MakeReportMapVС+TextViewHideKeyboard.swift */; };
@@ -67,10 +67,11 @@
 		F72E4C8A2406F388001EF798 /* MakeReportMapVС+MapCameraListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72E4C892406F388001EF798 /* MakeReportMapVС+MapCameraListener.swift */; };
 		F72E4C8C2406F3A4001EF798 /* MakeReportMapVС+LocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72E4C8B2406F3A4001EF798 /* MakeReportMapVС+LocationManagerDelegate.swift */; };
 		F72E4C8E2406F79E001EF798 /* MakeReportMapVС+UserLocationObjectListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72E4C8D2406F79E001EF798 /* MakeReportMapVС+UserLocationObjectListener.swift */; };
-		F72E4C902406FC42001EF798 /* District.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72E4C8F2406FC42001EF798 /* District.swift */; };
-		F72E4C92240700B9001EF798 /* DistrictsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72E4C91240700B9001EF798 /* DistrictsManager.swift */; };
+		F72E4C902406FC42001EF798 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72E4C8F2406FC42001EF798 /* Address.swift */; };
+		F72E4C92240700B9001EF798 /* AddressesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72E4C91240700B9001EF798 /* AddressesManager.swift */; };
 		F747EB1523EED78600862A6D /* ShowAddressOnMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F747EB1423EED78600862A6D /* ShowAddressOnMapViewController.swift */; };
 		F747EB1C23EF27FD00862A6D /* UIViewController+NavigationBarShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F747EB1B23EF27FD00862A6D /* UIViewController+NavigationBarShadow.swift */; };
+		F74D2B5F24114A0500F138BB /* BaseVotingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D2B5E24114A0500F138BB /* BaseVotingViewController.swift */; };
 		F75E4898239AA524007BDD47 /* MakeReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E4897239AA524007BDD47 /* MakeReport.swift */; };
 		F75E489C239AC9B0007BDD47 /* UIView+DashedBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E489B239AC9B0007BDD47 /* UIView+DashedBorder.swift */; };
 		F75E48A5239AD082007BDD47 /* GothaProLig.otf in Resources */ = {isa = PBXBuildFile; fileRef = F75E489E239AD082007BDD47 /* GothaProLig.otf */; };
@@ -82,8 +83,9 @@
 		F75E48AB239AD082007BDD47 /* GothaProLigIta.otf in Resources */ = {isa = PBXBuildFile; fileRef = F75E48A4239AD082007BDD47 /* GothaProLigIta.otf */; };
 		F76209C823ABA1B300BEB8DE /* NotificationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76209C723ABA1B300BEB8DE /* NotificationsTableViewController.swift */; };
 		F76209CA23ABA1CD00BEB8DE /* ReportsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76209C923ABA1CD00BEB8DE /* ReportsTableViewController.swift */; };
+		F76A98AC24114D59009097C8 /* VotingViewController+SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76A98AB24114D59009097C8 /* VotingViewController+SegmentedControl.swift */; };
 		F77187C0239FAD3300AAA1C6 /* MakeReportScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77187BF239FAD3300AAA1C6 /* MakeReportScrollView.swift */; };
-		F777369323FD6EED002B8746 /* ProfileVC+ TabBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F777369223FD6EED002B8746 /* ProfileVC+ TabBarDelegate.swift */; };
+		F777369323FD6EED002B8746 /* ProfileViewController+SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F777369223FD6EED002B8746 /* ProfileViewController+SegmentedControl.swift */; };
 		F77EF21823A7B36700938A3B /* SegmentedControl+MaterialPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77EF21723A7B36700938A3B /* SegmentedControl+MaterialPreset.swift */; };
 		F7A221DC23FF24D900C11353 /* UITabBarController+CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A221DB23FF24D900C11353 /* UITabBarController+CustomTabBar.swift */; };
 		F7A221E7240013DB00C11353 /* ChooseSubCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A221E5240013DB00C11353 /* ChooseSubCategoryViewController.swift */; };
@@ -111,7 +113,6 @@
 		F7A2221B2403419100C11353 /* BaseEnterAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A2221A2403419100C11353 /* BaseEnterAddressViewController.swift */; };
 		F7A2221D240341ED00C11353 /* BaseEnterAddressManuallyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A2221C240341ED00C11353 /* BaseEnterAddressManuallyViewController.swift */; };
 		F7A2221F2403427F00C11353 /* BaseFillFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A2221E2403427F00C11353 /* BaseFillFieldViewController.swift */; };
-		F7A222212403430E00C11353 /* BaseAddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A222202403430E00C11353 /* BaseAddPhotoViewController.swift */; };
 		F7A222232403D60E00C11353 /* ShowAddressOnMapVC+LocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A222222403D60E00C11353 /* ShowAddressOnMapVC+LocationManagerDelegate.swift */; };
 		F7A7811A239E9B7700EE2000 /* MakeReportMapVС+UIScrollviewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A78119239E9B7700EE2000 /* MakeReportMapVС+UIScrollviewDelegate.swift */; };
 		F7B1AC3223FB111000DB2B21 /* EnterAddressManuallyVC+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B1AC3123FB111000DB2B21 /* EnterAddressManuallyVC+TableViewDelegate.swift */; };
@@ -120,6 +121,11 @@
 		F7BDE17E23F6002900B6C1D9 /* EnterAddressManuallyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BDE17D23F6002900B6C1D9 /* EnterAddressManuallyViewController.swift */; };
 		F7CB4799240872510087FC22 /* MakeReportMapVС+ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CB4798240872510087FC22 /* MakeReportMapVС+ImagePicker.swift */; };
 		F7CB479B24087C2B0087FC22 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CB479A24087C2B0087FC22 /* Alert.swift */; };
+		F7CB47A12408970C0087FC22 /* UsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CB47A02408970C0087FC22 /* UsersTableViewCell.swift */; };
+		F7CB47A3240899690087FC22 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CB47A2240899690087FC22 /* User.swift */; };
+		F7CB47A524089B240087FC22 /* UsersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CB47A424089B240087FC22 /* UsersManager.swift */; };
+		F7CB47A724089D200087FC22 /* UsersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CB47A624089D200087FC22 /* UsersDataSource.swift */; };
+		F7CB47A92408A7620087FC22 /* AddressesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CB47A82408A7620087FC22 /* AddressesDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -179,7 +185,7 @@
 		F716107B23EC7B6100F89D26 /* EnterAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAddressViewController.swift; sourceTree = "<group>"; };
 		F716107E23ED80C500F89D26 /* EnterAddressVС+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnterAddressVС+TableViewDelegate.swift"; sourceTree = "<group>"; };
 		F716108023ED80D300F89D26 /* EnterAddressVС+TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnterAddressVС+TableViewDataSource.swift"; sourceTree = "<group>"; };
-		F716108223ED89E700F89D26 /* EnterAddressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAddressTableViewCell.swift; sourceTree = "<group>"; };
+		F716108223ED89E700F89D26 /* AddressesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressesTableViewCell.swift; sourceTree = "<group>"; };
 		F722EB37239D2FB300718397 /* UIButton+Highlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Highlight.swift"; sourceTree = "<group>"; };
 		F722EB3D239D491B00718397 /* MakeReportMapVС+TextViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MakeReportMapVС+TextViewDelegate.swift"; sourceTree = "<group>"; };
 		F722EB3F239D8EF500718397 /* MakeReportMapVС+TextViewHideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MakeReportMapVС+TextViewHideKeyboard.swift"; sourceTree = "<group>"; };
@@ -187,10 +193,11 @@
 		F72E4C892406F388001EF798 /* MakeReportMapVС+MapCameraListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MakeReportMapVС+MapCameraListener.swift"; sourceTree = "<group>"; };
 		F72E4C8B2406F3A4001EF798 /* MakeReportMapVС+LocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MakeReportMapVС+LocationManagerDelegate.swift"; sourceTree = "<group>"; };
 		F72E4C8D2406F79E001EF798 /* MakeReportMapVС+UserLocationObjectListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MakeReportMapVС+UserLocationObjectListener.swift"; sourceTree = "<group>"; };
-		F72E4C8F2406FC42001EF798 /* District.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = District.swift; sourceTree = "<group>"; };
-		F72E4C91240700B9001EF798 /* DistrictsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictsManager.swift; sourceTree = "<group>"; };
+		F72E4C8F2406FC42001EF798 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		F72E4C91240700B9001EF798 /* AddressesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressesManager.swift; sourceTree = "<group>"; };
 		F747EB1423EED78600862A6D /* ShowAddressOnMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAddressOnMapViewController.swift; sourceTree = "<group>"; };
 		F747EB1B23EF27FD00862A6D /* UIViewController+NavigationBarShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+NavigationBarShadow.swift"; sourceTree = "<group>"; };
+		F74D2B5E24114A0500F138BB /* BaseVotingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVotingViewController.swift; sourceTree = "<group>"; };
 		F75E4897239AA524007BDD47 /* MakeReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeReport.swift; sourceTree = "<group>"; };
 		F75E489B239AC9B0007BDD47 /* UIView+DashedBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+DashedBorder.swift"; sourceTree = "<group>"; };
 		F75E489E239AD082007BDD47 /* GothaProLig.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothaProLig.otf; sourceTree = "<group>"; };
@@ -202,8 +209,9 @@
 		F75E48A4239AD082007BDD47 /* GothaProLigIta.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothaProLigIta.otf; sourceTree = "<group>"; };
 		F76209C723ABA1B300BEB8DE /* NotificationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewController.swift; sourceTree = "<group>"; };
 		F76209C923ABA1CD00BEB8DE /* ReportsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsTableViewController.swift; sourceTree = "<group>"; };
+		F76A98AB24114D59009097C8 /* VotingViewController+SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VotingViewController+SegmentedControl.swift"; sourceTree = "<group>"; };
 		F77187BF239FAD3300AAA1C6 /* MakeReportScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeReportScrollView.swift; sourceTree = "<group>"; };
-		F777369223FD6EED002B8746 /* ProfileVC+ TabBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileVC+ TabBarDelegate.swift"; sourceTree = "<group>"; };
+		F777369223FD6EED002B8746 /* ProfileViewController+SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewController+SegmentedControl.swift"; sourceTree = "<group>"; };
 		F77EF21723A7B36700938A3B /* SegmentedControl+MaterialPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SegmentedControl+MaterialPreset.swift"; sourceTree = "<group>"; };
 		F7A221DB23FF24D900C11353 /* UITabBarController+CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+CustomTabBar.swift"; sourceTree = "<group>"; };
 		F7A221E5240013DB00C11353 /* ChooseSubCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseSubCategoryViewController.swift; sourceTree = "<group>"; };
@@ -231,7 +239,6 @@
 		F7A2221A2403419100C11353 /* BaseEnterAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEnterAddressViewController.swift; sourceTree = "<group>"; };
 		F7A2221C240341ED00C11353 /* BaseEnterAddressManuallyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEnterAddressManuallyViewController.swift; sourceTree = "<group>"; };
 		F7A2221E2403427F00C11353 /* BaseFillFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseFillFieldViewController.swift; sourceTree = "<group>"; };
-		F7A222202403430E00C11353 /* BaseAddPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAddPhotoViewController.swift; sourceTree = "<group>"; };
 		F7A222222403D60E00C11353 /* ShowAddressOnMapVC+LocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShowAddressOnMapVC+LocationManagerDelegate.swift"; sourceTree = "<group>"; };
 		F7A78119239E9B7700EE2000 /* MakeReportMapVС+UIScrollviewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MakeReportMapVС+UIScrollviewDelegate.swift"; sourceTree = "<group>"; };
 		F7B1AC3123FB111000DB2B21 /* EnterAddressManuallyVC+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnterAddressManuallyVC+TableViewDelegate.swift"; sourceTree = "<group>"; };
@@ -240,6 +247,11 @@
 		F7BDE17D23F6002900B6C1D9 /* EnterAddressManuallyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAddressManuallyViewController.swift; sourceTree = "<group>"; };
 		F7CB4798240872510087FC22 /* MakeReportMapVС+ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MakeReportMapVС+ImagePicker.swift"; sourceTree = "<group>"; };
 		F7CB479A24087C2B0087FC22 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		F7CB47A02408970C0087FC22 /* UsersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewCell.swift; sourceTree = "<group>"; };
+		F7CB47A2240899690087FC22 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F7CB47A424089B240087FC22 /* UsersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersManager.swift; sourceTree = "<group>"; };
+		F7CB47A624089D200087FC22 /* UsersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDataSource.swift; sourceTree = "<group>"; };
+		F7CB47A82408A7620087FC22 /* AddressesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressesDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -292,11 +304,12 @@
 		C5236022239672B5002D9783 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				F716108223ED89E700F89D26 /* AddressesTableViewCell.swift */,
 				C5236023239672CD002D9783 /* BaseTableViewCell.swift */,
-				C523602523967420002D9783 /* ReportsListTableViewCell.swift */,
-				F716108223ED89E700F89D26 /* EnterAddressTableViewCell.swift */,
 				F7A222032400536200C11353 /* CategoriesTableViewCell.swift */,
+				C523602523967420002D9783 /* ReportsListTableViewCell.swift */,
 				F7A22212240334AD00C11353 /* SubCategoriesTableViewCell.swift */,
+				F7CB47A02408970C0087FC22 /* UsersTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -324,11 +337,10 @@
 			isa = PBXGroup;
 			children = (
 				C52CE64A2395440F004760EF /* AppDelegate.swift */,
-				F7A221F32400339700C11353 /* Colors.xcassets */,
+				F7B31C3324105D3D00FC10C2 /* Assets */,
 				C52CE69423955FF6004760EF /* Data */,
 				C52CE68723954F89004760EF /* Extensions */,
 				F75E489D239AD082007BDD47 /* FontFamily */,
-				C52CE65323954411004760EF /* Icons.xcassets */,
 				C52CE65823954412004760EF /* Info.plist */,
 				C52CE65523954412004760EF /* LaunchScreen.storyboard */,
 				F7CB479D24087ED30087FC22 /* Services */,
@@ -355,7 +367,6 @@
 		C52CE65F239544D5004760EF /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				F7A222202403430E00C11353 /* BaseAddPhotoViewController.swift */,
 				F7A2221624033FF800C11353 /* BaseChooseCategoryViewController.swift */,
 				F7A222182403413300C11353 /* BaseChooseSubCategoryViewController.swift */,
 				F7A2221C240341ED00C11353 /* BaseEnterAddressManuallyViewController.swift */,
@@ -368,6 +379,7 @@
 				C52CE676239548E6004760EF /* BaseReportsListViewController.swift */,
 				F7A2221424033F4100C11353 /* BaseShowAddressOnMapViewController.swift */,
 				C52CE678239548F0004760EF /* BaseUsersViewController.swift */,
+				F74D2B5E24114A0500F138BB /* BaseVotingViewController.swift */,
 				C52CE660239544E4004760EF /* BaseViewController.swift */,
 				C52CE69223955F95004760EF /* RootTabBarController.swift */,
 			);
@@ -469,7 +481,8 @@
 				F722EB3F239D8EF500718397 /* MakeReportMapVС+TextViewHideKeyboard.swift */,
 				F7A78119239E9B7700EE2000 /* MakeReportMapVС+UIScrollviewDelegate.swift */,
 				F72E4C8D2406F79E001EF798 /* MakeReportMapVС+UserLocationObjectListener.swift */,
-				F777369223FD6EED002B8746 /* ProfileVC+ TabBarDelegate.swift */,
+				F777369223FD6EED002B8746 /* ProfileViewController+SegmentedControl.swift */,
+				F76A98AB24114D59009097C8 /* VotingViewController+SegmentedControl.swift */,
 				F7A221FB24004CE600C11353 /* ReportsTableViewController+SearchBarDelegate.swift */,
 				F77EF21723A7B36700938A3B /* SegmentedControl+MaterialPreset.swift */,
 				F7A222222403D60E00C11353 /* ShowAddressOnMapVC+LocationManagerDelegate.swift */,
@@ -509,7 +522,8 @@
 				C52360192396593D002D9783 /* ReportsManager.swift */,
 				F7A222072400614600C11353 /* CategoriesManager.swift */,
 				F7A22210240331E300C11353 /* SubCategoriesManager.swift */,
-				F72E4C91240700B9001EF798 /* DistrictsManager.swift */,
+				F72E4C91240700B9001EF798 /* AddressesManager.swift */,
+				F7CB47A424089B240087FC22 /* UsersManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -519,8 +533,9 @@
 			children = (
 				C523601B23965D5C002D9783 /* Report.swift */,
 				F7A2220524005C8600C11353 /* Category.swift */,
-				F72E4C8F2406FC42001EF798 /* District.swift */,
+				F72E4C8F2406FC42001EF798 /* Address.swift */,
 				F7A2220E2403310E00C11353 /* SubCategory.swift */,
+				F7CB47A2240899690087FC22 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -532,6 +547,8 @@
 				C52360202396700F002D9783 /* ReportsListDataSource.swift */,
 				F7A222012400524B00C11353 /* CategoriesDataSource.swift */,
 				F7A2220C2403307A00C11353 /* SubCategoriesDataSource.swift */,
+				F7CB47A82408A7620087FC22 /* AddressesDataSource.swift */,
+				F7CB47A624089D200087FC22 /* UsersDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -578,6 +595,15 @@
 			name = ChooseCategory;
 			sourceTree = "<group>";
 		};
+		F7B31C3324105D3D00FC10C2 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F7A221F32400339700C11353 /* Colors.xcassets */,
+				C52CE65323954411004760EF /* Icons.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		F7CB479D24087ED30087FC22 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -597,8 +623,8 @@
 				C52CE6432395440F004760EF /* Sources */,
 				C52CE6442395440F004760EF /* Frameworks */,
 				C52CE6452395440F004760EF /* Resources */,
-				76E124B0F3641AC6519C4987 /* [CP] Embed Pods Frameworks */,
-				700AFFEF33DA7A0C08F06EC0 /* [CP] Copy Pods Resources */,
+				A5FE766416472FBA6C7717C7 /* [CP] Embed Pods Frameworks */,
+				F98E12547473B46206BA2217 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -671,24 +697,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		700AFFEF33DA7A0C08F06EC0 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ActiveCitizen/Pods-ActiveCitizen-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ActiveCitizen/Pods-ActiveCitizen-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ActiveCitizen/Pods-ActiveCitizen-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		76E124B0F3641AC6519C4987 /* [CP] Embed Pods Frameworks */ = {
+		A5FE766416472FBA6C7717C7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -727,6 +736,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F98E12547473B46206BA2217 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ActiveCitizen/Pods-ActiveCitizen-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ActiveCitizen/Pods-ActiveCitizen-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ActiveCitizen/Pods-ActiveCitizen-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -752,6 +778,7 @@
 				C5236012239644FD002D9783 /* IBDesignableView.swift in Sources */,
 				F7B1AC3223FB111000DB2B21 /* EnterAddressManuallyVC+TableViewDelegate.swift in Sources */,
 				C52CE67F23954A03004760EF /* ProfileViewController.swift in Sources */,
+				F7CB47A3240899690087FC22 /* User.swift in Sources */,
 				F747EB1C23EF27FD00862A6D /* UIViewController+NavigationBarShadow.swift in Sources */,
 				C52CE68923954FBE004760EF /* UIFont+Style.swift in Sources */,
 				F76209CA23ABA1CD00BEB8DE /* ReportsTableViewController.swift in Sources */,
@@ -766,6 +793,7 @@
 				C523601A2396593D002D9783 /* ReportsManager.swift in Sources */,
 				C523600B2396419C002D9783 /* ExampleUIViewWithXib.swift in Sources */,
 				F722EB3E239D491B00718397 /* MakeReportMapVС+TextViewDelegate.swift in Sources */,
+				F74D2B5F24114A0500F138BB /* BaseVotingViewController.swift in Sources */,
 				F7A2220F2403310E00C11353 /* SubCategory.swift in Sources */,
 				F7B1AC3623FB204900DB2B21 /* EnterAddressManuallyVC+TableViewDataSource.swift in Sources */,
 				F7A221E8240013DB00C11353 /* ChooseCategoryViewController.swift in Sources */,
@@ -776,6 +804,7 @@
 				F77187C0239FAD3300AAA1C6 /* MakeReportScrollView.swift in Sources */,
 				C52CE68323954B01004760EF /* UsersListViewController.swift in Sources */,
 				C52CE679239548F0004760EF /* BaseUsersViewController.swift in Sources */,
+				F76A98AC24114D59009097C8 /* VotingViewController+SegmentedControl.swift in Sources */,
 				C593177D2397A4D90043F68C /* String+DateParse.swift in Sources */,
 				F7CB479B24087C2B0087FC22 /* Alert.swift in Sources */,
 				C523601623964F11002D9783 /* ReportsMapViewController.swift in Sources */,
@@ -788,12 +817,11 @@
 				F7A222232403D60E00C11353 /* ShowAddressOnMapVC+LocationManagerDelegate.swift in Sources */,
 				C5A3A77323968E580006997D /* VotingViewController.swift in Sources */,
 				C52CE67D239549AF004760EF /* MakeReportMapViewController.swift in Sources */,
-				F7A222212403430E00C11353 /* BaseAddPhotoViewController.swift in Sources */,
 				C593175923978DE50043F68C /* UIImage+MapMarkers.swift in Sources */,
 				F747EB1523EED78600862A6D /* ShowAddressOnMapViewController.swift in Sources */,
 				F72E4C862406D549001EF798 /* ShowAddressOnMapVC+MapCameraListener.swift in Sources */,
 				C52CE677239548E6004760EF /* BaseReportsListViewController.swift in Sources */,
-				F72E4C92240700B9001EF798 /* DistrictsManager.swift in Sources */,
+				F72E4C92240700B9001EF798 /* AddressesManager.swift in Sources */,
 				F7B1AC3423FB148F00DB2B21 /* FillFieldViewController.swift in Sources */,
 				F77EF21823A7B36700938A3B /* SegmentedControl+MaterialPreset.swift in Sources */,
 				C52CE69123955EE2004760EF /* BaseNavigationController.swift in Sources */,
@@ -812,18 +840,22 @@
 				F7A221F62400418400C11353 /* ChooseCategoryVC+TableViewDelegate.swift in Sources */,
 				F7A22211240331E300C11353 /* SubCategoriesManager.swift in Sources */,
 				F7A221FC24004CE600C11353 /* ReportsTableViewController+SearchBarDelegate.swift in Sources */,
-				F777369323FD6EED002B8746 /* ProfileVC+ TabBarDelegate.swift in Sources */,
+				F7CB47A92408A7620087FC22 /* AddressesDataSource.swift in Sources */,
+				F777369323FD6EED002B8746 /* ProfileViewController+SegmentedControl.swift in Sources */,
 				F7A7811A239E9B7700EE2000 /* MakeReportMapVС+UIScrollviewDelegate.swift in Sources */,
-				F716108323ED89E700F89D26 /* EnterAddressTableViewCell.swift in Sources */,
+				F716108323ED89E700F89D26 /* AddressesTableViewCell.swift in Sources */,
 				F716107F23ED80C500F89D26 /* EnterAddressVС+TableViewDelegate.swift in Sources */,
 				F7A222192403413300C11353 /* BaseChooseSubCategoryViewController.swift in Sources */,
 				F716108123ED80D300F89D26 /* EnterAddressVС+TableViewDataSource.swift in Sources */,
 				C523600823963C24002D9783 /* UIViewWithXib.swift in Sources */,
 				F7CB4799240872510087FC22 /* MakeReportMapVС+ImagePicker.swift in Sources */,
 				C5236024239672CD002D9783 /* BaseTableViewCell.swift in Sources */,
+				F7CB47A724089D200087FC22 /* UsersDataSource.swift in Sources */,
+				F7CB47A12408970C0087FC22 /* UsersTableViewCell.swift in Sources */,
 				F75E4898239AA524007BDD47 /* MakeReport.swift in Sources */,
 				F7A2220D2403307A00C11353 /* SubCategoriesDataSource.swift in Sources */,
-				F72E4C902406FC42001EF798 /* District.swift in Sources */,
+				F7CB47A524089B240087FC22 /* UsersManager.swift in Sources */,
+				F72E4C902406FC42001EF798 /* Address.swift in Sources */,
 				F7A222082400614600C11353 /* CategoriesManager.swift in Sources */,
 				C593177F2397A7890043F68C /* Date+Formatter.swift in Sources */,
 				F7A221FE24004D3500C11353 /* ChooseCategoryVC+SearchBarDelegate.swift in Sources */,
@@ -986,7 +1018,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.antares.activecitizen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1007,7 +1039,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.antares.activecitizen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

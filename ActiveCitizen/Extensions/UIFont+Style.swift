@@ -17,7 +17,7 @@ extension UIFont {
         }
     }
     
-    open class var boldFontFmily: String {
+    open class var mediumFontFmily: String {
         get {
             //return UIFont.systemFont(ofSize: 16, weight: .bold).fontName
             return "GothamPro-Medium";

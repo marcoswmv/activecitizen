@@ -17,8 +17,8 @@ class BaseChooseSubCategoryViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupCustomBackButton(titleText: "Подкатегории")
-        setupNavigationBarShadow()
+        setupCustomBackButton(with: "Подкатегории", icon: "back")
+        setupNavigationBarShadow(activate: true)
     }
 
 }

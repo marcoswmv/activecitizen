@@ -11,7 +11,14 @@ import UIKit
 class BaseUsersViewController: BaseViewController {
     
     override class func storyboardName() -> String? {
-        return "Users"
+        return "Участники"
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
+        setupNavigationBarTitle(with: "Участники")
+        setupNavigationBarShadow(activate: true)
+    }
+    
 }

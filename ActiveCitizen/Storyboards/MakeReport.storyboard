@@ -171,7 +171,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cMD-ZL-RkP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1568.8" y="812.807881773399"/>
+            <point key="canvasLocation" x="1569" y="143"/>
         </scene>
         <!--Choose Category View Controller-->
         <scene sceneID="ff1-OZ-AVC">
@@ -269,7 +269,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2yE-kJ-y9U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1569" y="148"/>
+            <point key="canvasLocation" x="2254" y="143"/>
         </scene>
         <!--Choose Sub Category View Controller-->
         <scene sceneID="MlV-F2-wGK">
@@ -345,7 +345,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X9d-F2-Gws" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2254" y="148"/>
+            <point key="canvasLocation" x="2942" y="143"/>
         </scene>
         <!--Make Report Map View Controller-->
         <scene sceneID="LyX-2h-JH7">
@@ -456,7 +456,7 @@
                                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="iIS-8w-Ayu"/>
-                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" priority="750" constant="363" id="jkh-Yk-3jw"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="750" constant="363" id="jkh-Yk-3jw"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mDu-PF-9Gc" userLabel="Choose category" customClass="UIButton">
@@ -521,7 +521,7 @@
                                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="dEO-Uh-W4e"/>
-                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" priority="750" constant="363" id="l82-U0-Ilo"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="750" constant="363" id="l82-U0-Ilo"/>
                                                 </constraints>
                                             </view>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Mhy-xL-RAk">
@@ -550,7 +550,7 @@
                                                 <rect key="frame" x="12" y="372" width="363" height="1"/>
                                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" priority="750" constant="363" id="0s4-tU-nCj"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="750" constant="363" id="0s4-tU-nCj"/>
                                                     <constraint firstAttribute="height" constant="1" id="NuZ-BN-qhu"/>
                                                 </constraints>
                                             </view>
@@ -675,7 +675,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uDM-UL-7L7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="844" y="201"/>
+            <point key="canvasLocation" x="834" y="-126"/>
         </scene>
         <!--Enter Address View Controller-->
         <scene sceneID="1In-LJ-n1x">
@@ -717,7 +717,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddressCell" rowHeight="84" id="aAv-9J-Eb7" customClass="EnterAddressTableViewCell" customModule="ActiveCitizen" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="DistrictsTableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddressesTableViewCell" rowHeight="84" id="aAv-9J-Eb7" customClass="AddressesTableViewCell" customModule="ActiveCitizen" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="38" width="375" height="84"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aAv-9J-Eb7" id="4o2-Of-OQQ">
@@ -790,6 +790,9 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="delegate" destination="jAj-cE-Xj6" id="y4r-lZ-qjQ"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

@@ -16,11 +16,11 @@ target "ActiveCitizen" do
     pod "YandexMapKit"
     pod "YandexMapKitSearch"
     pod "NVActivityIndicatorView"
-    pod "RESegmentedControl", "~> 0.2.1"
     pod "MaterialComponents/TextFields"
-    pod 'MaterialComponents/Tabs'
+    pod "MaterialComponents/Tabs"
     
-    
+    #pod "WMSegmentControl"
+    #pod "RESegmentedControl"
     #pod ‘YandexMapKitDirections’
     #pod ‘YandexMapKitPlaces’
     #pod ‘YandexMapKitTransport’

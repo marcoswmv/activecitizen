@@ -14,4 +14,12 @@ class BaseFillFieldViewController: BaseViewController {
         return "MakeReport"
     }
 
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupNavigationBarShadow(activate: true)
+        self.tabBarController?.hidesBottomBarWhenPushed = true
+        self.hideTabBar = true
+    }
 }

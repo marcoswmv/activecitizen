@@ -31,7 +31,7 @@ extension MakeReportMapViewController: CLLocationManagerDelegate {
         }
         
         func showUserLocationOnMap() {
-            let mapKit = YMKMapKit.sharedInstance()!
+            let mapKit = YMKMapKit.sharedInstance()
             let userLocationLayer = mapKit.createUserLocationLayer(with: mapView.mapWindow)
 
             userLocationLayer.setVisibleWithOn(true)

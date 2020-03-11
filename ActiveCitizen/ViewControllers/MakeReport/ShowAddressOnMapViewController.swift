@@ -19,7 +19,7 @@ class ShowAddressOnMapViewController: BaseShowAddressOnMapViewController {
     @IBOutlet weak var warningLabel: UILabel!
     
     @IBAction func doneOnTouchUpInside(_ sender: Any) {
-        completionHandler!(streetAddress.text!, cityAddress.text!)
+        completionHandler!(streetAddress.text!, cityAddress.text!, previousLocation!)
         navigationController?.popViewController(animated: true)
     }
     
@@ -35,14 +35,13 @@ class ShowAddressOnMapViewController: BaseShowAddressOnMapViewController {
     var previousLocation: CLLocation?
     var zoom: Float = 17.0
 
-    var completionHandler: ((String, String) -> Void)?
+    var completionHandler: ((String, String, CLLocation) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupMap()
         checkLocationServices()
-        setupNavigationBar()
     }
     
     override func viewWillAppear(_ animated: Bool) {

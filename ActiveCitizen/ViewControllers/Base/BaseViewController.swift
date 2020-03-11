@@ -8,7 +8,6 @@
 
 import UIKit
 import NVActivityIndicatorView
-import RESegmentedControl
 
 class BaseViewController: UIViewController, UITextFieldDelegate, NVActivityIndicatorViewable {
 

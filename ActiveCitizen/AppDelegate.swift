@@ -15,8 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         
+        // Always Light mode
+        
+        if #available(iOS 13.0, *) {
+            self.window?.overrideUserInterfaceStyle = .light
+        } else {
+            // Fallback on earlier versions
+            
+        }
         // TODO: production key
         YMKMapKit.setApiKey("a806cf9b-7e08-4ab3-8690-493ec0a1c973")
         return true

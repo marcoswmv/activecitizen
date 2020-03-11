@@ -14,4 +14,10 @@ class BaseReportsListViewController: BaseViewController {
         return "ReportsList"
     }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupNavigationBarTitle(with: "Обрашения")
+        setupNavigationBarShadow(activate: false)
+    }
 }
