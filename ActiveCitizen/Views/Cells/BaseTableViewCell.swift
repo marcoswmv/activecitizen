@@ -16,40 +16,31 @@ class BaseTableViewCell: UITableViewCell {
         }
     }
 
-    /*
-    -(void)setSelected:(BOOL)selected {
-         if(!self.fadeHighlight){
-             [super setSelected:selected];
-         }
-    }
+    func setCustomCellStyle(for subContentView: UIView) {
+        // add shadow to the cell
+        subContentView.backgroundColor = .clear // very important
+        subContentView.layer.masksToBounds = false
+        subContentView.layer.shadowOpacity = 0.2
+        subContentView.layer.shadowRadius = 4
+        subContentView.layer.shadowOffset = CGSize(width: 0, height: 3)
+        subContentView.layer.shadowColor = UIColor.black.cgColor
 
-    -(void)setSelected:(BOOL)selected animated:(BOOL)animated {
-        if(!self.fadeHighlight){
-            [super setSelected:selected animated:animated];
-        }
+        // add corner radius to the `contentView`
+        subContentView.backgroundColor = .white
+        subContentView.layer.cornerRadius = 12
     }
+    
+    func setCustomStyleOnSelection(for subContentView: UIView) {
+        // add shadow to the cell
+        subContentView.backgroundColor = .clear // very important
+        subContentView.layer.shadowOpacity = 0
+        subContentView.layer.shadowRadius = 0
 
-    -(void)setHighlighted:(BOOL)highlighted {
-        if(!self.fadeHighlight){
-            [super setHighlighted:highlighted];
-        }else{
-            self.alpha = highlighted ? 0.5f : 1.f;
-        }
+        // add corner radius on `contentView`
+        subContentView.borderColor = UIColor(named: "Separator Line Gray")
+        subContentView.borderWidth = 1
+        subContentView.backgroundColor = .white
+        subContentView.layer.cornerRadius = 12
     }
-
-    -(void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
-        if(!self.fadeHighlight){
-            [super setHighlighted:highlighted animated:animated];
-        }else{
-            
-            if(animated){
-                [UIView animateWithDuration:0.3f animations:^{
-                    self.alpha = highlighted ? 0.5f : 1.f;
-                }];
-            }else{
-                self.alpha = highlighted ? 0.5f : 1.f;
-            }
-        }
-    }
-     */
+    
 }
