@@ -8,16 +8,17 @@
 
 import UIKit
 
-class BaseUsersViewController: BaseViewController {
-    
-    override class func storyboardName() -> String? {
-        return "Участники"
-    }
+class BaseMembersListViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupNavigationBarTitle(with: "Участники")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         setupNavigationBarShadow(activate: true)
     }
     

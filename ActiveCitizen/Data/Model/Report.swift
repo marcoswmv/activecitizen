@@ -11,6 +11,7 @@ import UIKit
 class Report {
 
     var id: Int?
+    var userID: Int?
     var created: Date?
     var categoryId: Int?
     var categoryName: String?
@@ -20,11 +21,13 @@ class Report {
     var address: String?
     var latitude: Double?
     var longitude: Double?
-    
+    var photos: [String]?
+    var status: String?
     
     init(dictionary: [String : Any]) {
         
         id = dictionary["id"] as? Int
+        userID = dictionary["userId"] as? Int
         created = (dictionary["created"] as? String)?.parseISO8601()
         categoryId = dictionary["categoryId"] as? Int
         categoryName = dictionary["categoryName"] as? String
@@ -32,6 +35,8 @@ class Report {
         subcategoryName = dictionary["subcategoryName"] as? String
         description = dictionary["description"] as? String
         address = dictionary["address"] as? String
+        photos = dictionary["files"] as? [String]
+        status = dictionary["taskDefinitionKey"] as? String
         
         if let coordsString = dictionary["coordinates"] as? String {
             let coords = coordsString.split(separator: ",");

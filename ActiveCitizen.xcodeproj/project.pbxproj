@@ -32,17 +32,17 @@
 		C52CE661239544E4004760EF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52CE660239544E4004760EF /* BaseViewController.swift */; };
 		C52CE66B239545A6004760EF /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52CE66A239545A6004760EF /* Profile.storyboard */; };
 		C52CE66D239545B7004760EF /* ReportsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52CE66C239545B7004760EF /* ReportsList.storyboard */; };
-		C52CE66F239545C0004760EF /* Users.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52CE66E239545C0004760EF /* Users.storyboard */; };
+		C52CE66F239545C0004760EF /* Members.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52CE66E239545C0004760EF /* Members.storyboard */; };
 		C52CE671239545C8004760EF /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52CE670239545C8004760EF /* More.storyboard */; };
 		C52CE673239548C1004760EF /* BaseMakeReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52CE672239548C1004760EF /* BaseMakeReportViewController.swift */; };
 		C52CE675239548D7004760EF /* BaseProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52CE674239548D7004760EF /* BaseProfileViewController.swift */; };
 		C52CE677239548E6004760EF /* BaseReportsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52CE676239548E6004760EF /* BaseReportsListViewController.swift */; };
-		C52CE679239548F0004760EF /* BaseUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52CE678239548F0004760EF /* BaseUsersViewController.swift */; };
+		C52CE679239548F0004760EF /* BaseMembersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52CE678239548F0004760EF /* BaseMembersListViewController.swift */; };
 		C52CE67B239548FD004760EF /* BaseMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52CE67A239548FD004760EF /* BaseMoreViewController.swift */; };
 		C52CE67D239549AF004760EF /* MakeReportMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52CE67C239549AF004760EF /* MakeReportMapViewController.swift */; };
 		C52CE67F23954A03004760EF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52CE67E23954A03004760EF /* ProfileViewController.swift */; };
 		C52CE68123954AA5004760EF /* ReportsListContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52CE68023954AA5004760EF /* ReportsListContainerViewController.swift */; };
-		C52CE68323954B01004760EF /* UsersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52CE68223954B01004760EF /* UsersListViewController.swift */; };
+		C52CE68323954B01004760EF /* MembersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52CE68223954B01004760EF /* MembersListViewController.swift */; };
 		C52CE68523954B7E004760EF /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52CE68423954B7E004760EF /* MoreViewController.swift */; };
 		C52CE68923954FBE004760EF /* UIFont+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52CE68823954FBE004760EF /* UIFont+Style.swift */; };
 		C52CE68B23954FCB004760EF /* UIColor+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52CE68A23954FCB004760EF /* UIColor+Style.swift */; };
@@ -58,7 +58,6 @@
 		F716107A23EC654100F89D26 /* MakeReport.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F716107923EC654100F89D26 /* MakeReport.storyboard */; };
 		F716107C23EC7B6100F89D26 /* EnterAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F716107B23EC7B6100F89D26 /* EnterAddressViewController.swift */; };
 		F716107F23ED80C500F89D26 /* EnterAddressVС+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F716107E23ED80C500F89D26 /* EnterAddressVС+TableViewDelegate.swift */; };
-		F716108123ED80D300F89D26 /* EnterAddressVС+TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F716108023ED80D300F89D26 /* EnterAddressVС+TableViewDataSource.swift */; };
 		F716108323ED89E700F89D26 /* AddressesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F716108223ED89E700F89D26 /* AddressesTableViewCell.swift */; };
 		F722EB38239D2FB300718397 /* UIButton+Highlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = F722EB37239D2FB300718397 /* UIButton+Highlight.swift */; };
 		F722EB3E239D491B00718397 /* MakeReportMapVС+TextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F722EB3D239D491B00718397 /* MakeReportMapVС+TextViewDelegate.swift */; };
@@ -72,6 +71,12 @@
 		F747EB1523EED78600862A6D /* ShowAddressOnMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F747EB1423EED78600862A6D /* ShowAddressOnMapViewController.swift */; };
 		F747EB1C23EF27FD00862A6D /* UIViewController+NavigationBarShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F747EB1B23EF27FD00862A6D /* UIViewController+NavigationBarShadow.swift */; };
 		F74D2B5F24114A0500F138BB /* BaseVotingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D2B5E24114A0500F138BB /* BaseVotingViewController.swift */; };
+		F756532D24263A44002C4B81 /* FilterCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F756532C24263A44002C4B81 /* FilterCategoriesViewController.swift */; };
+		F756533724263F61002C4B81 /* FilterCategoriesVC+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F756533624263F61002C4B81 /* FilterCategoriesVC+TableViewDelegate.swift */; };
+		F756533B2426405D002C4B81 /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F756533A2426405D002C4B81 /* FiltersViewController.swift */; };
+		F75653412426598A002C4B81 /* BaseFilterCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75653402426598A002C4B81 /* BaseFilterCategoriesViewController.swift */; };
+		F7565343242659F2002C4B81 /* BaseFiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7565342242659F2002C4B81 /* BaseFiltersViewController.swift */; };
+		F756534524267DBC002C4B81 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F756534424267DBC002C4B81 /* Keys.swift */; };
 		F75E4898239AA524007BDD47 /* MakeReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E4897239AA524007BDD47 /* MakeReport.swift */; };
 		F75E489C239AC9B0007BDD47 /* UIView+DashedBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E489B239AC9B0007BDD47 /* UIView+DashedBorder.swift */; };
 		F75E48A5239AD082007BDD47 /* GothaProLig.otf in Resources */ = {isa = PBXBuildFile; fileRef = F75E489E239AD082007BDD47 /* GothaProLig.otf */; };
@@ -87,17 +92,18 @@
 		F77187C0239FAD3300AAA1C6 /* MakeReportScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77187BF239FAD3300AAA1C6 /* MakeReportScrollView.swift */; };
 		F777369323FD6EED002B8746 /* ProfileViewController+SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F777369223FD6EED002B8746 /* ProfileViewController+SegmentedControl.swift */; };
 		F77EF21823A7B36700938A3B /* SegmentedControl+MaterialPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77EF21723A7B36700938A3B /* SegmentedControl+MaterialPreset.swift */; };
+		F79A3CFE2419111800D94FD3 /* MakeReportMapVС+MapTapListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79A3CFD2419111800D94FD3 /* MakeReportMapVС+MapTapListener.swift */; };
 		F7A221DC23FF24D900C11353 /* UITabBarController+CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A221DB23FF24D900C11353 /* UITabBarController+CustomTabBar.swift */; };
-		F7A221E7240013DB00C11353 /* ChooseSubCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A221E5240013DB00C11353 /* ChooseSubCategoryViewController.swift */; };
-		F7A221E8240013DB00C11353 /* ChooseCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A221E6240013DB00C11353 /* ChooseCategoryViewController.swift */; };
+		F7A221E7240013DB00C11353 /* SubCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A221E5240013DB00C11353 /* SubCategoriesViewController.swift */; };
+		F7A221E8240013DB00C11353 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A221E6240013DB00C11353 /* CategoriesViewController.swift */; };
 		F7A221F02400300100C11353 /* ActiveCitizen (for mobile).postman_collection.json in Resources */ = {isa = PBXBuildFile; fileRef = F7A221EF2400300100C11353 /* ActiveCitizen (for mobile).postman_collection.json */; };
 		F7A221F22400324800C11353 /* UIImage+Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A221F12400324800C11353 /* UIImage+Icons.swift */; };
 		F7A221F42400339700C11353 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7A221F32400339700C11353 /* Colors.xcassets */; };
-		F7A221F62400418400C11353 /* ChooseCategoryVC+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A221F52400418400C11353 /* ChooseCategoryVC+TableViewDelegate.swift */; };
-		F7A221FA2400473C00C11353 /* ChooseSubCategoryVC+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A221F92400473C00C11353 /* ChooseSubCategoryVC+TableViewDelegate.swift */; };
+		F7A221F62400418400C11353 /* CategoriesVC+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A221F52400418400C11353 /* CategoriesVC+TableViewDelegate.swift */; };
+		F7A221FA2400473C00C11353 /* SubCategoriesVC+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A221F92400473C00C11353 /* SubCategoriesVC+TableViewDelegate.swift */; };
 		F7A221FC24004CE600C11353 /* ReportsTableViewController+SearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A221FB24004CE600C11353 /* ReportsTableViewController+SearchBarDelegate.swift */; };
-		F7A221FE24004D3500C11353 /* ChooseCategoryVC+SearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A221FD24004D3500C11353 /* ChooseCategoryVC+SearchBarDelegate.swift */; };
-		F7A2220024004D6200C11353 /* ChooseSubCategoryVC+SearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A221FF24004D6200C11353 /* ChooseSubCategoryVC+SearchBarDelegate.swift */; };
+		F7A221FE24004D3500C11353 /* CategoriesVC+SearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A221FD24004D3500C11353 /* CategoriesVC+SearchBarDelegate.swift */; };
+		F7A2220024004D6200C11353 /* SubCategoriesVC+SearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A221FF24004D6200C11353 /* SubCategoriesVC+SearchBarDelegate.swift */; };
 		F7A222022400524B00C11353 /* CategoriesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A222012400524B00C11353 /* CategoriesDataSource.swift */; };
 		F7A222042400536200C11353 /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A222032400536200C11353 /* CategoriesTableViewCell.swift */; };
 		F7A2220624005C8600C11353 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A2220524005C8600C11353 /* Category.swift */; };
@@ -108,24 +114,29 @@
 		F7A22211240331E300C11353 /* SubCategoriesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A22210240331E300C11353 /* SubCategoriesManager.swift */; };
 		F7A22213240334AD00C11353 /* SubCategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A22212240334AD00C11353 /* SubCategoriesTableViewCell.swift */; };
 		F7A2221524033F4100C11353 /* BaseShowAddressOnMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A2221424033F4100C11353 /* BaseShowAddressOnMapViewController.swift */; };
-		F7A2221724033FF800C11353 /* BaseChooseCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A2221624033FF800C11353 /* BaseChooseCategoryViewController.swift */; };
-		F7A222192403413300C11353 /* BaseChooseSubCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A222182403413300C11353 /* BaseChooseSubCategoryViewController.swift */; };
+		F7A2221724033FF800C11353 /* BaseCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A2221624033FF800C11353 /* BaseCategoriesViewController.swift */; };
+		F7A222192403413300C11353 /* BaseSubCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A222182403413300C11353 /* BaseSubCategoryViewController.swift */; };
 		F7A2221B2403419100C11353 /* BaseEnterAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A2221A2403419100C11353 /* BaseEnterAddressViewController.swift */; };
 		F7A2221D240341ED00C11353 /* BaseEnterAddressManuallyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A2221C240341ED00C11353 /* BaseEnterAddressManuallyViewController.swift */; };
 		F7A2221F2403427F00C11353 /* BaseFillFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A2221E2403427F00C11353 /* BaseFillFieldViewController.swift */; };
 		F7A222232403D60E00C11353 /* ShowAddressOnMapVC+LocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A222222403D60E00C11353 /* ShowAddressOnMapVC+LocationManagerDelegate.swift */; };
 		F7A7811A239E9B7700EE2000 /* MakeReportMapVС+UIScrollviewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A78119239E9B7700EE2000 /* MakeReportMapVС+UIScrollviewDelegate.swift */; };
+		F7AD212C241C0B830041AC2A /* BaseMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AD212B241C0B830041AC2A /* BaseMemberViewController.swift */; };
+		F7AD212E241C0BDA0041AC2A /* MemberDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AD212D241C0BDA0041AC2A /* MemberDetailViewController.swift */; };
+		F7AD2130241C0C460041AC2A /* MembersListViewController+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AD212F241C0C460041AC2A /* MembersListViewController+TableViewDelegate.swift */; };
 		F7B1AC3223FB111000DB2B21 /* EnterAddressManuallyVC+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B1AC3123FB111000DB2B21 /* EnterAddressManuallyVC+TableViewDelegate.swift */; };
 		F7B1AC3423FB148F00DB2B21 /* FillFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B1AC3323FB148F00DB2B21 /* FillFieldViewController.swift */; };
 		F7B1AC3623FB204900DB2B21 /* EnterAddressManuallyVC+TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B1AC3523FB204900DB2B21 /* EnterAddressManuallyVC+TableViewDataSource.swift */; };
 		F7BDE17E23F6002900B6C1D9 /* EnterAddressManuallyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BDE17D23F6002900B6C1D9 /* EnterAddressManuallyViewController.swift */; };
 		F7CB4799240872510087FC22 /* MakeReportMapVС+ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CB4798240872510087FC22 /* MakeReportMapVС+ImagePicker.swift */; };
 		F7CB479B24087C2B0087FC22 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CB479A24087C2B0087FC22 /* Alert.swift */; };
-		F7CB47A12408970C0087FC22 /* UsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CB47A02408970C0087FC22 /* UsersTableViewCell.swift */; };
-		F7CB47A3240899690087FC22 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CB47A2240899690087FC22 /* User.swift */; };
-		F7CB47A524089B240087FC22 /* UsersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CB47A424089B240087FC22 /* UsersManager.swift */; };
-		F7CB47A724089D200087FC22 /* UsersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CB47A624089D200087FC22 /* UsersDataSource.swift */; };
+		F7CB47A3240899690087FC22 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CB47A2240899690087FC22 /* Member.swift */; };
+		F7CB47A524089B240087FC22 /* MembersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CB47A424089B240087FC22 /* MembersManager.swift */; };
+		F7CB47A724089D200087FC22 /* MembersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CB47A624089D200087FC22 /* MembersDataSource.swift */; };
 		F7CB47A92408A7620087FC22 /* AddressesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CB47A82408A7620087FC22 /* AddressesDataSource.swift */; };
+		F7E63AB8241FCCD50017B13C /* MembersApplicationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E63AB7241FCCD50017B13C /* MembersApplicationsTableViewCell.swift */; };
+		F7E63ABC242020940017B13C /* MemberDetailsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E63ABB242020940017B13C /* MemberDetailsDataSource.swift */; };
+		F7E63AC024203CB90017B13C /* MembersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E63ABF24203CB90017B13C /* MembersTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -157,17 +168,17 @@
 		C52CE660239544E4004760EF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C52CE66A239545A6004760EF /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		C52CE66C239545B7004760EF /* ReportsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReportsList.storyboard; sourceTree = "<group>"; };
-		C52CE66E239545C0004760EF /* Users.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Users.storyboard; sourceTree = "<group>"; };
+		C52CE66E239545C0004760EF /* Members.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Members.storyboard; sourceTree = "<group>"; };
 		C52CE670239545C8004760EF /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
 		C52CE672239548C1004760EF /* BaseMakeReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMakeReportViewController.swift; sourceTree = "<group>"; };
 		C52CE674239548D7004760EF /* BaseProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProfileViewController.swift; sourceTree = "<group>"; };
 		C52CE676239548E6004760EF /* BaseReportsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReportsListViewController.swift; sourceTree = "<group>"; };
-		C52CE678239548F0004760EF /* BaseUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUsersViewController.swift; sourceTree = "<group>"; };
+		C52CE678239548F0004760EF /* BaseMembersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMembersListViewController.swift; sourceTree = "<group>"; };
 		C52CE67A239548FD004760EF /* BaseMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMoreViewController.swift; sourceTree = "<group>"; };
 		C52CE67C239549AF004760EF /* MakeReportMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeReportMapViewController.swift; sourceTree = "<group>"; };
 		C52CE67E23954A03004760EF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C52CE68023954AA5004760EF /* ReportsListContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsListContainerViewController.swift; sourceTree = "<group>"; };
-		C52CE68223954B01004760EF /* UsersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewController.swift; sourceTree = "<group>"; };
+		C52CE68223954B01004760EF /* MembersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersListViewController.swift; sourceTree = "<group>"; };
 		C52CE68423954B7E004760EF /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		C52CE68823954FBE004760EF /* UIFont+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Style.swift"; sourceTree = "<group>"; };
 		C52CE68A23954FCB004760EF /* UIColor+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Style.swift"; sourceTree = "<group>"; };
@@ -184,7 +195,6 @@
 		F716107923EC654100F89D26 /* MakeReport.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MakeReport.storyboard; sourceTree = "<group>"; };
 		F716107B23EC7B6100F89D26 /* EnterAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAddressViewController.swift; sourceTree = "<group>"; };
 		F716107E23ED80C500F89D26 /* EnterAddressVС+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnterAddressVС+TableViewDelegate.swift"; sourceTree = "<group>"; };
-		F716108023ED80D300F89D26 /* EnterAddressVС+TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnterAddressVС+TableViewDataSource.swift"; sourceTree = "<group>"; };
 		F716108223ED89E700F89D26 /* AddressesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressesTableViewCell.swift; sourceTree = "<group>"; };
 		F722EB37239D2FB300718397 /* UIButton+Highlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Highlight.swift"; sourceTree = "<group>"; };
 		F722EB3D239D491B00718397 /* MakeReportMapVС+TextViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MakeReportMapVС+TextViewDelegate.swift"; sourceTree = "<group>"; };
@@ -198,6 +208,12 @@
 		F747EB1423EED78600862A6D /* ShowAddressOnMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAddressOnMapViewController.swift; sourceTree = "<group>"; };
 		F747EB1B23EF27FD00862A6D /* UIViewController+NavigationBarShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+NavigationBarShadow.swift"; sourceTree = "<group>"; };
 		F74D2B5E24114A0500F138BB /* BaseVotingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVotingViewController.swift; sourceTree = "<group>"; };
+		F756532C24263A44002C4B81 /* FilterCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCategoriesViewController.swift; sourceTree = "<group>"; };
+		F756533624263F61002C4B81 /* FilterCategoriesVC+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilterCategoriesVC+TableViewDelegate.swift"; sourceTree = "<group>"; };
+		F756533A2426405D002C4B81 /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
+		F75653402426598A002C4B81 /* BaseFilterCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseFilterCategoriesViewController.swift; sourceTree = "<group>"; };
+		F7565342242659F2002C4B81 /* BaseFiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseFiltersViewController.swift; sourceTree = "<group>"; };
+		F756534424267DBC002C4B81 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		F75E4897239AA524007BDD47 /* MakeReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeReport.swift; sourceTree = "<group>"; };
 		F75E489B239AC9B0007BDD47 /* UIView+DashedBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+DashedBorder.swift"; sourceTree = "<group>"; };
 		F75E489E239AD082007BDD47 /* GothaProLig.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothaProLig.otf; sourceTree = "<group>"; };
@@ -213,17 +229,18 @@
 		F77187BF239FAD3300AAA1C6 /* MakeReportScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeReportScrollView.swift; sourceTree = "<group>"; };
 		F777369223FD6EED002B8746 /* ProfileViewController+SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewController+SegmentedControl.swift"; sourceTree = "<group>"; };
 		F77EF21723A7B36700938A3B /* SegmentedControl+MaterialPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SegmentedControl+MaterialPreset.swift"; sourceTree = "<group>"; };
+		F79A3CFD2419111800D94FD3 /* MakeReportMapVС+MapTapListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MakeReportMapVС+MapTapListener.swift"; sourceTree = "<group>"; };
 		F7A221DB23FF24D900C11353 /* UITabBarController+CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+CustomTabBar.swift"; sourceTree = "<group>"; };
-		F7A221E5240013DB00C11353 /* ChooseSubCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseSubCategoryViewController.swift; sourceTree = "<group>"; };
-		F7A221E6240013DB00C11353 /* ChooseCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseCategoryViewController.swift; sourceTree = "<group>"; };
+		F7A221E5240013DB00C11353 /* SubCategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoriesViewController.swift; sourceTree = "<group>"; };
+		F7A221E6240013DB00C11353 /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		F7A221EF2400300100C11353 /* ActiveCitizen (for mobile).postman_collection.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "ActiveCitizen (for mobile).postman_collection.json"; sourceTree = "<group>"; };
 		F7A221F12400324800C11353 /* UIImage+Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Icons.swift"; sourceTree = "<group>"; };
 		F7A221F32400339700C11353 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		F7A221F52400418400C11353 /* ChooseCategoryVC+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChooseCategoryVC+TableViewDelegate.swift"; sourceTree = "<group>"; };
-		F7A221F92400473C00C11353 /* ChooseSubCategoryVC+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChooseSubCategoryVC+TableViewDelegate.swift"; sourceTree = "<group>"; };
+		F7A221F52400418400C11353 /* CategoriesVC+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoriesVC+TableViewDelegate.swift"; sourceTree = "<group>"; };
+		F7A221F92400473C00C11353 /* SubCategoriesVC+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SubCategoriesVC+TableViewDelegate.swift"; sourceTree = "<group>"; };
 		F7A221FB24004CE600C11353 /* ReportsTableViewController+SearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReportsTableViewController+SearchBarDelegate.swift"; sourceTree = "<group>"; };
-		F7A221FD24004D3500C11353 /* ChooseCategoryVC+SearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChooseCategoryVC+SearchBarDelegate.swift"; sourceTree = "<group>"; };
-		F7A221FF24004D6200C11353 /* ChooseSubCategoryVC+SearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChooseSubCategoryVC+SearchBarDelegate.swift"; sourceTree = "<group>"; };
+		F7A221FD24004D3500C11353 /* CategoriesVC+SearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoriesVC+SearchBarDelegate.swift"; sourceTree = "<group>"; };
+		F7A221FF24004D6200C11353 /* SubCategoriesVC+SearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SubCategoriesVC+SearchBarDelegate.swift"; sourceTree = "<group>"; };
 		F7A222012400524B00C11353 /* CategoriesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesDataSource.swift; sourceTree = "<group>"; };
 		F7A222032400536200C11353 /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		F7A2220524005C8600C11353 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -234,24 +251,29 @@
 		F7A22210240331E300C11353 /* SubCategoriesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoriesManager.swift; sourceTree = "<group>"; };
 		F7A22212240334AD00C11353 /* SubCategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		F7A2221424033F4100C11353 /* BaseShowAddressOnMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseShowAddressOnMapViewController.swift; sourceTree = "<group>"; };
-		F7A2221624033FF800C11353 /* BaseChooseCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseChooseCategoryViewController.swift; sourceTree = "<group>"; };
-		F7A222182403413300C11353 /* BaseChooseSubCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseChooseSubCategoryViewController.swift; sourceTree = "<group>"; };
+		F7A2221624033FF800C11353 /* BaseCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCategoriesViewController.swift; sourceTree = "<group>"; };
+		F7A222182403413300C11353 /* BaseSubCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSubCategoryViewController.swift; sourceTree = "<group>"; };
 		F7A2221A2403419100C11353 /* BaseEnterAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEnterAddressViewController.swift; sourceTree = "<group>"; };
 		F7A2221C240341ED00C11353 /* BaseEnterAddressManuallyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEnterAddressManuallyViewController.swift; sourceTree = "<group>"; };
 		F7A2221E2403427F00C11353 /* BaseFillFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseFillFieldViewController.swift; sourceTree = "<group>"; };
 		F7A222222403D60E00C11353 /* ShowAddressOnMapVC+LocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShowAddressOnMapVC+LocationManagerDelegate.swift"; sourceTree = "<group>"; };
 		F7A78119239E9B7700EE2000 /* MakeReportMapVС+UIScrollviewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MakeReportMapVС+UIScrollviewDelegate.swift"; sourceTree = "<group>"; };
+		F7AD212B241C0B830041AC2A /* BaseMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMemberViewController.swift; sourceTree = "<group>"; };
+		F7AD212D241C0BDA0041AC2A /* MemberDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailViewController.swift; sourceTree = "<group>"; };
+		F7AD212F241C0C460041AC2A /* MembersListViewController+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MembersListViewController+TableViewDelegate.swift"; sourceTree = "<group>"; };
 		F7B1AC3123FB111000DB2B21 /* EnterAddressManuallyVC+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnterAddressManuallyVC+TableViewDelegate.swift"; sourceTree = "<group>"; };
 		F7B1AC3323FB148F00DB2B21 /* FillFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillFieldViewController.swift; sourceTree = "<group>"; };
 		F7B1AC3523FB204900DB2B21 /* EnterAddressManuallyVC+TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnterAddressManuallyVC+TableViewDataSource.swift"; sourceTree = "<group>"; };
 		F7BDE17D23F6002900B6C1D9 /* EnterAddressManuallyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAddressManuallyViewController.swift; sourceTree = "<group>"; };
 		F7CB4798240872510087FC22 /* MakeReportMapVС+ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MakeReportMapVС+ImagePicker.swift"; sourceTree = "<group>"; };
 		F7CB479A24087C2B0087FC22 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
-		F7CB47A02408970C0087FC22 /* UsersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewCell.swift; sourceTree = "<group>"; };
-		F7CB47A2240899690087FC22 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		F7CB47A424089B240087FC22 /* UsersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersManager.swift; sourceTree = "<group>"; };
-		F7CB47A624089D200087FC22 /* UsersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDataSource.swift; sourceTree = "<group>"; };
+		F7CB47A2240899690087FC22 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		F7CB47A424089B240087FC22 /* MembersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersManager.swift; sourceTree = "<group>"; };
+		F7CB47A624089D200087FC22 /* MembersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersDataSource.swift; sourceTree = "<group>"; };
 		F7CB47A82408A7620087FC22 /* AddressesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressesDataSource.swift; sourceTree = "<group>"; };
+		F7E63AB7241FCCD50017B13C /* MembersApplicationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersApplicationsTableViewCell.swift; sourceTree = "<group>"; };
+		F7E63ABB242020940017B13C /* MemberDetailsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailsDataSource.swift; sourceTree = "<group>"; };
+		F7E63ABF24203CB90017B13C /* MembersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,9 +329,10 @@
 				F716108223ED89E700F89D26 /* AddressesTableViewCell.swift */,
 				C5236023239672CD002D9783 /* BaseTableViewCell.swift */,
 				F7A222032400536200C11353 /* CategoriesTableViewCell.swift */,
+				F7E63AB7241FCCD50017B13C /* MembersApplicationsTableViewCell.swift */,
+				F7E63ABF24203CB90017B13C /* MembersTableViewCell.swift */,
 				C523602523967420002D9783 /* ReportsListTableViewCell.swift */,
 				F7A22212240334AD00C11353 /* SubCategoriesTableViewCell.swift */,
-				F7CB47A02408970C0087FC22 /* UsersTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -356,10 +379,10 @@
 			children = (
 				C52CE65F239544D5004760EF /* Base */,
 				C52CE662239544FE004760EF /* MakeReport */,
+				C52CE6652395455B004760EF /* Members */,
+				C52CE66623954571004760EF /* More */,
 				C52CE66323954504004760EF /* Profile */,
 				C52CE6642395454B004760EF /* ReportsList */,
-				C52CE6652395455B004760EF /* Users */,
-				C52CE66623954571004760EF /* More */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -367,8 +390,8 @@
 		C52CE65F239544D5004760EF /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				F7A2221624033FF800C11353 /* BaseChooseCategoryViewController.swift */,
-				F7A222182403413300C11353 /* BaseChooseSubCategoryViewController.swift */,
+				F7A2221624033FF800C11353 /* BaseCategoriesViewController.swift */,
+				F7A222182403413300C11353 /* BaseSubCategoryViewController.swift */,
 				F7A2221C240341ED00C11353 /* BaseEnterAddressManuallyViewController.swift */,
 				F7A2221A2403419100C11353 /* BaseEnterAddressViewController.swift */,
 				F7A2221E2403427F00C11353 /* BaseFillFieldViewController.swift */,
@@ -376,10 +399,13 @@
 				C52CE67A239548FD004760EF /* BaseMoreViewController.swift */,
 				C52CE69023955EE2004760EF /* BaseNavigationController.swift */,
 				C52CE674239548D7004760EF /* BaseProfileViewController.swift */,
+				F7AD212B241C0B830041AC2A /* BaseMemberViewController.swift */,
 				C52CE676239548E6004760EF /* BaseReportsListViewController.swift */,
 				F7A2221424033F4100C11353 /* BaseShowAddressOnMapViewController.swift */,
-				C52CE678239548F0004760EF /* BaseUsersViewController.swift */,
+				C52CE678239548F0004760EF /* BaseMembersListViewController.swift */,
 				F74D2B5E24114A0500F138BB /* BaseVotingViewController.swift */,
+				F7565342242659F2002C4B81 /* BaseFiltersViewController.swift */,
+				F75653402426598A002C4B81 /* BaseFilterCategoriesViewController.swift */,
 				C52CE660239544E4004760EF /* BaseViewController.swift */,
 				C52CE69223955F95004760EF /* RootTabBarController.swift */,
 			);
@@ -389,7 +415,7 @@
 		C52CE662239544FE004760EF /* MakeReport */ = {
 			isa = PBXGroup;
 			children = (
-				F7A221EA240013F300C11353 /* ChooseCategory */,
+				F7A221EA240013F300C11353 /* Categories */,
 				F7A221DF240009C700C11353 /* EnterAddress */,
 				F7B1AC3323FB148F00DB2B21 /* FillFieldViewController.swift */,
 				C52CE67C239549AF004760EF /* MakeReportMapViewController.swift */,
@@ -419,12 +445,15 @@
 			path = ReportsList;
 			sourceTree = "<group>";
 		};
-		C52CE6652395455B004760EF /* Users */ = {
+		C52CE6652395455B004760EF /* Members */ = {
 			isa = PBXGroup;
 			children = (
-				C52CE68223954B01004760EF /* UsersListViewController.swift */,
+				C52CE68223954B01004760EF /* MembersListViewController.swift */,
+				F7AD212D241C0BDA0041AC2A /* MemberDetailViewController.swift */,
+				F756533A2426405D002C4B81 /* FiltersViewController.swift */,
+				F756532C24263A44002C4B81 /* FilterCategoriesViewController.swift */,
 			);
-			path = Users;
+			path = Members;
 			sourceTree = "<group>";
 		};
 		C52CE66623954571004760EF /* More */ = {
@@ -442,10 +471,10 @@
 			children = (
 				C52CE6502395440F004760EF /* Main.storyboard */,
 				F716107923EC654100F89D26 /* MakeReport.storyboard */,
+				C52CE66E239545C0004760EF /* Members.storyboard */,
+				C52CE670239545C8004760EF /* More.storyboard */,
 				C52CE66A239545A6004760EF /* Profile.storyboard */,
 				C52CE66C239545B7004760EF /* ReportsList.storyboard */,
-				C52CE66E239545C0004760EF /* Users.storyboard */,
-				C52CE670239545C8004760EF /* More.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -453,10 +482,10 @@
 		C52CE68623954D69004760EF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F75E4896239AA507007BDD47 /* MakeReport */,
 				C523600923963C2A002D9783 /* Base */,
 				C5236022239672B5002D9783 /* Cells */,
 				C523600E239641DD002D9783 /* ExampleUIViewWithXib */,
+				F75E4896239AA507007BDD47 /* MakeReport */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -465,29 +494,30 @@
 			isa = PBXGroup;
 			children = (
 				C52CE68E23955740004760EF /* BaseViewController+TextFieldNavigation.swift */,
-				F7A221FD24004D3500C11353 /* ChooseCategoryVC+SearchBarDelegate.swift */,
-				F7A221F52400418400C11353 /* ChooseCategoryVC+TableViewDelegate.swift */,
-				F7A221FF24004D6200C11353 /* ChooseSubCategoryVC+SearchBarDelegate.swift */,
-				F7A221F92400473C00C11353 /* ChooseSubCategoryVC+TableViewDelegate.swift */,
+				F7A221FD24004D3500C11353 /* CategoriesVC+SearchBarDelegate.swift */,
+				F7A221F52400418400C11353 /* CategoriesVC+TableViewDelegate.swift */,
 				C593177E2397A7890043F68C /* Date+Formatter.swift */,
 				F7B1AC3523FB204900DB2B21 /* EnterAddressManuallyVC+TableViewDataSource.swift */,
 				F7B1AC3123FB111000DB2B21 /* EnterAddressManuallyVC+TableViewDelegate.swift */,
-				F716108023ED80D300F89D26 /* EnterAddressVС+TableViewDataSource.swift */,
 				F716107E23ED80C500F89D26 /* EnterAddressVС+TableViewDelegate.swift */,
+				F756533624263F61002C4B81 /* FilterCategoriesVC+TableViewDelegate.swift */,
 				F7CB4798240872510087FC22 /* MakeReportMapVС+ImagePicker.swift */,
 				F72E4C8B2406F3A4001EF798 /* MakeReportMapVС+LocationManagerDelegate.swift */,
 				F72E4C892406F388001EF798 /* MakeReportMapVС+MapCameraListener.swift */,
+				F79A3CFD2419111800D94FD3 /* MakeReportMapVС+MapTapListener.swift */,
 				F722EB3D239D491B00718397 /* MakeReportMapVС+TextViewDelegate.swift */,
 				F722EB3F239D8EF500718397 /* MakeReportMapVС+TextViewHideKeyboard.swift */,
 				F7A78119239E9B7700EE2000 /* MakeReportMapVС+UIScrollviewDelegate.swift */,
 				F72E4C8D2406F79E001EF798 /* MakeReportMapVС+UserLocationObjectListener.swift */,
+				F7AD212F241C0C460041AC2A /* MembersListViewController+TableViewDelegate.swift */,
 				F777369223FD6EED002B8746 /* ProfileViewController+SegmentedControl.swift */,
-				F76A98AB24114D59009097C8 /* VotingViewController+SegmentedControl.swift */,
 				F7A221FB24004CE600C11353 /* ReportsTableViewController+SearchBarDelegate.swift */,
 				F77EF21723A7B36700938A3B /* SegmentedControl+MaterialPreset.swift */,
 				F7A222222403D60E00C11353 /* ShowAddressOnMapVC+LocationManagerDelegate.swift */,
 				F72E4C852406D549001EF798 /* ShowAddressOnMapVC+MapCameraListener.swift */,
 				C593177C2397A4D90043F68C /* String+DateParse.swift */,
+				F7A221FF24004D6200C11353 /* SubCategoriesVC+SearchBarDelegate.swift */,
+				F7A221F92400473C00C11353 /* SubCategoriesVC+TableViewDelegate.swift */,
 				C523602923967F5A002D9783 /* UIApplication+Loading.swift */,
 				C523602723967EB0002D9783 /* UIApplication+TopViewController.swift */,
 				F722EB37239D2FB300718397 /* UIButton+Highlight.swift */,
@@ -501,6 +531,7 @@
 				F75E489B239AC9B0007BDD47 /* UIView+DashedBorder.swift */,
 				F7A2220A240325AA00C11353 /* UIViewController+BackButton.swift */,
 				F747EB1B23EF27FD00862A6D /* UIViewController+NavigationBarShadow.swift */,
+				F76A98AB24114D59009097C8 /* VotingViewController+SegmentedControl.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -518,12 +549,12 @@
 		C52CE69523956008004760EF /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				C52360172396513C002D9783 /* BaseNetworkManager.swift */,
-				C52360192396593D002D9783 /* ReportsManager.swift */,
-				F7A222072400614600C11353 /* CategoriesManager.swift */,
-				F7A22210240331E300C11353 /* SubCategoriesManager.swift */,
 				F72E4C91240700B9001EF798 /* AddressesManager.swift */,
-				F7CB47A424089B240087FC22 /* UsersManager.swift */,
+				C52360172396513C002D9783 /* BaseNetworkManager.swift */,
+				F7A222072400614600C11353 /* CategoriesManager.swift */,
+				F7CB47A424089B240087FC22 /* MembersManager.swift */,
+				C52360192396593D002D9783 /* ReportsManager.swift */,
+				F7A22210240331E300C11353 /* SubCategoriesManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -531,11 +562,11 @@
 		C52CE69623956012004760EF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C523601B23965D5C002D9783 /* Report.swift */,
-				F7A2220524005C8600C11353 /* Category.swift */,
 				F72E4C8F2406FC42001EF798 /* Address.swift */,
+				F7A2220524005C8600C11353 /* Category.swift */,
+				F7CB47A2240899690087FC22 /* Member.swift */,
+				C523601B23965D5C002D9783 /* Report.swift */,
 				F7A2220E2403310E00C11353 /* SubCategory.swift */,
-				F7CB47A2240899690087FC22 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -543,12 +574,13 @@
 		C52CE69723956017004760EF /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
-				C523601D23966D16002D9783 /* BaseDataSource.swift */,
-				C52360202396700F002D9783 /* ReportsListDataSource.swift */,
-				F7A222012400524B00C11353 /* CategoriesDataSource.swift */,
-				F7A2220C2403307A00C11353 /* SubCategoriesDataSource.swift */,
 				F7CB47A82408A7620087FC22 /* AddressesDataSource.swift */,
-				F7CB47A624089D200087FC22 /* UsersDataSource.swift */,
+				C523601D23966D16002D9783 /* BaseDataSource.swift */,
+				F7A222012400524B00C11353 /* CategoriesDataSource.swift */,
+				F7E63ABB242020940017B13C /* MemberDetailsDataSource.swift */,
+				F7CB47A624089D200087FC22 /* MembersDataSource.swift */,
+				C52360202396700F002D9783 /* ReportsListDataSource.swift */,
+				F7A2220C2403307A00C11353 /* SubCategoriesDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -586,13 +618,13 @@
 			name = EnterAddress;
 			sourceTree = "<group>";
 		};
-		F7A221EA240013F300C11353 /* ChooseCategory */ = {
+		F7A221EA240013F300C11353 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				F7A221E6240013DB00C11353 /* ChooseCategoryViewController.swift */,
-				F7A221E5240013DB00C11353 /* ChooseSubCategoryViewController.swift */,
+				F7A221E6240013DB00C11353 /* CategoriesViewController.swift */,
+				F7A221E5240013DB00C11353 /* SubCategoriesViewController.swift */,
 			);
-			name = ChooseCategory;
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		F7B31C3324105D3D00FC10C2 /* Assets */ = {
@@ -608,6 +640,7 @@
 			isa = PBXGroup;
 			children = (
 				F7CB479A24087C2B0087FC22 /* Alert.swift */,
+				F756534424267DBC002C4B81 /* Keys.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -674,7 +707,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F716107A23EC654100F89D26 /* MakeReport.storyboard in Resources */,
-				C52CE66F239545C0004760EF /* Users.storyboard in Resources */,
+				C52CE66F239545C0004760EF /* Members.storyboard in Resources */,
 				C52CE671239545C8004760EF /* More.storyboard in Resources */,
 				F75E48A6239AD082007BDD47 /* GothaProBla.otf in Resources */,
 				C52CE66D239545B7004760EF /* ReportsList.storyboard in Resources */,
@@ -772,21 +805,24 @@
 				C523602A23967F5A002D9783 /* UIApplication+Loading.swift in Sources */,
 				F722EB40239D8EF500718397 /* MakeReportMapVС+TextViewHideKeyboard.swift in Sources */,
 				F7A2221F2403427F00C11353 /* BaseFillFieldViewController.swift in Sources */,
-				F7A221E7240013DB00C11353 /* ChooseSubCategoryViewController.swift in Sources */,
-				F7A2221724033FF800C11353 /* BaseChooseCategoryViewController.swift in Sources */,
+				F7A221E7240013DB00C11353 /* SubCategoriesViewController.swift in Sources */,
+				F7A2221724033FF800C11353 /* BaseCategoriesViewController.swift in Sources */,
 				C52CE675239548D7004760EF /* BaseProfileViewController.swift in Sources */,
+				F7AD2130241C0C460041AC2A /* MembersListViewController+TableViewDelegate.swift in Sources */,
 				C5236012239644FD002D9783 /* IBDesignableView.swift in Sources */,
 				F7B1AC3223FB111000DB2B21 /* EnterAddressManuallyVC+TableViewDelegate.swift in Sources */,
 				C52CE67F23954A03004760EF /* ProfileViewController.swift in Sources */,
-				F7CB47A3240899690087FC22 /* User.swift in Sources */,
+				F7CB47A3240899690087FC22 /* Member.swift in Sources */,
 				F747EB1C23EF27FD00862A6D /* UIViewController+NavigationBarShadow.swift in Sources */,
 				C52CE68923954FBE004760EF /* UIFont+Style.swift in Sources */,
 				F76209CA23ABA1CD00BEB8DE /* ReportsTableViewController.swift in Sources */,
 				C52CE68123954AA5004760EF /* ReportsListContainerViewController.swift in Sources */,
 				F7A2221524033F4100C11353 /* BaseShowAddressOnMapViewController.swift in Sources */,
+				F756534524267DBC002C4B81 /* Keys.swift in Sources */,
 				C52CE68F23955740004760EF /* BaseViewController+TextFieldNavigation.swift in Sources */,
 				F7A2221D240341ED00C11353 /* BaseEnterAddressManuallyViewController.swift in Sources */,
 				C52360182396513C002D9783 /* BaseNetworkManager.swift in Sources */,
+				F7AD212C241C0B830041AC2A /* BaseMemberViewController.swift in Sources */,
 				C523601E23966D16002D9783 /* BaseDataSource.swift in Sources */,
 				C52CE673239548C1004760EF /* BaseMakeReportViewController.swift in Sources */,
 				C52CE69323955F95004760EF /* RootTabBarController.swift in Sources */,
@@ -796,15 +832,16 @@
 				F74D2B5F24114A0500F138BB /* BaseVotingViewController.swift in Sources */,
 				F7A2220F2403310E00C11353 /* SubCategory.swift in Sources */,
 				F7B1AC3623FB204900DB2B21 /* EnterAddressManuallyVC+TableViewDataSource.swift in Sources */,
-				F7A221E8240013DB00C11353 /* ChooseCategoryViewController.swift in Sources */,
+				F7A221E8240013DB00C11353 /* CategoriesViewController.swift in Sources */,
 				F72E4C8A2406F388001EF798 /* MakeReportMapVС+MapCameraListener.swift in Sources */,
 				F7A2221B2403419100C11353 /* BaseEnterAddressViewController.swift in Sources */,
 				C523602823967EB0002D9783 /* UIApplication+TopViewController.swift in Sources */,
-				F7A221FA2400473C00C11353 /* ChooseSubCategoryVC+TableViewDelegate.swift in Sources */,
+				F7A221FA2400473C00C11353 /* SubCategoriesVC+TableViewDelegate.swift in Sources */,
 				F77187C0239FAD3300AAA1C6 /* MakeReportScrollView.swift in Sources */,
-				C52CE68323954B01004760EF /* UsersListViewController.swift in Sources */,
-				C52CE679239548F0004760EF /* BaseUsersViewController.swift in Sources */,
+				C52CE68323954B01004760EF /* MembersListViewController.swift in Sources */,
+				C52CE679239548F0004760EF /* BaseMembersListViewController.swift in Sources */,
 				F76A98AC24114D59009097C8 /* VotingViewController+SegmentedControl.swift in Sources */,
+				F7E63ABC242020940017B13C /* MemberDetailsDataSource.swift in Sources */,
 				C593177D2397A4D90043F68C /* String+DateParse.swift in Sources */,
 				F7CB479B24087C2B0087FC22 /* Alert.swift in Sources */,
 				C523601623964F11002D9783 /* ReportsMapViewController.swift in Sources */,
@@ -813,6 +850,9 @@
 				C52360212396700F002D9783 /* ReportsListDataSource.swift in Sources */,
 				C52CE67B239548FD004760EF /* BaseMoreViewController.swift in Sources */,
 				F7A2220B240325AA00C11353 /* UIViewController+BackButton.swift in Sources */,
+				F75653412426598A002C4B81 /* BaseFilterCategoriesViewController.swift in Sources */,
+				F7E63AB8241FCCD50017B13C /* MembersApplicationsTableViewCell.swift in Sources */,
+				F7E63AC024203CB90017B13C /* MembersTableViewCell.swift in Sources */,
 				F7A22213240334AD00C11353 /* SubCategoriesTableViewCell.swift in Sources */,
 				F7A222232403D60E00C11353 /* ShowAddressOnMapVC+LocationManagerDelegate.swift in Sources */,
 				C5A3A77323968E580006997D /* VotingViewController.swift in Sources */,
@@ -827,38 +867,42 @@
 				C52CE69123955EE2004760EF /* BaseNavigationController.swift in Sources */,
 				C523602C239687E6002D9783 /* ReportDetailsViewController.swift in Sources */,
 				C52CE64B2395440F004760EF /* AppDelegate.swift in Sources */,
-				F7A2220024004D6200C11353 /* ChooseSubCategoryVC+SearchBarDelegate.swift in Sources */,
+				F7A2220024004D6200C11353 /* SubCategoriesVC+SearchBarDelegate.swift in Sources */,
 				C52CE68D23955331004760EF /* UITabBarController+Animation.swift in Sources */,
 				F7BDE17E23F6002900B6C1D9 /* EnterAddressManuallyViewController.swift in Sources */,
+				F756532D24263A44002C4B81 /* FilterCategoriesViewController.swift in Sources */,
 				C52360102396430C002D9783 /* UIView+Attributes.swift in Sources */,
 				C523601C23965D5C002D9783 /* Report.swift in Sources */,
+				F7AD212E241C0BDA0041AC2A /* MemberDetailViewController.swift in Sources */,
 				F7A2220624005C8600C11353 /* Category.swift in Sources */,
+				F7565343242659F2002C4B81 /* BaseFiltersViewController.swift in Sources */,
 				F76209C823ABA1B300BEB8DE /* NotificationsTableViewController.swift in Sources */,
+				F79A3CFE2419111800D94FD3 /* MakeReportMapVС+MapTapListener.swift in Sources */,
 				F72E4C8C2406F3A4001EF798 /* MakeReportMapVС+LocationManagerDelegate.swift in Sources */,
 				C523601423964F05002D9783 /* ReportsListViewController.swift in Sources */,
 				F72E4C8E2406F79E001EF798 /* MakeReportMapVС+UserLocationObjectListener.swift in Sources */,
-				F7A221F62400418400C11353 /* ChooseCategoryVC+TableViewDelegate.swift in Sources */,
+				F7A221F62400418400C11353 /* CategoriesVC+TableViewDelegate.swift in Sources */,
 				F7A22211240331E300C11353 /* SubCategoriesManager.swift in Sources */,
+				F756533724263F61002C4B81 /* FilterCategoriesVC+TableViewDelegate.swift in Sources */,
 				F7A221FC24004CE600C11353 /* ReportsTableViewController+SearchBarDelegate.swift in Sources */,
+				F756533B2426405D002C4B81 /* FiltersViewController.swift in Sources */,
 				F7CB47A92408A7620087FC22 /* AddressesDataSource.swift in Sources */,
 				F777369323FD6EED002B8746 /* ProfileViewController+SegmentedControl.swift in Sources */,
 				F7A7811A239E9B7700EE2000 /* MakeReportMapVС+UIScrollviewDelegate.swift in Sources */,
 				F716108323ED89E700F89D26 /* AddressesTableViewCell.swift in Sources */,
 				F716107F23ED80C500F89D26 /* EnterAddressVС+TableViewDelegate.swift in Sources */,
-				F7A222192403413300C11353 /* BaseChooseSubCategoryViewController.swift in Sources */,
-				F716108123ED80D300F89D26 /* EnterAddressVС+TableViewDataSource.swift in Sources */,
+				F7A222192403413300C11353 /* BaseSubCategoryViewController.swift in Sources */,
 				C523600823963C24002D9783 /* UIViewWithXib.swift in Sources */,
 				F7CB4799240872510087FC22 /* MakeReportMapVС+ImagePicker.swift in Sources */,
 				C5236024239672CD002D9783 /* BaseTableViewCell.swift in Sources */,
-				F7CB47A724089D200087FC22 /* UsersDataSource.swift in Sources */,
-				F7CB47A12408970C0087FC22 /* UsersTableViewCell.swift in Sources */,
+				F7CB47A724089D200087FC22 /* MembersDataSource.swift in Sources */,
 				F75E4898239AA524007BDD47 /* MakeReport.swift in Sources */,
 				F7A2220D2403307A00C11353 /* SubCategoriesDataSource.swift in Sources */,
-				F7CB47A524089B240087FC22 /* UsersManager.swift in Sources */,
+				F7CB47A524089B240087FC22 /* MembersManager.swift in Sources */,
 				F72E4C902406FC42001EF798 /* Address.swift in Sources */,
 				F7A222082400614600C11353 /* CategoriesManager.swift in Sources */,
 				C593177F2397A7890043F68C /* Date+Formatter.swift in Sources */,
-				F7A221FE24004D3500C11353 /* ChooseCategoryVC+SearchBarDelegate.swift in Sources */,
+				F7A221FE24004D3500C11353 /* CategoriesVC+SearchBarDelegate.swift in Sources */,
 				C52CE661239544E4004760EF /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

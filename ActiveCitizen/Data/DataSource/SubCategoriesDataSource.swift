@@ -22,6 +22,7 @@ class SubCategoriesDataSource: BaseDataSource {
     override func reload() {
         
         onLoading?(true)
+        
         manager.getSubCategories(categoryId: categoryID!, completion: { (result, error) in
             self.onLoading?(false)
             if error != nil {
@@ -43,6 +44,7 @@ class SubCategoriesDataSource: BaseDataSource {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = self.tableView.dequeueReusableCell(withIdentifier: SubCategoriesTableViewCell.identifier)! as! SubCategoriesTableViewCell
+        
         cell.data = data![indexPath.row]
         return cell
     }

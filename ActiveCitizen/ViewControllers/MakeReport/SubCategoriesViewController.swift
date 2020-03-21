@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChooseSubCategoryViewController: BaseChooseSubCategoryViewController {
+class SubCategoriesViewController: BaseSubCategoryViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UsersTableViewCell: BaseTableViewCell {
+class MembersTableViewCell: BaseTableViewCell {
 
     @IBOutlet weak var subContentView: UIView!
     @IBOutlet weak var userPhoto: UIImageView!
@@ -16,12 +16,12 @@ class UsersTableViewCell: BaseTableViewCell {
     @IBOutlet weak var solvedProblems: UILabel!
     @IBOutlet weak var applications: UILabel!
 
-    var data: User? {
+    var data: Member? {
         didSet {
             userPhoto.image = data?.photo
-            userName.text = data?.name //"Филинков Александр Юрьевич"
-            solvedProblems.text = "\(String(describing: data?.solvedProblems))" // "\(8924)"
-            applications.text = "\(String(describing: data?.applications))" // "\(10909)"
+            userName.text = data?.name
+            solvedProblems.text = "\(data?.solvedProblems ?? 0)"
+            applications.text = "\(data?.activeApplications ?? 0)"
         }
     }
 }

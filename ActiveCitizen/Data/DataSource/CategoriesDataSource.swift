@@ -42,6 +42,7 @@ class CategoriesDataSource: BaseDataSource {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = self.tableView.dequeueReusableCell(withIdentifier: CategoriesTableViewCell.identifier)! as! CategoriesTableViewCell
+        
         cell.data = data![indexPath.row]
         return cell
     }

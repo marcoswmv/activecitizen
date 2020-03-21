@@ -10,19 +10,26 @@ import UIKit
 
 class EnterAddressManuallyViewController: BaseEnterAddressManuallyViewController {
 
-    var district = ""
-    var city = ""
-    var street = ""
-    var house = ""
+    @IBOutlet weak var tableView: UITableView!
+    var district: String?
+    var city: String?
+    var street: String?
+    var house: String?
     
     var completionHandler: (([String: String]) -> Void)?
+    var dataSource: AddressesDataSource?
     
     @IBAction func doneOnTouchUpInside(_ sender: Any) {
         
         let addressDictionary = ["street": street, "house": house, "locality": city, "province": district]
         
-        completionHandler!(addressDictionary)
+        completionHandler!(addressDictionary as! [String : String])
         
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
     }
 }

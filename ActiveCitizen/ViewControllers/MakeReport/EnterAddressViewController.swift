@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 
+
 class EnterAddressViewController: BaseEnterAddressViewController {
 
     @IBOutlet weak var tableView: UITableView!
@@ -16,48 +17,65 @@ class EnterAddressViewController: BaseEnterAddressViewController {
     @IBAction func enterAddressManuallyOnTouchUpInside(_ sender: Any) {
         let enterAddressManuallyViewController = EnterAddressManuallyViewController.instantiate() as! EnterAddressManuallyViewController
         
+        if let cityAddress = self.cityAddress, let streetAddress = self.streetAddress {
+            let cityAddressArray = cityAddress.split { $0 == "," }
+            let streetAddressArray = streetAddress.split { $0 == "," }
+            
+            let city = String(cityAddressArray[0])
+            let district = String(cityAddressArray[1])
+            let street = String(streetAddressArray[0])
+            let house = String(streetAddressArray[1])
+            
+            enterAddressManuallyViewController.city = city
+            enterAddressManuallyViewController.district = district
+            enterAddressManuallyViewController.street = street
+            enterAddressManuallyViewController.house = house
+        }
+        
+        
         enterAddressManuallyViewController.completionHandler = { addressDictionary in
             if let returnedStreet = addressDictionary["street"],
                 let returnedHouse = addressDictionary["house"],
                 let returnedCity = addressDictionary["locality"],
                 let returnedDistrict = addressDictionary["province"] {
             
-                let street = returnedStreet != "" ? "\(returnedStreet)" : ""
-                let house = returnedHouse != "" ? "+\(returnedHouse)" : ""
-                let city = returnedCity != "" ? "+\(returnedCity)" : ""
-                let district = returnedDistrict != "" ? "+\(returnedDistrict)" : ""
+                let address = "\(returnedDistrict) \(returnedCity) \(returnedStreet) \(returnedHouse)".replacingOccurrences(of: " ", with: "+")
                 
-                print("City: ", city, district)
-                self.address = "\(street)\(house)\(city)\(district)"
+                self.setupDataSource(from: address)
             }
-            
             self.tableView.reloadData()
         }
         navigationController?.pushViewController(enterAddressManuallyViewController, animated: true)
     }
     
     var completionHandler: ((String?, String?) -> Void)?
+    var defaultValues = UserDefaults.standard
     var selectedCity: String?
     var selectedStreet: String?
-    var selectedCell: AddressesTableViewCell? = nil
     
     var dataSource: AddressesDataSource?
-    
-    var address: String?
+    var location: CLLocation?
+    var cityAddress: String?
+    var streetAddress: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setupDataSource()
+        
+        if let location = self.location {
+            let coordinates = "\(location.coordinate.longitude),\(location.coordinate.latitude)"
+            setupDataSource(from: coordinates)
+        }
+        
         tableView.separatorStyle = .none
     }
     
-    func setupDataSource() {
+    func setupDataSource(from geocode: String?) {
         dataSource = AddressesDataSource(tableView: self.tableView)
         dataSource?.onLoading = { isLoading in
             self.displayLoading(loading: isLoading)
         }
         
         dataSource?.reload()
+        dataSource?.getGeocode?(geocode)
     }
 }

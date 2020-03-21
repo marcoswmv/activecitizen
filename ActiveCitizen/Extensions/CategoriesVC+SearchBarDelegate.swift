@@ -1,5 +1,5 @@
 //
-//  ChooseSubCategoryVC+SearchBarDelegate.swift
+//  ChooseCategoryVC+SearchBarDelegate.swift
 //  ActiveCitizen
 //
 //  Created by Marcos Vicente on 21.02.2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension ChooseSubCategoryViewController: UISearchBarDelegate {
+extension CategoriesViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         cancelSearchTimer()

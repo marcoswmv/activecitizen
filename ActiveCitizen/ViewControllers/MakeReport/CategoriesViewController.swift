@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChooseCategoryViewController: BaseChooseCategoryViewController {
+class CategoriesViewController: BaseCategoriesViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -20,6 +20,10 @@ class ChooseCategoryViewController: BaseChooseCategoryViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupDataSource()
+    }
+    
+    func setupDataSource() {
         dataSource = CategoriesDataSource(tableView: self.tableView)
         dataSource?.onLoading = { isLoading in
             self.displayLoading(loading: isLoading)

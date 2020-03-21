@@ -17,14 +17,21 @@ class ReportsListViewController: BaseReportsListViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dataSource = ReportsListDataSource(tableView: self.tableView)
-        dataSource?.onLoading = { (isLoading) in
-            self.displayLoading(loading: isLoading)
-        }
-        dataSource?.reload()
         
-//        self.tableView.delegate = self
+        setupDataSource()
     }
+    
+    func setupDataSource() {
+        dataSource = ReportsListDataSource(tableView: self.tableView)
+//        dataSource?.onLoading = { (isLoading) in
+//            self.displayLoading(loading: isLoading)
+//        }
+        dataSource?.reload()
+    }
+    
+    
+    
+//    MARK: - Delegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)

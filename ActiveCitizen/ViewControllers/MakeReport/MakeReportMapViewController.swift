@@ -51,7 +51,9 @@ class MakeReportMapViewController: BaseMakeReportViewController {
     @IBAction func enterAddressOnTouchUpInside(_ sender: Any) {
         let enterAddressViewController = EnterAddressViewController.instantiate() as! EnterAddressViewController
         
-        enterAddressViewController.dataSource?.coordinate = self.locationFromPin
+        enterAddressViewController.location = self.locationFromPin
+        enterAddressViewController.cityAddress = self.cityAddress.text
+        enterAddressViewController.streetAddress = self.streetAddress.text
         
         enterAddressViewController.completionHandler = { street, city in
             self.streetAddress.text = street
@@ -61,7 +63,7 @@ class MakeReportMapViewController: BaseMakeReportViewController {
     }
     
     @IBAction func chooseCategoryOnTouchUpInside(_ sender: Any) {
-        let chooseCategoryViewController = ChooseCategoryViewController.instantiate() as! ChooseCategoryViewController
+        let chooseCategoryViewController = CategoriesViewController.instantiate() as! CategoriesViewController
         
         chooseCategoryViewController.completionHandler = { icon, chosenCategory in
             self.categoryIcon.isHidden = false

@@ -9,8 +9,9 @@
 import UIKit
 
 extension EnterAddressManuallyViewController: UITableViewDelegate {
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
         let fillFieldViewController = FillFieldViewController.instantiate() as! FillFieldViewController
         
         switch indexPath.row {

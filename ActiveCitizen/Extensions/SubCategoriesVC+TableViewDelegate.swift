@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension ChooseSubCategoryViewController: UITableViewDelegate {
+extension SubCategoriesViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let categoryName = dataSource?.data![indexPath.row].subCategoryName

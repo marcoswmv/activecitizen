@@ -15,28 +15,29 @@ extension ShowAddressOnMapViewController: CLLocationManagerDelegate {
 //    MARK: View Controller Setup
     
     func setupMap() {
-            map.isRotateGesturesEnabled = false
-            map.addCameraListener(with: self)
-            map.move(with: YMKCameraPosition.init(target: userLocation, zoom: zoom, azimuth: 0, tilt: 0))
-            map.logo.setAlignmentWith(YMKLogoAlignment(horizontalAlignment: YMKLogoHorizontalAlignment.left,
-                                                       verticalAlignment: YMKLogoVerticalAlignment.bottom))
-            showUserLocationOnMap()
-        }
+        map.isRotateGesturesEnabled = false
+        map.addCameraListener(with: self)
+        map.move(with: YMKCameraPosition.init(target: userLocation, zoom: zoom, azimuth: 0, tilt: 0))
+        map.logo.setAlignmentWith(YMKLogoAlignment(horizontalAlignment: YMKLogoHorizontalAlignment.left,
+                                                   verticalAlignment: YMKLogoVerticalAlignment.bottom))
         
-        func setCenterMapForLocation(_ location: YMKPoint?) {
-            guard let location = location else { return }
-            map.move(with: YMKCameraPosition.init(target: location, zoom: zoom, azimuth: 0, tilt: 0),
-                     animationType: YMKAnimation(type: YMKAnimationType.smooth, duration: 0.5),
-                     cameraCallback: nil)
-        }
+        showUserLocationOnMap()
+    }
         
-        func showUserLocationOnMap() {
-            let mapKit = YMKMapKit.sharedInstance()
-            let userLocationLayer = mapKit.createUserLocationLayer(with: mapWindow)
-            
-            userLocationLayer.setVisibleWithOn(true)
-            userLocationLayer.isHeadingEnabled = true
-        }
+    func setCenterMapForLocation(_ location: YMKPoint?) {
+        guard let location = location else { return }
+        map.move(with: YMKCameraPosition.init(target: location, zoom: zoom, azimuth: 0, tilt: 0),
+                 animationType: YMKAnimation(type: YMKAnimationType.smooth, duration: 0.5),
+                 cameraCallback: nil)
+    }
+    
+    func showUserLocationOnMap() {
+        let mapKit = YMKMapKit.sharedInstance()
+        let userLocationLayer = mapKit.createUserLocationLayer(with: mapWindow)
+        
+        userLocationLayer.setVisibleWithOn(true)
+        userLocationLayer.isHeadingEnabled = true
+    }
     
 //    MARK: Location Manager Setup
     
