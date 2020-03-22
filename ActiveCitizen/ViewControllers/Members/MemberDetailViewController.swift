@@ -27,6 +27,12 @@ class MemberDetailViewController: BaseMemberViewController {
         navigationController?.pushViewController(filterCategoriesViewController, animated:true)
     }
     
+    @IBAction func showReportPhotosOnTouchUpInside(_ sender: Any) {
+        
+        
+    }
+    
+    
     var dataSource: MemberDetailsDataSource?
     
     var memberID: Int?

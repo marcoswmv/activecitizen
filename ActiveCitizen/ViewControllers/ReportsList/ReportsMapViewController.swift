@@ -23,9 +23,9 @@ class ReportsMapViewController: BaseReportsListViewController, YMKClusterListene
         let collection = mapView.mapWindow.map.mapObjects.addClusterizedPlacemarkCollection(with: self)
         
         // Load data
-        displayLoading(loading: true)
+//        displayLoading(loading: true)
         manager.getReportsList { (reports, error) in
-            self.displayLoading(loading: false)
+//            self.displayLoading(loading: false)
             
             if error != nil {
                 print("error")

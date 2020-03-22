@@ -31,32 +31,31 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LeX-gp-l2C">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <view key="tableHeaderView" contentMode="scaleToFill" id="VUk-W7-NY3">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="bLM-MI-kVw">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="62"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Поиск" translatesAutoresizingMaskIntoConstraints="NO" id="lsv-gK-vFK">
-                                            <rect key="frame" x="10" y="16" width="355" height="49"/>
+                                            <rect key="frame" x="4" y="6" width="367" height="56"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </searchBar>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="lsv-gK-vFK" secondAttribute="trailing" constant="10" id="Hjt-1V-kNv"/>
-                                        <constraint firstItem="lsv-gK-vFK" firstAttribute="leading" secondItem="VUk-W7-NY3" secondAttribute="leading" constant="10" id="Lxx-lE-xm9"/>
-                                        <constraint firstItem="lsv-gK-vFK" firstAttribute="top" secondItem="VUk-W7-NY3" secondAttribute="top" constant="16" id="fGx-6r-7gB"/>
-                                        <constraint firstAttribute="bottom" secondItem="lsv-gK-vFK" secondAttribute="bottom" constant="10" id="fPq-M2-o7a"/>
-                                        <constraint firstAttribute="height" constant="75" id="nRo-wK-FBn"/>
+                                        <constraint firstAttribute="trailing" secondItem="lsv-gK-vFK" secondAttribute="trailing" constant="4" id="45K-XQ-90n"/>
+                                        <constraint firstAttribute="bottom" secondItem="lsv-gK-vFK" secondAttribute="bottom" id="aeq-5d-mfU"/>
+                                        <constraint firstItem="lsv-gK-vFK" firstAttribute="top" secondItem="bLM-MI-kVw" secondAttribute="top" constant="6" id="vGE-tv-Rzt"/>
+                                        <constraint firstItem="lsv-gK-vFK" firstAttribute="leading" secondItem="bLM-MI-kVw" secondAttribute="leading" constant="4" id="ytQ-YB-7t6"/>
                                     </constraints>
                                 </view>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="YDS-Ub-FAW">
-                                    <rect key="frame" x="0.0" y="253" width="375" height="30"/>
+                                    <rect key="frame" x="0.0" y="230" width="375" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MembersTableViewCell" rowHeight="112" id="xxb-xh-ndC" customClass="MembersTableViewCell" customModule="ActiveCitizen" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="113" width="375" height="112"/>
+                                        <rect key="frame" x="0.0" y="90" width="375" height="112"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xxb-xh-ndC" id="tn8-uK-EkF">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
@@ -164,8 +163,8 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="LeX-gp-l2C" firstAttribute="top" secondItem="AaC-uj-N71" secondAttribute="top" id="D9y-Pv-scj"/>
                             <constraint firstItem="LeX-gp-l2C" firstAttribute="bottom" secondItem="AaC-uj-N71" secondAttribute="bottom" id="Kl0-VU-KBY"/>
-                            <constraint firstItem="LeX-gp-l2C" firstAttribute="top" secondItem="AaC-uj-N71" secondAttribute="top" id="NWD-ne-wj9"/>
                             <constraint firstItem="LeX-gp-l2C" firstAttribute="leading" secondItem="AaC-uj-N71" secondAttribute="leading" id="WdL-Uu-jU6"/>
                             <constraint firstItem="LeX-gp-l2C" firstAttribute="trailing" secondItem="AaC-uj-N71" secondAttribute="trailing" id="pdJ-q8-1P0"/>
                         </constraints>
@@ -409,6 +408,9 @@
                                                                         <constraint firstAttribute="width" constant="30" id="TUx-6o-MOs"/>
                                                                     </constraints>
                                                                     <state key="normal" image="Photo_Numer"/>
+                                                                    <connections>
+                                                                        <action selector="showReportPhotosOnTouchUpInside:" destination="JzH-2f-20L" eventType="touchUpInside" id="Txa-FG-f4H"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                         </stackView>
@@ -618,7 +620,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kjC-wA-Cq3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2712.8000000000002" y="-226.23688155922042"/>
+            <point key="canvasLocation" x="2729" y="-759"/>
         </scene>
         <!--Filters View Controller-->
         <scene sceneID="yZc-JH-fCK">
@@ -676,7 +678,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PTz-8O-W95" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3373.5999999999999" y="-227.13643178410797"/>
+            <point key="canvasLocation" x="3390" y="-760"/>
         </scene>
     </scenes>
     <resources>

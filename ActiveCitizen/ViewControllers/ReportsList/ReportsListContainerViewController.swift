@@ -7,22 +7,28 @@
 //
 
 import UIKit
+import MaterialComponents.MaterialTabs
 
 class ReportsListContainerViewController: BaseReportsListViewController {
 
-    @IBOutlet weak var modeSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var segmentedControl: MDCTabBar!
     @IBOutlet weak var mapContainerView: UIView!
     @IBOutlet weak var listContainerView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    @IBAction func modeSegmentedControlValueChanged(_ sender: Any) {
         
-        let showList = modeSegmentedControl.selectedSegmentIndex == 0
-        mapContainerView.isHidden = showList
-        listContainerView.isHidden = !showList
+        setupSegmentedControl()
+        setupNavigationBarElements()
     }
     
+    func setupNavigationBarElements() {
+        let filterButton = UIBarButtonItem(image: UIImage(named: "filter")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleFilter))
+        
+        navigationItem.rightBarButtonItem = filterButton
+    }
+    
+    @objc func handleFilter() {
+        print("Showing filters")
+    }
 }
