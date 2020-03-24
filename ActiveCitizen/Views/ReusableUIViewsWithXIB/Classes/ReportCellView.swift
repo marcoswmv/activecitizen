@@ -23,11 +23,19 @@ class ReportCellView: UIViewWithXib {
     var photos: [String]?
     
     @IBAction func showPhotosOnTouchUpInside(_ sender: UIButton) {
+        if self.tag == 0 {
+            let imageViewController = ImageViewController.instantiate() as! ImageViewController
+            
+            imageViewController.photosToReceive = photos
+            
+            self.findViewController()?.navigationController?.pushViewController(imageViewController, animated: true)
+        } else if self.tag == 1 {
+            let memberDetailImageViewController = MemberDetailImageViewController.instantiate() as! MemberDetailImageViewController
+            
+            memberDetailImageViewController.photosToReceive = photos
+            
+            self.findViewController()?.navigationController?.pushViewController(memberDetailImageViewController, animated: true)
+        }
         
-        let imageViewController = ImageViewController.instantiate() as! ImageViewController
-        
-        imageViewController.photosToReceive = photos
-        
-        self.findViewController()?.navigationController?.pushViewController(imageViewController, animated: true)
     }
 }

@@ -23,11 +23,11 @@ class MemberDetailsDataSource: BaseDataSource {
     override func reload() {
         
         let reports: [[String: Any]] = [[ "categoryId": 1101, "created": "2013-12-02T19:13:16.167+0000", "categoryName": "Автомобильные дороги",
-                                          "subcategoryName": "Аварийные опоры линий наружного освещения", "address": "Россия, Волгоград, посёлок Ангарский, Раздольная улица, 47", "files": ["thor1"], "taskDefinitionKey": "taskEnterResult"],
+                                          "subcategoryName": "Аварийные опоры линий наружного освещения", "address": "Россия, Волгоград, посёлок Ангарский, Раздольная улица, 47", "files": ["dog1"], "taskDefinitionKey": "taskEnterResult"],
                                         [ "categoryId": 1102, "created": "2020-1-02T19:13:16.167+0000", "categoryName": "Автомобильные орфвлытоылчы",
-                                        "subcategoryName": "Аварийные опоры линиаватртноьй наружного оносвещения", "address": "Россия, Волгоград, посёлок Ангарский, Раздольная улица, 47", "files": [], "taskDefinitionKey": "taskAcceptance"],
+                                        "subcategoryName": "Аварийные опоры линиаватртноьй наружного оносвещения", "address": "Россия, Волгоград, посёлок Ангарский, Раздольная улица, 47", "files": ["dog4", "dog5", "dog6"], "taskDefinitionKey": "taskAcceptance"],
                                         [ "categoryId": 1103, "created": "2021-2-02T19:13:16.167+0000", "categoryName": "Авфылврифыыловилфсыльные дороги",
-                                          "subcategoryName": "Аварийныефмывамвамав опоры линий наружного освещения", "address": "Россия, Волгоград, посёлок Ангарский, Раздольная улица, 47", "files": ["thor2", "thor3"], "taskDefinitionKey": "taskRejected"]]
+                                          "subcategoryName": "Аварийныефмывамвамав опоры линий наружного освещения", "address": "Россия, Волгоград, посёлок Ангарский, Раздольная улица, 47", "files": ["dog2", "dog3"], "taskDefinitionKey": "taskRejected"]]
         
         
         var result = [Report]()

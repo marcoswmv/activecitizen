@@ -102,6 +102,8 @@
 		F777930E2428127F00389A0D /* SelectedAddressCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F777930D2428127F00389A0D /* SelectedAddressCellView.swift */; };
 		F77793102428129500389A0D /* SelectedAddressCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F777930F2428129500389A0D /* SelectedAddressCellView.xib */; };
 		F77EF21823A7B36700938A3B /* SegmentedControl+MaterialPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77EF21723A7B36700938A3B /* SegmentedControl+MaterialPreset.swift */; };
+		F78EC33F242A7B1000062A6B /* MemberDetailImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78EC33E242A7B1000062A6B /* MemberDetailImageViewController.swift */; };
+		F78EC341242A7C9300062A6B /* BaseMemberDetailImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78EC340242A7C9300062A6B /* BaseMemberDetailImageViewController.swift */; };
 		F79A3CFE2419111800D94FD3 /* MakeReportMapVС+MapTapListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79A3CFD2419111800D94FD3 /* MakeReportMapVС+MapTapListener.swift */; };
 		F7A221DC23FF24D900C11353 /* UITabBarController+CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A221DB23FF24D900C11353 /* UITabBarController+CustomTabBar.swift */; };
 		F7A221E7240013DB00C11353 /* SubCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A221E5240013DB00C11353 /* SubCategoriesViewController.swift */; };
@@ -249,6 +251,8 @@
 		F777930D2428127F00389A0D /* SelectedAddressCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedAddressCellView.swift; sourceTree = "<group>"; };
 		F777930F2428129500389A0D /* SelectedAddressCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SelectedAddressCellView.xib; path = ActiveCitizen/Views/ReusableUIViewsWithXIB/Classes/SelectedAddressCellView.xib; sourceTree = SOURCE_ROOT; };
 		F77EF21723A7B36700938A3B /* SegmentedControl+MaterialPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SegmentedControl+MaterialPreset.swift"; sourceTree = "<group>"; };
+		F78EC33E242A7B1000062A6B /* MemberDetailImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailImageViewController.swift; sourceTree = "<group>"; };
+		F78EC340242A7C9300062A6B /* BaseMemberDetailImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMemberDetailImageViewController.swift; sourceTree = "<group>"; };
 		F79A3CFD2419111800D94FD3 /* MakeReportMapVС+MapTapListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MakeReportMapVС+MapTapListener.swift"; sourceTree = "<group>"; };
 		F7A221DB23FF24D900C11353 /* UITabBarController+CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+CustomTabBar.swift"; sourceTree = "<group>"; };
 		F7A221E5240013DB00C11353 /* SubCategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoriesViewController.swift; sourceTree = "<group>"; };
@@ -411,23 +415,24 @@
 			isa = PBXGroup;
 			children = (
 				F7A2221624033FF800C11353 /* BaseCategoriesViewController.swift */,
-				F7A222182403413300C11353 /* BaseSubCategoryViewController.swift */,
 				F7A2221C240341ED00C11353 /* BaseEnterAddressManuallyViewController.swift */,
 				F7A2221A2403419100C11353 /* BaseEnterAddressViewController.swift */,
 				F7A2221E2403427F00C11353 /* BaseFillFieldViewController.swift */,
-				C52CE672239548C1004760EF /* BaseMakeReportViewController.swift */,
+				F75653402426598A002C4B81 /* BaseFilterCategoriesViewController.swift */,
+				F7565342242659F2002C4B81 /* BaseFiltersViewController.swift */,
 				F701799E242A65390048BA19 /* BaseImageViewController.swift */,
+				F78EC340242A7C9300062A6B /* BaseMemberDetailImageViewController.swift */,
+				C52CE672239548C1004760EF /* BaseMakeReportViewController.swift */,
+				C52CE678239548F0004760EF /* BaseMembersListViewController.swift */,
+				F7AD212B241C0B830041AC2A /* BaseMemberViewController.swift */,
 				C52CE67A239548FD004760EF /* BaseMoreViewController.swift */,
 				C52CE69023955EE2004760EF /* BaseNavigationController.swift */,
 				C52CE674239548D7004760EF /* BaseProfileViewController.swift */,
-				F7AD212B241C0B830041AC2A /* BaseMemberViewController.swift */,
 				C52CE676239548E6004760EF /* BaseReportsListViewController.swift */,
 				F7A2221424033F4100C11353 /* BaseShowAddressOnMapViewController.swift */,
-				C52CE678239548F0004760EF /* BaseMembersListViewController.swift */,
-				F74D2B5E24114A0500F138BB /* BaseVotingViewController.swift */,
-				F7565342242659F2002C4B81 /* BaseFiltersViewController.swift */,
-				F75653402426598A002C4B81 /* BaseFilterCategoriesViewController.swift */,
+				F7A222182403413300C11353 /* BaseSubCategoryViewController.swift */,
 				C52CE660239544E4004760EF /* BaseViewController.swift */,
+				F74D2B5E24114A0500F138BB /* BaseVotingViewController.swift */,
 				C52CE69223955F95004760EF /* RootTabBarController.swift */,
 			);
 			path = Base;
@@ -473,6 +478,7 @@
 				C52CE68223954B01004760EF /* MembersListViewController.swift */,
 				F7AD212D241C0BDA0041AC2A /* MemberDetailViewController.swift */,
 				F756533A2426405D002C4B81 /* FiltersViewController.swift */,
+				F78EC33E242A7B1000062A6B /* MemberDetailImageViewController.swift */,
 				F756532C24263A44002C4B81 /* FilterCategoriesViewController.swift */,
 			);
 			path = Members;
@@ -515,8 +521,10 @@
 		C52CE68723954F89004760EF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				C52CE68E23955740004760EF /* BaseViewController+TextFieldNavigation.swift */,
 				F701799C242A63480048BA19 /* BaseViewController+HideShowNavigationBar.swift */,
+				F7A221FB24004CE600C11353 /* BaseViewController+SearchBarDelegate.swift */,
+				C52CE68E23955740004760EF /* BaseViewController+TextFieldNavigation.swift */,
+				F7178A3A242827F8001741B5 /* BaseViewController+TextViewHideKeyboard.swift */,
 				F7A221FD24004D3500C11353 /* CategoriesVC+SearchBarDelegate.swift */,
 				F7A221F52400418400C11353 /* CategoriesVC+TableViewDelegate.swift */,
 				C593177E2397A7890043F68C /* Date+Formatter.swift */,
@@ -532,10 +540,8 @@
 				F7A78119239E9B7700EE2000 /* MakeReportMapVС+UIScrollviewDelegate.swift */,
 				F72E4C8D2406F79E001EF798 /* MakeReportMapVС+UserLocationObjectListener.swift */,
 				F7AD212F241C0C460041AC2A /* MembersListVC+TableViewDelegate.swift */,
-				F7178A3A242827F8001741B5 /* BaseViewController+TextViewHideKeyboard.swift */,
 				F777369223FD6EED002B8746 /* ProfileVC+SegmentedControl.swift */,
 				F75653462427A022002C4B81 /* ReportsTableVC+SegmentedControl.swift */,
-				F7A221FB24004CE600C11353 /* BaseViewController+SearchBarDelegate.swift */,
 				F77EF21723A7B36700938A3B /* SegmentedControl+MaterialPreset.swift */,
 				F7A222222403D60E00C11353 /* ShowAddressOnMapVC+LocationManagerDelegate.swift */,
 				F72E4C852406D549001EF798 /* ShowAddressOnMapVC+MapCameraListener.swift */,
@@ -845,6 +851,7 @@
 				F7A221F22400324800C11353 /* UIImage+Icons.swift in Sources */,
 				F7A222042400536200C11353 /* CategoriesTableViewCell.swift in Sources */,
 				F7A221DC23FF24D900C11353 /* UITabBarController+CustomTabBar.swift in Sources */,
+				F78EC33F242A7B1000062A6B /* MemberDetailImageViewController.swift in Sources */,
 				C52CE68B23954FCB004760EF /* UIColor+Style.swift in Sources */,
 				C523602623967420002D9783 /* ReportsListTableViewCell.swift in Sources */,
 				F7A222022400524B00C11353 /* CategoriesDataSource.swift in Sources */,
@@ -853,6 +860,7 @@
 				C52CE68523954B7E004760EF /* MoreViewController.swift in Sources */,
 				C5A3A77123968E4A0006997D /* AboutViewController.swift in Sources */,
 				C523602A23967F5A002D9783 /* UIApplication+Loading.swift in Sources */,
+				F78EC341242A7C9300062A6B /* BaseMemberDetailImageViewController.swift in Sources */,
 				F7A2221F2403427F00C11353 /* BaseFillFieldViewController.swift in Sources */,
 				F7A221E7240013DB00C11353 /* SubCategoriesViewController.swift in Sources */,
 				F7A2221724033FF800C11353 /* BaseCategoriesViewController.swift in Sources */,
