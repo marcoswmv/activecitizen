@@ -16,6 +16,8 @@ class BaseViewController: UIViewController, UITextFieldDelegate, NVActivityIndic
     
     var searchController = UISearchController()
     
+    var timer: Timer?
+    
     // MARK: - Variables
     
     /// Automatic authentication check. Logout if needed

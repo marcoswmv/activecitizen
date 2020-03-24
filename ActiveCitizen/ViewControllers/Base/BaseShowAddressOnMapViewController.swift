@@ -21,19 +21,4 @@ class BaseShowAddressOnMapViewController: BaseViewController {
         setupNavigationBarShadow(activate: true)
     }
     
-    func makeNavigationBarInvisible() {
-//        Turn nav bar invisible
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.view.backgroundColor = .clear
-        navigationController?.navigationBar.isTranslucent = true
-        
-    }
-    
-    func makeNavigationBarVisible() {
-//        Turn it visible
-        navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
-        navigationController?.navigationBar.shadowImage = nil
-    }
-
 }

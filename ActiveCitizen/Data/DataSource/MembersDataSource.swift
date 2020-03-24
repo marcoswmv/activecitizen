@@ -61,9 +61,10 @@ class MembersDataSource: BaseDataSource {
         
         cell.data = data![indexPath.row]
         
-        cell.setCustomCellStyle(for: cell.subContentView)
+//        cell.setCustomCellStyle(for: cell.subContentView)
         cell.userPhoto.layer.cornerRadius = (cell.userPhoto.frame.width) / 2
         cell.selectionStyle = .none
+        
         return cell
     }
 

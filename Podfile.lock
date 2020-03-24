@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (5.0.2)
+  - Auk (11.0.0):
+    - moa
   - MaterialComponents/AnimationTiming (107.1.0)
   - MaterialComponents/Availability (107.1.0)
   - MaterialComponents/Buttons (107.1.0):
@@ -61,6 +63,7 @@ PODS:
     - MaterialComponents/private/Math
   - MDFInternationalization (2.0.0)
   - MDFTextAccessibility (2.0.0)
+  - moa (12.0.0)
   - NVActivityIndicatorView (4.8.0):
     - NVActivityIndicatorView/Presenter (= 4.8.0)
   - NVActivityIndicatorView/Presenter (4.8.0)
@@ -73,8 +76,10 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-rc.3)
+  - Auk (~> 11.0)
   - MaterialComponents/Tabs
   - MaterialComponents/TextFields
+  - moa (~> 12.0)
   - NVActivityIndicatorView
   - YandexMapKit
   - YandexMapKitSearch
@@ -82,9 +87,11 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
+    - Auk
     - MaterialComponents
     - MDFInternationalization
     - MDFTextAccessibility
+    - moa
     - NVActivityIndicatorView
     - YandexMapKit
     - YandexMapKitSearch
@@ -92,14 +99,16 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 3ba7a4db18b4f62c4a1c0e1cb39d7f3d52e10ada
+  Auk: 7cc533252e2caaaa36b2be19c0b799f6057c365a
   MaterialComponents: 12ba01c537f9728d9cd739c6c46888abce8198d4
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
+  moa: e2346f12de6c65bbca4d103950d45db9e46785ef
   NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
   YandexMapKit: ecd4b78de34a35df63d066ac299e6fd0fe46d1ba
   YandexMapKitSearch: b46ddd1c80e2e35d006cdfc4ab88070a50cebeda
   YandexRuntime: 2d55244d06267106cf9b00c25a1e63f72a73b6fd
 
-PODFILE CHECKSUM: 8f3194cb8eb9cd49023b8aa55ac67765fd77064d
+PODFILE CHECKSUM: af96f238ad848f246c1f5c74d3d345984a4fedd5
 
 COCOAPODS: 1.8.4

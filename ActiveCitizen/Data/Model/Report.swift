@@ -13,6 +13,7 @@ class Report {
     var id: Int?
     var userID: Int?
     var created: Date?
+    var categoryIcon: UIImage?
     var categoryId: Int?
     var categoryName: String?
     var subcategoryId: Int?
@@ -37,11 +38,35 @@ class Report {
         address = dictionary["address"] as? String
         photos = dictionary["files"] as? [String]
         status = dictionary["taskDefinitionKey"] as? String
+        categoryIcon = getIcon(id: categoryId!)
         
         if let coordsString = dictionary["coordinates"] as? String {
             let coords = coordsString.split(separator: ",");
             latitude = Double(String(coords.first!))
             longitude = Double(String(coords.last!))
+        }
+    }
+    
+    func getIcon(id: Int) -> UIImage {
+        switch id {
+        case 1101:
+            return UIImage.yardArea!
+        case 1102:
+            return UIImage.road!
+        case 1103:
+            return UIImage.water!
+        case 1104:
+            return UIImage.fire!
+        case 1105:
+            return UIImage.buildings!
+        case 1106:
+            return UIImage.publicTransport!
+        case 1107:
+            return UIImage.payments!
+        case 1108:
+            return UIImage.empty
+        default:
+            return UIImage()
         }
     }
  

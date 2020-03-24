@@ -12,10 +12,12 @@ class ReportsTableViewController: BaseViewController, UITableViewDelegate {
 
     @IBOutlet weak var searchBar: UISearchBar!
     
-    var timer: Timer?
+//    var timer: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        keyboardManagment = true
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

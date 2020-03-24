@@ -10,6 +10,7 @@ import UIKit
 
 class MembersListViewController: BaseMembersListViewController {
 
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
     var dataSource: MembersDataSource?
@@ -18,7 +19,9 @@ class MembersListViewController: BaseMembersListViewController {
         super.viewDidLoad()
 
         setupDataSource()
+        self.hideKeyboardWhenTappedAround()
         tableView.separatorStyle = .none
+        keyboardManagment = true
     }
     
     func setupDataSource() {

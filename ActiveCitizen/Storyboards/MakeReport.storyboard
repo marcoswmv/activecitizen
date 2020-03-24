@@ -176,7 +176,7 @@
         <!--Categories View Controller-->
         <scene sceneID="ff1-OZ-AVC">
             <objects>
-                <viewController storyboardIdentifier="ChooseCategoryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qG9-u1-Oxd" customClass="CategoriesViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CategoriesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qG9-u1-Oxd" customClass="CategoriesViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EH-hR-NjJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -272,6 +272,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="FzU-tN-Xqy"/>
                     <connections>
+                        <outlet property="contentScrollView" destination="SrF-U5-SYw" id="CCF-ct-eaV"/>
                         <outlet property="searchBar" destination="eha-yg-LSx" id="xci-6i-o1G"/>
                         <outlet property="tableView" destination="SrF-U5-SYw" id="VT6-Rj-sf9"/>
                     </connections>
@@ -283,7 +284,7 @@
         <!--Sub Categories View Controller-->
         <scene sceneID="MlV-F2-wGK">
             <objects>
-                <viewController storyboardIdentifier="ChooseSubCategoryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2ea-Dy-QVc" customClass="SubCategoriesViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SubCategoriesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2ea-Dy-QVc" customClass="SubCategoriesViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="njh-Zq-iHN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -357,6 +358,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="0c8-5Q-lSd"/>
                     <connections>
+                        <outlet property="contentScrollView" destination="XFZ-Ml-wr4" id="FX5-dz-d3T"/>
                         <outlet property="searchBar" destination="o4j-hw-h6Q" id="t4H-cF-MwF"/>
                         <outlet property="tableView" destination="XFZ-Ml-wr4" id="PV1-XL-FG4"/>
                     </connections>
@@ -741,69 +743,39 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sDI-LT-AUY" userLabel="Sub Content View">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sDI-LT-AUY" customClass="AddressCellView" customModule="ActiveCitizen" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="10" width="335" height="64"/>
-                                                    <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map_pin_blue" translatesAutoresizingMaskIntoConstraints="NO" id="uGd-Xd-oqL">
-                                                            <rect key="frame" x="21" y="16" width="24" height="32"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="32" id="UYC-Vd-M5O"/>
-                                                                <constraint firstAttribute="width" constant="24" id="XUz-4T-Rmm"/>
-                                                            </constraints>
-                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
-                                                        </imageView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0ls-Et-9NE">
-                                                            <rect key="frame" x="60" y="15" width="257" height="34"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afz-XL-oEc">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="257" height="13.666666666666666"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="13.67" id="GNB-Ms-sOx"/>
-                                                                    </constraints>
-                                                                    <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="15"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxE-vM-Had">
-                                                                    <rect key="frame" x="0.0" y="18.666666666666664" width="257" height="15.333333333333336"/>
-                                                                    <color key="tintColor" name="App Blue"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="15.33" id="9l2-pw-krD"/>
-                                                                    </constraints>
-                                                                    <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="17"/>
-                                                                    <color key="textColor" name="App Blue"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </stackView>
-                                                    </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstItem="uGd-Xd-oqL" firstAttribute="centerY" secondItem="sDI-LT-AUY" secondAttribute="centerY" id="1We-dQ-hjO"/>
-                                                        <constraint firstAttribute="trailing" secondItem="0ls-Et-9NE" secondAttribute="trailing" constant="18" id="CDm-hZ-FQj"/>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="DJk-1s-rI5"/>
-                                                        <constraint firstAttribute="bottom" secondItem="0ls-Et-9NE" secondAttribute="bottom" constant="15" id="GyU-fS-37T"/>
-                                                        <constraint firstItem="0ls-Et-9NE" firstAttribute="leading" secondItem="uGd-Xd-oqL" secondAttribute="trailing" constant="15" id="MZC-Qs-m3e"/>
-                                                        <constraint firstItem="uGd-Xd-oqL" firstAttribute="leading" secondItem="sDI-LT-AUY" secondAttribute="leading" constant="21" id="SXQ-V1-wMl"/>
-                                                        <constraint firstItem="0ls-Et-9NE" firstAttribute="centerY" secondItem="sDI-LT-AUY" secondAttribute="centerY" id="UEY-Df-lDu"/>
-                                                        <constraint firstItem="0ls-Et-9NE" firstAttribute="top" secondItem="sDI-LT-AUY" secondAttribute="top" constant="15" id="WtH-dV-iWq"/>
                                                     </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpU-Na-IRa" customClass="SelectedAddressCellView" customModule="ActiveCitizen" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="10" width="335" height="64"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="yfC-wJ-yWm"/>
+                                                    </constraints>
+                                                    <viewLayoutGuide key="safeArea" id="OT6-sJ-3M0"/>
                                                 </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="sDI-LT-AUY" firstAttribute="centerY" secondItem="4o2-Of-OQQ" secondAttribute="centerY" id="3P0-Nr-1LA"/>
+                                                <constraint firstAttribute="trailing" secondItem="cpU-Na-IRa" secondAttribute="trailing" constant="20" id="6eB-ww-N2R"/>
+                                                <constraint firstItem="cpU-Na-IRa" firstAttribute="centerY" secondItem="4o2-Of-OQQ" secondAttribute="centerY" id="R3Z-hQ-SQz"/>
+                                                <constraint firstItem="cpU-Na-IRa" firstAttribute="leading" secondItem="4o2-Of-OQQ" secondAttribute="leading" constant="20" id="Rux-Gv-d1r"/>
                                                 <constraint firstAttribute="bottom" secondItem="sDI-LT-AUY" secondAttribute="bottom" constant="10" id="Xu0-fN-GlA"/>
+                                                <constraint firstAttribute="bottom" secondItem="cpU-Na-IRa" secondAttribute="bottom" constant="10" id="dID-On-4Pc"/>
                                                 <constraint firstAttribute="trailing" secondItem="sDI-LT-AUY" secondAttribute="trailing" constant="20" id="nZv-ba-kBF"/>
                                                 <constraint firstItem="sDI-LT-AUY" firstAttribute="top" secondItem="4o2-Of-OQQ" secondAttribute="top" constant="10" id="vAe-Mp-bLF"/>
+                                                <constraint firstItem="cpU-Na-IRa" firstAttribute="top" secondItem="4o2-Of-OQQ" secondAttribute="top" constant="10" id="xj9-0A-xjR"/>
                                                 <constraint firstItem="sDI-LT-AUY" firstAttribute="leading" secondItem="4o2-Of-OQQ" secondAttribute="leading" constant="20" id="z79-cX-JVp"/>
                                             </constraints>
                                             <edgeInsets key="layoutMargins" top="10" left="18" bottom="10" right="18"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="cityAddress" destination="Afz-XL-oEc" id="Adm-QH-WNv"/>
-                                            <outlet property="mapPin" destination="uGd-Xd-oqL" id="LC9-j8-Flw"/>
-                                            <outlet property="streetAddress" destination="gxE-vM-Had" id="qrd-pO-hTi"/>
-                                            <outlet property="subContentView" destination="sDI-LT-AUY" id="uco-jr-KK6"/>
+                                            <outlet property="addressCellView" destination="sDI-LT-AUY" id="Rxu-aZ-cEr"/>
+                                            <outlet property="selectedAddressCellView" destination="cpU-Na-IRa" id="nM7-ag-CiN"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1067,7 +1039,6 @@
         <image name="Photo" width="24" height="24"/>
         <image name="disclosure" width="8" height="12"/>
         <image name="map_pin" width="24" height="24"/>
-        <image name="map_pin_blue" width="75" height="100.33333587646484"/>
         <image name="map_pin_green" width="32" height="43"/>
         <image name="message_white" width="28" height="28"/>
         <image name="my_position" width="42" height="42"/>

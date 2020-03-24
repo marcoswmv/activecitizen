@@ -46,6 +46,7 @@ class SubCategoriesDataSource: BaseDataSource {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: SubCategoriesTableViewCell.identifier)! as! SubCategoriesTableViewCell
         
         cell.data = data![indexPath.row]
+        
         return cell
     }
 }

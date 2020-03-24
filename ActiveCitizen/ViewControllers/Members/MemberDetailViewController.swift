@@ -69,6 +69,7 @@ class MemberDetailViewController: BaseMemberViewController {
         userName.text = nameToReceive
         solvedProblems.text = solvedProblemsToReceive
         applications.text = applicationsToReceive
+        keyboardManagment = true
     }
 
 }

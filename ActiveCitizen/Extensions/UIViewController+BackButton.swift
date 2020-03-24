@@ -46,7 +46,7 @@ extension UIViewController {
         
     }
       
-      @objc func handlePop() {
-          navigationController?.popViewController(animated: true)
-      }
+    @objc func handlePop() {
+      navigationController?.popViewController(animated: true)
+    }
 }

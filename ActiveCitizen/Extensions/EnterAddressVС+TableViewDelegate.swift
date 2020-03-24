@@ -28,13 +28,14 @@ extension EnterAddressViewController: UITableViewDelegate {
         let cell = cell as! AddressesTableViewCell
         
         if let selectedRow = defaultValues.value(forKey: Keys.selectedAddress) as? Int, selectedRow == indexPath.row {
-            print(cell)
-            cell.setCustomStyleOnSelection(for: cell.subContentView)
-            cell.streetAddress.textColor = .black
-            cell.mapPin.image = UIImage(named: "map_pin")
-
+            
+            cell.selectedAddressCellView.isHidden = false
+            cell.addressCellView.isHidden = true
+            
         } else {
-            cell.setCustomCellStyle(for: cell.subContentView)
+            
+            cell.selectedAddressCellView.isHidden = true
+            cell.addressCellView.isHidden = false
         }
     }
     

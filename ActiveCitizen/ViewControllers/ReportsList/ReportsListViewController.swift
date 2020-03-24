@@ -10,7 +10,6 @@ import UIKit
 
 class ReportsListViewController: BaseReportsListViewController {
 
-    
     @IBOutlet weak var tableView: UITableView!
     
     var dataSource: ReportsListDataSource?
@@ -19,6 +18,7 @@ class ReportsListViewController: BaseReportsListViewController {
         super.viewDidLoad()
         
         setupDataSource()
+        keyboardManagment = true
     }
     
     func setupDataSource() {
@@ -28,7 +28,6 @@ class ReportsListViewController: BaseReportsListViewController {
 //        }
         dataSource?.reload()
     }
-    
     
     
 //    MARK: - Delegate

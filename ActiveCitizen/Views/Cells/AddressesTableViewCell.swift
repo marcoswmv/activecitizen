@@ -10,15 +10,16 @@ import UIKit
 
 class AddressesTableViewCell: BaseTableViewCell {
 
-    @IBOutlet weak var subContentView: UIView!
-    @IBOutlet weak var mapPin: UIImageView!
-    @IBOutlet weak var cityAddress: UILabel!
-    @IBOutlet weak var streetAddress: UILabel!
+    @IBOutlet weak var addressCellView: AddressCellView!
+    @IBOutlet weak var selectedAddressCellView: SelectedAddressCellView!
     
     var data: Address? {
         didSet {
-            cityAddress.text = data?.city
-            streetAddress.text = data?.street
+            addressCellView.cityAddress.text = data?.city
+            addressCellView.streetAddress.text = data?.street
+            
+            selectedAddressCellView.cityAddress.text = data?.city
+            selectedAddressCellView.streetAddress.text = data?.street
         }
     }
 }

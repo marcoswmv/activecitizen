@@ -15,12 +15,13 @@ class CategoriesViewController: BaseCategoriesViewController {
     
     var completionHandler: ((UIImage, String) -> Void)?
     var dataSource: CategoriesDataSource?
-    var timer: Timer?
+//    var timer: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupDataSource()
+        keyboardManagment = true
     }
     
     func setupDataSource() {

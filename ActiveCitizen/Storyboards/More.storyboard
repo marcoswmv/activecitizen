@@ -202,6 +202,13 @@
                                         <constraint firstItem="M6m-fW-z9J" firstAttribute="centerY" secondItem="BQn-lZ-5w6" secondAttribute="centerY" id="LKg-CN-Erg"/>
                                     </constraints>
                                 </view>
+                                <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't forget to bind contentScrollView outlet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b62-fk-IHL">
+                                    <rect key="frame" x="0.0" y="180" width="375" height="98"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="y7s-05-sJg">
                                         <rect key="frame" x="0.0" y="108" width="375" height="44"/>

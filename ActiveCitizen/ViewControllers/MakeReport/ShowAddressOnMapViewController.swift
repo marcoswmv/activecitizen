@@ -52,6 +52,7 @@ class ShowAddressOnMapViewController: BaseShowAddressOnMapViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        
         makeNavigationBarVisible()
     }
     

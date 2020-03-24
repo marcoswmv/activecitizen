@@ -18,6 +18,8 @@ target "ActiveCitizen" do
     pod "NVActivityIndicatorView"
     pod "MaterialComponents/TextFields"
     pod "MaterialComponents/Tabs"
+    pod 'moa', '~> 12.0'
+    pod 'Auk', '~> 11.0'
     
     #pod "WMSegmentControl"
     #pod "RESegmentedControl"

@@ -44,6 +44,7 @@ class CategoriesDataSource: BaseDataSource {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: CategoriesTableViewCell.identifier)! as! CategoriesTableViewCell
         
         cell.data = data![indexPath.row]
+        
         return cell
     }
 }

@@ -16,11 +16,16 @@ class SubCategoriesViewController: BaseSubCategoryViewController {
     var dataSource: SubCategoriesDataSource?
     var completionHandler: ((String) -> Void)?
     var categoryID: Int?
-    var timer: Timer?
+//    var timer: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupDataSource()
+        keyboardManagment = true
+    }
+    
+    func setupDataSource() {
         dataSource = SubCategoriesDataSource(tableView: self.tableView)
         dataSource?.onLoading = { isLoading in
             self.displayLoading(loading: isLoading)

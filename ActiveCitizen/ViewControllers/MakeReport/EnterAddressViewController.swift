@@ -67,6 +67,7 @@ class EnterAddressViewController: BaseEnterAddressViewController {
         }
         
         tableView.separatorStyle = .none
+        layoutTableViewCells()
     }
     
     func setupDataSource(from geocode: String?) {
@@ -77,5 +78,12 @@ class EnterAddressViewController: BaseEnterAddressViewController {
         
         dataSource?.reload()
         dataSource?.getGeocode?(geocode)
+    }
+    
+    func layoutTableViewCells() {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AddressesTableViewCell") as! AddressesTableViewCell
+        
+        cell.selectedAddressCellView.isHidden = true
+        cell.addressCellView.isHidden = false
     }
 }
