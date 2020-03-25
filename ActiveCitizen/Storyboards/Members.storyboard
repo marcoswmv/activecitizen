@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="baE-zn-9UB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="baE-zn-9UB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -342,16 +342,16 @@
                                             <viewLayoutGuide key="safeArea" id="brc-o0-U1W"/>
                                         </view>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="115" translatesAutoresizingMaskIntoConstraints="NO" id="Thc-39-WDH">
-                                            <rect key="frame" x="14" y="160.5" width="390" height="48"/>
+                                            <rect key="frame" x="14" y="160.5" width="390" height="24"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Обращения пользователя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJE-35-2O8">
-                                                    <rect key="frame" x="0.0" y="0.0" width="184" height="48"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="184" height="24"/>
                                                     <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rpw-lY-RKf">
-                                                    <rect key="frame" x="299" y="0.0" width="91" height="48"/>
+                                                    <rect key="frame" x="299" y="0.0" width="91" height="24"/>
                                                     <state key="normal" image="filter"/>
                                                     <connections>
                                                         <action selector="showFilterCategoriesOnTouchUpInside:" destination="JzH-2f-20L" eventType="touchUpInside" id="cgU-fU-TSK"/>
@@ -555,7 +555,6 @@
         <!--Member Detail Image View Controller-->
         <scene sceneID="pUG-MF-TOq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qrR-nz-KxA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="MemberDetailImageViewController" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pv2-DS-DbH" customClass="MemberDetailImageViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TkD-2X-ZcF" customClass="IBDesignableView" customModule="ActiveCitizen" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -594,6 +593,7 @@
                         <outlet property="scrollView" destination="89x-IF-tBS" id="cOz-gI-Rkb"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qrR-nz-KxA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2729" y="-71"/>
         </scene>

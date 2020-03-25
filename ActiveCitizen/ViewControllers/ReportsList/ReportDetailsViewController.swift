@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReportDetailsViewController: BaseReportsListViewController {
+class ReportDetailsViewController: BaseReportDetailsViewController {
 
     var report: Report?
     

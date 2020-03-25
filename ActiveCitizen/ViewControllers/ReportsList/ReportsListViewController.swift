@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReportsListViewController: BaseReportsListViewController {
+class ReportsListViewController: BaseReportsListViewController, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -33,9 +33,12 @@ class ReportsListViewController: BaseReportsListViewController {
 //    MARK: - Delegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        print("A cell was selected!")
+        
         let vc = ReportDetailsViewController.instantiate() as! ReportDetailsViewController
+        
         vc.report = dataSource?.data![indexPath.row]
+        
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

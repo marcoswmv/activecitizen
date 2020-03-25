@@ -22,6 +22,7 @@ class BaseDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     }
     
     func setup() {
+        self.tableView.delegate = self
         self.tableView.dataSource = self
 //        self.tableView.tableFooterView = UIView(frame: .zero)
     }
@@ -36,5 +37,10 @@ class BaseDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         fatalError("Not implemented")
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        print("You selected a cell!")
     }
 }
