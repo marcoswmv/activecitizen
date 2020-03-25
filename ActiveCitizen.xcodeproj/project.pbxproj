@@ -73,6 +73,7 @@
 		F72E4C8E2406F79E001EF798 /* MakeReportMapVС+UserLocationObjectListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72E4C8D2406F79E001EF798 /* MakeReportMapVС+UserLocationObjectListener.swift */; };
 		F72E4C902406FC42001EF798 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72E4C8F2406FC42001EF798 /* Address.swift */; };
 		F72E4C92240700B9001EF798 /* AddressesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72E4C91240700B9001EF798 /* AddressesManager.swift */; };
+		F72F02BC242C2354008C9766 /* BaseReportDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72F02BB242C2354008C9766 /* BaseReportDetailsViewController.swift */; };
 		F747EB1523EED78600862A6D /* ShowAddressOnMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F747EB1423EED78600862A6D /* ShowAddressOnMapViewController.swift */; };
 		F747EB1C23EF27FD00862A6D /* UIViewController+NavigationBarShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F747EB1B23EF27FD00862A6D /* UIViewController+NavigationBarShadow.swift */; };
 		F74D2B5F24114A0500F138BB /* BaseVotingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D2B5E24114A0500F138BB /* BaseVotingViewController.swift */; };
@@ -222,6 +223,7 @@
 		F72E4C8D2406F79E001EF798 /* MakeReportMapVС+UserLocationObjectListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MakeReportMapVС+UserLocationObjectListener.swift"; sourceTree = "<group>"; };
 		F72E4C8F2406FC42001EF798 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		F72E4C91240700B9001EF798 /* AddressesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressesManager.swift; sourceTree = "<group>"; };
+		F72F02BB242C2354008C9766 /* BaseReportDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReportDetailsViewController.swift; sourceTree = "<group>"; };
 		F747EB1423EED78600862A6D /* ShowAddressOnMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAddressOnMapViewController.swift; sourceTree = "<group>"; };
 		F747EB1B23EF27FD00862A6D /* UIViewController+NavigationBarShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+NavigationBarShadow.swift"; sourceTree = "<group>"; };
 		F74D2B5E24114A0500F138BB /* BaseVotingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVotingViewController.swift; sourceTree = "<group>"; };
@@ -422,6 +424,7 @@
 				F7565342242659F2002C4B81 /* BaseFiltersViewController.swift */,
 				F701799E242A65390048BA19 /* BaseImageViewController.swift */,
 				F78EC340242A7C9300062A6B /* BaseMemberDetailImageViewController.swift */,
+				F72F02BB242C2354008C9766 /* BaseReportDetailsViewController.swift */,
 				C52CE672239548C1004760EF /* BaseMakeReportViewController.swift */,
 				C52CE678239548F0004760EF /* BaseMembersListViewController.swift */,
 				F7AD212B241C0B830041AC2A /* BaseMemberViewController.swift */,
@@ -946,6 +949,7 @@
 				F7A22211240331E300C11353 /* SubCategoriesManager.swift in Sources */,
 				F7178A3B242827F8001741B5 /* BaseViewController+TextViewHideKeyboard.swift in Sources */,
 				F756533724263F61002C4B81 /* FilterCategoriesVC+TableViewDelegate.swift in Sources */,
+				F72F02BC242C2354008C9766 /* BaseReportDetailsViewController.swift in Sources */,
 				F7A221FC24004CE600C11353 /* BaseViewController+SearchBarDelegate.swift in Sources */,
 				F756533B2426405D002C4B81 /* FiltersViewController.swift in Sources */,
 				F7CB47A92408A7620087FC22 /* AddressesDataSource.swift in Sources */,
