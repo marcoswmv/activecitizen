@@ -78,7 +78,7 @@
                                                                     <rect key="frame" x="82" y="0.0" width="286" height="74"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Филинков Александр  Юрьевич" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cva-Nv-Iai">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="286" height="28"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="286" height="35"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="230" id="vEt-xV-FMf"/>
                                                                             </constraints>
@@ -87,19 +87,19 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="f7D-bP-oh3">
-                                                                            <rect key="frame" x="0.0" y="36" width="286" height="38"/>
+                                                                            <rect key="frame" x="0.0" y="43" width="286" height="31"/>
                                                                             <subviews>
                                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ffk-3A-kpd">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="15.5"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="132.5" height="12"/>
                                                                                     <subviews>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Решено проблем:" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DF4-kq-tvt">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="107.5" height="15.5"/>
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="118" height="12"/>
                                                                                             <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="13"/>
                                                                                             <color key="textColor" name="User Label Gray"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2s-T4-918">
-                                                                                            <rect key="frame" x="112.5" y="0.0" width="7.5" height="15.5"/>
+                                                                                            <rect key="frame" x="123" y="0.0" width="9.5" height="12"/>
                                                                                             <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="13"/>
                                                                                             <color key="textColor" name="User Label Gray"/>
                                                                                             <nil key="highlightedColor"/>
@@ -107,16 +107,16 @@
                                                                                     </subviews>
                                                                                 </stackView>
                                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="837-Bt-ssA">
-                                                                                    <rect key="frame" x="0.0" y="22.5" width="60" height="15.5"/>
+                                                                                    <rect key="frame" x="0.0" y="19" width="65" height="12"/>
                                                                                     <subviews>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Заявок:" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CY0-Yw-zKi">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="47.5" height="15.5"/>
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="50.5" height="12"/>
                                                                                             <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="13"/>
                                                                                             <color key="textColor" name="User Label Gray"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zL2-Fh-1B9">
-                                                                                            <rect key="frame" x="52.5" y="0.0" width="7.5" height="15.5"/>
+                                                                                            <rect key="frame" x="55.5" y="0.0" width="9.5" height="12"/>
                                                                                             <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="13"/>
                                                                                             <color key="textColor" name="User Label Gray"/>
                                                                                             <nil key="highlightedColor"/>
@@ -224,10 +224,10 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pNA-re-STi">
-                                                    <rect key="frame" x="78" y="7" width="291" height="56"/>
+                                                    <rect key="frame" x="78" y="9.5" width="291" height="51.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Александр Филинков Юрьевич" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Pb-TI-5Y1" userLabel="Name">
-                                                            <rect key="frame" x="0.0" y="0.0" width="291" height="19"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="291" height="14.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="252" id="aUW-TV-ZtO"/>
                                                             </constraints>
@@ -236,7 +236,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="3be-qp-NZz">
-                                                            <rect key="frame" x="0.0" y="29" width="291" height="27"/>
+                                                            <rect key="frame" x="0.0" y="24.5" width="291" height="27"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="K4O-dy-Jkg">
                                                                     <rect key="frame" x="0.0" y="0.0" width="236" height="12.5"/>
@@ -262,7 +262,7 @@
                                                                     <rect key="frame" x="0.0" y="14.5" width="218.5" height="12.5"/>
                                                                     <subviews>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stat_small" translatesAutoresizingMaskIntoConstraints="NO" id="dhJ-5k-e7b">
-                                                                            <rect key="frame" x="0.0" y="2.5" width="10" height="8"/>
+                                                                            <rect key="frame" x="0.0" y="2" width="10" height="8"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="8" id="WUu-uK-b4b"/>
                                                                                 <constraint firstAttribute="width" constant="10" id="oTj-MV-Chl"/>
@@ -285,28 +285,36 @@
                                                 </stackView>
                                             </subviews>
                                         </stackView>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ond-hi-GcQ" userLabel="Separator ">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ond-hi-GcQ" userLabel="Separator " customClass="Separator" customModule="ActiveCitizen" customModuleProvider="target">
                                             <rect key="frame" x="12" y="97" width="402" height="1"/>
-                                            <color key="backgroundColor" red="0.82715958359999997" green="0.83124256129999996" blue="0.8606311083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="363" id="8CD-JC-Xmt"/>
                                                 <constraint firstAttribute="height" constant="1" id="maF-M9-u0f"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                    <color key="value" name="Separator Line Gray"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="lineType">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </view>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="sxk-vL-rPV">
-                                            <rect key="frame" x="56" y="110" width="265" height="23.5"/>
+                                            <rect key="frame" x="56" y="110" width="265" height="18"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="tMa-mN-mQk">
-                                                    <rect key="frame" x="0.0" y="0.0" width="179" height="23.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="172.5" height="18"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yaT-n2-Fyr">
-                                                            <rect key="frame" x="0.0" y="0.0" width="71" height="23.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="54" height="18"/>
                                                             <fontDescription key="fontDescription" name="GothamPro-Bold" family="Gotham Pro" pointSize="20"/>
                                                             <color key="textColor" red="0.15686274510000001" green="0.82745098039999998" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Решеных проблем" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93Z-la-XZJ">
-                                                            <rect key="frame" x="75" y="9.5" width="104" height="14"/>
+                                                            <rect key="frame" x="58" y="7" width="114.5" height="11"/>
                                                             <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="12"/>
                                                             <color key="textColor" red="0.53333333329999999" green="0.54901960780000003" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -314,16 +322,16 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="aCr-CI-tPb">
-                                                    <rect key="frame" x="209" y="0.0" width="56" height="23.5"/>
+                                                    <rect key="frame" x="202.5" y="0.0" width="62.5" height="18"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGG-Jq-cvk">
-                                                            <rect key="frame" x="0.0" y="0.0" width="11.5" height="23.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="15" height="18"/>
                                                             <fontDescription key="fontDescription" name="GothamPro-Bold" family="Gotham Pro" pointSize="20"/>
                                                             <color key="textColor" red="0.15686274510000001" green="0.82745098039999998" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Заявок" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcU-2W-tzl">
-                                                            <rect key="frame" x="15.5" y="9.5" width="40.5" height="14"/>
+                                                            <rect key="frame" x="19" y="7" width="43.5" height="11"/>
                                                             <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="12"/>
                                                             <color key="textColor" red="0.53333333329999999" green="0.54901960780000003" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -332,26 +340,34 @@
                                                 </stackView>
                                             </subviews>
                                         </stackView>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uMF-sB-NmL" userLabel="Separator">
-                                            <rect key="frame" x="12" y="147.5" width="402" height="1"/>
-                                            <color key="backgroundColor" red="0.82715958359999997" green="0.83124256129999996" blue="0.8606311083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uMF-sB-NmL" userLabel="Separator" customClass="Separator" customModule="ActiveCitizen" customModuleProvider="target">
+                                            <rect key="frame" x="12" y="142" width="402" height="1"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="363" id="N5e-9Z-tfk"/>
                                                 <constraint firstAttribute="height" constant="1" id="sPq-hv-SFk"/>
                                             </constraints>
                                             <viewLayoutGuide key="safeArea" id="brc-o0-U1W"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="lineType">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                    <color key="value" name="Separator Line Gray"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </view>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="115" translatesAutoresizingMaskIntoConstraints="NO" id="Thc-39-WDH">
-                                            <rect key="frame" x="14" y="160.5" width="390" height="24"/>
+                                            <rect key="frame" x="14" y="155" width="390" height="24"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Обращения пользователя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJE-35-2O8">
-                                                    <rect key="frame" x="0.0" y="0.0" width="184" height="24"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="203.5" height="24"/>
                                                     <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rpw-lY-RKf">
-                                                    <rect key="frame" x="299" y="0.0" width="91" height="24"/>
+                                                    <rect key="frame" x="318.5" y="0.0" width="71.5" height="24"/>
                                                     <state key="normal" image="filter"/>
                                                     <connections>
                                                         <action selector="showFilterCategoriesOnTouchUpInside:" destination="JzH-2f-20L" eventType="touchUpInside" id="cgU-fU-TSK"/>
@@ -566,7 +582,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="89x-IF-tBS">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89x-IF-tBS">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <connections>
                                     <outlet property="delegate" destination="pv2-DS-DbH" id="YfO-Ld-ZPd"/>
@@ -603,6 +619,9 @@
         <image name="map_pin_small" width="8" height="11"/>
         <image name="placeholder" width="77.5" height="77.5"/>
         <image name="stat_small" width="7" height="6"/>
+        <namedColor name="Separator Line Gray">
+            <color red="0.74509803921568629" green="0.75294117647058822" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="User Label Gray">
             <color red="0.53299999237060547" green="0.54900002479553223" blue="0.62699997425079346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

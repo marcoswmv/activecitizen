@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GothaProMed.otf">
+            <string>GothamPro-Medium</string>
+        </array>
+        <array key="GothaProReg.otf">
+            <string>GothamPro</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReportDetailsView" customModule="ActiveCitizen" customModuleProvider="target">
+            <connections>
+                <outlet property="address" destination="jbb-w4-bUX" id="XOl-qJ-oH6"/>
+                <outlet property="autor" destination="3oM-FZ-bya" id="Mer-lO-baM"/>
+                <outlet property="categoryIcon" destination="My7-L1-zZa" id="ra0-lZ-9kc"/>
+                <outlet property="categoryName" destination="yT2-uT-ckZ" id="HbV-s7-h9L"/>
+                <outlet property="indicatedPeriod" destination="m2R-uV-Rxe" id="43P-cV-V4l"/>
+                <outlet property="numberOfReport" destination="AkN-Fq-sXd" id="MP0-lo-YSG"/>
+                <outlet property="reportCreatedDate" destination="pFU-Wb-1fw" id="sp5-Nj-i97"/>
+                <outlet property="reportDescription" destination="9Mb-rh-9l2" id="uOO-48-b8J"/>
+                <outlet property="scrollView" destination="8Ss-4b-BuQ" id="Eul-bg-grv"/>
+                <outlet property="status" destination="J5r-0v-viS" id="Oay-xy-zRV"/>
+                <outlet property="subCategoryName" destination="6ak-fA-UMz" id="xKP-h4-tv4"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Mau-3O-uRP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="1300"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZnQ-1A-Aov">
+                    <rect key="frame" x="25" y="20" width="369" height="30"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="My7-L1-zZa" userLabel="icon">
+                            <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="Hiq-5l-2c8"/>
+                                <constraint firstAttribute="width" constant="30" id="pDM-Pj-cr9"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Благоустройство дворовой территории МДК, Детские площадки" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yT2-uT-ckZ">
+                            <rect key="frame" x="40" y="0.0" width="329" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="329" id="Glf-iY-YPN"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="15"/>
+                            <color key="textColor" name="User Label Gray"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q8D-K3-sDg" userLabel="Separator " customClass="Separator" customModule="ActiveCitizen" customModuleProvider="target">
+                    <rect key="frame" x="26" y="70" width="388" height="1"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="WcP-iA-hAo"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="lineType">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                            <color key="value" name="Separator Line Gray"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ненадлежайшее содержание зеленых насаждений (газонов)" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ak-fA-UMz">
+                    <rect key="frame" x="25" y="86" width="369" height="30.5"/>
+                    <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2Zd-Nq-7KY">
+                    <rect key="frame" x="23" y="131.5" width="371" height="27"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map_pin" translatesAutoresizingMaskIntoConstraints="NO" id="Aub-5z-yXo" userLabel="icon">
+                            <rect key="frame" x="0.0" y="0.0" width="27" height="27"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="27" id="lQy-6k-vBe"/>
+                                <constraint firstAttribute="height" constant="27" id="yA9-Gw-VED"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Одинцовский городской округ, Хорошевский проезд, д.5" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbb-w4-bUX">
+                            <rect key="frame" x="32" y="0.0" width="339" height="27"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="339" id="lzn-Yh-H9N"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RWW-JG-xEl">
+                    <rect key="frame" x="25" y="183.5" width="369" height="14"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Указанный срок" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrb-C0-76Z">
+                            <rect key="frame" x="0.0" y="0.0" width="124.5" height="14"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="14" id="uKt-NV-j9x"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="15"/>
+                            <color key="textColor" name="User Label Gray"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QZM-D6-OnV" userLabel="Dotted Separator" customClass="Separator" customModule="ActiveCitizen" customModuleProvider="target">
+                            <rect key="frame" x="134.5" y="0.0" width="144.5" height="14"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="lineType">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                    <color key="value" name="Separator Line Gray"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22.05.2019" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2R-uV-Rxe">
+                            <rect key="frame" x="289" y="0.0" width="80" height="14"/>
+                            <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3Zu-Nz-0ci">
+                    <rect key="frame" x="25" y="217.5" width="369" height="14"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Обращение создано" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dk1-Jx-12A">
+                            <rect key="frame" x="0.0" y="0.0" width="158.5" height="14"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="14" id="RzI-gz-lyv"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="15"/>
+                            <color key="textColor" name="User Label Gray"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d5N-fd-vJD" userLabel="Dotted Separator" customClass="Separator" customModule="ActiveCitizen" customModuleProvider="target">
+                            <rect key="frame" x="168.5" y="0.0" width="109" height="14"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="lineType">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                    <color key="value" name="Separator Line Gray"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03.02.2019" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFU-Wb-1fw">
+                            <rect key="frame" x="287.5" y="0.0" width="81.5" height="14"/>
+                            <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sgT-zC-ath">
+                    <rect key="frame" x="25" y="251.5" width="369" height="14"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Номер обращения" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jj6-XA-j87">
+                            <rect key="frame" x="0.0" y="0.0" width="143.5" height="14"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="14" id="iEU-tN-lIm"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="15"/>
+                            <color key="textColor" name="User Label Gray"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m0n-5l-MHI" userLabel="Dotted Separator" customClass="Separator" customModule="ActiveCitizen" customModuleProvider="target">
+                            <rect key="frame" x="153.5" y="0.0" width="154" height="14"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="lineType">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                    <color key="value" name="Separator Line Gray"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="241597" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AkN-Fq-sXd">
+                            <rect key="frame" x="317.5" y="0.0" width="51.5" height="14"/>
+                            <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="J5X-2p-520">
+                    <rect key="frame" x="25" y="285.5" width="369" height="14"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Автор" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYu-8X-XW8">
+                            <rect key="frame" x="0.0" y="0.0" width="47.5" height="14"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="14" id="77s-wk-RgG"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="15"/>
+                            <color key="textColor" name="User Label Gray"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sga-rY-Kzn" userLabel="Dotted Separator" customClass="Separator" customModule="ActiveCitizen" customModuleProvider="target">
+                            <rect key="frame" x="57.5" y="0.0" width="70" height="14"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="lineType">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                    <color key="value" name="Separator Line Gray"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Филинков Александр Юревич" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oM-FZ-bya">
+                            <rect key="frame" x="137.5" y="0.0" width="231.5" height="14"/>
+                            <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="15"/>
+                            <color key="textColor" name="App Address Button Blue"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check on the android version if this is a label or a textView when the server starts working again." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Mb-rh-9l2">
+                    <rect key="frame" x="25" y="319.5" width="369" height="27"/>
+                    <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Mz-CY-TzF">
+                    <rect key="frame" x="0.0" y="366.5" width="414" height="400"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ss-4b-BuQ">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="8Ss-4b-BuQ" secondAttribute="bottom" id="7qb-MK-kdE"/>
+                        <constraint firstAttribute="trailing" secondItem="8Ss-4b-BuQ" secondAttribute="trailing" id="OIP-IU-b64"/>
+                        <constraint firstItem="8Ss-4b-BuQ" firstAttribute="leading" secondItem="1Mz-CY-TzF" secondAttribute="leading" id="QaD-bw-q6H"/>
+                        <constraint firstItem="8Ss-4b-BuQ" firstAttribute="top" secondItem="1Mz-CY-TzF" secondAttribute="top" id="rcW-YC-kiB"/>
+                        <constraint firstAttribute="height" constant="400" id="y8r-Kz-ciX"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kpx-rC-0x8" userLabel="Separator " customClass="Separator" customModule="ActiveCitizen" customModuleProvider="target">
+                    <rect key="frame" x="26" y="781.5" width="388" height="1"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="hJs-Iu-JJz"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="lineType">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                            <color key="value" name="Separator Line Gray"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Статус:" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n24-St-EaA">
+                    <rect key="frame" x="25" y="797.5" width="56" height="13.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="56" id="v6c-fx-YaY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Статус" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5r-0v-viS">
+                    <rect key="frame" x="85" y="797.5" width="51.5" height="13.5"/>
+                    <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EhA-PN-xPa">
+                    <rect key="frame" x="25" y="831" width="364" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="gwn-DA-d34"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="ДОБАВИТЬ КОММЕНТАРИЙ">
+                        <color key="titleColor" red="0.0" green="0.51764705879999995" blue="0.89019607840000003" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="14"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.0" green="0.51764705879999995" blue="0.89019607840000003" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="addCommentsOnTouchUpInside:" destination="-1" eventType="touchUpInside" id="UKB-0J-FtY"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ход выполнения" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xSK-N2-tBk">
+                    <rect key="frame" x="25" y="901" width="130.5" height="13.5"/>
+                    <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="xSK-N2-tBk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="25" id="15U-8p-Sik"/>
+                <constraint firstItem="6ak-fA-UMz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="25" id="1N8-nQ-Oa8"/>
+                <constraint firstItem="ZnQ-1A-Aov" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="2vU-dY-cPU"/>
+                <constraint firstItem="6ak-fA-UMz" firstAttribute="top" secondItem="q8D-K3-sDg" secondAttribute="bottom" constant="15" id="4QR-Y7-dw0"/>
+                <constraint firstAttribute="trailing" secondItem="ZnQ-1A-Aov" secondAttribute="trailing" constant="20" id="6Np-fm-I6K"/>
+                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="xSK-N2-tBk" secondAttribute="trailing" constant="258.5" id="8ep-4t-IDk"/>
+                <constraint firstAttribute="trailing" secondItem="9Mb-rh-9l2" secondAttribute="trailing" constant="20" id="ArN-sM-3M5"/>
+                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="J5r-0v-viS" secondAttribute="trailing" constant="277.5" id="AuG-1T-9pm"/>
+                <constraint firstAttribute="trailing" secondItem="3Zu-Nz-0ci" secondAttribute="trailing" constant="20" id="Chm-Wc-qBs"/>
+                <constraint firstItem="sgT-zC-ath" firstAttribute="top" secondItem="3Zu-Nz-0ci" secondAttribute="bottom" constant="20" id="Cz6-ea-kqj"/>
+                <constraint firstItem="kpx-rC-0x8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="26" id="DrV-d3-UwK"/>
+                <constraint firstAttribute="trailing" secondItem="q8D-K3-sDg" secondAttribute="trailing" id="G6f-Be-cCb"/>
+                <constraint firstItem="RWW-JG-xEl" firstAttribute="top" secondItem="2Zd-Nq-7KY" secondAttribute="bottom" constant="25" id="HCF-ox-EYK"/>
+                <constraint firstItem="kpx-rC-0x8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="26" id="LeN-fp-45n"/>
+                <constraint firstItem="2Zd-Nq-7KY" firstAttribute="top" secondItem="6ak-fA-UMz" secondAttribute="bottom" constant="15" id="OQm-iK-yFq"/>
+                <constraint firstAttribute="trailing" secondItem="J5X-2p-520" secondAttribute="trailing" constant="20" id="Osv-06-T0B"/>
+                <constraint firstItem="J5r-0v-viS" firstAttribute="top" secondItem="kpx-rC-0x8" secondAttribute="bottom" constant="15" id="Pw6-gF-Tho"/>
+                <constraint firstItem="n24-St-EaA" firstAttribute="top" secondItem="kpx-rC-0x8" secondAttribute="bottom" constant="15" id="RaM-cM-biV"/>
+                <constraint firstItem="sgT-zC-ath" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="25" id="VYo-71-Cc8"/>
+                <constraint firstItem="EhA-PN-xPa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="25" id="Wne-E6-99C"/>
+                <constraint firstItem="ZnQ-1A-Aov" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="25" id="XEZ-9D-8r8"/>
+                <constraint firstAttribute="trailing" secondItem="kpx-rC-0x8" secondAttribute="trailing" id="ZR4-ga-Cig"/>
+                <constraint firstItem="3Zu-Nz-0ci" firstAttribute="top" secondItem="RWW-JG-xEl" secondAttribute="bottom" constant="20" id="ZsS-Xr-I5O"/>
+                <constraint firstItem="EhA-PN-xPa" firstAttribute="top" secondItem="n24-St-EaA" secondAttribute="bottom" constant="20" id="aGZ-lM-5h3"/>
+                <constraint firstItem="1Mz-CY-TzF" firstAttribute="top" secondItem="9Mb-rh-9l2" secondAttribute="bottom" constant="20" id="bzc-do-lvb"/>
+                <constraint firstAttribute="trailing" secondItem="2Zd-Nq-7KY" secondAttribute="trailing" constant="20" id="dXD-Ui-EfC"/>
+                <constraint firstAttribute="trailing" secondItem="kpx-rC-0x8" secondAttribute="trailing" id="dlZ-T3-Vy1"/>
+                <constraint firstItem="q8D-K3-sDg" firstAttribute="top" secondItem="ZnQ-1A-Aov" secondAttribute="bottom" constant="20" id="etG-lA-xib"/>
+                <constraint firstItem="J5r-0v-viS" firstAttribute="leading" secondItem="n24-St-EaA" secondAttribute="trailing" constant="4" id="hZq-ya-hBa"/>
+                <constraint firstItem="9Mb-rh-9l2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="25" id="hsF-VR-QOl"/>
+                <constraint firstItem="J5X-2p-520" firstAttribute="top" secondItem="sgT-zC-ath" secondAttribute="bottom" constant="20" id="hzp-dH-Xhe"/>
+                <constraint firstAttribute="trailing" secondItem="EhA-PN-xPa" secondAttribute="trailing" constant="25" id="kEQ-24-g9H"/>
+                <constraint firstAttribute="trailing" secondItem="sgT-zC-ath" secondAttribute="trailing" constant="20" id="kaC-xr-sYN"/>
+                <constraint firstItem="1Mz-CY-TzF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="lGc-hh-35A"/>
+                <constraint firstAttribute="trailing" secondItem="1Mz-CY-TzF" secondAttribute="trailing" id="nmb-Gr-hbK"/>
+                <constraint firstItem="kpx-rC-0x8" firstAttribute="top" secondItem="1Mz-CY-TzF" secondAttribute="bottom" constant="15" id="nrF-9y-hcI"/>
+                <constraint firstAttribute="trailing" secondItem="6ak-fA-UMz" secondAttribute="trailing" constant="20" id="ooW-AE-qip"/>
+                <constraint firstItem="q8D-K3-sDg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="26" id="pGM-jt-9ak"/>
+                <constraint firstItem="J5X-2p-520" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="25" id="pay-95-BoY"/>
+                <constraint firstItem="n24-St-EaA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="25" id="qlR-jM-Fef"/>
+                <constraint firstAttribute="trailing" secondItem="RWW-JG-xEl" secondAttribute="trailing" constant="20" id="qyp-qI-BB4"/>
+                <constraint firstItem="2Zd-Nq-7KY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="23" id="s2a-K2-9av"/>
+                <constraint firstItem="xSK-N2-tBk" firstAttribute="top" secondItem="EhA-PN-xPa" secondAttribute="bottom" constant="25" id="tvc-oW-NDz"/>
+                <constraint firstItem="9Mb-rh-9l2" firstAttribute="top" secondItem="J5X-2p-520" secondAttribute="bottom" constant="20" id="xlB-dQ-jec"/>
+                <constraint firstItem="RWW-JG-xEl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="25" id="zes-er-LcR"/>
+                <constraint firstItem="3Zu-Nz-0ci" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="25" id="zmt-al-dsr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-84.057971014492765" y="242.07589285714283"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="map_pin" width="24" height="24"/>
+        <namedColor name="App Address Button Blue">
+            <color red="0.22400000691413879" green="0.54900002479553223" blue="0.94900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Separator Line Gray">
+            <color red="0.74509803921568629" green="0.75294117647058822" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="User Label Gray">
+            <color red="0.53299999237060547" green="0.54900002479553223" blue="0.62699997425079346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

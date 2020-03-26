@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -40,7 +40,7 @@
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="1Ld-NB-Z1l">
                             <rect key="frame" x="327" y="29" width="8" height="8.5"/>
-                            <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="9"/>
+                            <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="8"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -59,7 +59,7 @@
                                     <constraints>
                                         <constraint firstAttribute="width" constant="241" id="1id-TH-hoJ"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="14"/>
+                                    <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="15"/>
                                     <color key="textColor" name="User Label Gray"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -86,13 +86,13 @@
                             <viewLayoutGuide key="safeArea" id="h2I-FT-xIZ"/>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gja-L4-6ST">
-                            <rect key="frame" x="20" y="63" width="321" height="45.5"/>
-                            <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="16"/>
+                            <rect key="frame" x="20" y="63" width="321" height="44.5"/>
+                            <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jv1-RN-djA">
-                            <rect key="frame" x="20" y="120.5" width="321" height="32"/>
+                            <rect key="frame" x="20" y="119.5" width="321" height="32"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map_pin" translatesAutoresizingMaskIntoConstraints="NO" id="pE7-CQ-Jza">
                                     <rect key="frame" x="0.0" y="0.0" width="24" height="32"/>
@@ -106,14 +106,14 @@
                                     <constraints>
                                         <constraint firstAttribute="width" constant="289" id="64p-vY-rZH"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="14"/>
+                                    <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="15"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                         </stackView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KNa-Ye-rB6" userLabel="Separator">
-                            <rect key="frame" x="20" y="164.5" width="331" height="1"/>
+                            <rect key="frame" x="20" y="163.5" width="331" height="1"/>
                             <color key="backgroundColor" red="0.82715958359999997" green="0.83124256129999996" blue="0.8606311083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="HVv-rt-o9Y"/>
@@ -121,26 +121,26 @@
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Статус:" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITo-XD-eNr">
-                            <rect key="frame" x="20" y="177.5" width="52" height="16.5"/>
+                            <rect key="frame" x="20" y="176.5" width="56" height="17.5"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="52" id="1BX-eZ-nqz"/>
+                                <constraint firstAttribute="width" constant="56" id="1BX-eZ-nqz"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="14"/>
+                            <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="15"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Статус" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZe-Yq-dMo">
-                            <rect key="frame" x="76" y="177.5" width="45.5" height="16.5"/>
-                            <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="14"/>
+                            <rect key="frame" x="80" y="176.5" width="48.5" height="17.5"/>
+                            <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="15"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="any-Cn-YDk">
-                            <rect key="frame" x="265" y="177.5" width="76" height="16.5"/>
+                            <rect key="frame" x="259" y="176.5" width="82" height="17.5"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="76" id="lsn-vZ-Tgi"/>
+                                <constraint firstAttribute="width" constant="82" id="lsn-vZ-Tgi"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="14"/>
+                            <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="15"/>
                             <color key="textColor" name="User Label Gray"/>
                             <nil key="highlightedColor"/>
                         </label>

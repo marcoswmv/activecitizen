@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ct7-lF-QZw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ct7-lF-QZw">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -121,62 +122,78 @@
                                                         </connections>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eq1-PY-YL7" userLabel="Address">
-                                                        <rect key="frame" x="106" y="57.5" width="235" height="33"/>
+                                                        <rect key="frame" x="106" y="57.5" width="235" height="41"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Одинцовский городской округ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ij1-aL-1zM">
-                                                                <rect key="frame" x="0.0" y="0.0" width="235" height="12.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="235" height="16.5"/>
                                                                 <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="14"/>
                                                                 <color key="textColor" red="0.53333333333333333" green="0.5490196078431373" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="104 место по району/округу" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dh3-p6-R1j">
-                                                                <rect key="frame" x="0.0" y="20.5" width="235" height="12.5"/>
+                                                                <rect key="frame" x="0.0" y="24.5" width="235" height="16.5"/>
                                                                 <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="14"/>
                                                                 <color key="textColor" red="0.53333333333333333" green="0.5490196078431373" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
                                                     </stackView>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ELt-pG-cBE" userLabel="Separator ">
-                                                        <rect key="frame" x="12" y="105.5" width="363" height="1"/>
-                                                        <color key="backgroundColor" red="0.82715958359999997" green="0.83124256129999996" blue="0.8606311083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ELt-pG-cBE" userLabel="Separator " customClass="Separator" customModule="ActiveCitizen" customModuleProvider="target">
+                                                        <rect key="frame" x="12" y="113.5" width="363" height="1"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="363" id="0Kf-7H-GPj"/>
                                                             <constraint firstAttribute="height" constant="1" id="T14-8S-zVQ"/>
                                                         </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                <color key="value" name="Separator Line Gray"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="lineType">
+                                                                <integer key="value" value="0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="316" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tlo-Cd-fbm">
-                                                        <rect key="frame" x="41" y="121.5" width="34.5" height="18"/>
+                                                        <rect key="frame" x="41" y="129.5" width="51.5" height="18"/>
                                                         <fontDescription key="fontDescription" name="GothamPro-Bold" family="Gotham Pro" pointSize="20"/>
                                                         <color key="textColor" red="0.15686274510000001" green="0.82745098039999998" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Решеных проблем" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6DH-yt-Q8d">
-                                                        <rect key="frame" x="79.5" y="129.5" width="114.5" height="11"/>
+                                                        <rect key="frame" x="96.5" y="137.5" width="104" height="11"/>
                                                         <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="12"/>
                                                         <color key="textColor" red="0.53333333329999999" green="0.54901960780000003" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="104" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ib6-86-jPC">
-                                                        <rect key="frame" x="220.5" y="121.5" width="37" height="18"/>
+                                                        <rect key="frame" x="227" y="129.5" width="33.5" height="18"/>
                                                         <fontDescription key="fontDescription" name="GothamPro-Bold" family="Gotham Pro" pointSize="20"/>
                                                         <color key="textColor" red="0.15686274510000001" green="0.82745098039999998" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Заявок" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvQ-yK-zY8">
-                                                        <rect key="frame" x="261.5" y="129.5" width="43.5" height="11"/>
+                                                        <rect key="frame" x="264.5" y="137.5" width="40.5" height="11"/>
                                                         <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="12"/>
                                                         <color key="textColor" red="0.53333333329999999" green="0.54901960780000003" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o0Q-lY-6Ko" userLabel="Separator">
-                                                        <rect key="frame" x="12" y="154.5" width="363" height="1"/>
-                                                        <color key="backgroundColor" red="0.82715958359999997" green="0.83124256129999996" blue="0.8606311083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o0Q-lY-6Ko" userLabel="Separator" customClass="Separator" customModule="ActiveCitizen" customModuleProvider="target">
+                                                        <rect key="frame" x="12" y="162.5" width="363" height="1"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="TC6-jB-QJX"/>
                                                             <constraint firstAttribute="width" constant="363" id="Ur4-up-bqK"/>
                                                         </constraints>
                                                         <viewLayoutGuide key="safeArea" id="41j-GG-ISA"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                <color key="value" name="Separator Line Gray"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="lineType">
+                                                                <integer key="value" value="0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </view>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -347,5 +364,8 @@
         <image name="map_pin_small" width="8" height="11"/>
         <image name="placeholder" width="77.5" height="77.5"/>
         <image name="stat_small" width="7" height="6"/>
+        <namedColor name="Separator Line Gray">
+            <color red="0.74509803921568629" green="0.75294117647058822" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

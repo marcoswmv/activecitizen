@@ -100,7 +100,6 @@ class MakeReportMapViewController: BaseMakeReportViewController {
     }
     
     func setupUIElementsInContentView() {
-        dashedSeparator.addDashedBorder()
         self.hideKeyboardWhenTappedAround()
         maxLength.text = "0 / 1000"
         reportDescription.text = "Текст сообщения"

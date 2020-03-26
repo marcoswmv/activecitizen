@@ -33,8 +33,6 @@ class ReportsListViewController: BaseReportsListViewController, UITableViewDeleg
 //    MARK: - Delegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("A cell was selected!")
-        
         let vc = ReportDetailsViewController.instantiate() as! ReportDetailsViewController
         
         vc.report = dataSource?.data![indexPath.row]

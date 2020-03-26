@@ -125,6 +125,11 @@
                                         <constraint firstAttribute="bottom" secondItem="SMf-xA-TMB" secondAttribute="bottom" id="lL3-kA-7wa"/>
                                     </constraints>
                                 </view>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="6kG-qs-Zjq">
+                                    <rect key="frame" x="0.0" y="351" width="414" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReportsListTableViewCell" rowHeight="229" id="496-iq-yVT" customClass="ReportsListTableViewCell" customModule="ActiveCitizen" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="94" width="414" height="229"/>
@@ -150,6 +155,9 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="delegate" destination="2t6-E1-EWE" id="vvs-WF-W18"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -168,7 +176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c6t-7v-doi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-567" y="522"/>
+            <point key="canvasLocation" x="-568.1159420289855" y="521.65178571428567"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="CzK-hx-fem">
@@ -220,16 +228,55 @@
             <objects>
                 <viewController storyboardIdentifier="ReportDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SBU-H8-flg" customClass="ReportDetailsViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kRs-Wb-52a">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1378"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g4T-vi-YPX" customClass="YMKMapView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="225"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="225" id="4si-4F-VhD"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RvY-al-sfw">
+                                <rect key="frame" x="0.0" y="44" width="414" height="1300"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FKv-d7-L9S" customClass="ReportDetailsView" customModule="ActiveCitizen" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="225" width="414" height="1077"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="999" constant="1077" id="bdo-dP-aeu"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1077" id="hPx-x2-eJZ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="FKv-d7-L9S" secondAttribute="trailing" id="8wo-lV-xUE"/>
+                                    <constraint firstItem="FKv-d7-L9S" firstAttribute="centerX" secondItem="RvY-al-sfw" secondAttribute="centerX" id="Bgp-ff-NDU"/>
+                                    <constraint firstAttribute="bottom" secondItem="FKv-d7-L9S" secondAttribute="bottom" id="EdK-PC-YfP"/>
+                                    <constraint firstItem="FKv-d7-L9S" firstAttribute="top" secondItem="RvY-al-sfw" secondAttribute="top" constant="225" id="OMC-w6-Z6o"/>
+                                    <constraint firstItem="FKv-d7-L9S" firstAttribute="leading" secondItem="RvY-al-sfw" secondAttribute="leading" id="VAv-us-GT3"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1300" id="ihx-do-1Ry"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RvY-al-sfw" firstAttribute="leading" secondItem="n67-A2-GXb" secondAttribute="leading" id="17A-Pn-Wh8"/>
+                            <constraint firstItem="RvY-al-sfw" firstAttribute="trailing" secondItem="n67-A2-GXb" secondAttribute="trailing" id="KIA-oO-vIZ"/>
+                            <constraint firstItem="g4T-vi-YPX" firstAttribute="top" secondItem="n67-A2-GXb" secondAttribute="top" id="ZrR-KC-69d"/>
+                            <constraint firstItem="g4T-vi-YPX" firstAttribute="leading" secondItem="n67-A2-GXb" secondAttribute="leading" id="kgO-4M-Ued"/>
+                            <constraint firstItem="n67-A2-GXb" firstAttribute="bottom" secondItem="RvY-al-sfw" secondAttribute="bottom" id="ktb-Wn-eq5"/>
+                            <constraint firstItem="g4T-vi-YPX" firstAttribute="trailing" secondItem="n67-A2-GXb" secondAttribute="trailing" id="oRQ-zg-8j6"/>
+                            <constraint firstItem="RvY-al-sfw" firstAttribute="top" secondItem="n67-A2-GXb" secondAttribute="top" id="vgX-AP-Iah"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="n67-A2-GXb"/>
                     </view>
-                    <size key="freeformSize" width="414" height="1000"/>
+                    <size key="freeformSize" width="414" height="1378"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rZv-Z5-x4I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-207" y="1144"/>
+            <point key="canvasLocation" x="-207.24637681159422" y="1269.6428571428571"/>
         </scene>
         <!--Reports Map View Controller-->
         <scene sceneID="3cR-zx-ovI">
