@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import YandexMapKit
 
 class BaseReportsListViewController: BaseViewController {
     
@@ -17,7 +18,7 @@ class BaseReportsListViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupNavigationBarTitle(with: "Обрашения")
+        setupNavigationBarTitle(with: "Обращения")
         setupNavigationBarShadow(activate: false)
     }
 }

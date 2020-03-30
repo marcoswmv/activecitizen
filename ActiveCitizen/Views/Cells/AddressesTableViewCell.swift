@@ -10,8 +10,8 @@ import UIKit
 
 class AddressesTableViewCell: BaseTableViewCell {
 
-    @IBOutlet weak var addressCellView: AddressCellView!
-    @IBOutlet weak var selectedAddressCellView: SelectedAddressCellView!
+    @IBOutlet weak var addressCellView: AddressView!
+    @IBOutlet weak var selectedAddressCellView: SelectedAddressView!
     
     var data: Address? {
         didSet {

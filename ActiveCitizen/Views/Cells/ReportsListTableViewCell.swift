@@ -10,21 +10,17 @@ import UIKit
 
 class ReportsListTableViewCell: BaseTableViewCell {
 
-    @IBOutlet weak var reportCellView: ReportCellView!
+    @IBOutlet weak var reportCellView: ReportView!
     
     var data: Report? {
         didSet {
-            
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateStyle = .short
-            let date = dateFormatter.string(from: (data?.created)!).replacingOccurrences(of: "/", with: ".")
             
             reportCellView.categoryIcon.image = data?.categoryIcon
             reportCellView.categoryName.text = data?.categoryName
             reportCellView.subCategoryName.text = data?.subcategoryName
             reportCellView.numberOfPhotos.text = "\(data?.photos?.count ?? 0)"
             reportCellView.address.text = data?.address
-            reportCellView.dateOfCreation.text = date
+            reportCellView.dateOfCreation.text = data?.created?.string(format: "dd.MM.yyyy")
             reportCellView.photos = data?.photos
             
             switch data?.status {

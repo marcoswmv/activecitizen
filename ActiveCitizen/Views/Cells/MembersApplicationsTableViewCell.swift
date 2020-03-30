@@ -11,7 +11,7 @@ import Foundation
 
 class MembersApplicationsTableViewCell: BaseTableViewCell {
 
-    @IBOutlet weak var reportCellView: ReportCellView!
+    @IBOutlet weak var reportCellView: ReportView!
     
     var data: Report? {
         didSet {
@@ -20,12 +20,7 @@ class MembersApplicationsTableViewCell: BaseTableViewCell {
             reportCellView.subCategoryName.text = data?.subcategoryName
             reportCellView.address.text = data?.address
             reportCellView.photos = data?.photos
-
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateStyle = .short
-            let date = dateFormatter.string(from: (data?.created)!).replacingOccurrences(of: "/", with: ".")
-            
-            reportCellView.dateOfCreation.text = date
+            reportCellView.dateOfCreation.text = data?.created?.string(format: "dd.MM.yyyy")
             
             switch data?.status {
             case "taskModeration":

@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class ReportCellView: UIViewWithXib {
+class ReportView: UIViewWithXib {
 
     @IBOutlet weak var photosButton: UIButton!
     @IBOutlet weak var numberOfPhotos: UILabel!

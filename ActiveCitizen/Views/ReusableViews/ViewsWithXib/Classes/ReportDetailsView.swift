@@ -23,8 +23,6 @@ class ReportDetailsView: UIViewWithXib {
     
     @IBOutlet weak var scrollView: UIScrollView!
     
-    
-    
     @IBAction func addCommentsOnTouchUpInside(_ sender: Any) {
         
         print("Adding new comments...")

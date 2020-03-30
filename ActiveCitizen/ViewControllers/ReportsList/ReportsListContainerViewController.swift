@@ -14,7 +14,7 @@ class ReportsListContainerViewController: BaseReportsListViewController {
     @IBOutlet weak var segmentedControl: MDCTabBar!
     @IBOutlet weak var mapContainerView: UIView!
     @IBOutlet weak var listContainerView: UIView!
-    @IBOutlet weak var imageViewer: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

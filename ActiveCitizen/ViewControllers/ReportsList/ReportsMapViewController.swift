@@ -8,16 +8,42 @@
 
 import UIKit
 import YandexMapKit
+import CoreLocation
 
 class ReportsMapViewController: BaseReportsListViewController, YMKClusterListener, YMKClusterTapListener {
 
  
     @IBOutlet weak var mapView: YMKMapView!
+    
+    @IBAction func showUserLocationOnTouchUpInside(_ sender: Any) {
+        
+        setCenterMapForLocation(userLocation)
+        
+    }
+    
+    lazy var map: YMKMap = { return self.mapView.mapWindow.map }()
+    lazy var mapWindow: YMKMapWindow = { return self.mapView.mapWindow }()
+    
+    let locationManager = CLLocationManager()
+    var userLocation = YMKPoint()
+    var zoom: Float = 15.0
+    
+    var initialZoom: Float = 6.0
+    
     let manager = ReportsManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupMapViewWithCluster()
+        checkLocationServices()
+    }
+    
+    func setupMapViewWithCluster() {
+        map.logo.setAlignmentWith(YMKLogoAlignment(horizontalAlignment: YMKLogoHorizontalAlignment.left,
+                                                           verticalAlignment: YMKLogoVerticalAlignment.bottom))
+                
+                
         // Note that application must retain strong references to both
         // cluster listener and cluster tap listener
         let collection = mapView.mapWindow.map.mapObjects.addClusterizedPlacemarkCollection(with: self)
@@ -25,7 +51,7 @@ class ReportsMapViewController: BaseReportsListViewController, YMKClusterListene
         // Load data
 //        displayLoading(loading: true)
         manager.getReportsList { (reports, error) in
-//            self.displayLoading(loading: false)
+            self.displayLoading(loading: false)
             
             if error != nil {
                 print("error")
@@ -38,7 +64,6 @@ class ReportsMapViewController: BaseReportsListViewController, YMKClusterListene
             collection.clusterPlacemarks(withClusterRadius: 60, minZoom: 15)
         }
     }
-    
     
     func generatePoints(_ data: [Report]) -> [YMKPoint] {
         
