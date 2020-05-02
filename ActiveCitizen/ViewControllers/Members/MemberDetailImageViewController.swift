@@ -16,15 +16,9 @@ class MemberDetailImageViewController: BaseMemberDetailImageViewController, UISc
     @IBOutlet weak var pagination: UILabel!
     
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
-        if let currentPage = scrollView.auk.currentPageIndex {
-            let totalNumber = scrollView.auk.numberOfPages
-            pagination.text = "Фото \(currentPage + 1) из \(totalNumber)"
-        }
-    }
+    var imagesManager = ImagesManager()
+    var imagesToDisplay: [String]?
     
-    var photosToReceive: [String]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,31 +45,38 @@ class MemberDetailImageViewController: BaseMemberDetailImageViewController, UISc
         scrollView.auk.settings.pageControl.pageIndicatorTintColor = .clear
         scrollView.auk.settings.pageControl.currentPageIndicatorTintColor = .clear
         
-        var images = [UIImage?]()
-        
-        if let photosNames = photosToReceive {
-            
-            for photoName in photosNames {
-                images.append(UIImage(named: photoName))
-            }
-        }
-        
-        if images.isEmpty {
-            
-            pagination.text = "Фото 0 из 0"
-            
-        } else {
-            
-            for image in images {
-                
-                if let image = image {
-                    scrollView.auk.show(image: image)
+        if let imagesIDs = imagesToDisplay {
+                    
+            for imageId in imagesIDs {
+
+                imagesManager.getImage(with: imageId) { (response, error) in
+
+                    if error != nil {
+//                        Show an alert to the user
+                        
+                        print("Error: ", error?.errorDescription as Any)
+                    } else {
+                        if let image = response?.image {
+                            self.scrollView.auk.show(image: image)
+
+                            let totalNumber = self.scrollView.auk.numberOfPages
+                            self.pagination.text = "Фото 1 из \(totalNumber)"
+                        }
+                    }
                 }
             }
-            
-            let totalNumber = scrollView.auk.numberOfPages
-            pagination.text = "Фото 1 из \(totalNumber)"
         }
+    }
+    
+    
+    
+//    MARK: - Scrollview delegate
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
+        if let currentPage = scrollView.auk.currentPageIndex {
+            let totalNumber = scrollView.auk.numberOfPages
+            pagination.text = "Фото \(currentPage + 1) из \(totalNumber)"
+        }
     }
 }

@@ -49,7 +49,7 @@ class ReportsMapViewController: BaseReportsListViewController, YMKClusterListene
         let collection = mapView.mapWindow.map.mapObjects.addClusterizedPlacemarkCollection(with: self)
         
         // Load data
-//        displayLoading(loading: true)
+        displayLoading(loading: true)
         manager.getReportsList { (reports, error) in
             self.displayLoading(loading: false)
             
@@ -61,6 +61,7 @@ class ReportsMapViewController: BaseReportsListViewController, YMKClusterListene
             let points = self.generatePoints(reports!)
             collection.clear()
             collection.addPlacemarks(with: points, image: UIImage.markerImage(), style: YMKIconStyle())
+            
             collection.clusterPlacemarks(withClusterRadius: 60, minZoom: 15)
         }
     }

@@ -19,6 +19,12 @@ class BaseReportsListViewController: BaseViewController {
         super.viewDidLoad()
         
         setupNavigationBarTitle(with: "Обращения")
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         setupNavigationBarShadow(activate: false)
     }
 }

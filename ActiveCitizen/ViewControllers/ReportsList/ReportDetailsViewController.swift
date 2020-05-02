@@ -10,26 +10,34 @@ import UIKit
 import YandexMapKit
 import Auk
 
-class ReportDetailsViewController: BaseReportDetailsViewController {
+class ReportDetailsViewController: BaseReportDetailsViewController, UITableViewDelegate {
     
     @IBOutlet weak var mapView: YMKMapView!
     @IBOutlet weak var reportDetailsView: ReportDetailsView?
     
     @IBOutlet weak var tableView: UITableView!
     
-//    MARK: For test. Not sure if there is a data source for progress information. Check when server is available
-    var dataSource: ProgressDataSource?
+    lazy var map: YMKMap = { return self.mapView.mapWindow.map }()
     
+//    TODO: HOW TO ADD COMMENTS "ДОБАВИТЬ КОММЕНТРАИЙ"
+    
+    var dataSource: CommentsDataSource?
+    
+    var taskStatus = TaskStatus()
+    var membersManager = MembersManager()
+    var imagesManager = ImagesManager()
     var manager = ReportsManager()
     var report: Report?
-    var user: Member?
+    
+    var memberName: String?
+    var zoom: Float = 12.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupMapViewWithCluster()
-        showReportDetails()
-        setupDataSourceForProgressTableView()
+        setupMapView()
+        setupCommentsDataSource()
+        setReportDetails()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,30 +50,8 @@ class ReportDetailsViewController: BaseReportDetailsViewController {
         }
     }
     
-    func setupMapViewWithCluster() {
-        
-// Note that application must retain strong references to both
-        // cluster listener and cluster tap listener
-        let collection = mapView.mapWindow.map.mapObjects.addClusterizedPlacemarkCollection(with: self)
-        
-        // Load data
-//        displayLoading(loading: true)
-        manager.getReportsList { (reports, error) in
-//            self.displayLoading(loading: false)
-            
-            if error != nil {
-                print("error")
-                return
-            }
-            
-            let points = self.generatePoints(reports!)
-            collection.clear()
-            collection.addPlacemarks(with: points, image: UIImage.markerImage(), style: YMKIconStyle())
-            collection.clusterPlacemarks(withClusterRadius: 60, minZoom: 15)
-        }
-    }
     
-    func showReportDetails() {
+    func setReportDetails() {
         
         reportDetailsView?.scrollView.delegate = self
         
@@ -76,48 +62,41 @@ class ReportDetailsViewController: BaseReportDetailsViewController {
         reportDetailsView?.subCategoryName.text = report?.subcategoryName
         reportDetailsView?.address.text = report?.address
         reportDetailsView?.indicatedPeriod.text = ""
-        reportDetailsView?.reportCreatedDate.text = report?.created?.string(format: "yyyy.MM.dd")
-        reportDetailsView?.numberOfReport.text = ""
-        reportDetailsView?.autor.text = user?.id == report?.userID ? user?.name : ""
+        reportDetailsView?.reportCreationDate.text = report?.created?.string(format: "dd.MM.yyyy")
+        reportDetailsView?.numberOfReport.text = report?.id?.description
         reportDetailsView?.reportDescription.text = report?.description
-        reportDetailsView?.status.text = report?.status
-        
-        getReportStatus(status: report?.status)
+        setAutor()
+        reportDetailsView?.status.text = taskStatus.setStatus(statusKey: report?.status)
+        reportDetailsView?.status.textColor = taskStatus.setColor(statusKey: report?.status)
         
     }
     
-    func getReportStatus(status: String?) {
-        switch status {
-        case "taskModeration":
-            reportDetailsView?.status.text = "На модерации"
-            reportDetailsView?.status.textColor = .orange
-        case "taskAcceptance":
-            reportDetailsView?.status.text = "Принято в обработку"
-            reportDetailsView?.status.textColor = UIColor(named: "App Blue")
-        case "taskEnterResult":
-            reportDetailsView?.status.text = ""
-            reportDetailsView?.status.textColor = .black
-        case "taskPerformanceEvaluation":
-            reportDetailsView?.status.text = ""
-            reportDetailsView?.status.textColor = .black
-        case "taskRejected":
-            reportDetailsView?.status.text = "Отклонено"
-            reportDetailsView?.status.textColor = .orange
-        case "taskClosed":
-            reportDetailsView?.status.text = "Работа выполнена"
-            reportDetailsView?.status.textColor = .green
-        case "taskAll":
-            print("taskAll - Not defined type!")
-        default:
-            break
+    func setAutor() {
+        membersManager.getMemberUsers { (members, error) in
+            if error != nil  {
+//                TODO: Show alert to user
+                print(error?.localizedDescription as Any)
+                return
+            }
+            
+            if let name = members?.first(where: { $0.id == self.report?.userID })?.name, !name.isEmpty {
+                self.reportDetailsView?.userID = self.report?.userID
+                self.reportDetailsView?.autorButton.setTitle(name, for: .normal)
+            } else {
+                self.reportDetailsView?.autorButton.setTitle("", for: .normal)
+                self.reportDetailsView?.autorButton.isHidden = true
+                self.reportDetailsView?.autorButton.isEnabled = false
+            }
         }
     }
     
-    func setupDataSourceForProgressTableView() {
-        dataSource = ProgressDataSource(tableView: self.tableView)
-//        dataSource?.onLoading = { (isLoading) in
-//            self.displayLoading(loading: isLoading)
-//        }
+    func setupCommentsDataSource() {
+        dataSource = CommentsDataSource(tableView: self.tableView)
+        dataSource?.onLoading = { (isLoading) in
+            self.displayLoading(loading: isLoading)
+        }
+        dataSource?.caseID = report?.caseID
         dataSource?.reload()
     }
+    
 }

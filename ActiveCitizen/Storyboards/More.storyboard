@@ -3,7 +3,7 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -171,25 +171,116 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="О программе" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sip-i9-ufm">
-                                <rect key="frame" x="136.5" y="327" width="102" height="13.5"/>
-                                <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZd-eX-G3O">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0iU-NZ-aJN" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W0F-Jj-70h">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="oHL-Ph-S5b"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="W0F-Jj-70h" firstAttribute="top" secondItem="0iU-NZ-aJN" secondAttribute="top" id="4cj-yg-f59"/>
+                                            <constraint firstAttribute="trailing" secondItem="W0F-Jj-70h" secondAttribute="trailing" id="9Uq-w8-rgV"/>
+                                            <constraint firstItem="W0F-Jj-70h" firstAttribute="leading" secondItem="0iU-NZ-aJN" secondAttribute="leading" id="xTi-nl-FGz"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="0iU-NZ-aJN" firstAttribute="centerX" secondItem="WZd-eX-G3O" secondAttribute="centerX" id="7jd-2A-rEw"/>
+                                    <constraint firstItem="0iU-NZ-aJN" firstAttribute="top" secondItem="WZd-eX-G3O" secondAttribute="top" id="IfQ-BU-gwe"/>
+                                    <constraint firstAttribute="trailing" secondItem="0iU-NZ-aJN" secondAttribute="trailing" id="Jie-yZ-Vat"/>
+                                    <constraint firstItem="0iU-NZ-aJN" firstAttribute="centerY" secondItem="WZd-eX-G3O" secondAttribute="centerY" id="MTt-OA-znj"/>
+                                    <constraint firstAttribute="bottom" secondItem="0iU-NZ-aJN" secondAttribute="bottom" id="RIk-Dn-476"/>
+                                    <constraint firstItem="0iU-NZ-aJN" firstAttribute="leading" secondItem="WZd-eX-G3O" secondAttribute="leading" id="cDJ-fF-gQY"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="sip-i9-ufm" firstAttribute="centerX" secondItem="Kir-Np-i6N" secondAttribute="centerX" id="Sc6-0D-xqx"/>
-                            <constraint firstItem="sip-i9-ufm" firstAttribute="centerY" secondItem="Kir-Np-i6N" secondAttribute="centerY" id="qhA-XH-x22"/>
+                            <constraint firstAttribute="trailing" secondItem="WZd-eX-G3O" secondAttribute="trailing" id="8w5-4I-wXm"/>
+                            <constraint firstItem="WZd-eX-G3O" firstAttribute="top" secondItem="Kir-Np-i6N" secondAttribute="top" id="9K1-tp-ptL"/>
+                            <constraint firstAttribute="bottom" secondItem="WZd-eX-G3O" secondAttribute="bottom" id="KPZ-2F-C9X"/>
+                            <constraint firstItem="WZd-eX-G3O" firstAttribute="leading" secondItem="Kir-Np-i6N" secondAttribute="leading" id="aug-UV-wMh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4YM-67-BvO"/>
                     </view>
                     <navigationItem key="navigationItem" id="WgX-KL-wlh"/>
+                    <connections>
+                        <outlet property="tabBarView" destination="W0F-Jj-70h" id="eh4-k1-Mob"/>
+                        <outlet property="view" destination="WZd-eX-G3O" id="Kdp-JX-2Hk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UjL-SV-y8d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="849" y="559"/>
+            <point key="canvasLocation" x="848.79999999999995" y="558.17091454272872"/>
+        </scene>
+        <!--Инструкция-->
+        <scene sceneID="XhU-xV-ycl">
+            <objects>
+                <viewController storyboardIdentifier="InstructionsViewController" title="Инструкция" useStoryboardIdentifierAsRestorationIdentifier="YES" id="M0w-cU-GiN" customClass="InstructionsViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xZE-Ln-CbE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6J9-pz-IhN"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p5B-iV-JPA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1543" y="558"/>
+        </scene>
+        <!--Соглашения-->
+        <scene sceneID="wqk-1B-DMV">
+            <objects>
+                <viewController storyboardIdentifier="AgreementsViewController" title="Соглашения" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6Qy-H8-eH9" customClass="AgreementsViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ekB-hR-Xpl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="nbU-aD-NCs"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QfS-1L-F28" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2244" y="558"/>
+        </scene>
+        <!--Регламенты-->
+        <scene sceneID="X2L-WH-xYm">
+            <objects>
+                <viewController storyboardIdentifier="RegulationsViewController" title="Регламенты" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wZJ-bJ-cDP" customClass="RegulationsViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wnB-AE-S6j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="lJS-3U-AFa"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="igR-57-Dod" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2945" y="557"/>
+        </scene>
+        <!--Частые вопросы-->
+        <scene sceneID="IgG-Ra-j4z">
+            <objects>
+                <viewController storyboardIdentifier="FAQViewController" title="Частые вопросы" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uQ7-dP-cXP" customClass="FAQViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="78i-br-PgO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="g06-Ic-QTB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2OD-l1-OF4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3646" y="557"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="YZa-iD-J2Y">

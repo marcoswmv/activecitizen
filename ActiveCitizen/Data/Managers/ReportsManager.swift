@@ -11,7 +11,7 @@ import Alamofire
 
 class ReportsManager: BaseNetworkManager {
 
-    typealias ReportsListCompletionHandler = (_ reports:[Report]?, _ error:Error?) -> Void
+    typealias ReportsListCompletionHandler = (_ reports: [Report]?, _ error: Error?) -> Void
     
     @discardableResult
     func getReportsList(completion: @escaping ReportsListCompletionHandler) -> DataRequest {

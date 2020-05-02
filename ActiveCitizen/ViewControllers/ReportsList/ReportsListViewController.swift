@@ -12,24 +12,35 @@ class ReportsListViewController: BaseReportsListViewController, UITableViewDeleg
 
     @IBOutlet weak var tableView: UITableView!
     
+    let refreshControl = UIRefreshControl()
     var dataSource: ReportsListDataSource?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupDataSource()
-        keyboardManagment = true
+        setupUIElements()
     }
     
     func setupDataSource() {
         dataSource = ReportsListDataSource(tableView: self.tableView)
-//        dataSource?.onLoading = { (isLoading) in
-//            self.displayLoading(loading: isLoading)
-//        }
+        dataSource?.onLoading = { (isLoading) in
+            self.displayLoading(loading: isLoading)
+        }
         dataSource?.reload()
     }
     
+    func setupUIElements() {
+        keyboardManagment = true
+        
+        refreshControl.addTarget(self, action: #selector(self.handleRefresh), for: .valueChanged)
+        tableView.refreshControl = refreshControl
+    }
     
+    @objc func handleRefresh() {
+        dataSource?.reload()
+        refreshControl.endRefreshing()
+    }
 //    MARK: - Delegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

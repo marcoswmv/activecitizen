@@ -13,6 +13,7 @@ class MembersListViewController: BaseMembersListViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
+    var refreshControl = UIRefreshControl()
     var dataSource: MembersDataSource?
     
     override func viewDidLoad() {
@@ -26,9 +27,9 @@ class MembersListViewController: BaseMembersListViewController {
     
     func setupDataSource() {
         dataSource = MembersDataSource(tableView: self.tableView)
-//        dataSource?.onLoading = { isLoading in
-//            self.displayLoading(loading: isLoading)
-//        }
+        dataSource?.onLoading = { isLoading in
+            self.displayLoading(loading: isLoading)
+        }
         dataSource?.reload()
     }
 

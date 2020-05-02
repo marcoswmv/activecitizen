@@ -15,17 +15,27 @@ class ReportDetailsView: UIViewWithXib {
     @IBOutlet weak var subCategoryName: UILabel!
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var indicatedPeriod: UILabel!
-    @IBOutlet weak var reportCreatedDate: UILabel!
+    @IBOutlet weak var reportCreationDate: UILabel!
     @IBOutlet weak var numberOfReport: UILabel!
-    @IBOutlet weak var autor: UILabel!
+    @IBOutlet weak var autorButton: UIButton!
     @IBOutlet weak var reportDescription: UILabel!
     @IBOutlet weak var status: UILabel!
     
     @IBOutlet weak var scrollView: UIScrollView!
     
+    var userID: Int?
+    
     @IBAction func addCommentsOnTouchUpInside(_ sender: Any) {
         
         print("Adding new comments...")
+    }
+    
+    @IBAction func openAutorsProfileOnTouchUpInside(_ sender: Any) {
+        let profileViewController = ProfileViewController.instantiate() as! ProfileViewController
+        
+        profileViewController.user?.id = userID
+        
+        self.findViewController()?.navigationController?.pushViewController(profileViewController, animated: true)
     }
     
 }

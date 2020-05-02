@@ -10,14 +10,11 @@ import UIKit
 
 
 @IBDesignable
-class ProgressView: UIViewWithXib {
+class CommentView: UIViewWithXib {
     
-    @IBOutlet weak var reportImage: UIImageView!
     @IBOutlet weak var changedStatusLabel: UILabel!
     @IBOutlet weak var changedStatus: UILabel!
-    @IBOutlet weak var comment: UILabel!
-    @IBOutlet weak var decisionPeriodLabel: UILabel!
-    @IBOutlet weak var decisionPeriod: UILabel!
+    @IBOutlet weak var message: UILabel!
     @IBOutlet weak var autorLabel: UILabel!
     @IBOutlet weak var autor: UILabel!
     @IBOutlet weak var publicationDate: UILabel!

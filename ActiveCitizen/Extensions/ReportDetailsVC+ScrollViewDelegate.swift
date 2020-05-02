@@ -16,28 +16,24 @@ extension ReportDetailsViewController: UIScrollViewDelegate {
         reportDetailsView?.scrollView.auk.settings.pageControl.pageIndicatorTintColor = .clear
         reportDetailsView?.scrollView.auk.settings.pageControl.currentPageIndicatorTintColor = .clear
         
-        var images = [UIImage?]()
-        
-        if let photosNames = report?.photos {
+        if let imagesIDs = report?.imagesIDs {
             
-            for photoName in photosNames {
-                images.append(UIImage(named: photoName))
-            }
-        }
-        
-        if images.isEmpty {
-            
-            print("No images")
-            
-        } else {
-            
-            for image in images {
-                
-                if let image = image {
-                    reportDetailsView?.scrollView.auk.show(image: image)
+            for imageId in imagesIDs {
+
+                imagesManager.getImage(with: imageId) { (response, error) in
+
+                    if error != nil {
+//                        Show an alert to the user
+                        print("Error: ", error?.errorDescription as Any)
+                        
+                    } else if response != nil {
+                        
+                        if let image = response?.image {
+                            self.reportDetailsView?.scrollView.auk.show(image: image)
+                        }
+                    }
                 }
             }
         }
-        
     }
 }

@@ -8,8 +8,7 @@
 source "https://github.com/CocoaPods/Specs.git"
 
 platform :ios, '11.0'
-inhibit_all_warnings!
-use_frameworks!
+use_modular_headers!
 
 target "ActiveCitizen" do
     pod "Alamofire", "~> 5.0.0-rc.3"
@@ -20,6 +19,8 @@ target "ActiveCitizen" do
     pod "MaterialComponents/Tabs"
     pod 'moa', '~> 12.0'
     pod 'Auk', '~> 11.0'
+    pod 'Kingfisher', '~> 5.0'
+    pod 'Tabman'
     
     #pod "WMSegmentControl"
     #pod "RESegmentedControl"

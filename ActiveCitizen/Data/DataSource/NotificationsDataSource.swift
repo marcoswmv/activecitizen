@@ -1,16 +1,18 @@
 //
-//  ProgressDataSource.swift
+//  NotificationsDataSource.swift
 //  ActiveCitizen
 //
-//  Created by Marcos Vicente on 30.03.2020.
+//  Created by Marcos Vicente on 31.03.2020.
 //  Copyright © 2020 Antares Software. All rights reserved.
 //
 
 import UIKit
 
-class ProgressDataSource: BaseDataSource {
-
-   
+class NotificationsDataSource: BaseDataSource {
+    
+    
+//    MARK: Check if there is a request for notifications or it's data come from reports
+    
     private let manager = ReportsManager()
     private(set) var data: [Report]?
     
@@ -62,13 +64,11 @@ class ProgressDataSource: BaseDataSource {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: ProgressTableViewCell.identifier)! as! ProgressTableViewCell
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: ReportsListTableViewCell.identifier)! as! ReportsListTableViewCell
         
-        print("getting here")
         cell.data = data![indexPath.row]
         cell.selectionStyle = .none
         
         return cell
     }
-    
 }

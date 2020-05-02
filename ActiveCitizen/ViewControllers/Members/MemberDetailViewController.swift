@@ -27,48 +27,34 @@ class MemberDetailViewController: BaseMemberViewController {
         navigationController?.pushViewController(filterCategoriesViewController, animated:true)
     }
     
-    @IBAction func showReportPhotosOnTouchUpInside(_ sender: Any) {
-        
-        
-    }
     
     
-    var dataSource: MemberDetailsDataSource?
-    
-    var memberID: Int?
-    var photoToReceive: UIImage?
-    var nameToReceive: String?
-    var solvedProblemsToReceive: String?
-    var applicationsToReceive: String?
+    var dataSource: MemberReportsDataSource?
+    var member: Member?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         
         setupDataSource()
         setupUIElements()
     }
     
     func setupDataSource(with filter: String? = nil) {
-        dataSource = MemberDetailsDataSource(tableView: self.tableView)
+        dataSource = MemberReportsDataSource(tableView: self.tableView)
         dataSource?.onLoading = { (isLoading) in
             self.displayLoading(loading: isLoading)
         }
-        dataSource?.memberID = self.memberID
+        dataSource?.memberID = self.member?.id
         dataSource?.filter = filter
         dataSource?.reload()
     }
     
     func setupUIElements() {
-        userPhoto.image = photoToReceive
-        userName.text = nameToReceive
-        solvedProblems.text = solvedProblemsToReceive
-        applications.text = applicationsToReceive
+        userPhoto.image = member?.photo
+        userName.text = member?.name
+        solvedProblems.text = member?.solvedProblems?.description
+        applications.text = member?.activeApplications?.description
         keyboardManagment = true
     }
 

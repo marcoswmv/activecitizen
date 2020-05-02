@@ -11,18 +11,23 @@ import MaterialComponents.MaterialTabs
 
 class ProfileViewController: BaseProfileViewController {
     
+    @IBOutlet weak var userInformationView: UserInformationView!
     @IBOutlet weak var segmentedControl: MDCTabBar!
+    
+    var user: Member?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupSegmentedControl()
+        setupUserInformation()
         hideNavigationBar = true
     }
     
-    
-    @IBAction func editNameOnTouchUpInside(_ sender: Any) {
-        print("Editing name")
+    func setupUserInformation() {
+        userInformationView.photo.image = UIImage(named: "placeholder")
+        userInformationView.fullName.setTitle("Александр Филинков Юрьевич", for: .normal)
+        userInformationView.cityAddress.text = "Одинцовский городской округ"
+        userInformationView.streetAddress.text = "104 место по району/округу"
     }
-
 }

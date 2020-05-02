@@ -105,7 +105,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="670"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DT3-6Q-Nzp">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DT3-6Q-Nzp">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="670"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="LjO-Sr-kSf">
@@ -186,7 +186,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a random text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGF-Xw-Nmx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фото 0 из 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGF-Xw-Nmx">
                                 <rect key="frame" x="60" y="16.5" width="294" height="15.5"/>
                                 <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -242,50 +242,67 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="1800"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FKv-d7-L9S" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="225" width="414" height="1577"/>
+                                        <rect key="frame" x="0.0" y="225" width="414" height="1584"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CgM-ph-amF" customClass="ReportDetailsView" customModule="ActiveCitizen" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="925"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="790"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="790" id="Dzf-8Z-sD6"/>
+                                                </constraints>
                                             </view>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hDu-Yy-58H">
-                                                <rect key="frame" x="0.0" y="925" width="414" height="652"/>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C7m-9w-71Q" customClass="SelfSizingTableView" customModule="ActiveCitizen" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="790" width="414" height="794"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="794" id="cf2-ab-3qs"/>
+                                                </constraints>
+                                                <view key="tableFooterView" contentMode="scaleToFill" id="o3z-pV-0QV">
+                                                    <rect key="frame" x="0.0" y="292" width="414" height="70"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                </view>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProgressTableViewCell" rowHeight="416" id="bLS-fE-als" customClass="ProgressTableViewCell" customModule="ActiveCitizen" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="28" width="414" height="416"/>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CommentTableViewCell" rowHeight="236" id="rEv-ZP-R8N" customClass="CommentTableViewCell" customModule="ActiveCitizen" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="28" width="414" height="236"/>
                                                         <autoresizingMask key="autoresizingMask"/>
-                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bLS-fE-als" id="6zl-w2-WMW">
-                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="416"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rEv-ZP-R8N" id="EKw-x4-EcH">
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="236"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WES-b6-wb7" customClass="ProgressView" customModule="ActiveCitizen" customModuleProvider="target">
-                                                                    <rect key="frame" x="12" y="12" width="390" height="392"/>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8UK-E3-UFj" customClass="CommentView" customModule="ActiveCitizen" customModuleProvider="target">
+                                                                    <rect key="frame" x="12" y="12" width="390" height="212"/>
                                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                                 </view>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstItem="WES-b6-wb7" firstAttribute="leading" secondItem="6zl-w2-WMW" secondAttribute="leading" constant="12" id="SLW-eQ-BpD"/>
-                                                                <constraint firstAttribute="trailing" secondItem="WES-b6-wb7" secondAttribute="trailing" constant="12" id="bW5-TO-6e4"/>
-                                                                <constraint firstItem="WES-b6-wb7" firstAttribute="top" secondItem="6zl-w2-WMW" secondAttribute="top" constant="12" id="hVd-PV-jhQ"/>
-                                                                <constraint firstAttribute="bottom" secondItem="WES-b6-wb7" secondAttribute="bottom" constant="12" id="i8i-zP-E0G"/>
+                                                                <constraint firstAttribute="bottom" secondItem="8UK-E3-UFj" secondAttribute="bottom" constant="12" id="fMg-Ki-BsC"/>
+                                                                <constraint firstItem="8UK-E3-UFj" firstAttribute="leading" secondItem="EKw-x4-EcH" secondAttribute="leading" constant="12" id="gmb-bh-hav"/>
+                                                                <constraint firstItem="8UK-E3-UFj" firstAttribute="top" secondItem="EKw-x4-EcH" secondAttribute="top" constant="12" id="i0D-kE-DRl"/>
+                                                                <constraint firstAttribute="trailing" secondItem="8UK-E3-UFj" secondAttribute="trailing" constant="12" id="otO-rr-Hhs"/>
                                                             </constraints>
                                                         </tableViewCellContentView>
+                                                        <connections>
+                                                            <outlet property="commentCellView" destination="8UK-E3-UFj" id="XGu-Ip-E6V"/>
+                                                        </connections>
                                                     </tableViewCell>
                                                 </prototypes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="SBU-H8-flg" id="SM6-Fc-Fgv"/>
+                                                </connections>
                                             </tableView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
+                                            <constraint firstItem="C7m-9w-71Q" firstAttribute="leading" secondItem="FKv-d7-L9S" secondAttribute="leading" id="6t3-q6-stD"/>
                                             <constraint firstAttribute="trailing" secondItem="CgM-ph-amF" secondAttribute="trailing" id="A7a-dP-DL4"/>
-                                            <constraint firstItem="hDu-Yy-58H" firstAttribute="top" secondItem="CgM-ph-amF" secondAttribute="bottom" id="YOP-ig-ltJ"/>
+                                            <constraint firstItem="C7m-9w-71Q" firstAttribute="top" secondItem="CgM-ph-amF" secondAttribute="bottom" id="D8j-1d-t27"/>
+                                            <constraint firstAttribute="trailing" secondItem="C7m-9w-71Q" secondAttribute="trailing" id="VN3-Fe-ndQ"/>
                                             <constraint firstAttribute="height" priority="999" constant="1577" id="bdo-dP-aeu"/>
+                                            <constraint firstAttribute="bottom" secondItem="C7m-9w-71Q" secondAttribute="bottom" id="csZ-wz-OCw"/>
                                             <constraint firstItem="CgM-ph-amF" firstAttribute="top" secondItem="FKv-d7-L9S" secondAttribute="top" id="d5L-lt-mCO"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1577" id="hPx-x2-eJZ"/>
-                                            <constraint firstItem="hDu-Yy-58H" firstAttribute="leading" secondItem="FKv-d7-L9S" secondAttribute="leading" id="lSN-Sd-DHg"/>
                                             <constraint firstItem="CgM-ph-amF" firstAttribute="leading" secondItem="FKv-d7-L9S" secondAttribute="leading" id="q1J-j4-9Jy"/>
-                                            <constraint firstAttribute="bottom" secondItem="hDu-Yy-58H" secondAttribute="bottom" id="u9T-IT-Sh5"/>
-                                            <constraint firstAttribute="trailing" secondItem="hDu-Yy-58H" secondAttribute="trailing" id="xTs-Se-i3K"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -315,7 +332,7 @@
                     <connections>
                         <outlet property="mapView" destination="g4T-vi-YPX" id="WCF-9n-co4"/>
                         <outlet property="reportDetailsView" destination="CgM-ph-amF" id="4aO-ec-Hk1"/>
-                        <outlet property="tableView" destination="hDu-Yy-58H" id="iwq-dK-EXC"/>
+                        <outlet property="tableView" destination="C7m-9w-71Q" id="2Gy-x3-bRi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rZv-Z5-x4I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

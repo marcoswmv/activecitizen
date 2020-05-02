@@ -12,6 +12,7 @@ class Report {
 
     var id: Int?
     var userID: Int?
+    var caseID: String?
     var created: Date?
     var categoryIcon: UIImage?
     var categoryId: Int?
@@ -22,13 +23,14 @@ class Report {
     var address: String?
     var latitude: Double?
     var longitude: Double?
-    var photos: [String]?
+    var imagesIDs: [String]?
     var status: String?
     
     init(dictionary: [String : Any]) {
         
         id = dictionary["id"] as? Int
         userID = dictionary["userId"] as? Int
+        caseID = dictionary["caseId"] as? String
         created = (dictionary["created"] as? String)?.parseISO8601()
         categoryId = dictionary["categoryId"] as? Int
         categoryName = dictionary["categoryName"] as? String
@@ -36,9 +38,10 @@ class Report {
         subcategoryName = dictionary["subcategoryName"] as? String
         description = dictionary["description"] as? String
         address = dictionary["address"] as? String
-        photos = dictionary["files"] as? [String]
         status = dictionary["taskDefinitionKey"] as? String
         categoryIcon = getIcon(id: categoryId!)
+        imagesIDs = dictionary["files"] as? [String]
+        
         
         if let coordsString = dictionary["coordinates"] as? String {
             let coords = coordsString.split(separator: ",");
@@ -69,7 +72,7 @@ class Report {
             return UIImage()
         }
     }
- 
+    
 //    {
 //        "id": 3958,
 //        "caseId": "27903ce1-1537-11ea-87f0-0242ac110002",

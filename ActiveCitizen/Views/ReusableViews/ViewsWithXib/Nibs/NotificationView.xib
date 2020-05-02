@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GothaProMed.otf">
+            <string>GothamPro-Medium</string>
+        </array>
+        <array key="GothaProReg.otf">
+            <string>GothamPro</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NotificationView" customModule="ActiveCitizen" customModuleProvider="target">
+            <connections>
+                <outlet property="address" destination="CFt-m8-gbJ" id="Wow-pi-pzb"/>
+                <outlet property="notificationMessage" destination="wol-mH-UXj" id="xI5-iR-c5t"/>
+                <outlet property="photo" destination="9et-ir-TAC" id="ixy-ig-0ub"/>
+                <outlet property="statusChangedTo" destination="keu-Vi-x11" id="7Xz-B1-r3Z"/>
+                <outlet property="subCategoryName" destination="Vwl-dM-eLH" id="rAA-N1-LIB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="335" height="426"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9et-ir-TAC">
+                    <rect key="frame" x="15" y="15" width="305" height="170"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="170" id="cDy-MZ-SA9"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vwl-dM-eLH">
+                    <rect key="frame" x="15" y="205" width="305" height="15.5"/>
+                    <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="9M7-K5-sPa">
+                    <rect key="frame" x="15" y="235.5" width="305" height="11"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map_pin_small" translatesAutoresizingMaskIntoConstraints="NO" id="89q-bi-bmb">
+                            <rect key="frame" x="0.0" y="0.0" width="11" height="11"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="11" id="4C1-t3-2sW"/>
+                                <constraint firstAttribute="height" constant="11" id="zSv-7a-gQh"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFt-m8-gbJ">
+                            <rect key="frame" x="15" y="0.0" width="290" height="11"/>
+                            <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="13"/>
+                            <color key="textColor" name="User Label Gray"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cfv-Db-PGJ" customClass="Separator" customModule="ActiveCitizen" customModuleProvider="target">
+                    <rect key="frame" x="15" y="267.5" width="320" height="1"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Mc6-ET-oup"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                            <color key="value" name="Separator Line Gray"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="lineType">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qfG-60-qFf" customClass="Separator" customModule="ActiveCitizen" customModuleProvider="target">
+                    <rect key="frame" x="15" y="312" width="320" height="1"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="wjv-Di-Fjx"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                            <color key="value" name="Separator Line Gray"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="lineType">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="j6U-5K-aOi">
+                    <rect key="frame" x="15" y="283.5" width="305" height="17.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Статус изменен на:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0TD-ej-ufc">
+                            <rect key="frame" x="0.0" y="0.0" width="147" height="17.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="147" id="dnc-cw-8wc"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keu-Vi-x11">
+                            <rect key="frame" x="155" y="0.0" width="150" height="17.5"/>
+                            <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="15"/>
+                            <color key="textColor" name="App Green"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="В работе или таком-то ее разделе разбираются различные варианты каких-нибудь штук. Методом таким-то выявлен эффект еще" textAlignment="justified" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wol-mH-UXj">
+                    <rect key="frame" x="15" y="325" width="305" height="35"/>
+                    <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EqO-5B-G2s">
+                    <rect key="frame" x="15" y="381" width="140.5" height="30"/>
+                    <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="15"/>
+                    <state key="normal" title="Отклонить">
+                        <color key="titleColor" name="SC Title blue"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="14"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" name="SC Title blue"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                            <size key="value" width="0.0" height="3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                            <real key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="0.20000000000000001"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="declineOnTouchUpInside:" destination="-1" eventType="touchUpInside" id="baH-GQ-UFp"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abG-RD-MAm">
+                    <rect key="frame" x="179.5" y="385" width="140.5" height="26"/>
+                    <color key="backgroundColor" name="SC Title blue"/>
+                    <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="15"/>
+                    <state key="normal" title="Согласовать">
+                        <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="14"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                            <size key="value" width="0.0" height="3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                            <real key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="0.20000000000000001"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="approveOnTouchUpInside:" destination="-1" eventType="touchUpInside" id="5gV-Sc-bny"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="wol-mH-UXj" secondAttribute="trailing" constant="15" id="0Ee-mf-5Rc"/>
+                <constraint firstAttribute="trailing" secondItem="9et-ir-TAC" secondAttribute="trailing" constant="15" id="1lc-oV-6ee"/>
+                <constraint firstItem="Vwl-dM-eLH" firstAttribute="top" secondItem="9et-ir-TAC" secondAttribute="bottom" constant="20" id="6GN-MK-hum"/>
+                <constraint firstItem="cfv-Db-PGJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="87T-ET-eTL"/>
+                <constraint firstItem="abG-RD-MAm" firstAttribute="top" secondItem="wol-mH-UXj" secondAttribute="bottom" constant="25" id="CdL-AP-W5x"/>
+                <constraint firstItem="EqO-5B-G2s" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="Cv0-r5-1js"/>
+                <constraint firstAttribute="bottom" secondItem="EqO-5B-G2s" secondAttribute="bottom" constant="15" id="HHO-IT-Ofk"/>
+                <constraint firstItem="qfG-60-qFf" firstAttribute="top" secondItem="j6U-5K-aOi" secondAttribute="bottom" constant="15" id="Hey-ON-9Bj"/>
+                <constraint firstItem="j6U-5K-aOi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="Ihx-Y7-OdY"/>
+                <constraint firstItem="EqO-5B-G2s" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.42" id="M5j-Ly-x4m"/>
+                <constraint firstAttribute="trailing" secondItem="abG-RD-MAm" secondAttribute="trailing" constant="15" id="O5n-wS-gBJ"/>
+                <constraint firstItem="9M7-K5-sPa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="P6o-zp-CBw"/>
+                <constraint firstAttribute="bottom" secondItem="abG-RD-MAm" secondAttribute="bottom" constant="15" id="Qh7-2O-VeG"/>
+                <constraint firstItem="qfG-60-qFf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="SUG-KV-4wK"/>
+                <constraint firstItem="abG-RD-MAm" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.42" id="St1-or-6wN"/>
+                <constraint firstItem="j6U-5K-aOi" firstAttribute="top" secondItem="cfv-Db-PGJ" secondAttribute="bottom" constant="15" id="VNe-r6-1SF"/>
+                <constraint firstAttribute="trailing" secondItem="j6U-5K-aOi" secondAttribute="trailing" constant="15" id="Y7s-aK-P2Y"/>
+                <constraint firstAttribute="trailing" secondItem="9M7-K5-sPa" secondAttribute="trailing" constant="15" id="YEB-ez-Fmp"/>
+                <constraint firstItem="cfv-Db-PGJ" firstAttribute="top" secondItem="9M7-K5-sPa" secondAttribute="bottom" constant="15" id="Z4K-Ld-4YQ"/>
+                <constraint firstItem="wol-mH-UXj" firstAttribute="top" secondItem="qfG-60-qFf" secondAttribute="bottom" constant="12" id="cIB-cP-isD"/>
+                <constraint firstAttribute="trailing" secondItem="cfv-Db-PGJ" secondAttribute="trailing" id="e0h-Az-qJZ"/>
+                <constraint firstAttribute="trailing" secondItem="Vwl-dM-eLH" secondAttribute="trailing" constant="15" id="eLq-WM-del"/>
+                <constraint firstItem="9et-ir-TAC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="fTp-ph-pgz"/>
+                <constraint firstItem="wol-mH-UXj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="jui-jy-OTe"/>
+                <constraint firstItem="9M7-K5-sPa" firstAttribute="top" secondItem="Vwl-dM-eLH" secondAttribute="bottom" constant="15" id="uaP-9G-ysT"/>
+                <constraint firstAttribute="trailing" secondItem="qfG-60-qFf" secondAttribute="trailing" id="w1k-KM-Uig"/>
+                <constraint firstItem="Vwl-dM-eLH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="wtI-yS-nN4"/>
+                <constraint firstItem="9et-ir-TAC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="yei-IP-Y70"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                    <size key="value" width="0.0" height="3"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                    <real key="value" value="0.20000000000000001"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                    <real key="value" value="4"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="139.85507246376812" y="-11.383928571428571"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="map_pin_small" width="8" height="11"/>
+        <namedColor name="App Green">
+            <color red="0.15686274509803921" green="0.82745098039215681" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SC Title blue">
+            <color red="0.0" green="0.51764705882352946" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Separator Line Gray">
+            <color red="0.74509803921568629" green="0.75294117647058822" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="User Label Gray">
+            <color red="0.53299999237060547" green="0.54900002479553223" blue="0.62699997425079346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

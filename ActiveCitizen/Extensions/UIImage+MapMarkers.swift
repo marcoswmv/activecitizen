@@ -31,12 +31,12 @@ extension UIImage {
         UIGraphicsBeginImageContext(iconSize)
         let ctx = UIGraphicsGetCurrentContext()!
 
-        ctx.setFillColor(UIColor.red.cgColor)
+        ctx.setFillColor(UIColor.white.cgColor)
         ctx.fillEllipse(in: CGRect(
             origin: .zero,
             size: CGSize(width: 2 * externalRadius, height: 2 * externalRadius)));
 
-        ctx.setFillColor(UIColor.white.cgColor)
+        ctx.setFillColor(UIColor(named: "App Green")!.cgColor)
         ctx.fillEllipse(in: CGRect(
             origin: CGPoint(x: externalRadius - internalRadius, y: externalRadius - internalRadius),
             size: CGSize(width: 2 * internalRadius, height: 2 * internalRadius)));
@@ -47,13 +47,37 @@ extension UIImage {
                 size: size),
             withAttributes: [
                 NSAttributedString.Key.font: font,
-                NSAttributedString.Key.foregroundColor: UIColor.black])
+                NSAttributedString.Key.foregroundColor: UIColor.white])
         let image = UIGraphicsGetImageFromCurrentImageContext()!
         return image
     }
     
     // TODO: category
     class func markerImage() -> UIImage {
+        
         return UIImage(named: "map_pin_green")!
+    }
+    
+    func setIcon(id: Int) -> UIImage {
+        switch id {
+        case 1101:
+            return UIImage.yardArea!
+        case 1102:
+            return UIImage.road!
+        case 1103:
+            return UIImage.water!
+        case 1104:
+            return UIImage.fire!
+        case 1105:
+            return UIImage.buildings!
+        case 1106:
+            return UIImage.publicTransport!
+        case 1107:
+            return UIImage.payments!
+        case 1108:
+            return UIImage.empty
+        default:
+            return UIImage()
+        }
     }
 }

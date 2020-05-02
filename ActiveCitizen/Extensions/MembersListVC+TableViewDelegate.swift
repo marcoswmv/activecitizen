@@ -13,21 +13,9 @@ extension MembersListViewController: UITableViewDelegate {
         
         let memberViewController = MemberDetailViewController.instantiate() as! MemberDetailViewController
         let row = indexPath.row
+        let member = dataSource?.data![row]
         
-        let memberID = dataSource?.data![row].id
-        let photo = dataSource?.data![row].photo
-        let name = dataSource?.data![row].name
-        
-        memberViewController.memberID = memberID
-        memberViewController.photoToReceive = photo
-        memberViewController.nameToReceive = name
-        
-        if let solvedProblems = dataSource?.data![row].solvedProblems,
-            let applications = dataSource?.data![row].activeApplications {
-            memberViewController.solvedProblemsToReceive = "\(solvedProblems)"
-            memberViewController.applicationsToReceive = "\(applications)"
-        }
-        
+        memberViewController.member = member
         navigationController?.pushViewController(memberViewController, animated: true)
     }
 }

@@ -35,5 +35,6 @@ extension UIImage {
     
 //    MARK: App Icons
     static let disclosure = UIImage(named: "disclosure")
+    static let mapPinGreen = UIImage(named: "map_pin_green")
     static let empty = UIImage()
 }

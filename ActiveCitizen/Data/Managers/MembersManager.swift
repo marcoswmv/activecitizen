@@ -17,7 +17,8 @@ class MembersManager: BaseNetworkManager {
     func getMemberUsers(completion: @escaping UsersCompletionHandler) -> DataRequest {
         
 //        let params = ["firstResult": 0, "maxResult": 10]
-        return request(apiEndpoint: "statistics/allUsers?", method: .get, parameters: nil, completion: { (response, error) in
+        let apiEndPoint = "statistics/allUsers?firstResult=0&maxResult=10"
+        return request(apiEndpoint: apiEndPoint, method: .get, parameters: nil, completion: { (response, error) in
           
             if error != nil {
 //                print(error?.localizedDescription)
