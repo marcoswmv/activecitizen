@@ -79,7 +79,7 @@
         <!--Ещё-->
         <scene sceneID="V2S-bq-P5l">
             <objects>
-                <navigationController hidesBarsOnSwipe="YES" id="VIM-Tn-Bwg" customClass="BaseNavigationController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="VIM-Tn-Bwg" customClass="BaseNavigationController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Ещё" image="tab_more" selectedImage="tab_more_activ" id="Zyt-sQ-qoC"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8Ig-IG-xAe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -96,7 +96,7 @@
         <!--Участники-->
         <scene sceneID="D87-DJ-6Mp">
             <objects>
-                <navigationController hidesBarsOnSwipe="YES" id="XIH-dZ-3it" customClass="BaseNavigationController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="XIH-dZ-3it" customClass="BaseNavigationController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Участники" image="tab_people" selectedImage="tab_people_activ" id="9HR-Qv-hoU"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="j5p-L6-ixP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -113,7 +113,7 @@
         <!--Обращения-->
         <scene sceneID="xxV-ux-5vg">
             <objects>
-                <navigationController hidesBarsOnSwipe="YES" id="SCD-CH-2wL" customClass="BaseNavigationController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="SCD-CH-2wL" customClass="BaseNavigationController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Обращения" image="documents" selectedImage="documents_activ" id="HxQ-Np-VVA"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="p3L-na-W6m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

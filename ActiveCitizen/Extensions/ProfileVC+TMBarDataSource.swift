@@ -1,8 +1,8 @@
 //
-//  AboutViewController+TMBarDataSource.swift
+//  ProfileVC+ TabBarDelegate.swift
 //  ActiveCitizen
 //
-//  Created by Marcos Vicente on 08.05.2020.
+//  Created by Marcos Vicente on 19.02.2020.
 //  Copyright © 2020 Antares Software. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import UIKit
 import Tabman
 import Pageboy
 
-extension AboutViewController: PageboyViewControllerDataSource, TMBarDataSource {
+extension ProfileViewController: PageboyViewControllerDataSource, TMBarDataSource {
     
     func numberOfViewControllers(in pageboyViewController: PageboyViewController) -> Int {
         return viewControllersList.count
@@ -27,5 +27,4 @@ extension AboutViewController: PageboyViewControllerDataSource, TMBarDataSource 
     func barItem(for bar: TMBar, at index: Int) -> TMBarItemable {
         return TMBarItem(title: titles[index])
     }
-    
 }

@@ -23,6 +23,12 @@ class MembersListViewController: BaseMembersListViewController {
         self.hideKeyboardWhenTappedAround()
         tableView.separatorStyle = .none
         keyboardManagment = true
+        
+        if #available(iOS 13.0, *) {
+            searchBar.searchTextField.backgroundColor = .acSearchBarGray
+        } else {
+            // Fallback on earlier versions
+        }
     }
     
     func setupDataSource() {
@@ -32,5 +38,4 @@ class MembersListViewController: BaseMembersListViewController {
         }
         dataSource?.reload()
     }
-
 }

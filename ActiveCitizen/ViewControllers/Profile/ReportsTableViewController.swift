@@ -10,6 +10,7 @@ import UIKit
 
 class ReportsTableViewController: BaseViewController, UITableViewDelegate {
 
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
 //    var timer: Timer?

@@ -7,13 +7,20 @@
 //
 
 import UIKit
+import Pageboy
+import Tabman
 
 class ReportsListViewController: BaseReportsListViewController, UITableViewDelegate {
 
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBarTopConstraint: NSLayoutConstraint!
     
     let refreshControl = UIRefreshControl()
     var dataSource: ReportsListDataSource?
+    
+    var hidingBar: TMHidingBar! = nil
+    var hidingViews: [UIView]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +42,12 @@ class ReportsListViewController: BaseReportsListViewController, UITableViewDeleg
         
         refreshControl.addTarget(self, action: #selector(self.handleRefresh), for: .valueChanged)
         tableView.refreshControl = refreshControl
+        
+        if #available(iOS 13.0, *) {
+            searchBar.searchTextField.backgroundColor = .acSearchBarGray
+        } else {
+            // Fallback on earlier versions
+        }
     }
     
     @objc func handleRefresh() {

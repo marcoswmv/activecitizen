@@ -20,37 +20,37 @@ class ReportsListDataSource: BaseDataSource {
     override func reload() {
         
         
-//        let reports: [[String: Any]] = [[ "categoryId": 1101, "created": "2013-12-02T19:13:16.167+0000", "categoryName": "Автомобильные дороги",
-//                                          "subcategoryName": "Аварийные опоры линий наружного освещения", "address": "Россия, Волгоград, посёлок Ангарский, Раздольная улица, 47", "files": ["thor1"], "taskDefinitionKey": "taskEnterResult"],
-//                                        [ "categoryId": 1102, "created": "2020-1-02T19:13:16.167+0000", "categoryName": "Автомобильные орфвлытоылчы",
-//                                        "subcategoryName": "Аварийные опоры линиаватртноьй наружного оносвещения", "address": "Россия, Волгоград, посёлок Ангарский, Раздольная улица, 47", "files": [], "taskDefinitionKey": "taskAcceptance"],
-//                                        [ "categoryId": 1103, "created": "2021-2-02T19:13:16.167+0000", "categoryName": "Авфылврифыыловилфсыльные дороги",
-//                                          "subcategoryName": "Аварийныефмывамвамав опоры линий наружного освещения", "address": "Россия, Волгоград, посёлок Ангарский, Раздольная улица, 47", "files": ["thor2", "thor3"], "taskDefinitionKey": "taskRejected"]]
-//
-//
-//        var result = [Report]()
-//
-//        for report in reports {
-//            result.append(Report(dictionary: report))
-//        }
-//
-//        data = result
-//        tableView.reloadData()
-        
-        
-        onLoading?(true)
-        
-        manager.getReportsList { (result, error) in
-            
-            self.onLoading?(false)
-            if error != nil {
-                self.onError?(error!)
-                return
-            }
-            
-            self.data = result
-            self.tableView.reloadData()
+        let reports: [[String: Any]] = [[ "categoryId": 1101, "created": "2013-12-02T19:13:16.167+0000", "categoryName": "Автомобильные дороги",
+                                          "subcategoryName": "Аварийные опоры линий наружного освещения", "address": "Россия, Волгоград, посёлок Ангарский, Раздольная улица, 47", "files": ["thor1"], "taskDefinitionKey": "taskEnterResult"],
+                                        [ "categoryId": 1102, "created": "2020-1-02T19:13:16.167+0000", "categoryName": "Автомобильные орфвлытоылчы",
+                                        "subcategoryName": "Аварийные опоры линиаватртноьй наружного оносвещения", "address": "Россия, Волгоград, посёлок Ангарский, Раздольная улица, 47", "files": [], "taskDefinitionKey": "taskAcceptance"],
+                                        [ "categoryId": 1103, "created": "2021-2-02T19:13:16.167+0000", "categoryName": "Авфылврифыыловилфсыльные дороги",
+                                          "subcategoryName": "Аварийныефмывамвамав опоры линий наружного освещения", "address": "Россия, Волгоград, посёлок Ангарский, Раздольная улица, 47", "files": ["thor2", "thor3"], "taskDefinitionKey": "taskRejected"]]
+
+
+        var result = [Report]()
+
+        for report in reports {
+            result.append(Report(dictionary: report))
         }
+
+        data = result
+        tableView.reloadData()
+        
+        
+//        onLoading?(true)
+//        
+//        manager.getReportsList { (result, error) in
+//            
+//            self.onLoading?(false)
+//            if error != nil {
+//                self.onError?(error!)
+//                return
+//            }
+//            
+//            self.data = result
+//            self.tableView.reloadData()
+//        }
     }
     
     // MARK: - DataSource

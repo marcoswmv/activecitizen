@@ -22,45 +22,45 @@ class MemberReportsDataSource: BaseDataSource {
     
     override func reload() {
         
-//        let reports: [[String: Any]] = [[ "categoryId": 1101, "created": "2013-12-02T19:13:16.167+0000", "categoryName": "Автомобильные дороги",
-//                                          "subcategoryName": "Аварийные опоры линий наружного освещения", "address": "Россия, Волгоград, посёлок Ангарский, Раздольная улица, 47", "files": ["dog1"], "taskDefinitionKey": "taskEnterResult"],
-//                                        [ "categoryId": 1102, "created": "2020-1-02T19:13:16.167+0000", "categoryName": "Автомобильные орфвлытоылчы",
-//                                        "subcategoryName": "Аварийные опоры линиаватртноьй наружного оносвещения", "address": "Россия, Волгоград, посёлок Ангарский, Раздольная улица, 47", "files": ["dog4", "dog5", "dog6"], "taskDefinitionKey": "taskAcceptance"],
-//                                        [ "categoryId": 1103, "created": "2021-2-02T19:13:16.167+0000", "categoryName": "Авфылврифыыловилфсыльные дороги",
-//                                          "subcategoryName": "Аварийныефмывамвамав опоры линий наружного освещения", "address": "Россия, Волгоград, посёлок Ангарский, Раздольная улица, 47", "files": ["dog2", "dog3"], "taskDefinitionKey": "taskRejected"]]
-//
-//
-//        var result = [Report]()
-//
-//        for report in reports {
-//            result.append(Report(dictionary: report))
-//        }
-//
-//        data = result
-//        tableView.reloadData()
-        
-        
-        onLoading?(true)
-        manager.getReportsList { (result, error) in
+        let reports: [[String: Any]] = [[ "categoryId": 1101, "created": "2013-12-02T19:13:16.167+0000", "categoryName": "Автомобильные дороги",
+                                          "subcategoryName": "Аварийные опоры линий наружного освещения", "address": "Россия, Волгоград, посёлок Ангарский, Раздольная улица, 47", "files": ["dog1"], "taskDefinitionKey": "taskEnterResult"],
+                                        [ "categoryId": 1102, "created": "2020-1-02T19:13:16.167+0000", "categoryName": "Автомобильные орфвлытоылчы",
+                                        "subcategoryName": "Аварийные опоры линиаватртноьй наружного оносвещения", "address": "Россия, Волгоград, посёлок Ангарский, Раздольная улица, 47", "files": ["dog4", "dog5", "dog6"], "taskDefinitionKey": "taskAcceptance"],
+                                        [ "categoryId": 1103, "created": "2021-2-02T19:13:16.167+0000", "categoryName": "Авфылврифыыловилфсыльные дороги",
+                                          "subcategoryName": "Аварийныефмывамвамав опоры линий наружного освещения", "address": "Россия, Волгоград, посёлок Ангарский, Раздольная улица, 47", "files": ["dog2", "dog3"], "taskDefinitionKey": "taskRejected"]]
 
-            self.onLoading?(false)
-            if error != nil {
-                self.onError?(error!)
-                return
-            }
-            
-            var newData = [Report]()
-            if let result = result {
-                for report in result {
-                    if report.userID == self.memberID {
-                        newData.append(report)
-                    }
-                }
-            }
 
-            self.data = newData
-            self.tableView.reloadData()
+        var result = [Report]()
+
+        for report in reports {
+            result.append(Report(dictionary: report))
         }
+
+        data = result
+        tableView.reloadData()
+        
+        
+//        onLoading?(true)
+//        manager.getReportsList { (result, error) in
+//
+//            self.onLoading?(false)
+//            if error != nil {
+//                self.onError?(error!)
+//                return
+//            }
+//
+//            var newData = [Report]()
+//            if let result = result {
+//                for report in result {
+//                    if report.userID == self.memberID {
+//                        newData.append(report)
+//                    }
+//                }
+//            }
+//
+//            self.data = newData
+//            self.tableView.reloadData()
+//        }
     }
     
     // MARK: - DataSource

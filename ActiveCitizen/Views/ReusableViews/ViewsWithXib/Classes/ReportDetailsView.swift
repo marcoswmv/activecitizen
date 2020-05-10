@@ -31,7 +31,8 @@ class ReportDetailsView: UIViewWithXib {
     }
     
     @IBAction func openAutorsProfileOnTouchUpInside(_ sender: Any) {
-        let profileViewController = ProfileViewController.instantiate() as! ProfileViewController
+        let storyboard = UIStoryboard(name: "Profile", bundle: nil)
+        let profileViewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
         
         profileViewController.user?.id = userID
         

@@ -75,4 +75,10 @@ extension UIColor {
             return UIColor(named: "Dark Gray")!
         }
     }
+    
+    open class var acSearchBarGray: UIColor {
+        get {
+            return UIColor(named: "Search Bar Gray")!
+        }
+    }
 }

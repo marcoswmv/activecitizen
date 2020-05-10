@@ -24,11 +24,12 @@ class AboutViewController: TabmanViewController {
     }()
     
     lazy var titles: [String] = [ "ИНСТРУКЦИЯ", "СОГЛАШЕНИЯ", "РЕГЛАМЕНТЫ", "ЧАСТНЫЕ ВОПРОСЫ"]
+    let bar = TMBar.ButtonBar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupTabBar()
+        setupTabBar(bar: bar, view: tabBarView, viewController: self)
         setupCustomBackButton(with: "О программе", icon: "back")
     }
     
@@ -43,24 +44,4 @@ class AboutViewController: TabmanViewController {
         navigationController?.hidesBarsOnSwipe = false
         setupNavigationBarShadow(activate: true)
     }
-    
-    func setupTabBar() {
-        
-        self.dataSource = self
-        
-        let bar = TMBar.ButtonBar()
-        bar.layout.transitionStyle = .snap
-        bar.layout.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-        bar.backgroundView.style = .clear
-        bar.indicator.backgroundColor = .acBlue
-        
-        bar.buttons.customize { (button) in
-            button.tintColor = .acDarkGray
-            button.selectedTintColor = .acBlue
-            button.font = UIFont(name: UIFont.mediumFontFmily, size: 14.0)!
-        }
-        
-        addBar(bar, dataSource: self, at: .custom(view: tabBarView, layout: nil))
-    }
-    
 }

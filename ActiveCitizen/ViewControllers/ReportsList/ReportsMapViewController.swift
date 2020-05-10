@@ -11,14 +11,12 @@ import YandexMapKit
 import CoreLocation
 
 class ReportsMapViewController: BaseReportsListViewController, YMKClusterListener, YMKClusterTapListener {
-
  
     @IBOutlet weak var mapView: YMKMapView!
     
     @IBAction func showUserLocationOnTouchUpInside(_ sender: Any) {
         
         setCenterMapForLocation(userLocation)
-        
     }
     
     lazy var map: YMKMap = { return self.mapView.mapWindow.map }()
@@ -37,6 +35,18 @@ class ReportsMapViewController: BaseReportsListViewController, YMKClusterListene
 
         setupMapViewWithCluster()
         checkLocationServices()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.hidesBarsOnSwipe = false
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        navigationController?.hidesBarsOnSwipe = true
     }
     
     func setupMapViewWithCluster() {
