@@ -5,9 +5,9 @@ PODS:
   - Kingfisher (5.13.4):
     - Kingfisher/Core (= 5.13.4)
   - Kingfisher/Core (5.13.4)
-  - MaterialComponents/AnimationTiming (109.1.0)
-  - MaterialComponents/Availability (109.1.0)
-  - MaterialComponents/Buttons (109.1.0):
+  - MaterialComponents/AnimationTiming (109.2.0)
+  - MaterialComponents/Availability (109.2.0)
+  - MaterialComponents/Buttons (109.2.0):
     - MaterialComponents/Elevation
     - MaterialComponents/Ink
     - MaterialComponents/private/Math
@@ -18,32 +18,32 @@ PODS:
     - MaterialComponents/Typography
     - MDFInternationalization
     - MDFTextAccessibility
-  - MaterialComponents/Elevation (109.1.0):
+  - MaterialComponents/Elevation (109.2.0):
     - MaterialComponents/Availability
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
-  - MaterialComponents/Ink (109.1.0):
+  - MaterialComponents/Ink (109.2.0):
     - MaterialComponents/Availability
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
-  - MaterialComponents/Palettes (109.1.0)
-  - MaterialComponents/private/Application (109.1.0)
-  - MaterialComponents/private/Color (109.1.0):
+  - MaterialComponents/Palettes (109.2.0)
+  - MaterialComponents/private/Application (109.2.0)
+  - MaterialComponents/private/Color (109.2.0):
     - MaterialComponents/Availability
-  - MaterialComponents/private/Math (109.1.0)
-  - MaterialComponents/Ripple (109.1.0):
+  - MaterialComponents/private/Math (109.2.0)
+  - MaterialComponents/Ripple (109.2.0):
     - MaterialComponents/AnimationTiming
     - MaterialComponents/Availability
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
-  - MaterialComponents/ShadowElevations (109.1.0)
-  - MaterialComponents/ShadowLayer (109.1.0):
+  - MaterialComponents/ShadowElevations (109.2.0)
+  - MaterialComponents/ShadowLayer (109.2.0):
     - MaterialComponents/ShadowElevations
-  - MaterialComponents/Shapes (109.1.0):
+  - MaterialComponents/Shapes (109.2.0):
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
     - MaterialComponents/ShadowLayer
-  - MaterialComponents/Tabs (109.1.0):
+  - MaterialComponents/Tabs (109.2.0):
     - MaterialComponents/AnimationTiming
     - MaterialComponents/Elevation
     - MaterialComponents/Ink
@@ -54,7 +54,7 @@ PODS:
     - MaterialComponents/ShadowLayer
     - MaterialComponents/Typography
     - MDFInternationalization
-  - MaterialComponents/TextFields (109.1.0):
+  - MaterialComponents/TextFields (109.2.0):
     - MaterialComponents/AnimationTiming
     - MaterialComponents/Buttons
     - MaterialComponents/Elevation
@@ -62,7 +62,7 @@ PODS:
     - MaterialComponents/private/Math
     - MaterialComponents/Typography
     - MDFInternationalization
-  - MaterialComponents/Typography (109.1.0):
+  - MaterialComponents/Typography (109.2.0):
     - MaterialComponents/private/Application
     - MaterialComponents/private/Math
   - MDFInternationalization (2.0.0)
@@ -71,9 +71,9 @@ PODS:
   - NVActivityIndicatorView (4.8.0):
     - NVActivityIndicatorView/Presenter (= 4.8.0)
   - NVActivityIndicatorView/Presenter (4.8.0)
-  - Pageboy (3.5.1)
-  - Tabman (2.8.2):
-    - Pageboy (~> 3.5.1)
+  - Pageboy (3.6.0)
+  - Tabman (2.9.0):
+    - Pageboy (~> 3.6.0)
   - YandexMapKit (3.5.0):
     - YandexRuntime (= 3.5.0)
   - YandexMapKitSearch (3.5.0):
@@ -89,7 +89,7 @@ DEPENDENCIES:
   - MaterialComponents/TextFields
   - moa (~> 12.0)
   - NVActivityIndicatorView
-  - Tabman
+  - Tabman (~> 2.9)
   - YandexMapKit
   - YandexMapKitSearch
 
@@ -113,17 +113,17 @@ SPEC CHECKSUMS:
   Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
   Auk: 7cc533252e2caaaa36b2be19c0b799f6057c365a
   Kingfisher: d2279a7abece3c7f25a80cd2b7f363ca5cf3f44c
-  MaterialComponents: 194731e6041c0f05798867af15389f261332c330
+  MaterialComponents: 59bfbfe08fc1ac204b21ba69100beabb932e3699
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
   moa: e2346f12de6c65bbca4d103950d45db9e46785ef
   NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
-  Pageboy: 288353d4cc848c24deec2f7542f325089247c136
-  Tabman: 05f32e419b07411b5ec74516212ffbff2a9dfc0e
+  Pageboy: 490c26be405987158660bb45ee2f404567395007
+  Tabman: 55d3d18f393ce5119515cd0349c841a07774c895
   YandexMapKit: ecd4b78de34a35df63d066ac299e6fd0fe46d1ba
   YandexMapKitSearch: b46ddd1c80e2e35d006cdfc4ab88070a50cebeda
   YandexRuntime: 2d55244d06267106cf9b00c25a1e63f72a73b6fd
 
-PODFILE CHECKSUM: c012e1d5246713770285b42037f1de26cb77d7c5
+PODFILE CHECKSUM: a69c261e98bb3eb34eadae00df940f2a27bd7a3c
 
 COCOAPODS: 1.9.1

@@ -20,7 +20,7 @@ target "ActiveCitizen" do
     pod 'moa', '~> 12.0'
     pod 'Auk', '~> 11.0'
     pod 'Kingfisher', '~> 5.0'
-    pod 'Tabman'
+    pod 'Tabman', '~> 2.9'
     
     #pod "WMSegmentControl"
     #pod "RESegmentedControl"

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c6T-Bj-vju">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c6T-Bj-vju">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -79,7 +79,7 @@
         <!--Ещё-->
         <scene sceneID="V2S-bq-P5l">
             <objects>
-                <navigationController id="VIM-Tn-Bwg" customClass="BaseNavigationController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController hidesBarsOnSwipe="YES" id="VIM-Tn-Bwg" customClass="BaseNavigationController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Ещё" image="tab_more" selectedImage="tab_more_activ" id="Zyt-sQ-qoC"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8Ig-IG-xAe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -96,7 +96,7 @@
         <!--Участники-->
         <scene sceneID="D87-DJ-6Mp">
             <objects>
-                <navigationController id="XIH-dZ-3it" customClass="BaseNavigationController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController hidesBarsOnSwipe="YES" id="XIH-dZ-3it" customClass="BaseNavigationController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Участники" image="tab_people" selectedImage="tab_people_activ" id="9HR-Qv-hoU"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="j5p-L6-ixP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -113,7 +113,7 @@
         <!--Обращения-->
         <scene sceneID="xxV-ux-5vg">
             <objects>
-                <navigationController id="SCD-CH-2wL" customClass="BaseNavigationController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController hidesBarsOnSwipe="YES" id="SCD-CH-2wL" customClass="BaseNavigationController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Обращения" image="documents" selectedImage="documents_activ" id="HxQ-Np-VVA"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="p3L-na-W6m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -180,7 +180,7 @@
         <image name="tab_profil" width="28" height="28"/>
         <image name="tab_profil_activ" width="28" height="28"/>
         <namedColor name="App TabBar Blue">
-            <color red="0.15000000596046448" green="0.64899998903274536" blue="1" alpha="0.85000002384185791" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.14901960784313725" green="0.6470588235294118" blue="1" alpha="0.85000002384185791" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

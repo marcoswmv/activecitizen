@@ -1,16 +1,14 @@
 //
-//  InstructionsViewController.swift
+//  SubVotingViewController.swift
 //  ActiveCitizen
 //
-//  Created by Marcos Vicente on 02.05.2020.
+//  Created by Marcos Vicente on 10.05.2020.
 //  Copyright © 2020 Antares Software. All rights reserved.
 //
 
 import UIKit
-import Tabman
-import Pageboy
 
-class InstructionsViewController: TabmanViewController {
+class SubVotingViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,5 +16,4 @@ class InstructionsViewController: TabmanViewController {
         // Do any additional setup after loading the view.
     }
     
-
 }

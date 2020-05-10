@@ -104,59 +104,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="92O-NB-I8J">
-                                <rect key="frame" x="0.0" y="92" width="375" height="575"/>
-                                <connections>
-                                    <segue destination="3eJ-dy-qdk" kind="embed" id="0Ee-8s-jXn"/>
-                                </connections>
-                            </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pw8-sa-Fo1" userLabel="Shadow view SC">
-                                <rect key="frame" x="0.0" y="44" width="375" height="48"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hMg-Nw-xAR" customClass="IBDesignableView" customModule="ActiveCitizen" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="375" height="4"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="45a-JI-jMh"/>
+                                    <constraint firstAttribute="height" constant="4" id="5s1-u9-dlc"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.29999999999999999"/>
+                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
                                         <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="0.29999999999999999"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                        <size key="value" width="0.0" height="0.0"/>
-                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gv4-D3-NTv" customClass="MDCTabBar">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ELR-D7-ZqY">
                                 <rect key="frame" x="0.0" y="44" width="375" height="48"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="KeM-ML-Fjg"/>
+                                    <constraint firstAttribute="height" constant="48" id="iRr-yr-ntE"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Gv4-D3-NTv" firstAttribute="top" secondItem="3uN-1h-3WH" secondAttribute="top" id="6PQ-tJ-976"/>
-                            <constraint firstItem="pw8-sa-Fo1" firstAttribute="top" secondItem="3uN-1h-3WH" secondAttribute="top" id="Hqj-vT-NNo"/>
-                            <constraint firstItem="Gv4-D3-NTv" firstAttribute="trailing" secondItem="3uN-1h-3WH" secondAttribute="trailing" id="Hwh-HJ-QwJ"/>
-                            <constraint firstItem="92O-NB-I8J" firstAttribute="leading" secondItem="3uN-1h-3WH" secondAttribute="leading" id="IgG-AE-b61"/>
-                            <constraint firstItem="Gv4-D3-NTv" firstAttribute="leading" secondItem="3uN-1h-3WH" secondAttribute="leading" id="Imi-HQ-eGJ"/>
-                            <constraint firstItem="92O-NB-I8J" firstAttribute="top" secondItem="Gv4-D3-NTv" secondAttribute="bottom" id="Oee-gU-wru"/>
-                            <constraint firstItem="92O-NB-I8J" firstAttribute="trailing" secondItem="3uN-1h-3WH" secondAttribute="trailing" id="Yt0-7b-beN"/>
-                            <constraint firstItem="pw8-sa-Fo1" firstAttribute="leading" secondItem="3uN-1h-3WH" secondAttribute="leading" id="Z90-Wi-rRX"/>
-                            <constraint firstItem="92O-NB-I8J" firstAttribute="bottom" secondItem="3uN-1h-3WH" secondAttribute="bottom" id="ewP-q3-kTt"/>
-                            <constraint firstItem="pw8-sa-Fo1" firstAttribute="trailing" secondItem="3uN-1h-3WH" secondAttribute="trailing" id="omE-Mi-eDl"/>
+                            <constraint firstAttribute="trailing" secondItem="ELR-D7-ZqY" secondAttribute="trailing" id="1ga-9l-9Ez"/>
+                            <constraint firstAttribute="trailing" secondItem="hMg-Nw-xAR" secondAttribute="trailing" id="Aha-p2-8Pf"/>
+                            <constraint firstItem="hMg-Nw-xAR" firstAttribute="top" secondItem="3uN-1h-3WH" secondAttribute="top" constant="44" id="Khc-uQ-Soa"/>
+                            <constraint firstItem="ELR-D7-ZqY" firstAttribute="leading" secondItem="3uN-1h-3WH" secondAttribute="leading" id="V6h-Wq-r72"/>
+                            <constraint firstItem="hMg-Nw-xAR" firstAttribute="leading" secondItem="3uN-1h-3WH" secondAttribute="leading" id="YnH-fR-bAc"/>
+                            <constraint firstItem="ELR-D7-ZqY" firstAttribute="top" secondItem="3uN-1h-3WH" secondAttribute="top" id="uBf-ck-xjj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3uN-1h-3WH"/>
                     </view>
                     <navigationItem key="navigationItem" id="liT-e8-4PN"/>
                     <connections>
-                        <outlet property="segmentedControl" destination="Gv4-D3-NTv" id="mLD-5j-nHV"/>
+                        <outlet property="tabBarView" destination="ELR-D7-ZqY" id="Eg9-z2-0aC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w29-76-L3R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -166,56 +156,55 @@
         <!--О программе-->
         <scene sceneID="PeA-fW-ZI9">
             <objects>
-                <viewController storyboardIdentifier="AboutViewController" title="О программе" id="uqd-yf-rTo" customClass="AboutViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutViewController" title="О программе" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uqd-yf-rTo" customClass="AboutViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kir-Np-i6N">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZd-eX-G3O">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0iU-NZ-aJN" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W0F-Jj-70h">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="48" id="oHL-Ph-S5b"/>
-                                                </constraints>
-                                            </view>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <constraints>
-                                            <constraint firstItem="W0F-Jj-70h" firstAttribute="top" secondItem="0iU-NZ-aJN" secondAttribute="top" id="4cj-yg-f59"/>
-                                            <constraint firstAttribute="trailing" secondItem="W0F-Jj-70h" secondAttribute="trailing" id="9Uq-w8-rgV"/>
-                                            <constraint firstItem="W0F-Jj-70h" firstAttribute="leading" secondItem="0iU-NZ-aJN" secondAttribute="leading" id="xTi-nl-FGz"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eNE-jP-TmL" customClass="IBDesignableView" customModule="ActiveCitizen" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="375" height="4"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="0iU-NZ-aJN" firstAttribute="centerX" secondItem="WZd-eX-G3O" secondAttribute="centerX" id="7jd-2A-rEw"/>
-                                    <constraint firstItem="0iU-NZ-aJN" firstAttribute="top" secondItem="WZd-eX-G3O" secondAttribute="top" id="IfQ-BU-gwe"/>
-                                    <constraint firstAttribute="trailing" secondItem="0iU-NZ-aJN" secondAttribute="trailing" id="Jie-yZ-Vat"/>
-                                    <constraint firstItem="0iU-NZ-aJN" firstAttribute="centerY" secondItem="WZd-eX-G3O" secondAttribute="centerY" id="MTt-OA-znj"/>
-                                    <constraint firstAttribute="bottom" secondItem="0iU-NZ-aJN" secondAttribute="bottom" id="RIk-Dn-476"/>
-                                    <constraint firstItem="0iU-NZ-aJN" firstAttribute="leading" secondItem="WZd-eX-G3O" secondAttribute="leading" id="cDJ-fF-gQY"/>
+                                    <constraint firstAttribute="height" constant="4" id="2I9-Jv-6bd"/>
                                 </constraints>
-                            </scrollView>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.29999999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cvy-Tb-S4O">
+                                <rect key="frame" x="0.0" y="44" width="375" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="fIE-Dh-RTJ"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="WZd-eX-G3O" secondAttribute="trailing" id="8w5-4I-wXm"/>
-                            <constraint firstItem="WZd-eX-G3O" firstAttribute="top" secondItem="Kir-Np-i6N" secondAttribute="top" id="9K1-tp-ptL"/>
-                            <constraint firstAttribute="bottom" secondItem="WZd-eX-G3O" secondAttribute="bottom" id="KPZ-2F-C9X"/>
-                            <constraint firstItem="WZd-eX-G3O" firstAttribute="leading" secondItem="Kir-Np-i6N" secondAttribute="leading" id="aug-UV-wMh"/>
+                            <constraint firstItem="eNE-jP-TmL" firstAttribute="leading" secondItem="4YM-67-BvO" secondAttribute="leading" id="5gW-Eq-24y"/>
+                            <constraint firstItem="4YM-67-BvO" firstAttribute="trailing" secondItem="eNE-jP-TmL" secondAttribute="trailing" id="Hme-7n-eRp"/>
+                            <constraint firstItem="Cvy-Tb-S4O" firstAttribute="leading" secondItem="Kir-Np-i6N" secondAttribute="leading" id="JBS-mt-2Ed"/>
+                            <constraint firstItem="eNE-jP-TmL" firstAttribute="top" secondItem="4YM-67-BvO" secondAttribute="top" constant="44" id="R4O-nN-U0m"/>
+                            <constraint firstItem="Cvy-Tb-S4O" firstAttribute="top" secondItem="4YM-67-BvO" secondAttribute="top" id="hin-TQ-iMF"/>
+                            <constraint firstItem="4YM-67-BvO" firstAttribute="trailing" secondItem="Cvy-Tb-S4O" secondAttribute="trailing" id="lVu-y9-uY1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4YM-67-BvO"/>
                     </view>
                     <navigationItem key="navigationItem" id="WgX-KL-wlh"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="tabBarView" destination="W0F-Jj-70h" id="eh4-k1-Mob"/>
-                        <outlet property="view" destination="WZd-eX-G3O" id="Kdp-JX-2Hk"/>
+                        <outlet property="tabBarView" destination="Cvy-Tb-S4O" id="lRU-a6-yus"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UjL-SV-y8d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -225,43 +214,270 @@
         <!--Инструкция-->
         <scene sceneID="XhU-xV-ycl">
             <objects>
-                <viewController storyboardIdentifier="InstructionsViewController" title="Инструкция" useStoryboardIdentifierAsRestorationIdentifier="YES" id="M0w-cU-GiN" customClass="InstructionsViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SubAboutViewController1" title="Инструкция" useStoryboardIdentifierAsRestorationIdentifier="YES" id="M0w-cU-GiN" customClass="SubAboutViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xZE-Ln-CbE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="666"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NVS-9p-aD3">
+                                <rect key="frame" x="0.0" y="44" width="375" height="622"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="tintColor" name="App Blue"/>
+                                <mutableString key="text">Для подачи сообщений на портал «Никто кроме нас!» необходимо: 
+Зарегистрироваться на портале.
+ Регистрация на портале «Никто кроме нас» возможна только через общероссийский портал государственных услуг http://gosuslugi.ru (используя ЕСИА). Т. е. для того, чтобы иметь возможность оставлять обращения, вам необходимо иметь стандартную или подтвержденную учетную запись на портале http://gosuslugi.ru. Регистрация на портале государственных услуг производится в соответствии с инструкцией, приведенной на портале http://gosuslugi.ru.
+ нажмите кнопку «СОЗДАТЬ ОБРАЩЕНИЕ» в правом нижнем углу ПОРТАЛА.
+ На открывшейся странице заполните необходимую информацию по вашей проблеме: 
+
+Выберите подходящую категорию и тему обращения.  
+Кратко опишите суть проблемы. Старайтесь указывать только факты.  
+Выберите местоположение проблемы поставив точку на карте в левой части экрана  или напишите адрес в соответствующих полях.  
+Прикрепите фотографии, подтверждающие проблему.  
+Нажмите кнопку «Создать», чтобы отправить обращение.  
+Ваше обращение в течение суток пройдет модерацию и будет опубликовано на портале.
+
+В установленные сроки Вы получите ответ. 
+</mutableString>
+                                <color key="textColor" name="Dark Gray"/>
+                                <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NVS-9p-aD3" firstAttribute="top" secondItem="6J9-pz-IhN" secondAttribute="top" constant="44" id="21E-cX-dWx"/>
+                            <constraint firstItem="NVS-9p-aD3" firstAttribute="leading" secondItem="6J9-pz-IhN" secondAttribute="leading" id="H6W-IO-2SW"/>
+                            <constraint firstItem="6J9-pz-IhN" firstAttribute="trailing" secondItem="NVS-9p-aD3" secondAttribute="trailing" id="NFN-jf-LVL"/>
+                            <constraint firstItem="6J9-pz-IhN" firstAttribute="bottom" secondItem="NVS-9p-aD3" secondAttribute="bottom" id="W0u-pw-byQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6J9-pz-IhN"/>
                     </view>
+                    <size key="freeformSize" width="375" height="666"/>
+                    <connections>
+                        <outlet property="textView" destination="NVS-9p-aD3" id="GUp-af-lPD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p5B-iV-JPA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1543" y="558"/>
+            <point key="canvasLocation" x="1541.5999999999999" y="557.72113943028489"/>
         </scene>
         <!--Соглашения-->
         <scene sceneID="wqk-1B-DMV">
             <objects>
-                <viewController storyboardIdentifier="AgreementsViewController" title="Соглашения" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6Qy-H8-eH9" customClass="AgreementsViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SubAboutViewController2" title="Соглашения" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6Qy-H8-eH9" customClass="SubAboutViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ekB-hR-Xpl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPy-nd-MnH">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="tintColor" name="App Blue"/>
+                                <string key="text">1.Общие условия 
+
+1.1. Настоящее соглашение регулирует отношения между Оператором Платформы, с одной стороны, и Пользователем Платформы, с другой. 
+
+1.2. Оператор оставляет за собой право в любое время изменять, добавлять или удалять пункты настоящего Соглашения с последующим уведомлением Пользователя. 
+
+1.3. Пользователь несет персональную ответственность за ознакомление с условиями настоящего Соглашения. 
+
+2.Термины, используемые в целях настоящего Соглашения 
+
+В настоящем Соглашении используются следующие термины: 
+2.1. Оператор – Комитет информационных технологий Волгоградской области (Облкоминформтехнологии). 
+2.2. Пользователь – физическое лицо, получившее в установленном порядке доступ к сервисам цифровой платформы развития механизмов социального взаимодействия «Никто кроме нас». 
+2.3. Цифровая платформа развития механизмов социального взаимодействия «Никто кроме нас» (далее – Платформа) – web-сайт Оператора, предоставляющий возможность регистрации и пользования следующими сервисами: «Web - портал (сайт) «Никто кроме нас», «Мобильное приложение «Никто кроме нас». 
+2.4. Логин – уникальная последовательность символов, позволяющая идентифицировать Пользователя на сайте или мобильном приложении, в качестве логина должен быть использован логин учетной записи Единой Платформы идентификации и аутентификации (ЕСИА). Вход в Платформу осуществляется через кнопку «Войти через ЕСИА). 
+2.5. Авторизация – предоставление Пользователю определенных прав на использование сервисов Платформы, производимое по итогам ввода Пользователем логина и пароля. 
+2.6. Сообщение Пользователя – текстовый комментарий, в том числе с фотографией, а в случаях, когда фотография не является обязательным атрибутом сообщения, только текст, направленные Пользователем в Платформу. 
+2.10. Проблема в сообщении - письменное заявление на портал или мобильное приложение, содержащее информацию о нарушении прав или законных интересов жителей города Волгограда и Волгоградской области, в том числе, указывающее на незаконные или неправомерные действия, решение которых находится в компетенции органов местного самоуправления города Волгограда. 
+3.Предмет Соглашения
+
+3.1. Предметом настоящего Соглашения является обязанность Оператора в предоставлении Пользователю возможности авторизации на портале или мобильном приложении и пользования их сервисами. 
+3.2. Пройдя процедуру авторизации, Пользователь считается принявшим условия настоящего Соглашения в полном объеме без исключений. В случае несогласия Пользователя с какими-либо из положений Соглашения, Пользователь не вправе использовать сервисы Платформы. 
+
+3.3. Использование сервисов Платформы регулируется настоящим Соглашением, а также Порядком работы с сообщениями и предложениями, поступившими в Цифровую платформу развития механизмов социального взаимодействия «Никто кроме нас» города Волгограда и Волгоградской области. 
+
+4.Права и обязанности сторон 
+
+4.1. Оператор обязуется: 
+4.1.1. Обеспечить Пользователю доступ к сервисам Платформы в соответствии с п.3.1. – п.3.3. настоящего Соглашения
+
+4.1.2 Не разглашать и не передавать информацию третьим лицам о Пользователе и его операциях в Платформе, за исключением случаев, предусмотренных действующим законодательством Российской Федерации. 
+4.2. Оператор имеет право: 
+
+4.2.1. В любой момент времени изменить условия настоящего Соглашения с последующим уведомлением Пользователя. 
+4.2.2. Вносить изменения в сервисы Платформы, а также предоставлять доступ к новым сервисам с последующим уведомлением Пользователя. 
+
+4.2.3. Проводить профилактические работы в сервисах Оператора с временным приостановлением работы Платформы. 
+4.2.4. Отказать Пользователю в авторизации Платформы, в случае отсутствия у Пользователя регистрации в ЕСИА.
+
+4.2.5. Отказать Пользователю в обработке сообщений, в случае нарушения Пользователем установленных настоящим Соглашением обязательств. 
+4.2.6. При условии согласия Пользователя, направлять сообщения Пользователя, не соответствующие проблемным темам, доступным в Платформе, в Интернет -приемную сайта органов местного самоуправления администрации города Волгограда для рассмотрения в соответствии с Федеральным законом от 02 мая 2006 г. No 59-ФЗ «О порядке рассмотрения обращений граждан Российской Федерации». 
+
+4.2.7. Заблокировать на любой период или удалить учетную запись в случае нарушения Пользователем условий настоящего Соглашения. 
+
+4.2.8. Заблокировать на любой период или удалить учетную запись Пользователя в случае, если Пользователь неоднократно направляет в Платформу недостоверные материалы или материалы, которые могут быть классифицированы как спам, либо противоречащие требованиям, указанным в п.4.4.11 - 4.4.12. 
+
+4.2.9. Заблокировать на любой период или удалить учетную запись Пользователя, если сочтет ее противоречащей п.4.4.3. 
+4.2.10. Не рассматривать сообщения, содержащие нецензурные выражения, социальный диалект, неясные сокращения, а также сообщения на политические темы или содержащие лозунги коммерческого и иного характера. 4.3. Оператор не несет ответственность за последствия несанкционированного использования сервисов Платформы третьими лицами, случившегося не по вине Оператора. 
+
+4.4. Пользователь обязуется: 
+4.4.1. Обеспечить за свой счет доступ в Интернет, настройку и защиту от несанкционированного использования своего оборудования. 
+4.4.2. Нести ответственность за использование своей учетной записи и сохранность установленного Пользователем пароля ЕСИА. 
+4.4.3. Не создавать и не использовать в Платформе более одной учетной записи. 4.4.4. Принять полную ответственность за все обращения и действия, предпринятые через Платформу, имевшие место после авторизации Пользователя в Платформе. 
+4.4.5. Не использовать сервисы Платформы для совершения каких-либо действий, противоречащих действующему законодательству, а также не размещать или передавать с помощью сервисов Платформы незаконные, оскорбительные, клеветнические, агрессивные или скандальные материалы. 
+
+4.4.6. Не выдавать себя за другого человека или представителя организации и/или сообщества без достаточных на то прав, не использовать имя какого-либо Пользователя с намерением выдать себя за этого Пользователя, а также применять любые другие формы и способы незаконного представительства других лиц. 
+
+4.4.7. Не накапливать, не хранить и не использовать материалы, направленные другими Пользователями в Платформе, для целей повторного размещения в Платформе от своего имени или для любых других целей. 
+4.4.8. Не размещать материалы, которые не соответствует целям создания Платформы, ущемляют интересы других Пользователей Платформы или третьих лиц, оскорбляют сотрудников Платформы, или по другим причинам являются нежелательными для размещения в Платформе. 
+
+4.4.9. Не размещать материалы, содержащие заведомо ложную, вводящую в заблуждение, неправдивую или неточную информацию, или материалы, которые могут быть классифицированы как спам. 
+4.4.10. Не пытаться получить доступ к сервисам Платформе незаконно или в обход правилам, указанным в настоящем Соглашении. 
+
+4.4.11. По возможности формулировать сообщение о проблеме в вежливой, максимально короткой и простой для понимания форме. 
+
+4.5. Пользователь имеет право в случае возникновения претензий или пожеланий, связанных с предоставлением возможностей по пользованию сервисами Платформы, написать обращение в соответствии с Федеральным законом от 02 мая 2006 г. No 59-ФЗ «О порядке рассмотрения обращений граждан Российской Федерации» в адрес Оператора Платформы. 
+
+4.6. Пользователь соглашается не использовать сервисы Платформы для: 
+4.6.1. Загрузки, отправки, передачи или любого другого способа опубликования материалов, которые нарушают авторские и иные права интеллектуальной собственности, пропагандирующие ненависть и/или дискриминацию людей по расовому, этническому, половому, социальному признакам. 
+4.6.2. Размещения ссылок на ресурсы в сети Интернет, содержание которых противоречит действующему законодательству Российской Федерации. 
+
+5.Использование и хранение информации и материалов 
+5.1. Оператор имеет право устанавливать ограничения на срок хранения и максимальное количество материалов, размещаемых Пользователем. 
+
+5.2. Пользователь предоставляет Оператору неисключительную лицензию на использование материалов, направленных Пользователем на портал, включая воспроизведение, распространение, переработку, публичный показ и доведение до всеобщего сведения. 
+5.3. Пользователь имеет право в любой момент времени удалить свою учетную запись. В случае удаления Пользователем своей учетной записи, Оператор имеет право хранить архивные копии контента, размещенного Пользователями. 6.Нарушение условий настоящего Соглашения
+
+6.1. Оператор вправе без предварительного уведомления Пользователя заблокировать на любой период, если Пользователь нарушил условия настоящего Соглашения, а также в случае прекращения действия Платформы по любой причине. 
+6.2. Оператор не несет ответственности перед Пользователем или третьими лицами за прекращение предоставление доступа к сервисам Платформы в случае нарушения Пользователем любого из пунктов настоящего Соглашения. 
+
+7.Прочие условия 
+
+7.1. Условия настоящего Соглашения действуют до тех пор, пока одна из сторон не заявит о своем намерении выйти из Соглашения. 
+7.2. Пользователь имеет право отказаться от использования Платформы и иных сервисов Оператора, воспользовавшись специальным интерфейсом по удалению профиля Пользователя. 
+
+7.3. Оператор вправе без предупреждения Пользователя приостановить использование Пользователем сервисов Платформы в случаях: 
+7.3.1. Нарушения Пользователем условий настоящего Соглашения.
+
+7.3.2. Вследствие создания помех и нарушений в отношении сервисов Оператора, включая использование любых устройств, программного обеспечения. 
+
+7.4. Все возможные споры по настоящему Соглашению будут разрешаться в соответствии с нормами действующего законодательства Российской Федерации. </string>
+                                <color key="textColor" name="Dark Gray"/>
+                                <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nbU-aD-NCs" firstAttribute="trailing" secondItem="MPy-nd-MnH" secondAttribute="trailing" id="9eK-aq-yba"/>
+                            <constraint firstItem="MPy-nd-MnH" firstAttribute="top" secondItem="nbU-aD-NCs" secondAttribute="top" constant="44" id="NVS-t3-e8K"/>
+                            <constraint firstItem="MPy-nd-MnH" firstAttribute="leading" secondItem="nbU-aD-NCs" secondAttribute="leading" id="ZxD-kK-RWh"/>
+                            <constraint firstItem="nbU-aD-NCs" firstAttribute="bottom" secondItem="MPy-nd-MnH" secondAttribute="bottom" id="oIB-tl-koP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nbU-aD-NCs"/>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="MPy-nd-MnH" id="TJq-rT-Cjb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QfS-1L-F28" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2244" y="558"/>
+            <point key="canvasLocation" x="2244" y="557.27136431784118"/>
         </scene>
         <!--Регламенты-->
         <scene sceneID="X2L-WH-xYm">
             <objects>
-                <viewController storyboardIdentifier="RegulationsViewController" title="Регламенты" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wZJ-bJ-cDP" customClass="RegulationsViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SubAboutViewController3" title="Регламенты" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wZJ-bJ-cDP" customClass="SubAboutViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wnB-AE-S6j">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgD-P4-7uw">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="tintColor" name="App Blue"/>
+                                <string key="text">1. Термины и определения
+
+Пользователь портала (далее – пользователь) – физическое лицо, прошедшее процедуру регистрации на портале и получившее доступ к сервисам портала. 
+
+Оператор портала(далее–оператор) -комитет по информатизации Волгоградской области. 
+
+Исполнитель – орган исполнительной власти, орган местного самоуправления Волгоградской области либо их подведомственное учреждение (организация) осуществляющие реагирование на обращений и подготовку ответа. 
+
+Обращение пользователя (далее – Обращение) – информация (текст, фотоматериалы) направленная пользователем на портал, с целью взаимодействия с органами исполнительной власти. 
+
+Личный кабинет – персональный раздел пользователя портала, предоставляющий возможности для работы с обращениями, а так же с другой информацией. 
+
+Обработка обращений – анализ, проверка обращений пользователей и ответов на них. 
+
+Публикация обращений – размещение на портале обращений, переданного пользователями. 
+
+Реагирование на обращение (далее – реагирование), - фактическая проработка содержащейся в обращении информации в части, касающейся деятельности соответствующего органа исполнительной власти, администрации муниципального района (городского округа), их подведомственных организаций и учреждений, принятие мер (выполнение работ) по устранению выявленных проблем, предоставление пользователям требуемой информации, а также иные мероприятия, направленные на решение поднятого вопроса. 
+
+Модерация обращений – обработка обращений пользователей ответственным лицом на предмет соответствия «Регламенту модерации». 
+
+Отклонение обращения - недопущение публикации обращения на Портале. 
+
+Блокировка пользователя - техническая мера ограничения доступа пользователя к сервисам портала, а так же временный запрет направления обращений сроком на 30 календарных дней. 
+
+Категории обращений – темы обращений пользователей. 
+
+2. Общие положения
+
+Настоящий регламент определяет порядок обработки и публикации обращений пользователей информации на портале «Никто кроме нас»
+
+Для установления и поддержания порядка публикации обращений на портале модератор в своей деятельности руководствуется «Регламентом модерации» 
+
+3. Порядок обработки обращений пользователя 
+
+Обращений, направленное пользователем на портал, поступает в личный кабинет модератора.  
+До рассмотрения обращений модератором, обращению присваивается статус «На модерации».  
+По итогам обработки поступившего сообщения модератор принимает решение: 
+
+о корректировки категории и темы обращения в соответствии с содержанием  обращения  о корректировки муниципального образования в соответствии с  местоположением проблемы, указанной в обращении  о публикации обращения на портале и передаче обращения Исполнителю для  реагирования  об отклонении обращения.  В случае принятия решения о публикации обращения оно поступает в личный кабинет ответственного для организации реагирования на него и подготовки ответа. В этом случае обращению присваивается статус «На рассмотрении».  В случае принятия решения об отклонении обращения, по адресу электронной почты пользователя и в личный кабинет пользователя автоматически направляется уведомление об отклонении обращения с указанием вызвавших это причин.  Обработка обращений осуществляется модератором портала в течение одного рабочего дня  
+4. Подготовка и обработка ответов на обращения пользователей 
+
+Исполнитель в течение 3 календарных дней с момента получения обращения и публикации его на портале  a. организует реагирование на обращение, готовит ответ с указанием ориентировочной даты завершения работы.  b. отклоняет обращение с указанием причины отклонения (нет возможность решить указанную проблему, за решение данной проблемы отвечает другой исполнитель)  
+В случае принятия обращения в работу с указанием даты завершения работ
+– обращению присваивается статус – «Первичное рассмотрение Исполнителем» 
+- Получен ответ, Указан срок. Данный ответ отображается в личном кабинете заявителя  
+В случае отклонения обращения Исполнителем, обращение направляется Модератору для уточнения.  
+Обработка отклоненных исполнителем обращений осуществляется модератором портала в течение одного рабочего дня.  
+После завершения работы по обращению заявителя, исполнитель уведомляет о завершении работ по обращению сопровождая уведомление текстовым комментарием и приложенными фотоматериалами, подтверждающими решение проблемы. Данный ответ отображается в личном кабинете заявителя и обращению присваивается статус – «Работа выполнена».  
+5. Подтверждение пользователями качества реагирования на обращение, подача повторных обращений 
+
+После ответа исполнителя о завершении работ пользователь может: 
+подтвердить решение проблемы;  не подтвердить решение проблемы;  
+В случае подтверждения пользователем решения описанной в обращении проблемы обращению присваивается статус «Проблема закрыта».  
+В случае не подтверждения решения проблемы обращение поступает в личный кабинет модератора. При этом пользователь обязан в комментарии привести исчерпывающее обоснование необходимости повторного направления обращения исполнителю.  
+Модератор проводит анализ качества представленной в ответе информации, обоснования пользователя и принимает решение:  
+направить сообщение повторно ответственному исполнителю;  отказать в направлении сообщения на доработку (закрыть сообщение).  В случае принятия решения об отказе в направлении сообщения на доработку  (закрытии сообщения), по адресу электронной почты пользователя портала автоматически направляется уведомление о закрытии обращения с указанием вызвавших это причин.  
+Порядок реагирования и подготовки ответов на повторные обращения осуществляется в порядке, определённом в разделе 4 настоящего регламента.  
+Обработка информации осуществляется модератором портала в течение одного рабочего дня.  
+Направить повторное обращение пользователь может не более одного раза. 
+</string>
+                                <color key="textColor" name="Dark Gray"/>
+                                <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fgD-P4-7uw" firstAttribute="top" secondItem="lJS-3U-AFa" secondAttribute="top" constant="44" id="aFb-K3-8Tt"/>
+                            <constraint firstItem="lJS-3U-AFa" firstAttribute="bottom" secondItem="fgD-P4-7uw" secondAttribute="bottom" id="jGa-gC-LrA"/>
+                            <constraint firstItem="fgD-P4-7uw" firstAttribute="leading" secondItem="lJS-3U-AFa" secondAttribute="leading" id="nSL-yk-zsc"/>
+                            <constraint firstItem="lJS-3U-AFa" firstAttribute="trailing" secondItem="fgD-P4-7uw" secondAttribute="trailing" id="vCY-5H-R0b"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lJS-3U-AFa"/>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="fgD-P4-7uw" id="knx-rO-RjB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="igR-57-Dod" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -270,28 +486,84 @@
         <!--Частые вопросы-->
         <scene sceneID="IgG-Ra-j4z">
             <objects>
-                <viewController storyboardIdentifier="FAQViewController" title="Частые вопросы" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uQ7-dP-cXP" customClass="FAQViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SubAboutViewController4" title="Частые вопросы" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uQ7-dP-cXP" customClass="SubAboutViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="78i-br-PgO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZ0-NT-TYc">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="tintColor" name="App Blue"/>
+                                <string key="text">1. Как отправить сообщение в на портал?
+
+Ответ: Прежде всего, зарегистрируйтесь на портале через общероссийский портал государственных услуг http://gosuslugi.ru (используя ЕСИА). Т. е. для того, чтобы иметь возможность оставлять обращения, вам необходимо иметь стандартную или подтвержденную учетную запись на портале http://gosuslugi.ru. Регистрация на портале государственных услуг производится в соответствии с инструкцией, приведенной на портале http://gosuslugi.ru. 
+Прежде чем приступить к составлению сообщения, внимательно ознакомьтесь с «Регламентом модерации» во избежание распространенных ошибок, которые могут привести к отклонению обращений. 
+
+2. Почему я не могу написать на портал про всё? 
+
+Ответ: Потому что основная цель портала - помочь людям решить их проблему максимально быстро и качественно. Кроме того, на портале принимаются сообщения по проблемам, решение которых находится исключительно в компетенции Администрации области и тех людей, которые отвечают за решение конкретных проблемных вопросов, обозначенных в категориях портала. Поэтому у каждого ответственного исполнителя есть возможность решить проблему, либо разобраться в ней и дать ответ о том, когда она будет решена, в максимально короткий срок (по сравнению со сроками, регламентируемых в федеральном законе No59) Если же пользователи будут писать на портал обо всем, что их волнует, быстро и качественно решить проблему не получится. В перспективе перечень проблемных тем будет расширятся и дополняться новыми актуальными темами. 
+
+4. Как осуществляется обратная связь по обращениям? 
+
+Ответ: Автор обращения получает уведомление в мобильном приложении. На портале «Никто кроме нас» зарегистрированные пользователи также получают уведомления в личные кабинеты. 
+
+5. В течение какого времени ожидать ответ на свое обращение? 
+Ответ: В течение не более 8 рабочих дней, начиная с рабочего дня, следующего за днем 
+публикации сообщения на портале. 
+
+6. Почему мое обращение не опубликовано? 
+
+Ответ: Обращение не публикуется в системе, если оно противоречит «Регламенту модерации», где перечислены причины, по которым обращение может быть отклонено. В случае отклонения обращения пользователь получает уведомление в личном кабинете портала и на электронную почту с указанием конкретной причины, по которой его обращение отклонено. Вот наиболее частые причины, по которым обращения не публикуются. 
+Первая: содержание обращения не соответствует проблемным тематике выбранной категории. Если же в обращении указывается категория и тема, но содержание обращения не соответствует выбранной категории и теме, то модератор может самостоятельно изменить их в соответствии с правильной категорией. 
+ 
+Если же содержание обращения не попадает ни под одну категорию, то такое обращение не может быть направлено к конкретным органам исполнительной власти, отвечающим за решение таких проблем. 
+
+Вторая: в обращении описывается несколько проблем по разным темам. Например, пользователь одновременно жалуется и на то, что не убирают двор, и на некачественный ремонт подъезда, а также пишет, что в киоске с вывеской «Мороженое» торгуют хот-догами и шаурмой. Необходимо четко понимать, что за решение каждого типа проблем отвечают конкретные ведомства, которым и будет переадресовано Ваше обращение. 
+Поскольку алгоритм действий с поступившим обращением прописан четко, модератор может отправить его только в один орган власти, и тогда по другим изложенным проблемам будут «вынужденные отписки». 
+
+Третья: отсутствие в обращении конкретных фактов, на основании которых органы власти смогли бы провести проверку. Например, пользователь пишет: «Не горят во дворах фонарные столбы». Где эти дворы находятся, не указывается. Очень часто к таким бессодержательным обращениям не прикрепляют и фотографию, которая могла бы проиллюстрировать наличие проблемы. Бывает и наоборот: человек присылает фотографию своего двора, указывая в теме сообщения название адреса, а сам текст обращения либо вовсе отсутствует, либо, к примеру, такой: «Полюбуйтесь на наш двор!», где также отсутствует какая-либо конкретика. 
+
+7. Орган власти опровергает наличие проблемы. 
+
+Ответ: Возможно, в обращении был указан неверный или неточный адрес объекта. Например, похожий объект, проверенный органами власти, находится в соседнем дворе, и проблем по нему не существует, что и выявила проверка. Часто пользователи забывают прикреплять к обращению фотографию, подтверждающую наличие проблемного объекта и иллюстрирующую, в чем именно она заключается. Автор обращения может повторно обратиться в систему, описав объект детально с указанием точного адреса и обязательно приложив к сообщению фотографию. 
+
+8. Ответ органа власти не соответствует истине. 
+
+Ответ: В этом случае гражданин имеет право публично опровергнуть ответ органа власти и отправить в систему повторное обращение. </string>
+                                <color key="textColor" name="Dark Gray"/>
+                                <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cZ0-NT-TYc" firstAttribute="leading" secondItem="g06-Ic-QTB" secondAttribute="leading" id="2YW-Ak-7Gw"/>
+                            <constraint firstItem="g06-Ic-QTB" firstAttribute="bottom" secondItem="cZ0-NT-TYc" secondAttribute="bottom" id="IfM-tr-nYA"/>
+                            <constraint firstItem="g06-Ic-QTB" firstAttribute="trailing" secondItem="cZ0-NT-TYc" secondAttribute="trailing" id="W48-Xk-aLP"/>
+                            <constraint firstItem="cZ0-NT-TYc" firstAttribute="top" secondItem="g06-Ic-QTB" secondAttribute="top" constant="44" id="o5m-uw-v1E"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="g06-Ic-QTB"/>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="cZ0-NT-TYc" id="573-qM-Qd9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2OD-l1-OF4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3646" y="557"/>
         </scene>
-        <!--View Controller-->
+        <!--Sub Voting View Controller-->
         <scene sceneID="YZa-iD-J2Y">
             <objects>
-                <viewController id="3eJ-dy-qdk" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SubVotingViewController1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3eJ-dy-qdk" customClass="SubVotingViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r84-Ie-fba">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="575"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fXr-GK-X4W">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="575"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="BQn-lZ-5w6">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
@@ -309,20 +581,33 @@
                                         <constraint firstItem="M6m-fW-z9J" firstAttribute="centerY" secondItem="BQn-lZ-5w6" secondAttribute="centerY" id="LKg-CN-Erg"/>
                                     </constraints>
                                 </view>
-                                <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't forget to bind contentScrollView outlet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b62-fk-IHL">
-                                    <rect key="frame" x="0.0" y="180" width="375" height="98"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="y7s-05-sJg">
-                                        <rect key="frame" x="0.0" y="108" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="108" width="375" height="184"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y7s-05-sJg" id="Vk1-sg-L99">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="184"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xhv-l3-TrC" customClass="VotingCellView" customModule="ActiveCitizen" customModuleProvider="target">
+                                                    <rect key="frame" x="12" y="12" width="351" height="160"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="160" id="cm3-y3-PpQ"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="12"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Xhv-l3-TrC" firstAttribute="leading" secondItem="Vk1-sg-L99" secondAttribute="leading" constant="12" id="0Ef-iV-LNF"/>
+                                                <constraint firstItem="Xhv-l3-TrC" firstAttribute="top" secondItem="Vk1-sg-L99" secondAttribute="top" constant="12" id="6qe-cg-3rk"/>
+                                                <constraint firstAttribute="bottom" secondItem="Xhv-l3-TrC" secondAttribute="bottom" constant="12" id="HaT-sQ-bM1"/>
+                                                <constraint firstAttribute="trailing" secondItem="Xhv-l3-TrC" secondAttribute="trailing" constant="12" id="OYa-EY-VcH"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -333,17 +618,169 @@
                             <constraint firstItem="fXr-GK-X4W" firstAttribute="leading" secondItem="Qgx-3V-atR" secondAttribute="leading" id="FJC-Lu-PFI"/>
                             <constraint firstItem="fXr-GK-X4W" firstAttribute="trailing" secondItem="Qgx-3V-atR" secondAttribute="trailing" id="MFE-hy-Hgw"/>
                             <constraint firstItem="fXr-GK-X4W" firstAttribute="bottom" secondItem="Qgx-3V-atR" secondAttribute="bottom" id="nOn-Fb-7kD"/>
-                            <constraint firstItem="fXr-GK-X4W" firstAttribute="top" secondItem="Qgx-3V-atR" secondAttribute="top" id="nsh-f3-sO3"/>
+                            <constraint firstItem="fXr-GK-X4W" firstAttribute="top" secondItem="Qgx-3V-atR" secondAttribute="top" constant="44" id="nsh-f3-sO3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qgx-3V-atR"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Co-at-qoQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1621.5999999999999" y="-99.400299850074973"/>
+            <point key="canvasLocation" x="1542" y="-99"/>
+        </scene>
+        <!--Sub Voting View Controller-->
+        <scene sceneID="ZqS-eJ-j0I">
+            <objects>
+                <viewController storyboardIdentifier="SubVotingViewController2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="myt-Af-EbS" customClass="SubVotingViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7ca-HL-0ya">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YZG-EH-bnw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="Bvu-z0-7Sy">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Поиск" translatesAutoresizingMaskIntoConstraints="NO" id="g1s-r0-grE">
+                                            <rect key="frame" x="8" y="12" width="359" height="56"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </searchBar>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstItem="g1s-r0-grE" firstAttribute="centerY" secondItem="Bvu-z0-7Sy" secondAttribute="centerY" id="GL8-Ja-G1s"/>
+                                        <constraint firstAttribute="trailing" secondItem="g1s-r0-grE" secondAttribute="trailing" constant="8" id="Z3s-Zi-FeB"/>
+                                        <constraint firstItem="g1s-r0-grE" firstAttribute="leading" secondItem="Bvu-z0-7Sy" secondAttribute="leading" constant="8" id="sgR-sV-FeE"/>
+                                    </constraints>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="oOG-9L-tLe">
+                                        <rect key="frame" x="0.0" y="108" width="375" height="184.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oOG-9L-tLe" id="RXF-xQ-AGG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="184.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f3n-95-6M6" customClass="VotingCellView" customModule="ActiveCitizen" customModuleProvider="target">
+                                                    <rect key="frame" x="12" y="12" width="351" height="160.5"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="160" id="3Qt-JS-Fg6"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="12"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="f3n-95-6M6" secondAttribute="bottom" constant="12" id="DIq-Za-Slx"/>
+                                                <constraint firstItem="f3n-95-6M6" firstAttribute="top" secondItem="RXF-xQ-AGG" secondAttribute="top" constant="12" id="FhH-ab-yQH"/>
+                                                <constraint firstItem="f3n-95-6M6" firstAttribute="leading" secondItem="RXF-xQ-AGG" secondAttribute="leading" constant="12" id="K3U-vn-YZb"/>
+                                                <constraint firstAttribute="trailing" secondItem="f3n-95-6M6" secondAttribute="trailing" constant="12" id="sIk-1v-bSp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="r8t-i4-Igx" firstAttribute="trailing" secondItem="YZG-EH-bnw" secondAttribute="trailing" id="KRs-0V-Bhl"/>
+                            <constraint firstItem="YZG-EH-bnw" firstAttribute="leading" secondItem="r8t-i4-Igx" secondAttribute="leading" id="Ojb-Kt-lNm"/>
+                            <constraint firstItem="YZG-EH-bnw" firstAttribute="top" secondItem="r8t-i4-Igx" secondAttribute="top" constant="44" id="on5-K0-C2y"/>
+                            <constraint firstItem="r8t-i4-Igx" firstAttribute="bottom" secondItem="YZG-EH-bnw" secondAttribute="bottom" id="rDn-NS-2vt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="r8t-i4-Igx"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rbY-RQ-R5l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2244" y="-99.400299850074973"/>
+        </scene>
+        <!--Sub Voting View Controller-->
+        <scene sceneID="53u-Og-2ES">
+            <objects>
+                <viewController storyboardIdentifier="SubVotingViewController3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XIg-yf-Xwg" customClass="SubVotingViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yUU-vV-nff">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lAp-CY-4mt">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="6zX-he-0PU">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Поиск" translatesAutoresizingMaskIntoConstraints="NO" id="emO-Vo-KBy">
+                                            <rect key="frame" x="8" y="12" width="359" height="56"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </searchBar>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstItem="emO-Vo-KBy" firstAttribute="leading" secondItem="6zX-he-0PU" secondAttribute="leading" constant="8" id="BJG-kX-1tb"/>
+                                        <constraint firstItem="emO-Vo-KBy" firstAttribute="centerY" secondItem="6zX-he-0PU" secondAttribute="centerY" id="RAz-vh-CDu"/>
+                                        <constraint firstAttribute="trailing" secondItem="emO-Vo-KBy" secondAttribute="trailing" constant="8" id="wQ6-nr-4sW"/>
+                                    </constraints>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="hDf-jt-Px0">
+                                        <rect key="frame" x="0.0" y="108" width="375" height="184"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hDf-jt-Px0" id="fZb-uW-cEZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="184"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfE-bu-wFE" customClass="VotingCellView" customModule="ActiveCitizen" customModuleProvider="target">
+                                                    <rect key="frame" x="12" y="12" width="351" height="160"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="160" id="0EY-i2-bz8"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="12"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="gfE-bu-wFE" secondAttribute="bottom" constant="12" id="da9-5k-gqt"/>
+                                                <constraint firstAttribute="trailing" secondItem="gfE-bu-wFE" secondAttribute="trailing" constant="12" id="myw-Pj-RN0"/>
+                                                <constraint firstItem="gfE-bu-wFE" firstAttribute="top" secondItem="fZb-uW-cEZ" secondAttribute="top" constant="12" id="pq7-oE-Ek8"/>
+                                                <constraint firstItem="gfE-bu-wFE" firstAttribute="leading" secondItem="fZb-uW-cEZ" secondAttribute="leading" constant="12" id="t4T-Av-eSj"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qHF-J2-mfu" firstAttribute="trailing" secondItem="lAp-CY-4mt" secondAttribute="trailing" id="3ex-FO-d0t"/>
+                            <constraint firstItem="lAp-CY-4mt" firstAttribute="top" secondItem="qHF-J2-mfu" secondAttribute="top" constant="44" id="AHV-a5-RAn"/>
+                            <constraint firstItem="lAp-CY-4mt" firstAttribute="leading" secondItem="qHF-J2-mfu" secondAttribute="leading" id="GuM-BQ-rDU"/>
+                            <constraint firstItem="qHF-J2-mfu" firstAttribute="bottom" secondItem="lAp-CY-4mt" secondAttribute="bottom" id="v7r-7S-G1w"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qHF-J2-mfu"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jYo-B4-D4z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2944.8000000000002" y="-99.400299850074973"/>
         </scene>
     </scenes>
     <resources>
+        <namedColor name="App Blue">
+            <color red="0.0" green="0.51800000667572021" blue="0.88999998569488525" alpha="0.85000002384185791" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Dark Gray">
+            <color red="0.36078431372549019" green="0.36078431372549019" blue="0.35686274509803922" alpha="0.94999998807907104" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Separator Line Gray">
             <color red="0.74509803921568629" green="0.75294117647058822" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -14,22 +14,5 @@ class BaseVotingViewController: BaseViewController {
         return "More"
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        setupCustomBackButton(with: "Опросы и голосования", icon: "back")
-        
-    }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        setupNavigationBarShadow(activate: false)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        setupNavigationBarShadow(activate: true)
-    }
 }

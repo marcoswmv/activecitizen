@@ -12,6 +12,5 @@ class MoreViewController: BaseMoreViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 }

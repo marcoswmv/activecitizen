@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         // Always Light mode
+        window?.backgroundColor = .white
         
         if #available(iOS 13.0, *) {
             self.window?.overrideUserInterfaceStyle = .light

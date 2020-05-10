@@ -25,17 +25,17 @@ extension BaseViewController {
         previousBarButton.setTitleTextAttributes(attributes, for: .normal)
         previousBarButton.setTitleTextAttributes(attributes, for: .highlighted)
         previousBarButton.setTitleTextAttributes(attributes, for: .disabled)
-        previousBarButton.tintColor = UIColor.mainColor;
+        previousBarButton.tintColor = UIColor.acBlue;
         
         let nextBarButton = UIBarButtonItem.init(title: " ► ", style: .plain, target: self, action: #selector(nextTextFieldAction))
         nextBarButton.isEnabled = nextTextField?.isEnabled ?? false;
         nextBarButton.setTitleTextAttributes(attributes, for: .normal)
         nextBarButton.setTitleTextAttributes(attributes, for: .highlighted)
         nextBarButton.setTitleTextAttributes(attributes, for: .disabled)
-        nextBarButton.tintColor = UIColor.mainColor;
+        nextBarButton.tintColor = UIColor.acBlue;
         
         let doneBarButton = UIBarButtonItem.init(title: "Готово", style: .done, target: self, action: #selector(resignKeyboard))
-        doneBarButton.tintColor = UIColor.mainColor;
+        doneBarButton.tintColor = UIColor.acBlue;
             
         let keyboardToolBar = UIToolbar.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 40.0))
         keyboardToolBar.barStyle = .default;

@@ -136,6 +136,12 @@ class BaseViewController: UIViewController, UITextFieldDelegate, NVActivityIndic
             UIApplication.sharedApplication.delegate.window.rootViewController = vc;
         }
     }*/
+    
+    func didLogout() {
+        if self.isVisible && self.authenticationRequired {
+            
+        }
+    }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent;
