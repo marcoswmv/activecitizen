@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8by-Qb-bEN">
-                                <rect key="frame" x="15" y="54" width="350" height="28"/>
+                                <rect key="frame" x="15" y="54" width="350" height="32"/>
                                 <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="17"/>
                                 <state key="normal" title="Опросы и голосования">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -33,7 +33,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6qh-ka-zH5" userLabel="Separator" customClass="Separator" customModule="ActiveCitizen" customModuleProvider="target">
-                                <rect key="frame" x="15" y="92" width="360" height="1"/>
+                                <rect key="frame" x="15" y="96" width="360" height="1"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="QS8-DI-16l"/>
@@ -48,7 +48,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yA8-ti-Tcx">
-                                <rect key="frame" x="15" y="103" width="350" height="28"/>
+                                <rect key="frame" x="15" y="107" width="350" height="32"/>
                                 <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="17"/>
                                 <state key="normal" title="О программе">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -58,7 +58,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NKC-Rs-Lfd" userLabel="Separator" customClass="Separator" customModule="ActiveCitizen" customModuleProvider="target">
-                                <rect key="frame" x="15" y="141" width="360" height="1"/>
+                                <rect key="frame" x="15" y="149" width="360" height="1"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="oQq-5E-z48"/>
@@ -563,8 +563,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fXr-GK-X4W">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fXr-GK-X4W">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="BQn-lZ-5w6">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
@@ -572,8 +572,8 @@
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="y7s-05-sJg">
-                                        <rect key="frame" x="0.0" y="108" width="375" height="184"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VoteTableViewCell" id="y7s-05-sJg" customClass="VoteTableViewCell" customModule="ActiveCitizen" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="124" width="375" height="184"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y7s-05-sJg" id="Vk1-sg-L99">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="184"/>
@@ -599,21 +599,27 @@
                                                 <constraint firstAttribute="trailing" secondItem="Xhv-l3-TrC" secondAttribute="trailing" constant="12" id="OYa-EY-VcH"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="votingCellView" destination="Xhv-l3-TrC" id="Vgj-pe-b4S"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="delegate" destination="3eJ-dy-qdk" id="bHg-vD-2FS"/>
+                                </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v24-Jt-FzJ">
-                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="64"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Поиск" translatesAutoresizingMaskIntoConstraints="NO" id="vzk-eX-S7p">
-                                        <rect key="frame" x="-60" y="36" width="359" height="56"/>
+                                        <rect key="frame" x="8" y="4" width="359" height="56"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <outlet property="delegate" destination="3eJ-dy-qdk" id="s84-wE-VEc"/>
                                         </connections>
                                     </searchBar>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" name="Search Bar Background White"/>
                                 <constraints>
                                     <constraint firstItem="vzk-eX-S7p" firstAttribute="leading" secondItem="v24-Jt-FzJ" secondAttribute="leading" constant="8" id="OnO-io-34R"/>
                                     <constraint firstItem="vzk-eX-S7p" firstAttribute="centerY" secondItem="v24-Jt-FzJ" secondAttribute="centerY" id="TjZ-w9-zPy"/>
@@ -636,6 +642,7 @@
                     </view>
                     <connections>
                         <outlet property="searchBar" destination="vzk-eX-S7p" id="Uu9-8f-OW5"/>
+                        <outlet property="tableView" destination="fXr-GK-X4W" id="QDW-sM-pEh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Co-at-qoQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -650,8 +657,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YZG-EH-bnw">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YZG-EH-bnw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="Bvu-z0-7Sy">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
@@ -659,8 +666,8 @@
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VotingCellView" id="oOG-9L-tLe">
-                                        <rect key="frame" x="0.0" y="108" width="375" height="184"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VoteTableViewCell" id="oOG-9L-tLe" customClass="VoteTableViewCell" customModule="ActiveCitizen" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="124" width="375" height="184"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oOG-9L-tLe" id="RXF-xQ-AGG">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="184"/>
@@ -686,18 +693,24 @@
                                                 <constraint firstAttribute="trailing" secondItem="f3n-95-6M6" secondAttribute="trailing" constant="12" id="sIk-1v-bSp"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="votingCellView" destination="f3n-95-6M6" id="zRG-RX-gPl"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="delegate" destination="myt-Af-EbS" id="L0M-lX-HCJ"/>
+                                </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Le-LF-rem">
-                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="64"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Поиск" translatesAutoresizingMaskIntoConstraints="NO" id="zSW-Md-04T">
-                                        <rect key="frame" x="-60" y="36" width="359" height="56"/>
+                                        <rect key="frame" x="8" y="4" width="359" height="56"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </searchBar>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" name="Search Bar Background White"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="zSW-Md-04T" secondAttribute="trailing" constant="8" id="2t0-aU-GbT"/>
                                     <constraint firstItem="zSW-Md-04T" firstAttribute="leading" secondItem="6Le-LF-rem" secondAttribute="leading" constant="8" id="U2x-2C-EJw"/>
@@ -720,6 +733,7 @@
                     </view>
                     <connections>
                         <outlet property="searchBar" destination="zSW-Md-04T" id="jbs-mq-cOY"/>
+                        <outlet property="tableView" destination="YZG-EH-bnw" id="HuX-Lf-gbf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rbY-RQ-R5l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -734,8 +748,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lAp-CY-4mt">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lAp-CY-4mt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="6zX-he-0PU">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
@@ -743,8 +757,8 @@
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VotingCellView1" id="hDf-jt-Px0">
-                                        <rect key="frame" x="0.0" y="108" width="375" height="184"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VoteTableViewCell" id="hDf-jt-Px0" customClass="VoteTableViewCell" customModule="ActiveCitizen" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="124" width="375" height="184"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hDf-jt-Px0" id="fZb-uW-cEZ">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="184"/>
@@ -770,18 +784,24 @@
                                                 <constraint firstItem="gfE-bu-wFE" firstAttribute="leading" secondItem="fZb-uW-cEZ" secondAttribute="leading" constant="12" id="t4T-Av-eSj"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="votingCellView" destination="gfE-bu-wFE" id="Dvd-PD-WHx"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="delegate" destination="XIg-yf-Xwg" id="SZG-3h-qfc"/>
+                                </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mgo-fI-BO8">
-                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="64"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Поиск" translatesAutoresizingMaskIntoConstraints="NO" id="BIM-df-KuI">
-                                        <rect key="frame" x="-60" y="36" width="359" height="56"/>
+                                        <rect key="frame" x="8" y="4" width="359" height="56"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </searchBar>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" name="Search Bar Background White"/>
                                 <constraints>
                                     <constraint firstItem="BIM-df-KuI" firstAttribute="leading" secondItem="mgo-fI-BO8" secondAttribute="leading" constant="8" id="21R-LW-lct"/>
                                     <constraint firstAttribute="trailing" secondItem="BIM-df-KuI" secondAttribute="trailing" constant="8" id="28g-5R-6IE"/>
@@ -794,7 +814,7 @@
                         <constraints>
                             <constraint firstItem="qHF-J2-mfu" firstAttribute="trailing" secondItem="lAp-CY-4mt" secondAttribute="trailing" id="3ex-FO-d0t"/>
                             <constraint firstItem="mgo-fI-BO8" firstAttribute="top" secondItem="qHF-J2-mfu" secondAttribute="top" constant="44" id="4Qf-F7-swY"/>
-                            <constraint firstItem="lAp-CY-4mt" firstAttribute="top" secondItem="qHF-J2-mfu" secondAttribute="top" constant="44" id="AHV-a5-RAn"/>
+                            <constraint firstItem="lAp-CY-4mt" firstAttribute="top" secondItem="qHF-J2-mfu" secondAttribute="top" id="AHV-a5-RAn"/>
                             <constraint firstItem="lAp-CY-4mt" firstAttribute="leading" secondItem="qHF-J2-mfu" secondAttribute="leading" id="GuM-BQ-rDU"/>
                             <constraint firstItem="qHF-J2-mfu" firstAttribute="trailing" secondItem="mgo-fI-BO8" secondAttribute="trailing" id="gTE-sy-cKN"/>
                             <constraint firstItem="mgo-fI-BO8" firstAttribute="leading" secondItem="qHF-J2-mfu" secondAttribute="leading" id="jjm-x6-J14"/>
@@ -804,6 +824,7 @@
                     </view>
                     <connections>
                         <outlet property="searchBar" destination="BIM-df-KuI" id="iXa-e0-9I6"/>
+                        <outlet property="tableView" destination="lAp-CY-4mt" id="jtP-JS-33A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jYo-B4-D4z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -817,6 +838,9 @@
         </namedColor>
         <namedColor name="Dark Gray">
             <color red="0.36078431372549019" green="0.36078431372549019" blue="0.35686274509803922" alpha="0.94999998807907104" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Search Bar Background White">
+            <color red="1" green="1" blue="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Separator Line Gray">
             <color red="0.74509803921568629" green="0.75294117647058822" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

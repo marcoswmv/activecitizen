@@ -21,7 +21,6 @@ class MembersListViewController: BaseMembersListViewController {
 
         setupDataSource()
         self.hideKeyboardWhenTappedAround()
-        tableView.separatorStyle = .none
         keyboardManagment = true
         
         if #available(iOS 13.0, *) {

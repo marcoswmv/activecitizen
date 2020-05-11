@@ -123,6 +123,10 @@
 		F78EC33F242A7B1000062A6B /* MemberDetailImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78EC33E242A7B1000062A6B /* MemberDetailImageViewController.swift */; };
 		F78EC341242A7C9300062A6B /* BaseMemberDetailImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78EC340242A7C9300062A6B /* BaseMemberDetailImageViewController.swift */; };
 		F792BE502468C529008B17ED /* ReportsListViewController+HideTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F792BE4F2468C529008B17ED /* ReportsListViewController+HideTabBar.swift */; };
+		F792BE522468CD5F008B17ED /* Vote.swift in Sources */ = {isa = PBXBuildFile; fileRef = F792BE512468CD5F008B17ED /* Vote.swift */; };
+		F792BE542468CE3D008B17ED /* VotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F792BE532468CE3D008B17ED /* VotesManager.swift */; };
+		F792BE562468CED0008B17ED /* VotesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F792BE552468CED0008B17ED /* VotesDataSource.swift */; };
+		F792BE582468D015008B17ED /* VoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F792BE572468D015008B17ED /* VoteTableViewCell.swift */; };
 		F7980C5A243290EF000019D7 /* UserInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7980C59243290EF000019D7 /* UserInformationView.swift */; };
 		F7980C5C24329139000019D7 /* UserInformationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7980C5B24329139000019D7 /* UserInformationView.xib */; };
 		F7980C5E2432B246000019D7 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7980C5D2432B246000019D7 /* NotificationView.swift */; };
@@ -307,6 +311,10 @@
 		F78EC33E242A7B1000062A6B /* MemberDetailImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailImageViewController.swift; sourceTree = "<group>"; };
 		F78EC340242A7C9300062A6B /* BaseMemberDetailImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMemberDetailImageViewController.swift; sourceTree = "<group>"; };
 		F792BE4F2468C529008B17ED /* ReportsListViewController+HideTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReportsListViewController+HideTabBar.swift"; sourceTree = "<group>"; };
+		F792BE512468CD5F008B17ED /* Vote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vote.swift; sourceTree = "<group>"; };
+		F792BE532468CE3D008B17ED /* VotesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotesManager.swift; sourceTree = "<group>"; };
+		F792BE552468CED0008B17ED /* VotesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotesDataSource.swift; sourceTree = "<group>"; };
+		F792BE572468D015008B17ED /* VoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteTableViewCell.swift; sourceTree = "<group>"; };
 		F7980C59243290EF000019D7 /* UserInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationView.swift; sourceTree = "<group>"; };
 		F7980C5B24329139000019D7 /* UserInformationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInformationView.xib; sourceTree = "<group>"; };
 		F7980C5D2432B246000019D7 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
@@ -429,6 +437,7 @@
 				F7980C652432C4D4000019D7 /* ProfileReportsTableViewCell.swift */,
 				F7313EBF24322FDA005857EE /* CommentTableViewCell.swift */,
 				C523602523967420002D9783 /* ReportsListTableViewCell.swift */,
+				F792BE572468D015008B17ED /* VoteTableViewCell.swift */,
 				F7A22212240334AD00C11353 /* SubCategoriesTableViewCell.swift */,
 			);
 			path = Cells;
@@ -669,6 +678,7 @@
 				C52360172396513C002D9783 /* BaseNetworkManager.swift */,
 				F7A222072400614600C11353 /* CategoriesManager.swift */,
 				F7A5595C243624C60024D907 /* ImagesManager.swift */,
+				F792BE532468CE3D008B17ED /* VotesManager.swift */,
 				F7CB47A424089B240087FC22 /* MembersManager.swift */,
 				F773E47A2437B61600E8E978 /* CommentsManager.swift */,
 				C52360192396593D002D9783 /* ReportsManager.swift */,
@@ -684,6 +694,7 @@
 				F7A2220524005C8600C11353 /* Category.swift */,
 				F7CB47A2240899690087FC22 /* Member.swift */,
 				F7980C672432CBCE000019D7 /* Comment.swift */,
+				F792BE512468CD5F008B17ED /* Vote.swift */,
 				C523601B23965D5C002D9783 /* Report.swift */,
 				F7A2220E2403310E00C11353 /* SubCategory.swift */,
 			);
@@ -697,6 +708,7 @@
 				C523601D23966D16002D9783 /* BaseDataSource.swift */,
 				F7A222012400524B00C11353 /* CategoriesDataSource.swift */,
 				F7E63ABB242020940017B13C /* MemberReportsDataSource.swift */,
+				F792BE552468CED0008B17ED /* VotesDataSource.swift */,
 				F7CB47A624089D200087FC22 /* MembersDataSource.swift */,
 				F7980C692432CCA8000019D7 /* NotificationsDataSource.swift */,
 				F7313EC3243234EE005857EE /* CommentsDataSource.swift */,
@@ -977,9 +989,11 @@
 				F7CB47A3240899690087FC22 /* Member.swift in Sources */,
 				F747EB1C23EF27FD00862A6D /* UIViewController+NavigationBarShadow.swift in Sources */,
 				C52CE68923954FBE004760EF /* UIFont+Style.swift in Sources */,
+				F792BE562468CED0008B17ED /* VotesDataSource.swift in Sources */,
 				F76209CA23ABA1CD00BEB8DE /* ReportsTableViewController.swift in Sources */,
 				C52CE68123954AA5004760EF /* ReportsListContainerViewController.swift in Sources */,
 				F7A2221524033F4100C11353 /* BaseShowAddressOnMapViewController.swift in Sources */,
+				F792BE542468CE3D008B17ED /* VotesManager.swift in Sources */,
 				F728C05124688994006BBE13 /* ApplicationsView.swift in Sources */,
 				F756534524267DBC002C4B81 /* Keys.swift in Sources */,
 				F7980C5E2432B246000019D7 /* NotificationView.swift in Sources */,
@@ -1046,6 +1060,7 @@
 				F7980C5A243290EF000019D7 /* UserInformationView.swift in Sources */,
 				C52CE69123955EE2004760EF /* BaseNavigationController.swift in Sources */,
 				C523602C239687E6002D9783 /* ReportDetailsViewController.swift in Sources */,
+				F792BE522468CD5F008B17ED /* Vote.swift in Sources */,
 				C52CE64B2395440F004760EF /* AppDelegate.swift in Sources */,
 				F7A2220024004D6200C11353 /* SubCategoriesVC+SearchBarDelegate.swift in Sources */,
 				C52CE68D23955331004760EF /* UITabBarController+Animation.swift in Sources */,
@@ -1096,6 +1111,7 @@
 				F7A221FE24004D3500C11353 /* CategoriesVC+SearchBarDelegate.swift in Sources */,
 				F701799F242A65390048BA19 /* BaseImageViewController.swift in Sources */,
 				F7980C662432C4D4000019D7 /* ProfileReportsTableViewCell.swift in Sources */,
+				F792BE582468D015008B17ED /* VoteTableViewCell.swift in Sources */,
 				F701799B242A25470048BA19 /* UIView+FindViewController.swift in Sources */,
 				C52CE661239544E4004760EF /* BaseViewController.swift in Sources */,
 			);

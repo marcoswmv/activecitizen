@@ -10,7 +10,6 @@ import UIKit
 
 class CommentsDataSource: BaseDataSource {
 
-   
     private let manager = CommentsManager()
     private(set) var data: [Comment]?
     
@@ -21,7 +20,6 @@ class CommentsDataSource: BaseDataSource {
     }
     
     override func reload() {
-        
         
         let comments: [[String: Any]] = [[ "categoryId": 1101, "created": "2013-12-02T19:13:16.167+0000", "categoryName": "Автомобильные дороги",
                                           "subcategoryName": "Аварийные опоры линий наружного освещения", "address": "Россия, Волгоград, посёлок Ангарский, Раздольная улица, 47", "files": ["thor1"], "taskDefinitionKey": "taskEnterResult"],
