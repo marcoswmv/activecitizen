@@ -9,7 +9,6 @@
 import UIKit
 
 
-@IBDesignable
 class AddressView: UIViewWithXib {
 
     @IBOutlet var contentView: UIView!

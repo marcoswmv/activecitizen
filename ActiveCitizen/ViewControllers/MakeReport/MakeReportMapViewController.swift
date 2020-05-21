@@ -24,6 +24,9 @@ class MakeReportMapViewController: BaseMakeReportViewController {
     @IBOutlet weak var streetAddress: UILabel!
     @IBOutlet weak var scrollView: MakeReportScrollView!
     
+    @IBOutlet weak var scrollParentView: UIView!
+    @IBOutlet weak var imagesPreviewScrollView: UIScrollView!
+    
     @IBAction func showMyPositionOnTouchUpInside(_ sender: Any) {
         setCenterMapForLocation(userLocation)
     }
@@ -81,6 +84,7 @@ class MakeReportMapViewController: BaseMakeReportViewController {
     var userLocation = YMKPoint()
     var previousLocation: CLLocation?
     var zoom: Float = 17.0
+    let VOLGOGRAD_COORDINATES = YMKPoint(latitude: 48.7193900, longitude: 44.5018300)
     
     let addressesManager = AddressesManager()
     var locationFromPin: CLLocation?

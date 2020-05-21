@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="s57-OV-7xI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="s57-OV-7xI">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -372,7 +372,7 @@
             <objects>
                 <viewController storyboardIdentifier="MakeReportMapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="s57-OV-7xI" customClass="MakeReportMapViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V6k-hS-4Tb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="958"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Tm-Lv-tRW" customClass="YMKMapView">
@@ -391,10 +391,10 @@
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Lq-Yr-HrM" customClass="MakeReportScrollView" customModule="ActiveCitizen" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="88" width="375" height="870"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="1112"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L5p-b2-bCX" userLabel="Content view">
-                                        <rect key="frame" x="0.0" y="225" width="375" height="562"/>
+                                        <rect key="frame" x="0.0" y="225" width="375" height="750"/>
                                         <subviews>
                                             <view contentMode="scaleAspectFill" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="X0A-Bv-Fcg" userLabel="Address button">
                                                 <rect key="frame" x="17" y="22.999999999999996" width="340" height="49.666666666666657"/>
@@ -560,7 +560,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Mhy-xL-RAk">
-                                                <rect key="frame" x="12" y="215" width="345" height="130"/>
+                                                <rect key="frame" x="12" y="215" width="345" height="128"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="250" constant="130" id="2nd-MT-9Dd"/>
@@ -573,7 +573,7 @@
                                                 </connections>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShB-bk-ij1">
-                                                <rect key="frame" x="257" y="348" width="100" height="12"/>
+                                                <rect key="frame" x="257" y="346" width="100" height="12"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" priority="750" constant="100" id="MN5-PY-0qS"/>
                                                 </constraints>
@@ -582,7 +582,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eig-Hq-hHw" userLabel="Dashed Separator" customClass="Separator" customModule="ActiveCitizen" customModuleProvider="target">
-                                                <rect key="frame" x="12" y="367" width="363" height="1"/>
+                                                <rect key="frame" x="12" y="365" width="363" height="1"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="750" constant="363" id="0s4-tU-nCj"/>
@@ -594,18 +594,39 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y20-sT-RMl" userLabel="Добавить фото">
-                                                <rect key="frame" x="12" y="380" width="345" height="24"/>
-                                                <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="15"/>
-                                                <state key="normal" title="  Добавить фото" image="Photo">
-                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="addPhotoOnTouchUpInside:" destination="s57-OV-7xI" eventType="touchUpInside" id="RvK-fg-Bwp"/>
-                                                </connections>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="chR-Hh-eR7">
+                                                <rect key="frame" x="12" y="386" width="345" height="194"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BOc-24-vfP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="150"/>
+                                                        <subviews>
+                                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d0L-Dn-twp">
+                                                                <rect key="frame" x="0.0" y="0.0" width="345" height="150"/>
+                                                            </scrollView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="d0L-Dn-twp" firstAttribute="top" secondItem="BOc-24-vfP" secondAttribute="top" id="52e-ml-G79"/>
+                                                            <constraint firstAttribute="height" constant="150" id="Erd-De-FQs"/>
+                                                            <constraint firstAttribute="trailing" secondItem="d0L-Dn-twp" secondAttribute="trailing" id="KpS-Ds-AL5"/>
+                                                            <constraint firstAttribute="bottom" secondItem="d0L-Dn-twp" secondAttribute="bottom" id="ZTQ-xc-kYd"/>
+                                                            <constraint firstItem="d0L-Dn-twp" firstAttribute="leading" secondItem="BOc-24-vfP" secondAttribute="leading" id="hAY-Zi-0LQ"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y20-sT-RMl" userLabel="Добавить фото">
+                                                        <rect key="frame" x="0.0" y="170" width="345" height="24"/>
+                                                        <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="15"/>
+                                                        <state key="normal" title="  Добавить фото" image="Photo">
+                                                            <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="addPhotoOnTouchUpInside:" destination="s57-OV-7xI" eventType="touchUpInside" id="RvK-fg-Bwp"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTf-fU-UJe">
-                                                <rect key="frame" x="18" y="445" width="339" height="46"/>
+                                                <rect key="frame" x="18" y="620" width="339" height="46"/>
                                                 <color key="backgroundColor" name="App Blue"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="46" id="mdK-AL-XgC"/>
@@ -628,40 +649,40 @@
                                             <constraint firstAttribute="trailing" secondItem="LBa-yA-W2c" secondAttribute="trailing" id="20o-lf-8Yy"/>
                                             <constraint firstItem="Eig-Hq-hHw" firstAttribute="leading" secondItem="L5p-b2-bCX" secondAttribute="leading" constant="12" id="22P-eR-yS4"/>
                                             <constraint firstAttribute="trailing" secondItem="Eig-Hq-hHw" secondAttribute="trailing" id="2Jk-2q-gKd"/>
-                                            <constraint firstAttribute="bottom" secondItem="yTf-fU-UJe" secondAttribute="bottom" priority="100" constant="20" id="4lX-C5-dL8"/>
                                             <constraint firstAttribute="trailing" secondItem="mDu-PF-9Gc" secondAttribute="trailing" constant="18" id="5SH-9V-uYg"/>
                                             <constraint firstAttribute="trailing" secondItem="Mhy-xL-RAk" secondAttribute="trailing" constant="18" id="ABd-kk-Ycs"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="562" id="AJT-jU-ved"/>
+                                            <constraint firstItem="chR-Hh-eR7" firstAttribute="leading" secondItem="L5p-b2-bCX" secondAttribute="leading" constant="12" id="BZh-ug-rfe"/>
                                             <constraint firstItem="EwB-tX-DJX" firstAttribute="top" secondItem="mDu-PF-9Gc" secondAttribute="bottom" constant="9" id="CIq-VJ-Asl"/>
+                                            <constraint firstAttribute="trailing" secondItem="chR-Hh-eR7" secondAttribute="trailing" constant="18" id="CZY-IJ-bCY"/>
+                                            <constraint firstAttribute="bottom" secondItem="yTf-fU-UJe" secondAttribute="bottom" priority="100" constant="84" id="EOA-d3-grF"/>
                                             <constraint firstItem="X0A-Bv-Fcg" firstAttribute="top" secondItem="L5p-b2-bCX" secondAttribute="top" constant="23" id="EbC-Ie-eKP"/>
                                             <constraint firstItem="Eig-Hq-hHw" firstAttribute="top" secondItem="ShB-bk-ij1" secondAttribute="bottom" constant="7" id="IZv-A6-WiC"/>
                                             <constraint firstItem="X0A-Bv-Fcg" firstAttribute="leading" secondItem="L5p-b2-bCX" secondAttribute="leading" constant="17" id="Izd-4i-Nh0"/>
-                                            <constraint firstItem="y20-sT-RMl" firstAttribute="top" secondItem="Eig-Hq-hHw" secondAttribute="bottom" constant="12" id="KJ0-gQ-Cgo"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="yTf-fU-UJe" secondAttribute="bottom" constant="84" id="Jni-yp-RWT"/>
                                             <constraint firstAttribute="trailing" secondItem="yTf-fU-UJe" secondAttribute="trailing" constant="18" id="Q1L-6L-8db"/>
                                             <constraint firstItem="LBa-yA-W2c" firstAttribute="leading" secondItem="L5p-b2-bCX" secondAttribute="leading" constant="12" id="Qge-SW-EHs"/>
                                             <constraint firstItem="EwB-tX-DJX" firstAttribute="leading" secondItem="L5p-b2-bCX" secondAttribute="leading" constant="12" id="RHr-eX-lUh"/>
-                                            <constraint firstItem="yTf-fU-UJe" firstAttribute="top" secondItem="y20-sT-RMl" secondAttribute="bottom" constant="41" id="WUZ-jD-Q2Z"/>
                                             <constraint firstItem="7zr-LM-O5J" firstAttribute="leading" secondItem="L5p-b2-bCX" secondAttribute="leading" constant="51" id="XA7-Ru-PCa"/>
                                             <constraint firstAttribute="trailing" secondItem="ShB-bk-ij1" secondAttribute="trailing" constant="18" id="YtE-fi-pz2"/>
                                             <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="7zr-LM-O5J" secondAttribute="trailing" constant="207" id="b8m-ig-pRt"/>
                                             <constraint firstItem="Mhy-xL-RAk" firstAttribute="leading" secondItem="L5p-b2-bCX" secondAttribute="leading" constant="12" id="bhe-IW-inn"/>
+                                            <constraint firstItem="chR-Hh-eR7" firstAttribute="top" secondItem="Eig-Hq-hHw" secondAttribute="bottom" constant="20" id="cyU-bP-wYo"/>
                                             <constraint firstItem="yTf-fU-UJe" firstAttribute="leading" secondItem="L5p-b2-bCX" secondAttribute="leading" constant="18" id="fYs-IU-NYS"/>
                                             <constraint firstItem="Eig-Hq-hHw" firstAttribute="top" secondItem="Mhy-xL-RAk" secondAttribute="bottom" constant="22" id="g79-Kd-AUH"/>
                                             <constraint firstItem="Mhy-xL-RAk" firstAttribute="top" secondItem="EwB-tX-DJX" secondAttribute="bottom" constant="8" id="hkb-jx-rUi"/>
                                             <constraint firstAttribute="trailing" secondItem="EwB-tX-DJX" secondAttribute="trailing" id="iFu-5c-v6V"/>
+                                            <constraint firstAttribute="height" constant="750" id="jj4-0F-bco"/>
                                             <constraint firstItem="ShB-bk-ij1" firstAttribute="leading" relation="lessThanOrEqual" secondItem="L5p-b2-bCX" secondAttribute="leading" constant="257" id="jrY-uC-Wd4"/>
                                             <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="xh2-CI-waT" secondAttribute="trailing" constant="185" id="kqa-xz-dBi"/>
-                                            <constraint firstItem="y20-sT-RMl" firstAttribute="leading" secondItem="L5p-b2-bCX" secondAttribute="leading" constant="12" id="lDN-wU-2LM"/>
                                             <constraint firstItem="mDu-PF-9Gc" firstAttribute="leading" secondItem="L5p-b2-bCX" secondAttribute="leading" constant="12" id="mQ1-xz-Uqc"/>
                                             <constraint firstItem="ShB-bk-ij1" firstAttribute="top" secondItem="Mhy-xL-RAk" secondAttribute="bottom" constant="3" id="oME-Xi-DZA"/>
                                             <constraint firstItem="xh2-CI-waT" firstAttribute="top" secondItem="7zr-LM-O5J" secondAttribute="bottom" constant="28" id="oSQ-mm-qMj"/>
                                             <constraint firstItem="xh2-CI-waT" firstAttribute="leading" secondItem="L5p-b2-bCX" secondAttribute="leading" constant="17" id="qmm-Hr-pLD"/>
-                                            <constraint firstAttribute="trailing" secondItem="y20-sT-RMl" secondAttribute="trailing" constant="18" id="qqY-AB-S77"/>
                                             <constraint firstItem="7zr-LM-O5J" firstAttribute="top" secondItem="X0A-Bv-Fcg" secondAttribute="bottom" constant="10" id="tnT-u0-bDJ"/>
-                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="yTf-fU-UJe" secondAttribute="bottom" constant="20" id="vro-fr-cc9"/>
                                             <constraint firstItem="mDu-PF-9Gc" firstAttribute="top" secondItem="LBa-yA-W2c" secondAttribute="bottom" constant="9" id="xl4-tN-t1o"/>
                                             <constraint firstItem="LBa-yA-W2c" firstAttribute="top" secondItem="xh2-CI-waT" secondAttribute="bottom" constant="9" id="yAa-Vi-Hzs"/>
                                             <constraint firstAttribute="trailing" secondItem="X0A-Bv-Fcg" secondAttribute="trailing" constant="18" id="zHU-3A-rLp"/>
+                                            <constraint firstItem="yTf-fU-UJe" firstAttribute="top" secondItem="chR-Hh-eR7" secondAttribute="bottom" constant="40" id="zhE-yL-n9N"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -695,7 +716,7 @@
                     <navigationItem key="navigationItem" id="0iS-y6-3UY"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <size key="freeformSize" width="375" height="958"/>
+                    <size key="freeformSize" width="375" height="1200"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="keyboardManagment" value="YES"/>
                     </userDefinedRuntimeAttributes>
@@ -705,11 +726,12 @@
                         <outlet property="cityAddress" destination="Fq4-Cw-KWN" id="Qog-do-GpI"/>
                         <outlet property="contentScrollView" destination="2Lq-Yr-HrM" id="YUU-TM-FJP"/>
                         <outlet property="dashedSeparator" destination="Eig-Hq-hHw" id="n2r-si-hcY"/>
+                        <outlet property="imagesPreviewScrollView" destination="d0L-Dn-twp" id="2LA-sU-Ej7"/>
                         <outlet property="mapView" destination="5Tm-Lv-tRW" id="4Ya-dl-JAz"/>
                         <outlet property="maxLength" destination="ShB-bk-ij1" id="1wS-yw-xpZ"/>
                         <outlet property="reportDescription" destination="Mhy-xL-RAk" id="ajD-d7-FI7"/>
+                        <outlet property="scrollParentView" destination="BOc-24-vfP" id="8qa-EL-dO7"/>
                         <outlet property="scrollView" destination="2Lq-Yr-HrM" id="7tJ-az-0fn"/>
-                        <outlet property="scrollViewContentHeightConstraint" destination="AJT-jU-ved" id="lQY-P6-bqu"/>
                         <outlet property="streetAddress" destination="KBZ-wI-VsM" id="KO0-Tc-YDd"/>
                     </connections>
                 </viewController>
@@ -886,14 +908,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Район/Округ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="W6L-FX-MgX">
-                                                    <rect key="frame" x="15.000000000000007" y="12" width="102.66666666666667" height="20"/>
+                                                    <rect key="frame" x="14.999999999999993" y="15" width="115.33333333333333" height="15.333333333333334"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="alf-0S-teY">
-                                                    <rect key="frame" x="316.66666666666669" y="12" width="43.333333333333336" height="20"/>
+                                                    <rect key="frame" x="310.66666666666669" y="15" width="49.333333333333336" height="15.333333333333334"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="17"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -910,14 +932,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Населенный пункт" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="J23-vQ-eg9">
-                                                    <rect key="frame" x="15" y="12" width="148" height="20"/>
+                                                    <rect key="frame" x="15" y="15" width="162.33333333333334" height="15.333333333333334"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bnO-Qb-pzD">
-                                                    <rect key="frame" x="316.66666666666669" y="12" width="43.333333333333336" height="20"/>
+                                                    <rect key="frame" x="310.66666666666669" y="15" width="49.333333333333336" height="15.333333333333334"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="17"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -934,14 +956,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Улица" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pp2-DS-ce9">
-                                                    <rect key="frame" x="15.000000000000004" y="12" width="48.333333333333336" height="20"/>
+                                                    <rect key="frame" x="15.000000000000004" y="15" width="53.333333333333336" height="15.333333333333334"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sqS-Mh-LgZ">
-                                                    <rect key="frame" x="316.66666666666669" y="12" width="43.333333333333336" height="20"/>
+                                                    <rect key="frame" x="310.66666666666669" y="15" width="49.333333333333336" height="15.333333333333334"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="17"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -958,14 +980,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Дом" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Np4-OZ-MD1">
-                                                    <rect key="frame" x="15" y="12" width="34" height="20"/>
+                                                    <rect key="frame" x="15" y="15" width="36" height="15.333333333333334"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4Zj-3B-xW5">
-                                                    <rect key="frame" x="316.66666666666669" y="12" width="43.333333333333336" height="20"/>
+                                                    <rect key="frame" x="310.66666666666669" y="15" width="49.333333333333336" height="15.333333333333334"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="17"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

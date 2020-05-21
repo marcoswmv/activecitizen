@@ -1,13 +1,13 @@
 PODS:
-  - Alamofire (5.0.5)
+  - Alamofire (5.2.0)
   - Auk (11.0.0):
     - moa
-  - Kingfisher (5.13.4):
-    - Kingfisher/Core (= 5.13.4)
-  - Kingfisher/Core (5.13.4)
-  - MaterialComponents/AnimationTiming (109.2.0)
-  - MaterialComponents/Availability (109.2.0)
-  - MaterialComponents/Buttons (109.2.0):
+  - Kingfisher (5.14.0):
+    - Kingfisher/Core (= 5.14.0)
+  - Kingfisher/Core (5.14.0)
+  - MaterialComponents/AnimationTiming (109.4.0)
+  - MaterialComponents/Availability (109.4.0)
+  - MaterialComponents/Buttons (109.4.0):
     - MaterialComponents/Elevation
     - MaterialComponents/Ink
     - MaterialComponents/private/Math
@@ -18,43 +18,32 @@ PODS:
     - MaterialComponents/Typography
     - MDFInternationalization
     - MDFTextAccessibility
-  - MaterialComponents/Elevation (109.2.0):
+  - MaterialComponents/Elevation (109.4.0):
     - MaterialComponents/Availability
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
-  - MaterialComponents/Ink (109.2.0):
+  - MaterialComponents/Ink (109.4.0):
     - MaterialComponents/Availability
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
-  - MaterialComponents/Palettes (109.2.0)
-  - MaterialComponents/private/Application (109.2.0)
-  - MaterialComponents/private/Color (109.2.0):
+  - MaterialComponents/Palettes (109.4.0)
+  - MaterialComponents/private/Application (109.4.0)
+  - MaterialComponents/private/Color (109.4.0):
     - MaterialComponents/Availability
-  - MaterialComponents/private/Math (109.2.0)
-  - MaterialComponents/Ripple (109.2.0):
+  - MaterialComponents/private/Math (109.4.0)
+  - MaterialComponents/Ripple (109.4.0):
     - MaterialComponents/AnimationTiming
     - MaterialComponents/Availability
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
-  - MaterialComponents/ShadowElevations (109.2.0)
-  - MaterialComponents/ShadowLayer (109.2.0):
+  - MaterialComponents/ShadowElevations (109.4.0)
+  - MaterialComponents/ShadowLayer (109.4.0):
     - MaterialComponents/ShadowElevations
-  - MaterialComponents/Shapes (109.2.0):
+  - MaterialComponents/Shapes (109.4.0):
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
     - MaterialComponents/ShadowLayer
-  - MaterialComponents/Tabs (109.2.0):
-    - MaterialComponents/AnimationTiming
-    - MaterialComponents/Elevation
-    - MaterialComponents/Ink
-    - MaterialComponents/Palettes
-    - MaterialComponents/private/Math
-    - MaterialComponents/Ripple
-    - MaterialComponents/ShadowElevations
-    - MaterialComponents/ShadowLayer
-    - MaterialComponents/Typography
-    - MDFInternationalization
-  - MaterialComponents/TextFields (109.2.0):
+  - MaterialComponents/TextFields (109.4.0):
     - MaterialComponents/AnimationTiming
     - MaterialComponents/Buttons
     - MaterialComponents/Elevation
@@ -62,7 +51,7 @@ PODS:
     - MaterialComponents/private/Math
     - MaterialComponents/Typography
     - MDFInternationalization
-  - MaterialComponents/Typography (109.2.0):
+  - MaterialComponents/Typography (109.4.0):
     - MaterialComponents/private/Application
     - MaterialComponents/private/Math
   - MDFInternationalization (2.0.0)
@@ -82,14 +71,13 @@ PODS:
   - YandexRuntime (3.5.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 5.0.0-rc.3)
-  - Auk (~> 11.0)
-  - Kingfisher (~> 5.0)
-  - MaterialComponents/Tabs
+  - Alamofire
+  - Auk
+  - Kingfisher
   - MaterialComponents/TextFields
-  - moa (~> 12.0)
+  - moa
   - NVActivityIndicatorView
-  - Tabman (~> 2.9)
+  - Tabman
   - YandexMapKit
   - YandexMapKitSearch
 
@@ -110,10 +98,10 @@ SPEC REPOS:
     - YandexRuntime
 
 SPEC CHECKSUMS:
-  Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
+  Alamofire: c1ca147559e730bfb2182c8c7aafbdd90a867987
   Auk: 7cc533252e2caaaa36b2be19c0b799f6057c365a
-  Kingfisher: d2279a7abece3c7f25a80cd2b7f363ca5cf3f44c
-  MaterialComponents: 59bfbfe08fc1ac204b21ba69100beabb932e3699
+  Kingfisher: 7b64389a43139c903ec434788344c288217c792d
+  MaterialComponents: d4f75b4037cc114d71841ce9933b334c4b604a95
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
   moa: e2346f12de6c65bbca4d103950d45db9e46785ef
@@ -124,6 +112,6 @@ SPEC CHECKSUMS:
   YandexMapKitSearch: b46ddd1c80e2e35d006cdfc4ab88070a50cebeda
   YandexRuntime: 2d55244d06267106cf9b00c25a1e63f72a73b6fd
 
-PODFILE CHECKSUM: a69c261e98bb3eb34eadae00df940f2a27bd7a3c
+PODFILE CHECKSUM: 6be00e11c75a71c5bc137220748da2176ec13167
 
 COCOAPODS: 1.9.1

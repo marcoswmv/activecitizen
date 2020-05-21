@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -78,7 +78,7 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHh-Ve-24U">
-                    <rect key="frame" x="25" y="76" width="369" height="15.5"/>
+                    <rect key="frame" x="25" y="76" width="369" height="8.5"/>
                     <attributedString key="attributedText">
                         <fragment content="Label">
                             <attributes>
@@ -90,7 +90,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="d6F-6E-SJl">
-                    <rect key="frame" x="25" y="106.5" width="369" height="27"/>
+                    <rect key="frame" x="25" y="99.5" width="369" height="27"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map_pin" translatesAutoresizingMaskIntoConstraints="NO" id="hxG-R9-SYj">
                             <rect key="frame" x="0.0" y="0.0" width="27" height="27"/>
@@ -114,7 +114,7 @@
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ndo-gp-sBy">
-                    <rect key="frame" x="25" y="158.5" width="369" height="116"/>
+                    <rect key="frame" x="25" y="151.5" width="369" height="116"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="unY-BJ-taH">
                             <rect key="frame" x="0.0" y="0.0" width="369" height="14"/>
@@ -129,7 +129,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yF4-Iv-jp0" customClass="Separator" customModule="ActiveCitizen" customModuleProvider="target">
-                                    <rect key="frame" x="134.5" y="0.0" width="183.5" height="14"/>
+                                    <rect key="frame" x="134.5" y="0.0" width="187.5" height="14"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="14" id="JOG-6P-ckx"/>
@@ -144,7 +144,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TaJ-2D-UeL">
-                                    <rect key="frame" x="328" y="0.0" width="41" height="14"/>
+                                    <rect key="frame" x="332" y="0.0" width="37" height="14"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="14" id="JS0-KL-CJb"/>
                                     </constraints>
@@ -167,7 +167,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lZ2-09-Pd2" customClass="Separator" customModule="ActiveCitizen" customModuleProvider="target">
-                                    <rect key="frame" x="168.5" y="0.0" width="149.5" height="14"/>
+                                    <rect key="frame" x="168.5" y="0.0" width="153.5" height="14"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="14" id="a0y-27-xsF"/>
@@ -182,7 +182,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCb-E3-6gX">
-                                    <rect key="frame" x="328" y="0.0" width="41" height="14"/>
+                                    <rect key="frame" x="332" y="0.0" width="37" height="14"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="14" id="FPe-sx-rz0"/>
                                     </constraints>
@@ -205,7 +205,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PA2-Yx-0WU" customClass="Separator" customModule="ActiveCitizen" customModuleProvider="target">
-                                    <rect key="frame" x="153.5" y="0.0" width="164.5" height="14"/>
+                                    <rect key="frame" x="153.5" y="0.0" width="168.5" height="14"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="14" id="2YV-qy-S1x"/>
@@ -220,7 +220,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hg8-4V-rhr">
-                                    <rect key="frame" x="328" y="0.0" width="41" height="14"/>
+                                    <rect key="frame" x="332" y="0.0" width="37" height="14"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="14" id="8Wr-rK-D6b"/>
                                     </constraints>
@@ -243,7 +243,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YPk-nP-DUt" customClass="Separator" customModule="ActiveCitizen" customModuleProvider="target">
-                                    <rect key="frame" x="57.5" y="0.0" width="177.5" height="14"/>
+                                    <rect key="frame" x="57.5" y="0.0" width="187.5" height="14"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="14" id="TN9-ZY-fDg"/>
@@ -258,7 +258,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHK-aA-J9w">
-                                    <rect key="frame" x="245" y="0.0" width="124" height="14"/>
+                                    <rect key="frame" x="255" y="0.0" width="114" height="14"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="14" id="q0V-aU-EvP"/>
                                     </constraints>
@@ -275,7 +275,7 @@
                     </subviews>
                 </stackView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xI-mZ-3BI">
-                    <rect key="frame" x="25" y="299.5" width="369" height="13.5"/>
+                    <rect key="frame" x="25" y="292.5" width="369" height="17.5"/>
                     <attributedString key="attributedText">
                         <fragment content="Label">
                             <attributes>
@@ -287,10 +287,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9qU-30-r6h">
-                    <rect key="frame" x="0.0" y="333" width="414" height="301"/>
+                    <rect key="frame" x="0.0" y="330" width="414" height="300"/>
                     <subviews>
                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L1z-Jx-Ahx">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="301"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
                         </scrollView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -303,7 +303,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="30u-ic-4gK" customClass="Separator" customModule="ActiveCitizen" customModuleProvider="target">
-                    <rect key="frame" x="26" y="639" width="388" height="1"/>
+                    <rect key="frame" x="26" y="635" width="388" height="1"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="eT0-u3-QuA"/>
@@ -318,10 +318,10 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="wfo-m9-BFq">
-                    <rect key="frame" x="25" y="660" width="112" height="13.5"/>
+                    <rect key="frame" x="25" y="656" width="109" height="17.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Статус:" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25J-vg-wOu">
-                            <rect key="frame" x="0.0" y="0.0" width="55.5" height="13.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="55.5" height="17.5"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="55.5" id="jbN-Vx-Bs9"/>
                             </constraints>
@@ -330,7 +330,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itL-rj-AeI">
-                            <rect key="frame" x="60.5" y="0.0" width="51.5" height="13.5"/>
+                            <rect key="frame" x="60.5" y="0.0" width="48.5" height="17.5"/>
                             <attributedString key="attributedText">
                                 <fragment content="Статус">
                                     <attributes>
@@ -368,7 +368,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ход выполнения" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmY-8t-kup">
-                    <rect key="frame" x="25" y="773.5" width="130.5" height="13.5"/>
+                    <rect key="frame" x="25" y="773.5" width="116.5" height="13.5"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="13.5" id="ebZ-Fa-9tZ"/>
                     </constraints>
@@ -421,13 +421,13 @@
     <resources>
         <image name="map_pin" width="24" height="24"/>
         <namedColor name="App Blue">
-            <color red="0.0" green="0.51800000667572021" blue="0.88999998569488525" alpha="0.85000002384185791" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.51764705882352946" blue="0.88627450980392153" alpha="0.85000002384185791" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Separator Line Gray">
             <color red="0.74509803921568629" green="0.75294117647058822" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="User Label Gray">
-            <color red="0.53299999237060547" green="0.54900002479553223" blue="0.62699997425079346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.53333333333333333" green="0.5490196078431373" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="User Label Gray">
             <color red="0.53299999237060547" green="0.54900002479553223" blue="0.62699997425079346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

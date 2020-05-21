@@ -23,7 +23,7 @@ class AboutViewController: TabmanViewController {
         return [vc1, vc2, vc3, vc4]
     }()
     
-    lazy var titles: [String] = [ "ИНСТРУКЦИЯ", "СОГЛАШЕНИЯ", "РЕГЛАМЕНТЫ", "ЧАСТНЫЕ ВОПРОСЫ"]
+    lazy var titles: [String] = [ "ИНСТРУКЦИЯ", "СОГЛАШЕНИЯ", "РЕГЛАМЕНТЫ", "ЧАСТЫЕ ВОПРОСЫ"]
     let bar = TMBar.ButtonBar()
     
     override func viewDidLoad() {

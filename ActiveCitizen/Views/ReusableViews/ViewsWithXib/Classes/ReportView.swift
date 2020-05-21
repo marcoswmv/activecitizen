@@ -8,7 +8,6 @@
 
 import UIKit
 
-@IBDesignable
 class ReportView: UIViewWithXib {
 
     @IBOutlet weak var photosButton: UIButton!

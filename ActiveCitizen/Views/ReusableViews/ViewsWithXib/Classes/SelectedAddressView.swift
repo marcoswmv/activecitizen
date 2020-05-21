@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-@IBDesignable
 class SelectedAddressView: UIViewWithXib {
 
     @IBOutlet var contentView: UIView!

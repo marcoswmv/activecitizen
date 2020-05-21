@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-@IBDesignable
 class CommentView: UIViewWithXib {
     
     @IBOutlet weak var changedStatusLabel: UILabel!

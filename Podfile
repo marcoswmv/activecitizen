@@ -10,21 +10,28 @@ source "https://github.com/CocoaPods/Specs.git"
 platform :ios, '11.0'
 use_modular_headers!
 
-target "ActiveCitizen" do
-    pod "Alamofire", "~> 5.0.0-rc.3"
-    pod "YandexMapKit"
-    pod "YandexMapKitSearch"
-    pod "NVActivityIndicatorView"
-    pod "MaterialComponents/TextFields"
-    pod "MaterialComponents/Tabs"
-    pod 'moa', '~> 12.0'
-    pod 'Auk', '~> 11.0'
-    pod 'Kingfisher', '~> 5.0'
-    pod 'Tabman', '~> 2.9'
+target 'ActiveCitizen' do
+    pod 'Alamofire'
+    pod 'YandexMapKit'
+    pod 'YandexMapKitSearch'
+    pod 'NVActivityIndicatorView'
+    pod 'MaterialComponents/TextFields'
+    pod 'moa'
+    pod 'Auk'
+    pod 'Kingfisher'
+    pod 'Tabman'
     
-    #pod "WMSegmentControl"
-    #pod "RESegmentedControl"
-    #pod ‘YandexMapKitDirections’
-    #pod ‘YandexMapKitPlaces’
-    #pod ‘YandexMapKitTransport’
+    
+end
+
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      if config.name == 'Debug'
+        config.build_settings['OTHER_SWIFT_FLAGS'] = ['$(inherited)', '-Onone']
+        config.build_settings['SWIFT_OPTIMIZATION_LEVEL'] = '-Owholemodule'
+      end
+    end
+  end
 end
