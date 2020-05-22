@@ -9,7 +9,7 @@
 import UIKit
 
 extension MakeReportMapViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
+
     func choosePhotoSourceAlertController() {
         let photoLibraryAction = UIAlertAction(title: "Галерея", style: .default) { (action) in
             self.showImagePickerController(sourceType: .photoLibrary)
@@ -18,21 +18,12 @@ extension MakeReportMapViewController: UIImagePickerControllerDelegate, UINaviga
             if UIImagePickerController.isSourceTypeAvailable(.camera) {
                 self.showImagePickerController(sourceType: .camera)
             } else {
-//                TODO: Show alert letting the user know the camera is unavailable
+                Alert.showAlert(on: self,
+                                style: .alert,
+                                title: "Camera is unavailable",
+                                message: "Unfortunately the camera in the device is unavailable!")
             }
         }
-/*
-         let cameraRollAction = UIAlertAction(title: "Camera Roll", style: .default) { (action) in
-            if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) {
-                self.showImagePickerController(sourceType: .savedPhotosAlbum)
-            } else {
-/*
-                 TODO: Show alert letting the user know the camera roll is unavailable
-                        and then it will open the Photo Library
-*/
-            }
-        }
-*/
         let cancelAction = UIAlertAction(title: "Отменить", style: .cancel, handler: nil)
         
         Alert.showAlert(on: self,
@@ -54,11 +45,14 @@ extension MakeReportMapViewController: UIImagePickerControllerDelegate, UINaviga
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-//            TODO: Get the image and upload to server
-            print(originalImage.withRenderingMode(.alwaysOriginal))
+            
+            let image = originalImage.withRenderingMode(.alwaysOriginal)
+            photoCollectionControllerDelegate?.addPhoto(with: image, at: self)
+            
         } else if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
-//            TODO: Get the image and upload to server
-            print(editedImage.withRenderingMode(.alwaysOriginal))
+            
+            let image = editedImage.withRenderingMode(.alwaysOriginal)
+            photoCollectionControllerDelegate?.addPhoto(with: image, at: self)
         }
         dismiss(animated: true, completion: nil)
     }

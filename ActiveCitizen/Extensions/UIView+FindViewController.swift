@@ -19,4 +19,14 @@ extension UIView {
             return nil
         }
     }
+    
+    func findTopView() -> UIView? {
+        if let nextResponder = self.next as? UICollectionViewCell {
+            return nextResponder
+        } else if let nextResponder = self.next as? UIView {
+            return nextResponder.findTopView()
+        } else {
+            return nil
+        }
+    }
 }

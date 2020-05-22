@@ -77,7 +77,7 @@ class EnterAddressViewController: BaseEnterAddressViewController {
         }
         
         dataSource?.reload()
-        dataSource?.getGeocode?(geocode)
+        dataSource?.completionHandler?(geocode)
     }
     
     func layoutTableViewCells() {

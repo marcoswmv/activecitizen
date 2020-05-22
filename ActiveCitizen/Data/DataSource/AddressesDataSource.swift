@@ -14,7 +14,7 @@ class AddressesDataSource: BaseDataSource {
     private let manager = AddressesManager()
     private(set) var data: [Address]?
 
-    var getGeocode: ((_ geocode: String?) -> Void)?
+    var completionHandler: ((_ geocode: String?) -> Void)?
     
     override func setup() {
         super.setup()
@@ -24,7 +24,7 @@ class AddressesDataSource: BaseDataSource {
         
         onLoading?(true)
         
-        getGeocode = { geocode in
+        completionHandler = { geocode in
             
             self.manager.getAddresses(for: geocode!) { (result, error) in
                 

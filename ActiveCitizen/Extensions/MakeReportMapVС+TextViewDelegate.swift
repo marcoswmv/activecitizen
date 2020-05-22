@@ -27,7 +27,7 @@ extension MakeReportMapViewController: UITextViewDelegate {
         let newText = (textView.text as NSString).replacingCharacters(in: range, with: text)
         let numberOfChars = newText.count
 
-        maxLength.text = "\(numberOfChars) / 1000"
-        return numberOfChars < 1000;
+        maxLength.text = "\(numberOfChars) / 500"
+        return numberOfChars < 500;
     }
 }

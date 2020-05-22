@@ -10,6 +10,10 @@ import UIKit
 import YandexMapKit
 import CoreLocation
 
+protocol PhotoCollectionControllerDelegate {
+    func addPhoto(with image: UIImage, at viewController: MakeReportMapViewController)
+}
+
 class MakeReportMapViewController: BaseMakeReportViewController {
 
     @IBOutlet weak var mapView: YMKMapView!
@@ -24,8 +28,7 @@ class MakeReportMapViewController: BaseMakeReportViewController {
     @IBOutlet weak var streetAddress: UILabel!
     @IBOutlet weak var scrollView: MakeReportScrollView!
     
-    @IBOutlet weak var scrollParentView: UIView!
-    @IBOutlet weak var imagesPreviewScrollView: UIScrollView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     @IBAction func showMyPositionOnTouchUpInside(_ sender: Any) {
         setCenterMapForLocation(userLocation)
@@ -86,8 +89,11 @@ class MakeReportMapViewController: BaseMakeReportViewController {
     var zoom: Float = 17.0
     let VOLGOGRAD_COORDINATES = YMKPoint(latitude: 48.7193900, longitude: 44.5018300)
     
-    let addressesManager = AddressesManager()
+    let addressesManager: AddressesManager = AddressesManager()
     var locationFromPin: CLLocation?
+    
+    var photoCollectionDataSource: PhotoCollectionDataSource!
+    var photoCollectionControllerDelegate: PhotoCollectionControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,10 +111,12 @@ class MakeReportMapViewController: BaseMakeReportViewController {
     
     func setupUIElementsInContentView() {
         self.hideKeyboardWhenTappedAround()
-        maxLength.text = "0 / 1000"
+        maxLength.text = "0 / 500"
         reportDescription.text = "Текст сообщения"
         reportDescription.textColor = .lightGray
         categoryIcon.isHidden = true
+        
+        photoCollectionDataSource = PhotoCollectionDataSource(collectionView: self.collectionView)
     }
     
     func setupScrollViewContent() {

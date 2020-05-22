@@ -112,7 +112,6 @@
 		F777369323FD6EED002B8746 /* ProfileVC+TMBarDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F777369223FD6EED002B8746 /* ProfileVC+TMBarDataSource.swift */; };
 		F7779308242810D900389A0D /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7779307242810D900389A0D /* AddressView.swift */; };
 		F777930E2428127F00389A0D /* SelectedAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F777930D2428127F00389A0D /* SelectedAddressView.swift */; };
-		F77EF21823A7B36700938A3B /* SegmentedControl+MaterialPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77EF21723A7B36700938A3B /* SegmentedControl+MaterialPreset.swift */; };
 		F785332E24675B2E00C584B7 /* SubAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785332D24675B2E00C584B7 /* SubAboutViewController.swift */; };
 		F785333224676D7200C584B7 /* SubAboutViewController+TextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785333124676D7200C584B7 /* SubAboutViewController+TextViewDelegate.swift */; };
 		F78533342467841700C584B7 /* VotingCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78533332467841700C584B7 /* VotingCellView.swift */; };
@@ -173,6 +172,12 @@
 		F7AD212C241C0B830041AC2A /* BaseMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AD212B241C0B830041AC2A /* BaseMemberViewController.swift */; };
 		F7AD212E241C0BDA0041AC2A /* MemberDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AD212D241C0BDA0041AC2A /* MemberDetailViewController.swift */; };
 		F7AD2130241C0C460041AC2A /* MembersListVC+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AD212F241C0C460041AC2A /* MembersListVC+TableViewDelegate.swift */; };
+		F7ADA3CC247703F10057BEAD /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ADA3CB247703F10057BEAD /* BaseCollectionViewCell.swift */; };
+		F7ADA3CE247704070057BEAD /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ADA3CD247704070057BEAD /* PhotoCollectionViewCell.swift */; };
+		F7ADA3D22477082A0057BEAD /* BaseCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ADA3D12477082A0057BEAD /* BaseCollectionViewDataSource.swift */; };
+		F7ADA3D4247708DE0057BEAD /* PhotoCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ADA3D3247708DE0057BEAD /* PhotoCollectionDataSource.swift */; };
+		F7ADA3D6247709EB0057BEAD /* MakeReportMapViewController+PhotoCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ADA3D5247709EB0057BEAD /* MakeReportMapViewController+PhotoCollectionDataSource.swift */; };
+		F7ADA3DA2477246C0057BEAD /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ADA3D92477246C0057BEAD /* Photo.swift */; };
 		F7B1AC3223FB111000DB2B21 /* EnterAddressManuallyVC+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B1AC3123FB111000DB2B21 /* EnterAddressManuallyVC+TableViewDelegate.swift */; };
 		F7B1AC3423FB148F00DB2B21 /* FillFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B1AC3323FB148F00DB2B21 /* FillFieldViewController.swift */; };
 		F7B1AC3623FB204900DB2B21 /* EnterAddressManuallyVC+TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B1AC3523FB204900DB2B21 /* EnterAddressManuallyVC+TableViewDataSource.swift */; };
@@ -183,6 +188,8 @@
 		F7CB47A524089B240087FC22 /* MembersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CB47A424089B240087FC22 /* MembersManager.swift */; };
 		F7CB47A724089D200087FC22 /* MembersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CB47A624089D200087FC22 /* MembersDataSource.swift */; };
 		F7CB47A92408A7620087FC22 /* AddressesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CB47A82408A7620087FC22 /* AddressesDataSource.swift */; };
+		F7CF6CC4247824D500ABD4B8 /* PhotoCollectionDataSource+PhotoCollectionCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF6CC3247824D500ABD4B8 /* PhotoCollectionDataSource+PhotoCollectionCellDelegate.swift */; };
+		F7CF6CC6247826F800ABD4B8 /* PhotoCollectionDataSource+PhotoCollectionControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF6CC5247826F800ABD4B8 /* PhotoCollectionDataSource+PhotoCollectionControllerDelegate.swift */; };
 		F7E63AB8241FCCD50017B13C /* MemberReportsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E63AB7241FCCD50017B13C /* MemberReportsTableViewCell.swift */; };
 		F7E63ABC242020940017B13C /* MemberReportsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E63ABB242020940017B13C /* MemberReportsDataSource.swift */; };
 		F7E63AC024203CB90017B13C /* MembersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E63ABF24203CB90017B13C /* MembersTableViewCell.swift */; };
@@ -300,7 +307,6 @@
 		F777369223FD6EED002B8746 /* ProfileVC+TMBarDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileVC+TMBarDataSource.swift"; sourceTree = "<group>"; };
 		F7779307242810D900389A0D /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
 		F777930D2428127F00389A0D /* SelectedAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedAddressView.swift; sourceTree = "<group>"; };
-		F77EF21723A7B36700938A3B /* SegmentedControl+MaterialPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SegmentedControl+MaterialPreset.swift"; sourceTree = "<group>"; };
 		F785332D24675B2E00C584B7 /* SubAboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubAboutViewController.swift; sourceTree = "<group>"; };
 		F785333124676D7200C584B7 /* SubAboutViewController+TextViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SubAboutViewController+TextViewDelegate.swift"; sourceTree = "<group>"; };
 		F78533332467841700C584B7 /* VotingCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingCellView.swift; sourceTree = "<group>"; };
@@ -361,6 +367,12 @@
 		F7AD212B241C0B830041AC2A /* BaseMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMemberViewController.swift; sourceTree = "<group>"; };
 		F7AD212D241C0BDA0041AC2A /* MemberDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailViewController.swift; sourceTree = "<group>"; };
 		F7AD212F241C0C460041AC2A /* MembersListVC+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MembersListVC+TableViewDelegate.swift"; sourceTree = "<group>"; };
+		F7ADA3CB247703F10057BEAD /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		F7ADA3CD247704070057BEAD /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		F7ADA3D12477082A0057BEAD /* BaseCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		F7ADA3D3247708DE0057BEAD /* PhotoCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionDataSource.swift; sourceTree = "<group>"; };
+		F7ADA3D5247709EB0057BEAD /* MakeReportMapViewController+PhotoCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MakeReportMapViewController+PhotoCollectionDataSource.swift"; sourceTree = "<group>"; };
+		F7ADA3D92477246C0057BEAD /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		F7B1AC3123FB111000DB2B21 /* EnterAddressManuallyVC+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnterAddressManuallyVC+TableViewDelegate.swift"; sourceTree = "<group>"; };
 		F7B1AC3323FB148F00DB2B21 /* FillFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillFieldViewController.swift; sourceTree = "<group>"; };
 		F7B1AC3523FB204900DB2B21 /* EnterAddressManuallyVC+TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnterAddressManuallyVC+TableViewDataSource.swift"; sourceTree = "<group>"; };
@@ -371,6 +383,8 @@
 		F7CB47A424089B240087FC22 /* MembersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersManager.swift; sourceTree = "<group>"; };
 		F7CB47A624089D200087FC22 /* MembersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersDataSource.swift; sourceTree = "<group>"; };
 		F7CB47A82408A7620087FC22 /* AddressesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressesDataSource.swift; sourceTree = "<group>"; };
+		F7CF6CC3247824D500ABD4B8 /* PhotoCollectionDataSource+PhotoCollectionCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoCollectionDataSource+PhotoCollectionCellDelegate.swift"; sourceTree = "<group>"; };
+		F7CF6CC5247826F800ABD4B8 /* PhotoCollectionDataSource+PhotoCollectionControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoCollectionDataSource+PhotoCollectionControllerDelegate.swift"; sourceTree = "<group>"; };
 		F7E63AB7241FCCD50017B13C /* MemberReportsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberReportsTableViewCell.swift; sourceTree = "<group>"; };
 		F7E63ABB242020940017B13C /* MemberReportsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberReportsDataSource.swift; sourceTree = "<group>"; };
 		F7E63ABF24203CB90017B13C /* MembersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersTableViewCell.swift; sourceTree = "<group>"; };
@@ -430,15 +444,17 @@
 			isa = PBXGroup;
 			children = (
 				F716108223ED89E700F89D26 /* AddressesTableViewCell.swift */,
+				F7ADA3CB247703F10057BEAD /* BaseCollectionViewCell.swift */,
 				C5236023239672CD002D9783 /* BaseTableViewCell.swift */,
 				F7A222032400536200C11353 /* CategoriesTableViewCell.swift */,
+				F7313EBF24322FDA005857EE /* CommentTableViewCell.swift */,
 				F7E63AB7241FCCD50017B13C /* MemberReportsTableViewCell.swift */,
 				F7E63ABF24203CB90017B13C /* MembersTableViewCell.swift */,
+				F7ADA3CD247704070057BEAD /* PhotoCollectionViewCell.swift */,
 				F7980C652432C4D4000019D7 /* ProfileReportsTableViewCell.swift */,
-				F7313EBF24322FDA005857EE /* CommentTableViewCell.swift */,
 				C523602523967420002D9783 /* ReportsListTableViewCell.swift */,
-				F792BE572468D015008B17ED /* VoteTableViewCell.swift */,
 				F7A22212240334AD00C11353 /* SubCategoriesTableViewCell.swift */,
+				F792BE572468D015008B17ED /* VoteTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -626,7 +642,10 @@
 				F722EB3D239D491B00718397 /* MakeReportMapVС+TextViewDelegate.swift */,
 				F7A78119239E9B7700EE2000 /* MakeReportMapVС+UIScrollviewDelegate.swift */,
 				F72E4C8D2406F79E001EF798 /* MakeReportMapVС+UserLocationObjectListener.swift */,
+				F7ADA3D5247709EB0057BEAD /* MakeReportMapViewController+PhotoCollectionDataSource.swift */,
 				F7AD212F241C0C460041AC2A /* MembersListVC+TableViewDelegate.swift */,
+				F7CF6CC3247824D500ABD4B8 /* PhotoCollectionDataSource+PhotoCollectionCellDelegate.swift */,
+				F7CF6CC5247826F800ABD4B8 /* PhotoCollectionDataSource+PhotoCollectionControllerDelegate.swift */,
 				F777369223FD6EED002B8746 /* ProfileVC+TMBarDataSource.swift */,
 				F7A3EFEE242D7C9D0002C8EB /* ReportDetailsVC+MapClusterListener.swift */,
 				F78C176124392A9C000200CD /* ReportDetailsVC+ReportLocationObjectListener.swift */,
@@ -634,7 +653,6 @@
 				F7F67E932468404300202BBF /* ReportsListContainerViewController+TMBarDataSource.swift */,
 				F792BE4F2468C529008B17ED /* ReportsListViewController+HideTabBar.swift */,
 				F76AE656242E5DBC00C27F4B /* ReportsMapVC+LocationManager.swift */,
-				F77EF21723A7B36700938A3B /* SegmentedControl+MaterialPreset.swift */,
 				F7A222222403D60E00C11353 /* ShowAddressOnMapVC+LocationManagerDelegate.swift */,
 				F72E4C852406D549001EF798 /* ShowAddressOnMapVC+MapCameraListener.swift */,
 				C593177C2397A4D90043F68C /* String+DateParse.swift */,
@@ -694,6 +712,7 @@
 				F7A2220524005C8600C11353 /* Category.swift */,
 				F7CB47A2240899690087FC22 /* Member.swift */,
 				F7980C672432CBCE000019D7 /* Comment.swift */,
+				F7ADA3D92477246C0057BEAD /* Photo.swift */,
 				F792BE512468CD5F008B17ED /* Vote.swift */,
 				C523601B23965D5C002D9783 /* Report.swift */,
 				F7A2220E2403310E00C11353 /* SubCategory.swift */,
@@ -705,15 +724,17 @@
 			isa = PBXGroup;
 			children = (
 				F7CB47A82408A7620087FC22 /* AddressesDataSource.swift */,
+				F7ADA3D12477082A0057BEAD /* BaseCollectionViewDataSource.swift */,
 				C523601D23966D16002D9783 /* BaseDataSource.swift */,
 				F7A222012400524B00C11353 /* CategoriesDataSource.swift */,
+				F7313EC3243234EE005857EE /* CommentsDataSource.swift */,
 				F7E63ABB242020940017B13C /* MemberReportsDataSource.swift */,
-				F792BE552468CED0008B17ED /* VotesDataSource.swift */,
 				F7CB47A624089D200087FC22 /* MembersDataSource.swift */,
 				F7980C692432CCA8000019D7 /* NotificationsDataSource.swift */,
-				F7313EC3243234EE005857EE /* CommentsDataSource.swift */,
 				C52360202396700F002D9783 /* ReportsListDataSource.swift */,
 				F7A2220C2403307A00C11353 /* SubCategoriesDataSource.swift */,
+				F792BE552468CED0008B17ED /* VotesDataSource.swift */,
+				F7ADA3D3247708DE0057BEAD /* PhotoCollectionDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -755,9 +776,9 @@
 			isa = PBXGroup;
 			children = (
 				F7779307242810D900389A0D /* AddressView.swift */,
+				F728C05024688994006BBE13 /* ApplicationsView.swift */,
 				F7A3EFE4242D65330002C8EB /* CommentView.swift */,
 				F7980C5D2432B246000019D7 /* NotificationView.swift */,
-				F728C05024688994006BBE13 /* ApplicationsView.swift */,
 				F75575A5242D2946003F9532 /* ReportDetailsView.swift */,
 				C523600A2396419C002D9783 /* ReportView.swift */,
 				F777930D2428127F00389A0D /* SelectedAddressView.swift */,
@@ -771,9 +792,9 @@
 			isa = PBXGroup;
 			children = (
 				F7A3EFE8242D65A60002C8EB /* AddressView.xib */,
+				F728C052246889A8006BBE13 /* ApplicationsView.xib */,
 				F7A3EFE6242D655C0002C8EB /* CommentView.xib */,
 				F7980C5F2432B25E000019D7 /* NotificationView.xib */,
-				F728C052246889A8006BBE13 /* ApplicationsView.xib */,
 				F75575A3242D28A4003F9532 /* ReportDetailsView.xib */,
 				C523600C239641D9002D9783 /* ReportView.xib */,
 				F7A3EFEA242D65AE0002C8EB /* SelectedAddressView.xib */,
@@ -833,7 +854,7 @@
 				C52CE6432395440F004760EF /* Sources */,
 				C52CE6442395440F004760EF /* Frameworks */,
 				C52CE6452395440F004760EF /* Resources */,
-				4DF279BD5A1E73B169656A1C /* [CP] Copy Pods Resources */,
+				ABB75BBB54AF5EF1F3F7D3B3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -915,7 +936,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4DF279BD5A1E73B169656A1C /* [CP] Copy Pods Resources */ = {
+		ABB75BBB54AF5EF1F3F7D3B3 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -980,6 +1001,7 @@
 				F7A2221F2403427F00C11353 /* BaseFillFieldViewController.swift in Sources */,
 				F7A221E7240013DB00C11353 /* SubCategoriesViewController.swift in Sources */,
 				F7A2221724033FF800C11353 /* BaseCategoriesViewController.swift in Sources */,
+				F7CF6CC4247824D500ABD4B8 /* PhotoCollectionDataSource+PhotoCollectionCellDelegate.swift in Sources */,
 				C52CE675239548D7004760EF /* BaseProfileViewController.swift in Sources */,
 				F7AD2130241C0C460041AC2A /* MembersListVC+TableViewDelegate.swift in Sources */,
 				C5236012239644FD002D9783 /* IBDesignableView.swift in Sources */,
@@ -997,6 +1019,7 @@
 				F728C05124688994006BBE13 /* ApplicationsView.swift in Sources */,
 				F756534524267DBC002C4B81 /* Keys.swift in Sources */,
 				F7980C5E2432B246000019D7 /* NotificationView.swift in Sources */,
+				F7ADA3D22477082A0057BEAD /* BaseCollectionViewDataSource.swift in Sources */,
 				F7980C682432CBCE000019D7 /* Comment.swift in Sources */,
 				C52CE68F23955740004760EF /* BaseViewController+TextFieldNavigation.swift in Sources */,
 				F7A2221D240341ED00C11353 /* BaseEnterAddressManuallyViewController.swift in Sources */,
@@ -1014,8 +1037,11 @@
 				F777930E2428127F00389A0D /* SelectedAddressView.swift in Sources */,
 				F74D2B5F24114A0500F138BB /* BaseVotingViewController.swift in Sources */,
 				F7A2220F2403310E00C11353 /* SubCategory.swift in Sources */,
+				F7ADA3CE247704070057BEAD /* PhotoCollectionViewCell.swift in Sources */,
 				F7A3EFEF242D7C9D0002C8EB /* ReportDetailsVC+MapClusterListener.swift in Sources */,
 				F7B1AC3623FB204900DB2B21 /* EnterAddressManuallyVC+TableViewDataSource.swift in Sources */,
+				F7ADA3D6247709EB0057BEAD /* MakeReportMapViewController+PhotoCollectionDataSource.swift in Sources */,
+				F7ADA3CC247703F10057BEAD /* BaseCollectionViewCell.swift in Sources */,
 				F7A221E8240013DB00C11353 /* CategoriesViewController.swift in Sources */,
 				F72E4C8A2406F388001EF798 /* MakeReportMapVС+MapCameraListener.swift in Sources */,
 				F7A2221B2403419100C11353 /* BaseEnterAddressViewController.swift in Sources */,
@@ -1027,6 +1053,7 @@
 				F785332E24675B2E00C584B7 /* SubAboutViewController.swift in Sources */,
 				C52CE68323954B01004760EF /* MembersListViewController.swift in Sources */,
 				C52CE679239548F0004760EF /* BaseMembersListViewController.swift in Sources */,
+				F7CF6CC6247826F800ABD4B8 /* PhotoCollectionDataSource+PhotoCollectionControllerDelegate.swift in Sources */,
 				F76A98AC24114D59009097C8 /* VotingViewController+TMBarDataSource.swift in Sources */,
 				F7E63ABC242020940017B13C /* MemberReportsDataSource.swift in Sources */,
 				F7313EC024322FDA005857EE /* CommentTableViewCell.swift in Sources */,
@@ -1056,11 +1083,11 @@
 				F72E4C92240700B9001EF798 /* AddressesManager.swift in Sources */,
 				F7F67E9224683F0F00202BBF /* TabmanViewController+SetupTabBar.swift in Sources */,
 				F7B1AC3423FB148F00DB2B21 /* FillFieldViewController.swift in Sources */,
-				F77EF21823A7B36700938A3B /* SegmentedControl+MaterialPreset.swift in Sources */,
 				F7980C5A243290EF000019D7 /* UserInformationView.swift in Sources */,
 				C52CE69123955EE2004760EF /* BaseNavigationController.swift in Sources */,
 				C523602C239687E6002D9783 /* ReportDetailsViewController.swift in Sources */,
 				F792BE522468CD5F008B17ED /* Vote.swift in Sources */,
+				F7ADA3D4247708DE0057BEAD /* PhotoCollectionDataSource.swift in Sources */,
 				C52CE64B2395440F004760EF /* AppDelegate.swift in Sources */,
 				F7A2220024004D6200C11353 /* SubCategoriesVC+SearchBarDelegate.swift in Sources */,
 				C52CE68D23955331004760EF /* UITabBarController+Animation.swift in Sources */,
@@ -1099,6 +1126,7 @@
 				F7980C6A2432CCA8000019D7 /* NotificationsDataSource.swift in Sources */,
 				F7A222192403413300C11353 /* BaseSubCategoryViewController.swift in Sources */,
 				C523600823963C24002D9783 /* UIViewWithXib.swift in Sources */,
+				F7ADA3DA2477246C0057BEAD /* Photo.swift in Sources */,
 				F7CB4799240872510087FC22 /* MakeReportMapVС+ImagePicker.swift in Sources */,
 				C5236024239672CD002D9783 /* BaseTableViewCell.swift in Sources */,
 				F7CB47A724089D200087FC22 /* MembersDataSource.swift in Sources */,

@@ -51,6 +51,7 @@ class AddressesDataSource: BaseDataSource {
         
         cell.data = data![indexPath.row]
         cell.selectionStyle = .none
+        
         return cell
     }
 }
