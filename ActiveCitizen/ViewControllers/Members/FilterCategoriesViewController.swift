@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FilterCategoriesViewController: BaseFilterCategoriesViewController {
+class FilterCategoriesViewController: BaseMembersViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -22,6 +22,12 @@ class FilterCategoriesViewController: BaseFilterCategoriesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        DispatchQueue.once {
+            defaultValues.removeObject(forKey: Keys.selectedFilterCategory)
+        }
+        
+        setupNavigationBarShadow(activate: true)
+        setupCustomBackButton(with: "Фильтр", icon: "back")
     }
     
 }

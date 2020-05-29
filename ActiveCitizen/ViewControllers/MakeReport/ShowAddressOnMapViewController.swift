@@ -11,7 +11,7 @@ import YandexMapKit
 import YandexMapKitSearch
 import CoreLocation
 
-class ShowAddressOnMapViewController: BaseShowAddressOnMapViewController {
+class ShowAddressOnMapViewController: BaseMakeReportViewController {
 
     @IBOutlet weak var mapView: YMKMapView!
     @IBOutlet weak var cityAddress: UILabel!
@@ -42,6 +42,8 @@ class ShowAddressOnMapViewController: BaseShowAddressOnMapViewController {
         
         setupMap()
         checkLocationServices()
+        setupCustomBackButton(with: "", icon: "baseline_clear_black_18pt")
+        setupNavigationBarShadow(activate: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,6 +57,4 @@ class ShowAddressOnMapViewController: BaseShowAddressOnMapViewController {
         
         makeNavigationBarVisible()
     }
-    
-    
 }

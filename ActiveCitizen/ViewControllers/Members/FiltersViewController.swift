@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FiltersViewController: BaseFiltersViewController {
+class FiltersViewController: BaseMembersViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -17,11 +17,16 @@ class FiltersViewController: BaseFiltersViewController {
     
     var completionHandler: ((String?) -> Void)?
     
-    var defaultValues = UserDefaults.standard
+    var defaultValues: UserDefaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        DispatchQueue.once {
+            defaultValues.removeObject(forKey: Keys.selectedFilter)
+        }
+        
+        setupNavigationBarShadow(activate: true)
         if let title = navigationBarTitle {
             setupCustomBackButton(with: title, icon: "back")
         }

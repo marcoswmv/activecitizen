@@ -12,5 +12,8 @@ class MoreViewController: BaseMoreViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupNavigationBarTitle(with: "Ещё")
+        setupNavigationBarShadow(activate: true)
     }
 }

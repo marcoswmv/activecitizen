@@ -10,8 +10,7 @@ import UIKit
 
 extension PhotoCollectionDataSource: PhotoCollectionControllerDelegate {
     
-    func addPhoto(with image: UIImage,
-                  at viewController: MakeReportMapViewController) {
+    func addPhoto(with image: UIImage) {
         
         data.append(Photo(image: image))
         collectionView.reloadData()

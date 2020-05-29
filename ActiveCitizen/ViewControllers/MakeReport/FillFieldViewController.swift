@@ -9,7 +9,7 @@
 import UIKit
 import MaterialComponents
 
-class FillFieldViewController: BaseFillFieldViewController {
+class FillFieldViewController: BaseMakeReportViewController {
     
     @IBOutlet weak var textFieldToFill: MDCTextField!
     
@@ -26,6 +26,10 @@ class FillFieldViewController: BaseFillFieldViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupNavigationBarShadow(activate: true)
+        self.tabBarController?.hidesBottomBarWhenPushed = true
+        self.hideTabBar = true
 
         setupCustomBackButton(with: navigationBarTitle!, icon: "back")
         setupTextField()

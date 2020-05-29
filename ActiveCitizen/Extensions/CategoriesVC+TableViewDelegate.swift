@@ -22,6 +22,9 @@ extension CategoriesViewController: UITableViewDelegate {
         chooseSubCategoryViewController.completionHandler = { subcategory in
             self.completionHandler!(categoryIcon!, subcategory)
         }
+        
+        defaultValues.set(indexPath.row, forKey: Keys.selectedCategory)
+        
         navigationController?.pushViewController(chooseSubCategoryViewController, animated: true)
     }
 }

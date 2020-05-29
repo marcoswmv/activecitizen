@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MemberDetailViewController: BaseMemberViewController {
+class MemberDetailViewController: BaseMembersViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -40,6 +40,18 @@ class MemberDetailViewController: BaseMemberViewController {
         setupUIElements()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        setupNavigationBarShadow(activate: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        setupNavigationBarShadow(activate: true)
+    }
+    
     func setupDataSource(with filter: String? = nil) {
         dataSource = MemberReportsDataSource(tableView: self.tableView)
         dataSource?.onLoading = { (isLoading) in
@@ -51,6 +63,8 @@ class MemberDetailViewController: BaseMemberViewController {
     }
     
     func setupUIElements() {
+        setupCustomBackButton(with: "Участник", icon: "back")
+        
         userPhoto.image = member?.photo
         userName.text = member?.name
         solvedProblems.text = member?.solvedProblems?.description

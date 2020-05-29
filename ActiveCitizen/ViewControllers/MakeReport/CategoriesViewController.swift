@@ -8,13 +8,15 @@
 
 import UIKit
 
-class CategoriesViewController: BaseCategoriesViewController {
+class CategoriesViewController: BaseMakeReportViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
     var completionHandler: ((UIImage, String) -> Void)?
     var dataSource: CategoriesDataSource?
+    
+    var defaultValues: UserDefaults = UserDefaults.standard
 //    var timer: Timer?
     
     override func viewDidLoad() {
@@ -22,6 +24,8 @@ class CategoriesViewController: BaseCategoriesViewController {
         
         setupDataSource()
         keyboardManagment = true
+        setupCustomBackButton(with: "Категории", icon: "back")
+        setupNavigationBarShadow(activate: true)
     }
     
     func setupDataSource() {

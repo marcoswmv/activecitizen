@@ -36,4 +36,5 @@ class BaseDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         fatalError("Not implemented")
     }
+    
 }

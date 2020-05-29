@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class LoginViewController: BaseLoginViewController {
+class LoginViewController: BaseProfileViewController {
     
     let webView = WKWebView()
 
@@ -19,6 +19,9 @@ class LoginViewController: BaseLoginViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupNavigationBarTitle(with: "Вход")
+        setupNavigationBarShadow(activate: true)
 
 //        if !authenticationRequired {
 //            let profileViewController = ProfileViewController.instantiate() as! ProfileViewController

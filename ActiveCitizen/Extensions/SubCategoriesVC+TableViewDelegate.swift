@@ -14,6 +14,8 @@ extension SubCategoriesViewController: UITableViewDelegate {
         let categoryName = dataSource?.data![indexPath.row].subCategoryName
         
         completionHandler!(categoryName!)
+        defaultValues.set(indexPath.row, forKey: Keys.selectedSubCategory)
+        
         navigationController?.popToRootViewController(animated: true)
     }
 }

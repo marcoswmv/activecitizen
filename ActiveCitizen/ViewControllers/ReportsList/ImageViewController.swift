@@ -9,8 +9,7 @@
 import UIKit
 import Auk
 
-class ImageViewController: BaseImageViewController, UIScrollViewDelegate {
-    
+class ImageViewController: BaseReportsListViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pagination: UILabel!
@@ -23,6 +22,9 @@ class ImageViewController: BaseImageViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupNavigationBarShadow(activate: false)
+        setupCustomBackButton(with: "", icon: "baseline_clear_white_18pt")
+        
         setupImageViewer()
     }
     
@@ -52,9 +54,10 @@ class ImageViewController: BaseImageViewController, UIScrollViewDelegate {
                 imagesManager.getImage(with: imageId) { (response, error) in
 
                     if error != nil {
-//                        Show an alert to the user
-                        
-                        print("Error: ", error?.errorDescription as Any)
+                        Alert.showAlert(on: self,
+                                        style: .alert,
+                                        title: String(describing: error?.errorCode),
+                                        message: error?.errorDescription)
                     } else {
                         if let image = response?.image {
                             

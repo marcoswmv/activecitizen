@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EnterAddressManuallyViewController: BaseEnterAddressManuallyViewController {
+class EnterAddressManuallyViewController: BaseMakeReportViewController {
 
     @IBOutlet weak var tableView: UITableView!
     var district: String?
@@ -31,5 +31,8 @@ class EnterAddressManuallyViewController: BaseEnterAddressManuallyViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupCustomBackButton(with: "Укажите адрес", icon: "back")
+        setupNavigationBarShadow(activate: true)
+        self.hideTabBar = true
     }
 }

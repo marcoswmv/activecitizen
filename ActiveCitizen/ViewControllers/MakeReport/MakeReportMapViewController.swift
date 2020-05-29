@@ -11,7 +11,7 @@ import YandexMapKit
 import CoreLocation
 
 protocol PhotoCollectionControllerDelegate {
-    func addPhoto(with image: UIImage, at viewController: MakeReportMapViewController)
+    func addPhoto(with image: UIImage)
 }
 
 class MakeReportMapViewController: BaseMakeReportViewController {
@@ -110,6 +110,9 @@ class MakeReportMapViewController: BaseMakeReportViewController {
     }
     
     func setupUIElementsInContentView() {
+        setupNavigationBarTitle(with: "Сообщить")
+        setupNavigationBarShadow(activate: true)
+        
         self.hideKeyboardWhenTappedAround()
         maxLength.text = "0 / 500"
         reportDescription.text = "Текст сообщения"

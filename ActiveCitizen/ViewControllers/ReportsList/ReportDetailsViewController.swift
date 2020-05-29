@@ -10,7 +10,7 @@ import UIKit
 import YandexMapKit
 import Auk
 
-class ReportDetailsViewController: BaseReportDetailsViewController, UITableViewDelegate {
+class ReportDetailsViewController: BaseReportsListViewController, UITableViewDelegate {
     
     @IBOutlet weak var mapView: YMKMapView!
     @IBOutlet weak var reportDetailsView: ReportDetailsView?
@@ -38,6 +38,9 @@ class ReportDetailsViewController: BaseReportDetailsViewController, UITableViewD
         setupMapView()
         setupCommentsDataSource()
         setReportDetails()
+        
+        setupCustomBackButton(with: "Обрашение", icon: "back")
+        setupNavigationBarShadow(activate: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -47,12 +47,12 @@ extension MakeReportMapViewController: UIImagePickerControllerDelegate, UINaviga
         if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             
             let image = originalImage.withRenderingMode(.alwaysOriginal)
-            photoCollectionControllerDelegate?.addPhoto(with: image, at: self)
+            photoCollectionControllerDelegate?.addPhoto(with: image)
             
         } else if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
             
             let image = editedImage.withRenderingMode(.alwaysOriginal)
-            photoCollectionControllerDelegate?.addPhoto(with: image, at: self)
+            photoCollectionControllerDelegate?.addPhoto(with: image)
         }
         dismiss(animated: true, completion: nil)
     }

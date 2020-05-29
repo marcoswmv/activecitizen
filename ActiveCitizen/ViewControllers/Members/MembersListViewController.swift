@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MembersListViewController: BaseMembersListViewController {
+class MembersListViewController: BaseMembersViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
@@ -19,6 +19,7 @@ class MembersListViewController: BaseMembersListViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupNavigationBarTitle(with: "Участники")
         setupDataSource()
         self.hideKeyboardWhenTappedAround()
         keyboardManagment = true
@@ -28,6 +29,12 @@ class MembersListViewController: BaseMembersListViewController {
         } else {
             // Fallback on earlier versions
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        setupNavigationBarShadow(activate: true)
     }
     
     func setupDataSource() {

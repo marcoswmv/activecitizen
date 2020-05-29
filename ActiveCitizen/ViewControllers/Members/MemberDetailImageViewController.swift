@@ -9,7 +9,7 @@
 import UIKit
 import Auk
 
-class MemberDetailImageViewController: BaseMemberDetailImageViewController, UIScrollViewDelegate {
+class MemberDetailImageViewController: BaseMembersViewController, UIScrollViewDelegate {
     
     
     @IBOutlet weak var scrollView: UIScrollView!
@@ -23,8 +23,10 @@ class MemberDetailImageViewController: BaseMemberDetailImageViewController, UISc
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupImageViewer()
+        setupNavigationBarShadow(activate: false)
+        setupCustomBackButton(with: "", icon: "baseline_clear_white_18pt")
         
+        setupImageViewer()
     }
     
     override func viewWillAppear(_ animated: Bool) {

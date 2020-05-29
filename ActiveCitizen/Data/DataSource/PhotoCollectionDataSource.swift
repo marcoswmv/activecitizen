@@ -41,6 +41,9 @@ class PhotoCollectionDataSource: BaseCollectionViewDataSource {
 //    MARK: - Collection Delegate
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Item selected!")
+
+        let imageSliderViewController = ImageSliderViewController.instantiate() as! ImageSliderViewController
+        imageSliderViewController.photos = data
+        UIApplication.topViewController()?.navigationController?.pushViewController(imageSliderViewController, animated: true)
     }
 }

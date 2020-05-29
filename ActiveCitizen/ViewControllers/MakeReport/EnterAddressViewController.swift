@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 
 
-class EnterAddressViewController: BaseEnterAddressViewController {
+class EnterAddressViewController: BaseMakeReportViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -60,6 +60,9 @@ class EnterAddressViewController: BaseEnterAddressViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupCustomBackButton(with: "Уточните адрес", icon: "back")
+        setupNavigationBarShadow(activate: true)
         
         if let location = self.location {
             let coordinates = "\(location.coordinate.longitude),\(location.coordinate.latitude)"

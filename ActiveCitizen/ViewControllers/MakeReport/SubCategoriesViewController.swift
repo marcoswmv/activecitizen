@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SubCategoriesViewController: BaseSubCategoryViewController {
+class SubCategoriesViewController: BaseMakeReportViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -16,6 +16,8 @@ class SubCategoriesViewController: BaseSubCategoryViewController {
     var dataSource: SubCategoriesDataSource?
     var completionHandler: ((String) -> Void)?
     var categoryID: Int?
+    var defaultValues: UserDefaults = UserDefaults.standard
+    
 //    var timer: Timer?
     
     override func viewDidLoad() {
@@ -23,6 +25,8 @@ class SubCategoriesViewController: BaseSubCategoryViewController {
         
         setupDataSource()
         keyboardManagment = true
+        setupCustomBackButton(with: "Подкатегории", icon: "back")
+        setupNavigationBarShadow(activate: true)
     }
     
     func setupDataSource() {

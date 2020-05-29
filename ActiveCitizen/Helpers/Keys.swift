@@ -12,4 +12,6 @@ struct Keys {
     static var selectedFilter = "selectedFilter"
     static var selectedFilterCategory = "selectedFilterCategory"
     static var selectedAddress = "selectedAddress"
+    static var selectedCategory = "selectedCategory"
+    static var selectedSubCategory = "selectedSubCategory"
 }
