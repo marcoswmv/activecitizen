@@ -18,7 +18,7 @@ class SubCategoriesViewController: BaseMakeReportViewController {
     var categoryID: Int?
     var defaultValues: UserDefaults = UserDefaults.standard
     
-//    var timer: Timer?
+    var timer: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()

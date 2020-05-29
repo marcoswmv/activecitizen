@@ -13,16 +13,9 @@ class CategoriesDataSource: BaseDataSource {
     private let manager: CategoriesManager = CategoriesManager()
     private(set) var data: [Category]?
     
-    var categories: [[String: Any]] = [[ "id": 1101, "name": "Благоустройство дворовой территории"],
-                                       [ "id": 1102, "name": "Автомобильные дороги"],
-                                       [ "id": 1103, "name": "Водоснабжение в многоквартирном доме"],
-                                       [ "id": 1104, "name": "Газ и топливо"],
-                                       [ "id": 1105, "name": "Многоквартирные дома"],
-                                       [ "id": 1106, "name": "Общественный транспорт"],
-                                       [ "id": 1107, "name": "Плата за ЖКУ и работа ЕИРЦ"],
-                                       [ "id": 1108, "name": "Народный инспектор"]]
-    
-    var defaultValues: UserDefaults = UserDefaults.standard
+    private var filteredData: [Category]?
+    private var searching: Bool = false
+    private var defaultValues: UserDefaults = UserDefaults.standard
     
     override func setup() {
         DispatchQueue.once {
@@ -32,6 +25,15 @@ class CategoriesDataSource: BaseDataSource {
     }
     
     override func reload() {
+        
+        let categories: [[String: Any]] = [[ "id": 1101, "name": "Благоустройство дворовой территории"],
+                                           [ "id": 1102, "name": "Автомобильные дороги"],
+                                           [ "id": 1103, "name": "Водоснабжение в многоквартирном доме"],
+                                           [ "id": 1104, "name": "Газ и топливо"],
+                                           [ "id": 1105, "name": "Многоквартирные дома"],
+                                           [ "id": 1106, "name": "Общественный транспорт"],
+                                           [ "id": 1107, "name": "Плата за ЖКУ и работа ЕИРЦ"],
+                                           [ "id": 1108, "name": "Народный инспектор"]]
         
         var hardCodedresult: [Category] = [Category]()
         for category in categories {
@@ -56,21 +58,30 @@ class CategoriesDataSource: BaseDataSource {
     }
     
     func startQuery(with text: String) {
-        data = data?.filter({ $0.categoryName!.prefix(text.count).lowercased() == text.lowercased() })
+        searching = !text.isEmpty ? true : false
+        filteredData = data?.filter({ $0.categoryName!.prefix(text.count).lowercased() == text.lowercased() })
         tableView.reloadData()
     }
     
     // MARK: - DataSource
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data?.count ?? 0
+        if searching {
+            return filteredData?.count ?? 0
+        } else {
+            return data?.count ?? 0
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = self.tableView.dequeueReusableCell(withIdentifier: CategoriesTableViewCell.identifier)! as! CategoriesTableViewCell
         
-        cell.data = data![indexPath.row]
+        if searching {
+            cell.data = filteredData![indexPath.row]
+        } else {
+            cell.data = data![indexPath.row]
+        }
         
         if let selectedRow = defaultValues.value(forKey: Keys.selectedCategory) as? Int {
             let selectedIndexPath = IndexPath(row: selectedRow, section: indexPath.section)

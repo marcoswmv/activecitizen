@@ -48,11 +48,6 @@ extension CategoriesViewController: UISearchBarDelegate {
     func search(query: String?)  {
         print(query ?? "none")
         guard let searchText = query else { return }
-        
-        if searchText.isEmpty {
-            dataSource?.reload()
-        } else {
-            dataSource?.startQuery(with: searchText)
-        }
+        dataSource?.startQuery(with: searchText)
     }
 }

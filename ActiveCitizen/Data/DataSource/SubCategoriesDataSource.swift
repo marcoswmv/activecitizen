@@ -13,8 +13,10 @@ class SubCategoriesDataSource: BaseDataSource {
     private let manager = SubCategoriesManager()
     private(set) var data: [SubCategory]?
     
+    private var filteredData: [SubCategory]?
+    private var searching: Bool = false
+    private var defaultValues: UserDefaults = UserDefaults.standard
     var categoryID: Int?
-    var defaultValues: UserDefaults = UserDefaults.standard
     
     override func setup() {
         DispatchQueue.once {
@@ -90,17 +92,31 @@ class SubCategoriesDataSource: BaseDataSource {
 //        })
     }
     
+    func startQuery(with text: String) {
+        searching = !text.isEmpty ? true : false
+        filteredData = data?.filter({ $0.subCategoryName!.prefix(text.count).lowercased() == text.lowercased() })
+        tableView.reloadData()
+    }
+    
     // MARK: - DataSource
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data?.count ?? 0
+        if searching {
+            return filteredData?.count ?? 0
+        } else {
+            return data?.count ?? 0
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = self.tableView.dequeueReusableCell(withIdentifier: SubCategoriesTableViewCell.identifier)! as! SubCategoriesTableViewCell
         
-        cell.data = data![indexPath.row]
+        if searching {
+            cell.data = filteredData![indexPath.row]
+        } else {
+            cell.data = data![indexPath.row]
+        }
         
         if let selectedRow = defaultValues.value(forKey: Keys.selectedSubCategory) as? Int {
             let selectedIndexPath = IndexPath(row: selectedRow, section: indexPath.section)
