@@ -13,26 +13,29 @@ class CategoriesDataSource: BaseDataSource {
     private let manager: CategoriesManager = CategoriesManager()
     private(set) var data: [Category]?
     
+    var categories: [[String: Any]] = [[ "id": 1101, "name": "Благоустройство дворовой территории"],
+                                       [ "id": 1102, "name": "Автомобильные дороги"],
+                                       [ "id": 1103, "name": "Водоснабжение в многоквартирном доме"],
+                                       [ "id": 1104, "name": "Газ и топливо"],
+                                       [ "id": 1105, "name": "Многоквартирные дома"],
+                                       [ "id": 1106, "name": "Общественный транспорт"],
+                                       [ "id": 1107, "name": "Плата за ЖКУ и работа ЕИРЦ"],
+                                       [ "id": 1108, "name": "Народный инспектор"]]
+    
     var defaultValues: UserDefaults = UserDefaults.standard
     
     override func setup() {
+        DispatchQueue.once {
+            defaultValues.removeObject(forKey: Keys.selectedCategory)
+        }
         super.setup()
     }
     
     override func reload() {
         
-        let users: [[String: Any]] = [[ "id": 1101, "name": "Благоустройство дворовой территории"],
-                                      [ "id": 1102, "name": "Автомобильные дороги"],
-                                      [ "id": 1103, "name": "Водоснабжение в многоквартирном доме"],
-                                      [ "id": 1104, "name": "Газ и топливо"],
-                                      [ "id": 1105, "name": "Многоквартирные дома"],
-                                      [ "id": 1106, "name": "Общественный транспорт"],
-                                      [ "id": 1107, "name": "Плата за ЖКУ и работа ЕИРЦ"],
-                                      [ "id": 1108, "name": "Народный инспектор"]]
         var hardCodedresult: [Category] = [Category]()
-
-        for user in users {
-            hardCodedresult.append(Category(dictionary: user))
+        for category in categories {
+            hardCodedresult.append(Category(dictionary: category))
         }
 
         data = hardCodedresult
@@ -50,6 +53,11 @@ class CategoriesDataSource: BaseDataSource {
 //            self.data = result
 //            self.tableView.reloadData()
 //        }
+    }
+    
+    func startQuery(with text: String) {
+        data = data?.filter({ $0.categoryName!.prefix(text.count).lowercased() == text.lowercased() })
+        tableView.reloadData()
     }
     
     // MARK: - DataSource

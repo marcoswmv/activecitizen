@@ -17,7 +17,9 @@ class SubCategoriesDataSource: BaseDataSource {
     var defaultValues: UserDefaults = UserDefaults.standard
     
     override func setup() {
-        
+        DispatchQueue.once {
+            defaultValues.removeObject(forKey: Keys.selectedSubCategory)
+        }
         super.setup()
     }
     

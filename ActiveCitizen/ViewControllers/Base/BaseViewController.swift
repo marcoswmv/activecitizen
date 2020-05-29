@@ -14,9 +14,7 @@ class BaseViewController: UIViewController, UITextFieldDelegate, NVActivityIndic
     @IBOutlet weak var containerTableView: UITableView!
     @IBOutlet weak var searchBarView: UIView!
     
-    var searchController = UISearchController()
-    
-    var timer: Timer?
+//    var searchController = UISearchController()
     
     // MARK: - Variables
     

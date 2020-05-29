@@ -192,6 +192,9 @@
                                         <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Поиск" translatesAutoresizingMaskIntoConstraints="NO" id="eha-yg-LSx">
                                             <rect key="frame" x="10" y="9.6666666666666643" width="355" height="55.999999999999993"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="qG9-u1-Oxd" id="r2g-T0-FL9"/>
+                                            </connections>
                                         </searchBar>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -300,6 +303,9 @@
                                         <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Поиск" translatesAutoresizingMaskIntoConstraints="NO" id="o4j-hw-h6Q">
                                             <rect key="frame" x="10" y="9.6666666666666643" width="355" height="55.999999999999993"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="2ea-Dy-QVc" id="Vq5-c8-gTA"/>
+                                            </connections>
                                         </searchBar>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

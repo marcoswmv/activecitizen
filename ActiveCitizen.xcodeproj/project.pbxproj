@@ -139,7 +139,6 @@
 		F7A221F42400339700C11353 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7A221F32400339700C11353 /* Colors.xcassets */; };
 		F7A221F62400418400C11353 /* CategoriesVC+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A221F52400418400C11353 /* CategoriesVC+TableViewDelegate.swift */; };
 		F7A221FA2400473C00C11353 /* SubCategoriesVC+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A221F92400473C00C11353 /* SubCategoriesVC+TableViewDelegate.swift */; };
-		F7A221FC24004CE600C11353 /* BaseViewController+SearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A221FB24004CE600C11353 /* BaseViewController+SearchBarDelegate.swift */; };
 		F7A221FE24004D3500C11353 /* CategoriesVC+SearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A221FD24004D3500C11353 /* CategoriesVC+SearchBarDelegate.swift */; };
 		F7A2220024004D6200C11353 /* SubCategoriesVC+SearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A221FF24004D6200C11353 /* SubCategoriesVC+SearchBarDelegate.swift */; };
 		F7A222022400524B00C11353 /* CategoriesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A222012400524B00C11353 /* CategoriesDataSource.swift */; };
@@ -325,7 +324,6 @@
 		F7A221F32400339700C11353 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		F7A221F52400418400C11353 /* CategoriesVC+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoriesVC+TableViewDelegate.swift"; sourceTree = "<group>"; };
 		F7A221F92400473C00C11353 /* SubCategoriesVC+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SubCategoriesVC+TableViewDelegate.swift"; sourceTree = "<group>"; };
-		F7A221FB24004CE600C11353 /* BaseViewController+SearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseViewController+SearchBarDelegate.swift"; sourceTree = "<group>"; };
 		F7A221FD24004D3500C11353 /* CategoriesVC+SearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoriesVC+SearchBarDelegate.swift"; sourceTree = "<group>"; };
 		F7A221FF24004D6200C11353 /* SubCategoriesVC+SearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SubCategoriesVC+SearchBarDelegate.swift"; sourceTree = "<group>"; };
 		F7A222012400524B00C11353 /* CategoriesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesDataSource.swift; sourceTree = "<group>"; };
@@ -596,7 +594,6 @@
 			children = (
 				F762F6742465F627001B9ABC /* AboutViewController+TMBarDataSource.swift */,
 				F701799C242A63480048BA19 /* BaseViewController+HideShowNavigationBar.swift */,
-				F7A221FB24004CE600C11353 /* BaseViewController+SearchBarDelegate.swift */,
 				C52CE68E23955740004760EF /* BaseViewController+TextFieldNavigation.swift */,
 				F7A221FD24004D3500C11353 /* CategoriesVC+SearchBarDelegate.swift */,
 				F7A221F52400418400C11353 /* CategoriesVC+TableViewDelegate.swift */,
@@ -1086,7 +1083,6 @@
 				F7A22211240331E300C11353 /* SubCategoriesManager.swift in Sources */,
 				F7178A3B242827F8001741B5 /* UIViewController+HideKeyboardWhenTappedAround.swift in Sources */,
 				F756533724263F61002C4B81 /* FilterCategoriesVC+TableViewDelegate.swift in Sources */,
-				F7A221FC24004CE600C11353 /* BaseViewController+SearchBarDelegate.swift in Sources */,
 				F756533B2426405D002C4B81 /* FiltersViewController.swift in Sources */,
 				F71D672A247873B200B0054C /* ImageSliderDataSource.swift in Sources */,
 				F792BE502468C529008B17ED /* ReportsListViewController+HideTabBar.swift in Sources */,

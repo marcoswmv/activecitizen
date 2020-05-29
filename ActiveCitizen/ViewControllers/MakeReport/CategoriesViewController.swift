@@ -17,7 +17,9 @@ class CategoriesViewController: BaseMakeReportViewController {
     var dataSource: CategoriesDataSource?
     
     var defaultValues: UserDefaults = UserDefaults.standard
-//    var timer: Timer?
+    var timer: Timer?
+    var searching: Bool = false
+    var filteredCategories: [[String: Any]] = [[String: Any]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
