@@ -10,10 +10,7 @@ import Foundation
 import UIKit
 
 extension FilterCategoriesViewController: UITableViewDelegate {
-    
-    
-//    TO-DO: GET DATA FROM HTTP SERVER
-    
+
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -38,7 +35,6 @@ extension FilterCategoriesViewController: UITableViewDelegate {
             navigationController?.pushViewController(filtersViewController, animated: true)
         } else if indexPath.row == 2 {
             
-//            setupCategoriesDataSource()
             dataToPass = ["Не выбрано", "Автомобильные дороги", "Газ и топливо", "Многоквартирные  дома", "Общественный транспорт", "Народный инспектор"]
             
             filtersViewController.navigationBarTitle = "Категория"
@@ -49,7 +45,6 @@ extension FilterCategoriesViewController: UITableViewDelegate {
             navigationController?.pushViewController(filtersViewController, animated: true)
         } else if indexPath.row == 3 {
             
-//            TO-DO: CHECK TO SEE WHICH FILTERS ARE AVAILABLE IN THIS CATEGORY
             dataToPass = ["Не выбрано", "Весь период", "Неделя назад", "Месяц назад", "3 месяца назад"]
             
             filtersViewController.navigationBarTitle = "Период"
@@ -59,13 +54,5 @@ extension FilterCategoriesViewController: UITableViewDelegate {
             }
             navigationController?.pushViewController(filtersViewController, animated: true)
         }
-    }
-    
-    func setupCategoriesDataSource() {
-        categoriesDataSource = CategoriesDataSource(tableView: self.tableView)
-        categoriesDataSource?.onLoading = { isLoading in
-            self.displayLoading(loading: isLoading)
-        }
-        categoriesDataSource?.reload()
     }
 }

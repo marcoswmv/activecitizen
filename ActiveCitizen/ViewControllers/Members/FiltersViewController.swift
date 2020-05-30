@@ -42,7 +42,7 @@ extension FiltersViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "FilterTableViewCell", for: indexPath)
-        let memberDetailViewController = navigationController?.viewControllers[1] as! MemberDetailViewController
+//        let memberDetailViewController = navigationController?.viewControllers[1] as! MemberDetailViewController
         
         cell.accessoryView = UIImageView(image: UIImage(named: "chek-on"))
         
@@ -50,7 +50,8 @@ extension FiltersViewController: UITableViewDelegate {
         completionHandler?(data[indexPath.row])
         
         tableView.deselectRow(at: indexPath, animated: true)
-        navigationController?.popToViewController(memberDetailViewController, animated: true)
+//        navigationController?.popToViewController(memberDetailViewController, animated: true)
+        navigationController?.popToRootViewController(animated: true)
     }
 }
 

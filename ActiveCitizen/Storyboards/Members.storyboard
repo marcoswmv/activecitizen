@@ -368,20 +368,20 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="Thc-39-WDH">
-                                            <rect key="frame" x="14" y="160.5" width="390" height="24"/>
+                                            <rect key="frame" x="14" y="160.5" width="390" height="22"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Обращения пользователя" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJE-35-2O8">
-                                                    <rect key="frame" x="0.0" y="3.5" width="308" height="17.5"/>
+                                                    <rect key="frame" x="0.0" y="2.5" width="308" height="17.5"/>
                                                     <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rpw-lY-RKf">
-                                                    <rect key="frame" x="350" y="0.0" width="40" height="24"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rpw-lY-RKf">
+                                                    <rect key="frame" x="350" y="0.0" width="40" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="ZQ1-DX-UzX"/>
                                                     </constraints>
-                                                    <state key="normal" image="filter"/>
+                                                    <state key="normal" image="filter-stroke"/>
                                                     <connections>
                                                         <action selector="showFilterCategoriesOnTouchUpInside:" destination="JzH-2f-20L" eventType="touchUpInside" id="cgU-fU-TSK"/>
                                                     </connections>
@@ -455,6 +455,7 @@
                     <connections>
                         <outlet property="applications" destination="MGG-Jq-cvk" id="MgD-Qd-ndO"/>
                         <outlet property="contentScrollView" destination="NXR-Vw-wrG" id="i39-ha-bqq"/>
+                        <outlet property="filterButton" destination="rpw-lY-RKf" id="GiK-Je-VYq"/>
                         <outlet property="solvedProblems" destination="yaT-n2-Fyr" id="8se-N7-DvW"/>
                         <outlet property="tableView" destination="NXR-Vw-wrG" id="L9F-U0-keJ"/>
                         <outlet property="userName" destination="9Pb-TI-5Y1" id="Wbb-i1-FZm"/>
@@ -628,7 +629,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="filter" width="24" height="24"/>
+        <image name="filter-stroke" width="18" height="20.5"/>
         <image name="placeholder" width="77.5" height="77.5"/>
         <namedColor name="Search Bar Background White">
             <color red="1" green="1" blue="1" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="sRGB"/>

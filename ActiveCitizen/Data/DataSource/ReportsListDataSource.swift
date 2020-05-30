@@ -98,7 +98,7 @@ class ReportsListDataSource: BaseDataSource {
                                                 width: tableView.bounds.size.width,
                                                 height: tableView.bounds.size.height))
         noDataLabel.text = "Нет обращений"
-        noDataLabel.font = UIFont(name: UIFont.regularFontFmily, size: 15.0)
+        noDataLabel.font = UIFont(name: UIFont.regularFontFmily, size: 17.0)
         noDataLabel.textAlignment = .center
         tableView.backgroundView = noDataLabel
     }

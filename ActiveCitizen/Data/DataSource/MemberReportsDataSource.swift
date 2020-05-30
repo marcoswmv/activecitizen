@@ -39,7 +39,6 @@ class MemberReportsDataSource: BaseDataSource {
         data = result
         tableView.reloadData()
         
-        
 //        onLoading?(true)
 //        manager.getReportsList { (result, error) in
 //

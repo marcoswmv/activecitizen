@@ -16,12 +16,14 @@ class MemberDetailViewController: BaseMembersViewController {
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var solvedProblems: UILabel!
     @IBOutlet weak var applications: UILabel!
+    @IBOutlet weak var filterButton: UIButton!
     
 
     @IBAction func showFilterCategoriesOnTouchUpInside(_ sender: Any) {
         let filterCategoriesViewController = FilterCategoriesViewController.instantiate() as! FilterCategoriesViewController
         
         filterCategoriesViewController.completionHandler = { filter in
+            self.filterButton.imageView?.image = UIImage(named: "filter")
             self.setupDataSource(with: filter)
         }
         navigationController?.pushViewController(filterCategoriesViewController, animated:true)

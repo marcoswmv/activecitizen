@@ -16,7 +16,6 @@ class FilterCategoriesViewController: BaseMembersViewController {
 
     var defaultValues = UserDefaults.standard
     
-    var categoriesDataSource: CategoriesDataSource?
     var data = ["Не выбрано", "Статус", "Категория", "Период"]
     
     override func viewDidLoad() {

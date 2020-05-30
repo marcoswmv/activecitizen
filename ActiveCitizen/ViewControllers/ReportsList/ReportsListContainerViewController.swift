@@ -50,13 +50,21 @@ class ReportsListContainerViewController: TabmanViewController {
     }
     
     func setupNavigationBarElements() {
-        let filterButton = UIBarButtonItem(image: UIImage(named: "filter-stroke")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleFilter))
+        let filterButton = UIBarButtonItem(image: UIImage(named: "filter-stroke")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleFilter(sender:)))
         
         navigationItem.rightBarButtonItem = filterButton
     }
     
-    @objc func handleFilter() {
-        print("Showing filters")
+    @objc func handleFilter(sender: UIBarButtonItem) {
+        let filterCategoriesViewController = FilterCategoriesViewController.instantiate() as! FilterCategoriesViewController
+        
+        filterCategoriesViewController.completionHandler = { filter in
+            sender.image = UIImage(named: "filter")?.withRenderingMode(.alwaysOriginal)
+            
+//            TODO: Use filter on reports list to display reports by filter.
+//            self.setupDataSource(with: filter)
+        }
+        navigationController?.pushViewController(filterCategoriesViewController, animated:true)
     }
     
     func setTabBar() {

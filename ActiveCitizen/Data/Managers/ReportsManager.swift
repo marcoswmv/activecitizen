@@ -14,9 +14,10 @@ class ReportsManager: BaseNetworkManager {
     typealias ReportsListCompletionHandler = (_ reports: [Report]?, _ error: Error?) -> Void
     
     @discardableResult
-    func getReportsList(completion: @escaping ReportsListCompletionHandler) -> DataRequest {
+    func getReportsList(filter: String? = nil, completion: @escaping ReportsListCompletionHandler) -> DataRequest {
         
-        // TODO: pages
+        // TODO: Get reports from the server with filters
+        
         let params = ["firstResult": 0, "maxResults": 10]
         return request(apiEndpoint: "complain/filter", method: .post, parameters: params, completion: { (response, error) in
           
