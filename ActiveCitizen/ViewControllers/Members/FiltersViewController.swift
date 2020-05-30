@@ -14,10 +14,9 @@ class FiltersViewController: BaseMembersViewController {
     
     var data = [String]()
     var navigationBarTitle: String? = nil
-    
     var completionHandler: ((String?) -> Void)?
-    
     var defaultValues: UserDefaults = UserDefaults.standard
+    var topViewController: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +30,6 @@ class FiltersViewController: BaseMembersViewController {
             setupCustomBackButton(with: title, icon: "back")
         }
     }
-    
 }
 
 
@@ -42,16 +40,20 @@ extension FiltersViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "FilterTableViewCell", for: indexPath)
-//        let memberDetailViewController = navigationController?.viewControllers[1] as! MemberDetailViewController
-        
+
         cell.accessoryView = UIImageView(image: UIImage(named: "chek-on"))
         
         defaultValues.set(indexPath.row, forKey: Keys.selectedFilter)
         completionHandler?(data[indexPath.row])
         
         tableView.deselectRow(at: indexPath, animated: true)
-//        navigationController?.popToViewController(memberDetailViewController, animated: true)
-        navigationController?.popToRootViewController(animated: true)
+        
+        if topViewController == "MemberDetailViewController" {
+            let memberDetailViewController = navigationController?.viewControllers[1] as! MemberDetailViewController
+            navigationController?.popToViewController(memberDetailViewController, animated: true)
+        } else {
+            navigationController?.popToRootViewController(animated: true)
+        }
     }
 }
 

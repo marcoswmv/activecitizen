@@ -21,6 +21,7 @@ extension FilterCategoriesViewController: UITableViewDelegate {
         
         defaultValues.set(indexPath.row, forKey: Keys.selectedFilterCategory)
         
+        filtersViewController.topViewController = self.topViewController
         if indexPath.row == 0 {
             navigationController?.popViewController(animated: true)
         } else if indexPath.row == 1 {

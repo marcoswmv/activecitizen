@@ -12,10 +12,9 @@ class FilterCategoriesViewController: BaseMembersViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    var topViewController: String?
     var completionHandler: ((String?) -> Void)?
-
     var defaultValues = UserDefaults.standard
-    
     var data = ["Не выбрано", "Статус", "Категория", "Период"]
     
     override func viewDidLoad() {
