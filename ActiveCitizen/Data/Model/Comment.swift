@@ -10,6 +10,7 @@ import UIKit
 
 class Comment {
     
+    var id: Int?
     var changedStatus: String?
     var message: String?
     var files: String?
@@ -20,6 +21,7 @@ class Comment {
     var publicationDate: Date?
     
     init(dictionary: [String: Any]) {
+        self.id = dictionary["id"] as? Int
         self.changedStatus = dictionary["taskDefinitionKey"] as? String
         self.message = dictionary["message"] as? String
         self.files = dictionary["files"] as? String

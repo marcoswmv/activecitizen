@@ -21,6 +21,7 @@ class ReportDetailsView: UIViewWithXib {
     @IBOutlet weak var reportDescription: UILabel!
     @IBOutlet weak var status: UILabel!
     
+    @IBOutlet weak var scrollContentView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     
     var userID: Int?

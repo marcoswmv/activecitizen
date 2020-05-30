@@ -58,7 +58,7 @@ class ReportsListDataSource: BaseDataSource {
     
     func startQuery(with text: String) {
         searching = !text.isEmpty ? true : false
-        filteredData = data?.filter({ $0.id.debugDescription.prefix(text.count) == text })
+        filteredData = data?.filter({ $0.id?.description.prefix(text.count).description == text })
         tableView.reloadData()
     }
     

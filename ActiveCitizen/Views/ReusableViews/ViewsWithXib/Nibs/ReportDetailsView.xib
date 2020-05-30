@@ -26,6 +26,7 @@
                 <outlet property="numberOfReport" destination="hg8-4V-rhr" id="9Q5-rZ-cMb"/>
                 <outlet property="reportCreationDate" destination="KCb-E3-6gX" id="Yx1-Pg-WlV"/>
                 <outlet property="reportDescription" destination="5xI-mZ-3BI" id="BZQ-Xg-hwU"/>
+                <outlet property="scrollContentView" destination="9qU-30-r6h" id="V1O-MR-ana"/>
                 <outlet property="scrollView" destination="L1z-Jx-Ahx" id="kNr-qL-ekp"/>
                 <outlet property="status" destination="itL-rj-AeI" id="Bch-wT-5Lx"/>
                 <outlet property="subCategoryName" destination="pHh-Ve-24U" id="SgJ-Ra-tQt"/>

@@ -21,12 +21,33 @@ class CommentsDataSource: BaseDataSource {
     
     override func reload() {
         
-        let comments: [[String: Any]] = [[ "categoryId": 1101, "created": "2013-12-02T19:13:16.167+0000", "categoryName": "Автомобильные дороги",
-                                          "subcategoryName": "Аварийные опоры линий наружного освещения", "address": "Россия, Волгоград, посёлок Ангарский, Раздольная улица, 47", "files": ["thor1"], "taskDefinitionKey": "taskEnterResult"],
-                                        [ "categoryId": 1102, "created": "2020-1-02T19:13:16.167+0000", "categoryName": "Автомобильные орфвлытоылчы",
-                                        "subcategoryName": "Аварийные опоры линиаватртноьй наружного оносвещения", "address": "Россия, Волгоград, посёлок Ангарский, Раздольная улица, 47", "files": [], "taskDefinitionKey": "taskAcceptance"],
-                                        [ "categoryId": 1103, "created": "2021-2-02T19:13:16.167+0000", "categoryName": "Авфылврифыыловилфсыльные дороги",
-                                          "subcategoryName": "Аварийныефмывамвамав опоры линий наружного освещения", "address": "Россия, Волгоград, посёлок Ангарский, Раздольная улица, 47", "files": ["thor2", "thor3"], "taskDefinitionKey": "taskRejected"]]
+        let comments: [[String: Any]] = [[ "id": 2258,
+                                           "taskDefinitionKey": "TaskModeration",
+                                           "message": "Комментарий через REST API",
+                                           "organizationId": 1232,
+                                           "authority": "Заявитель",
+                                           "files": ["dog6"],
+                                           "firstName": "Евгений",
+                                           "lastName": "Павлов",
+                                           "creationTime": "2020-01-27T18:15:32.862+0000"],
+                                         [ "id": 2233,
+                                           "taskDefinitionKey": "TaskModeration",
+                                           "message": "Обращение создано и передано на модерацию",
+                                           "organizationId": 8765,
+                                           "authority": "Заявитель",
+                                           "files": ["dog4, dog5"],
+                                           "firstName": "Евгений",
+                                           "lastName": "Павлов",
+                                           "creationTime": "2020-01-27T14:51:19.765+0000"],
+                                         [ "id": 2043,
+                                           "taskDefinitionKey": "TaskPerformanceEvaluation",
+                                           "message": "Обращение завершено",
+                                           "files": ["dog7"],
+                                           "organizationId": 1672,
+                                           "authority": "Модератор",
+                                           "firstName": "Алексей",
+                                           "lastName": "Кантов",
+                                           "creationTime": "2020-01-30T1:56:19.765+0000"]]
 
 
         var result = [Comment]()
