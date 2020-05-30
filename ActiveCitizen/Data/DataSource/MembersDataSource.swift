@@ -21,18 +21,8 @@ class MembersDataSource: BaseDataSource {
 
     override func reload() {
         
-        
-        let users: [[String: Any]] = [[ "fio": "Vicente Marcos", "active": 10, "completed": 43, "rejected": 68],
-                                      [ "fio": "Бунтов Алексей", "active": 45, "completed": 98, "rejected": 0],
-                                      [ "fio": "Корненко Мария", "active": 3, "completed": 6, "rejected": 1],
-                                      [ "fio": "User name", "active": 1, "completed": 2, "rejected": 3],
-                                      [ "fio": "Другой пользователь", "active": 4, "completed": 5, "rejected": 0000],
-                                      [ "fio": "Федорова Алина", "active": 3548, "completed": 676, "rejected": 741]]
         var result = [Member]()
-
-        for user in users {
-            result.append(Member(dictionary: user))
-        }
+        _ = DummyData.users.map({ result.append(Member(dictionary: $0)) })
 
         data = result
         tableView.reloadData()

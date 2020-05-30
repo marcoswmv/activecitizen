@@ -22,20 +22,8 @@ class ReportsListDataSource: BaseDataSource {
     
     override func reload() {
         
-        
-        let reports: [[String: Any]] = [[ "id": 123, "categoryId": 1101, "created": "2013-12-02T19:13:16.167+0000", "categoryName": "Автомобильные дороги",
-                                          "subcategoryName": "Аварийные опоры линий наружного освещения", "address": "Россия, Волгоград, посёлок Ангарский, Раздольная улица, 47", "coordinates": "48.72650460064742,44.48047016906738", "files": ["dog1"], "taskDefinitionKey": "TaskEnterResult"],
-                                        [ "id": 456, "categoryId": 1102, "created": "2020-1-02T19:13:16.167+0000", "categoryName": "Автомобильные орфвлытоылчы",
-                                        "subcategoryName": "Аварийные опоры линиаватртноьй наружного оносвещения", "address": "Россия, Волгоград, посёлок Ангарский, Раздольная улица, 47", "coordinates": "48.72650460064742,44.48047016906738", "files": [], "taskDefinitionKey": "TaskAcceptance"],
-                                        [ "id": 789, "categoryId": 1103, "created": "2021-2-02T19:13:16.167+0000", "categoryName": "Авфылврифыыловилфсыльные дороги",
-                                          "subcategoryName": "Аварийныефмывамвамав опоры линий наружного освещения", "address": "Россия, Волгоград, посёлок Ангарский, Раздольная улица, 47", "coordinates": "48.72650460064742,44.48047016906738", "files": ["dog2", "dog3"], "taskDefinitionKey": "TaskRejected"]]
-        
-        
         var result = [Report]()
-
-        for report in reports {
-            result.append(Report(dictionary: report))
-        }
+        _ = DummyData.reports.map({ result.append(Report(dictionary: $0)) })
 
         data = result
         tableView.reloadData()

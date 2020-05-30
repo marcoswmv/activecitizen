@@ -25,20 +25,9 @@ class CategoriesDataSource: BaseDataSource {
     }
     
     override func reload() {
-        
-        let categories: [[String: Any]] = [[ "id": 1101, "name": "Благоустройство дворовой территории"],
-                                           [ "id": 1102, "name": "Автомобильные дороги"],
-                                           [ "id": 1103, "name": "Водоснабжение в многоквартирном доме"],
-                                           [ "id": 1104, "name": "Газ и топливо"],
-                                           [ "id": 1105, "name": "Многоквартирные дома"],
-                                           [ "id": 1106, "name": "Общественный транспорт"],
-                                           [ "id": 1107, "name": "Плата за ЖКУ и работа ЕИРЦ"],
-                                           [ "id": 1108, "name": "Народный инспектор"]]
-        
+
         var hardCodedresult: [Category] = [Category]()
-        for category in categories {
-            hardCodedresult.append(Category(dictionary: category))
-        }
+        _ = DummyData.categories.map({ hardCodedresult.append(Category(dictionary: $0)) })
 
         data = hardCodedresult
         tableView.reloadData()

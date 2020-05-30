@@ -14,6 +14,7 @@ class SubVotingViewController: BaseViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     var dataSource: VotesDataSource?
+    var timer: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()

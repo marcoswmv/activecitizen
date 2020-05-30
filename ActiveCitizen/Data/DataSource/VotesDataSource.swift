@@ -11,28 +11,24 @@ import UIKit
 class VotesDataSource: BaseDataSource {
     
     private let manager = VotesManager()
-        private(set) var data: [Vote]?
+    private(set) var data: [Vote]?
+    
+    private var filteredData: [Vote]?
+    private var searching: Bool = false
+    var caseID: String?
+    
+    override func setup() {
+        super.setup()
+    }
+    
+    override func reload() {
+//           TO-DO: get votes form each case by caseID after authorization
         
-        var caseID: String?
-        
-        override func setup() {
-            super.setup()
-        }
-        
-        override func reload() {
-            
-            let votes: [[String: Any]] = [ [ "id": 1234, "message": "Оценка проектов благоустройства Великого Новгорода", "date": "20.20.2020"],
-                                           [ "id": 5678, "message": "Some random text just test this data", "date": "24.5.2020"],
-                                           [ "id": 91011, "message": "Другой текст для тестирования", "date": "8.8.2020"]]
+        var result = [Vote]()
+        _ = DummyData.votes.map({ result.append(Vote(dictionary: $0)) })
 
-            var result = [Vote]()
-
-            for vote in votes {
-                result.append(Vote(dictionary: vote))
-            }
-
-            data = result
-            tableView.reloadData()
+        data = result
+        tableView.reloadData()
 
 //            onLoading?(true)
 //
@@ -49,22 +45,51 @@ class VotesDataSource: BaseDataSource {
 //                    self.tableView.reloadData()
 //                })
 //            }
-            
-        }
         
+    }
+    
+    func startQuery(with text: String) {
+        searching = !text.isEmpty ? true : false
+        filteredData = data?.filter({ $0.message!.prefix(text.count).lowercased() == text.lowercased() })
+        tableView.reloadData()
+    }
         // MARK: - DataSource
         
-        override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if searching {
+            if filteredData!.isEmpty {
+                addTableViewBackgroundView()
+            }
+            return filteredData?.count ?? 0
+        } else {
+            if data!.isEmpty {
+                addTableViewBackgroundView()
+            }
             return data?.count ?? 0
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            
-            let cell = self.tableView.dequeueReusableCell(withIdentifier: VoteTableViewCell.identifier) as! VoteTableViewCell
-            
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: VoteTableViewCell.identifier) as! VoteTableViewCell
+        
+        if searching {
+            cell.data = filteredData![indexPath.row]
+        } else {
             cell.data = data![indexPath.row]
-            cell.selectionStyle = .none
-            
-            return cell
         }
+        cell.selectionStyle = .none
+        
+        return cell
+    }
+    
+    func addTableViewBackgroundView() {
+        let noDataLabel = UILabel(frame: CGRect(x: 0, y: 0,
+                                                width: tableView.bounds.size.width,
+                                                height: tableView.bounds.size.height))
+        noDataLabel.text = "Нет опросов и голосований"
+        noDataLabel.font = UIFont(name: UIFont.regularFontFmily, size: 17.0)
+        noDataLabel.textAlignment = .center
+        tableView.backgroundView = noDataLabel
+    }
 }

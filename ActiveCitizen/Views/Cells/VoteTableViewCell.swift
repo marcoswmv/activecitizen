@@ -15,7 +15,7 @@ class VoteTableViewCell: BaseTableViewCell {
     var data: Vote? {
         didSet {
             votingCellView.surveyNumber.text = data?.id?.description
-            votingCellView.surveyNumber.text = data?.message
+            votingCellView.surveyDescription.text = data?.message
             votingCellView.endOfVoting.text = data?.date?.string(format: "dd.MM.yyyy")
         }
     }
