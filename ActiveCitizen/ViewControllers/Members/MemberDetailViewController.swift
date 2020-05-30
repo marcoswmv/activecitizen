@@ -9,7 +9,9 @@
 import UIKit
 
 class MemberDetailViewController: BaseMembersViewController {
-
+    
+//    MARK: - OUTLETS
+    
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var userPhoto: UIImageView!
@@ -18,7 +20,6 @@ class MemberDetailViewController: BaseMembersViewController {
     @IBOutlet weak var applications: UILabel!
     @IBOutlet weak var filterButton: UIButton!
     
-
     @IBAction func showFilterCategoriesOnTouchUpInside(_ sender: Any) {
         let filterCategoriesViewController = FilterCategoriesViewController.instantiate() as! FilterCategoriesViewController
         
@@ -31,10 +32,13 @@ class MemberDetailViewController: BaseMembersViewController {
     }
     
     
+//    MARK: - PROPERTIES
     
     var dataSource: MemberReportsDataSource?
     var member: Member?
     
+    
+//    MARK: - METHODS
     
     override func viewDidLoad() {
         super.viewDidLoad()

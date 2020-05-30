@@ -9,15 +9,22 @@
 import UIKit
 
 class CategoriesViewController: BaseMakeReportViewController {
-
+    
+//    MARK:  - OUTLETS
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
+    
+//    MARK: - PROPERTIES
+    
     var completionHandler: ((_ icon: UIImage, _ subcategory: String, _ categoryId: Int, _ subCategoryId: Int) -> Void)?
     var dataSource: CategoriesDataSource?
-    
     var defaultValues: UserDefaults = UserDefaults.standard
     var timer: Timer?
+    
+    
+//    MARK: - METHODS
     
     override func viewDidLoad() {
         super.viewDidLoad()

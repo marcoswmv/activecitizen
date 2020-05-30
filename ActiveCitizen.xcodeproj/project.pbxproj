@@ -58,6 +58,7 @@
 		F701799B242A25470048BA19 /* UIView+FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F701799A242A25470048BA19 /* UIView+FindViewController.swift */; };
 		F701799D242A63480048BA19 /* BaseViewController+HideShowNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F701799C242A63480048BA19 /* BaseViewController+HideShowNavigationBar.swift */; };
 		F70212A42482F6740068B445 /* ReportDetailsVC+ScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70212A32482F6740068B445 /* ReportDetailsVC+ScrollViewDelegate.swift */; };
+		F70212A62483151D0068B445 /* MembersListVC+SearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70212A52483151D0068B445 /* MembersListVC+SearchBarDelegate.swift */; };
 		F716107A23EC654100F89D26 /* MakeReport.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F716107923EC654100F89D26 /* MakeReport.storyboard */; };
 		F716107C23EC7B6100F89D26 /* EnterAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F716107B23EC7B6100F89D26 /* EnterAddressViewController.swift */; };
 		F716107F23ED80C500F89D26 /* EnterAddressVС+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F716107E23ED80C500F89D26 /* EnterAddressVС+TableViewDelegate.swift */; };
@@ -242,6 +243,7 @@
 		F701799A242A25470048BA19 /* UIView+FindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+FindViewController.swift"; sourceTree = "<group>"; };
 		F701799C242A63480048BA19 /* BaseViewController+HideShowNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseViewController+HideShowNavigationBar.swift"; sourceTree = "<group>"; };
 		F70212A32482F6740068B445 /* ReportDetailsVC+ScrollViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReportDetailsVC+ScrollViewDelegate.swift"; sourceTree = "<group>"; };
+		F70212A52483151D0068B445 /* MembersListVC+SearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MembersListVC+SearchBarDelegate.swift"; sourceTree = "<group>"; };
 		F716107923EC654100F89D26 /* MakeReport.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MakeReport.storyboard; sourceTree = "<group>"; };
 		F716107B23EC7B6100F89D26 /* EnterAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAddressViewController.swift; sourceTree = "<group>"; };
 		F716107E23ED80C500F89D26 /* EnterAddressVС+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnterAddressVС+TableViewDelegate.swift"; sourceTree = "<group>"; };
@@ -607,6 +609,7 @@
 				F7A78119239E9B7700EE2000 /* MakeReportMapVС+UIScrollviewDelegate.swift */,
 				F72E4C8D2406F79E001EF798 /* MakeReportMapVС+UserLocationObjectListener.swift */,
 				F7AD212F241C0C460041AC2A /* MembersListVC+TableViewDelegate.swift */,
+				F70212A52483151D0068B445 /* MembersListVC+SearchBarDelegate.swift */,
 				F7CF6CC3247824D500ABD4B8 /* PhotoCollectionDataSource+PhotoCollectionCellDelegate.swift */,
 				F7CF6CC5247826F800ABD4B8 /* PhotoCollectionDataSource+PhotoCollectionControllerDelegate.swift */,
 				F777369223FD6EED002B8746 /* ProfileVC+TMBarDataSource.swift */,
@@ -1074,6 +1077,7 @@
 				F71D672A247873B200B0054C /* ImageSliderDataSource.swift in Sources */,
 				F792BE502468C529008B17ED /* ReportsListViewController+HideTabBar.swift in Sources */,
 				F7CB47A92408A7620087FC22 /* AddressesDataSource.swift in Sources */,
+				F70212A62483151D0068B445 /* MembersListVC+SearchBarDelegate.swift in Sources */,
 				F777369323FD6EED002B8746 /* ProfileVC+TMBarDataSource.swift in Sources */,
 				F7A7811A239E9B7700EE2000 /* MakeReportMapVС+UIScrollviewDelegate.swift in Sources */,
 				F716108323ED89E700F89D26 /* AddressesTableViewCell.swift in Sources */,

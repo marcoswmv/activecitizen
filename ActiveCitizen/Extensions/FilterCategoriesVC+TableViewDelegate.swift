@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 extension FilterCategoriesViewController: UITableViewDelegate {
-
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         

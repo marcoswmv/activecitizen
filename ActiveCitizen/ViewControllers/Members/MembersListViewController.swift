@@ -9,13 +9,20 @@
 import UIKit
 
 class MembersListViewController: BaseMembersViewController {
-
+    
+//    MARK: - OUTLETS
+    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
+    
+//    MARK: - PROPERTIES
     var refreshControl = UIRefreshControl()
     var dataSource: MembersDataSource?
+    var timer: Timer?
     
+    
+//    MARK: - METHODS
     override func viewDidLoad() {
         super.viewDidLoad()
 

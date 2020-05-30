@@ -11,9 +11,14 @@ import Pageboy
 import Tabman
 
 class ReportsListContainerViewController: TabmanViewController {
-
+    
+//    MARK: - OUTLETS
+    
     @IBOutlet weak var tabBarView: UIView!
     @IBOutlet weak var shadowView: UIView!
+    
+    
+//    MARK: - PROPERTIES
     
     lazy var viewControllersList: [UIViewController] = {
         let storyboard = UIStoryboard(name: "ReportsList", bundle: nil)
@@ -23,9 +28,9 @@ class ReportsListContainerViewController: TabmanViewController {
     }()
     
     lazy var titles: [String] = [ "СПИСОК", "КАРТА"]
-    
     let bar = TMBar.ButtonBar()
     
+//    MARK: - METHODS
     override func viewDidLoad() {
         super.viewDidLoad()
         
