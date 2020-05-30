@@ -13,6 +13,9 @@ class ReportsListDataSource: BaseDataSource {
     private let manager = ReportsManager()
     private(set) var data: [Report]?
     
+    private var filteredData: [Report]?
+    private var searching: Bool = false
+    
     override func setup() {
         super.setup()
     }
@@ -20,14 +23,14 @@ class ReportsListDataSource: BaseDataSource {
     override func reload() {
         
         
-        let reports: [[String: Any]] = [[ "categoryId": 1101, "created": "2013-12-02T19:13:16.167+0000", "categoryName": "Автомобильные дороги",
-                                          "subcategoryName": "Аварийные опоры линий наружного освещения", "address": "Россия, Волгоград, посёлок Ангарский, Раздольная улица, 47", "files": ["thor1"], "taskDefinitionKey": "taskEnterResult"],
-                                        [ "categoryId": 1102, "created": "2020-1-02T19:13:16.167+0000", "categoryName": "Автомобильные орфвлытоылчы",
-                                        "subcategoryName": "Аварийные опоры линиаватртноьй наружного оносвещения", "address": "Россия, Волгоград, посёлок Ангарский, Раздольная улица, 47", "files": [], "taskDefinitionKey": "taskAcceptance"],
-                                        [ "categoryId": 1103, "created": "2021-2-02T19:13:16.167+0000", "categoryName": "Авфылврифыыловилфсыльные дороги",
-                                          "subcategoryName": "Аварийныефмывамвамав опоры линий наружного освещения", "address": "Россия, Волгоград, посёлок Ангарский, Раздольная улица, 47", "files": ["thor2", "thor3"], "taskDefinitionKey": "taskRejected"]]
-
-
+        let reports: [[String: Any]] = [[ "id": 123, "categoryId": 1101, "created": "2013-12-02T19:13:16.167+0000", "categoryName": "Автомобильные дороги",
+                                          "subcategoryName": "Аварийные опоры линий наружного освещения", "address": "Россия, Волгоград, посёлок Ангарский, Раздольная улица, 47", "coordinates": "48.72650460064742,44.48047016906738", "files": ["dog1"], "taskDefinitionKey": "TaskEnterResult"],
+                                        [ "id": 456, "categoryId": 1102, "created": "2020-1-02T19:13:16.167+0000", "categoryName": "Автомобильные орфвлытоылчы",
+                                        "subcategoryName": "Аварийные опоры линиаватртноьй наружного оносвещения", "address": "Россия, Волгоград, посёлок Ангарский, Раздольная улица, 47", "coordinates": "48.72650460064742,44.48047016906738", "files": [], "taskDefinitionKey": "TaskAcceptance"],
+                                        [ "id": 789, "categoryId": 1103, "created": "2021-2-02T19:13:16.167+0000", "categoryName": "Авфылврифыыловилфсыльные дороги",
+                                          "subcategoryName": "Аварийныефмывамвамав опоры линий наружного освещения", "address": "Россия, Волгоград, посёлок Ангарский, Раздольная улица, 47", "coordinates": "48.72650460064742,44.48047016906738", "files": ["dog2", "dog3"], "taskDefinitionKey": "TaskRejected"]]
+        
+        
         var result = [Report]()
 
         for report in reports {
@@ -53,17 +56,32 @@ class ReportsListDataSource: BaseDataSource {
 //        }
     }
     
+    func startQuery(with text: String) {
+        searching = !text.isEmpty ? true : false
+        filteredData = data?.filter({ $0.id.debugDescription.prefix(text.count) == text })
+        tableView.reloadData()
+    }
+    
+    
     // MARK: - DataSource
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data?.count ?? 0
+        if searching {
+            return filteredData?.count ?? 0
+        } else {
+            return data?.count ?? 0
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = self.tableView.dequeueReusableCell(withIdentifier: ReportsListTableViewCell.identifier)! as! ReportsListTableViewCell
         
-        cell.data = data![indexPath.row]
+        if searching {
+            cell.data = filteredData![indexPath.row]
+        } else {
+            cell.data = data![indexPath.row]
+        }
         cell.selectionStyle = .none
         
         return cell

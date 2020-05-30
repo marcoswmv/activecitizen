@@ -21,6 +21,7 @@ class ReportsListViewController: BaseReportsListViewController, UITableViewDeleg
     
     var hidingBar: TMHidingBar! = nil
     var hidingViews: [UIView]!
+    var timer: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()

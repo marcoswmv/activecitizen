@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseCollectionViewDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDelegate {
+class BaseCollectionViewDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate {
     
     private(set) var collectionView: UICollectionView
     
@@ -37,5 +37,11 @@ class BaseCollectionViewDataSource: NSObject, UICollectionViewDataSource, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    }
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
     }
 }

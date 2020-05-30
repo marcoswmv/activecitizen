@@ -14,7 +14,7 @@ class SubCategoriesViewController: BaseMakeReportViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     var dataSource: SubCategoriesDataSource?
-    var completionHandler: ((String) -> Void)?
+    var completionHandler: ((_ subcategory: String, _ subCategoryId: Int) -> Void)?
     var categoryID: Int?
     var defaultValues: UserDefaults = UserDefaults.standard
     

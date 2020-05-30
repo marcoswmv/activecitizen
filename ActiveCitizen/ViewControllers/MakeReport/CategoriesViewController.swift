@@ -13,7 +13,7 @@ class CategoriesViewController: BaseMakeReportViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    var completionHandler: ((UIImage, String) -> Void)?
+    var completionHandler: ((_ icon: UIImage, _ subcategory: String, _ categoryId: Int, _ subCategoryId: Int) -> Void)?
     var dataSource: CategoriesDataSource?
     
     var defaultValues: UserDefaults = UserDefaults.standard

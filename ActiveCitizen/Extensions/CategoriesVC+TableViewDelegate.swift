@@ -19,8 +19,8 @@ extension CategoriesViewController: UITableViewDelegate {
         let categoryIcon = dataSource?.data![indexPath.row].categoryIcon
 
         chooseSubCategoryViewController.categoryID = categoryId
-        chooseSubCategoryViewController.completionHandler = { subcategory in
-            self.completionHandler!(categoryIcon!, subcategory)
+        chooseSubCategoryViewController.completionHandler = { subcategory, subCategoryId in
+            self.completionHandler!(categoryIcon!, subcategory, categoryId!, subCategoryId)
         }
         
         defaultValues.set(indexPath.row, forKey: Keys.selectedCategory)

@@ -11,9 +11,10 @@ import UIKit
 extension SubCategoriesViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let categoryName = dataSource?.data![indexPath.row].subCategoryName
+        let subCategoryName = dataSource?.data![indexPath.row].subCategoryName
+        let subCategoryId = dataSource?.data![indexPath.row].subCategoryId
         
-        completionHandler!(categoryName!)
+        completionHandler!(subCategoryName!, subCategoryId!)
         defaultValues.set(indexPath.row, forKey: Keys.selectedSubCategory)
         
         navigationController?.popToRootViewController(animated: true)

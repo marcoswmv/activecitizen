@@ -40,6 +40,10 @@ class MakeReportMapViewController: BaseMakeReportViewController {
         showAddressOnMapViewController.completionHandler = { street, city, location in
             self.streetAddress.text = street
             self.cityAddress.text = city
+            
+            let latitude = location.coordinate.latitude.description
+            let longitude = location.coordinate.longitude.description
+            self.reportCoordinates = "\(latitude),\(longitude)"
         }
         navigationController?.pushViewController(showAddressOnMapViewController, animated: true)
     }
@@ -51,6 +55,7 @@ class MakeReportMapViewController: BaseMakeReportViewController {
     
     @IBAction func makeReportOnTouchUpInside(_ sender: Any) {
         print("Making report")
+        makeReport()
 //        TODO: Connect to server to make the report
     }
     
@@ -71,10 +76,12 @@ class MakeReportMapViewController: BaseMakeReportViewController {
     @IBAction func chooseCategoryOnTouchUpInside(_ sender: Any) {
         let chooseCategoryViewController = CategoriesViewController.instantiate() as! CategoriesViewController
         
-        chooseCategoryViewController.completionHandler = { icon, chosenCategory in
+        chooseCategoryViewController.completionHandler = { icon, subCategory, categoryId, subCategoryId in
             self.categoryIcon.isHidden = false
             self.categoryIcon.image = icon
-            self.category.text = chosenCategory
+            self.category.text = subCategory
+            self.categoryId = categoryId
+            self.subCategoryId = subCategoryId
         }
         navigationController?.pushViewController(chooseCategoryViewController, animated: true)
     }
@@ -83,17 +90,23 @@ class MakeReportMapViewController: BaseMakeReportViewController {
     lazy var map: YMKMap = { return self.mapView.mapWindow.map }()
     lazy var mapWindow: YMKMapWindow = { return self.mapView.mapWindow }()
     
-    let locationManager = CLLocationManager()
-    var userLocation = YMKPoint()
+    let locationManager: CLLocationManager = CLLocationManager()
+    var userLocation: YMKPoint = YMKPoint()
     var previousLocation: CLLocation?
     var zoom: Float = 17.0
-    let VOLGOGRAD_COORDINATES = YMKPoint(latitude: 48.7193900, longitude: 44.5018300)
+    let VOLGOGRAD_COORDINATES: YMKPoint = YMKPoint(latitude: 48.7193900, longitude: 44.5018300)
+    
     
     let addressesManager: AddressesManager = AddressesManager()
     var locationFromPin: CLLocation?
     
     var photoCollectionDataSource: PhotoCollectionDataSource!
     var photoCollectionControllerDelegate: PhotoCollectionControllerDelegate?
+    
+    let makeReportManager: MakeReportManager = MakeReportManager()
+    var reportCoordinates: String?
+    var categoryId: Int?
+    var subCategoryId: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -126,6 +139,39 @@ class MakeReportMapViewController: BaseMakeReportViewController {
         if let height = self.contentScrollView?.frame.size.height {
             self.scrollViewContentHeightConstraint.constant = height
             self.view.layoutSubviews()
+        }
+    }
+    
+    
+    func makeReport() {
+        
+        guard let reportCoordinates = reportCoordinates else { return }
+        
+        var message: [String: Any] = [String: Any]()
+        
+        let userId = 0 // see what's the correct format
+        let categoryId = self.categoryId
+        let subCategoryId = self.subCategoryId
+        let address = "\(cityAddress.text!), \(streetAddress.text!)"
+        let coordinates = reportCoordinates
+        let description = reportDescription.text
+        let files = [String]() // see what's the correct format
+        
+        message.updateValue(userId, forKey: "userId")
+        message.updateValue(categoryId!, forKey: "categoryId")
+        message.updateValue(subCategoryId!, forKey: "subCategoryId")
+        message.updateValue(address, forKey: "address")
+        message.updateValue(coordinates , forKey: "coordinates")
+        message.updateValue(description!, forKey: "description")
+        message.updateValue(files, forKey: "files")
+        
+        
+        makeReportManager.makeReport(dictionary: message) { (result, error) in
+            if error != nil {
+                Alert.showAlert(on: self, style: .alert, title: "Error404", message: error.debugDescription)
+            } else {
+                Alert.showAlert(on: self, style: .alert, title: "Success", message: result!)
+            }
         }
     }
 }
