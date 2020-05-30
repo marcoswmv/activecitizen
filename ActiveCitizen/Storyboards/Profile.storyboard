@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OlW-T2-WGQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ct7-lF-QZw">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -218,7 +218,7 @@
                                             <rect key="frame" x="8" y="8" width="398" height="64"/>
                                             <subviews>
                                                 <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Поиск" translatesAutoresizingMaskIntoConstraints="NO" id="NV4-hX-s7T">
-                                                    <rect key="frame" x="0.0" y="0.0" width="365" height="64"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
@@ -226,10 +226,10 @@
                                                     </connections>
                                                 </searchBar>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filter-stroke" translatesAutoresizingMaskIntoConstraints="NO" id="it2-oz-UrF">
-                                                    <rect key="frame" x="368" y="0.0" width="30" height="64"/>
+                                                    <rect key="frame" x="378" y="0.0" width="20" height="64"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="35" id="EXx-LR-lEh"/>
-                                                        <constraint firstAttribute="width" constant="30" id="jfR-90-2HS"/>
+                                                        <constraint firstAttribute="height" constant="25" id="EXx-LR-lEh"/>
+                                                        <constraint firstAttribute="width" constant="20" id="jfR-90-2HS"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>

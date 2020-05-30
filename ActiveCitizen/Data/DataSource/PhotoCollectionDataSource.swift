@@ -12,6 +12,7 @@ class PhotoCollectionDataSource: BaseCollectionViewDataSource {
     
     var data: [Photo] = [Photo]()
     var completionHandler: ((_ :[Photo]) -> Void)?
+    var imagesToDisplay: [String]?
     
     override func setup() {
         super.setup()

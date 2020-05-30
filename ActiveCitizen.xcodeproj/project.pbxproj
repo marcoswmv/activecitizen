@@ -55,9 +55,9 @@
 		C5A3A77323968E580006997D /* VotingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A3A77223968E580006997D /* VotingViewController.swift */; };
 		E6BE44B6E7480C2F39DB2B5A /* libPods-ActiveCitizen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51EE1CF2E9C3B7EB058C53B0 /* libPods-ActiveCitizen.a */; };
 		F7017997242989030048BA19 /* MediaForTest.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7017996242989020048BA19 /* MediaForTest.xcassets */; };
-		F7017999242995690048BA19 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7017998242995690048BA19 /* ImageViewController.swift */; };
 		F701799B242A25470048BA19 /* UIView+FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F701799A242A25470048BA19 /* UIView+FindViewController.swift */; };
 		F701799D242A63480048BA19 /* BaseViewController+HideShowNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F701799C242A63480048BA19 /* BaseViewController+HideShowNavigationBar.swift */; };
+		F70212A42482F6740068B445 /* ReportDetailsVC+ScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70212A32482F6740068B445 /* ReportDetailsVC+ScrollViewDelegate.swift */; };
 		F716107A23EC654100F89D26 /* MakeReport.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F716107923EC654100F89D26 /* MakeReport.storyboard */; };
 		F716107C23EC7B6100F89D26 /* EnterAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F716107B23EC7B6100F89D26 /* EnterAddressViewController.swift */; };
 		F716107F23ED80C500F89D26 /* EnterAddressVС+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F716107E23ED80C500F89D26 /* EnterAddressVС+TableViewDelegate.swift */; };
@@ -88,7 +88,6 @@
 		F756533724263F61002C4B81 /* FilterCategoriesVC+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F756533624263F61002C4B81 /* FilterCategoriesVC+TableViewDelegate.swift */; };
 		F756533B2426405D002C4B81 /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F756533A2426405D002C4B81 /* FiltersViewController.swift */; };
 		F756534524267DBC002C4B81 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F756534424267DBC002C4B81 /* Keys.swift */; };
-		F75E4898239AA524007BDD47 /* MakeReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E4897239AA524007BDD47 /* MakeReport.swift */; };
 		F75E48A5239AD082007BDD47 /* GothaProLig.otf in Resources */ = {isa = PBXBuildFile; fileRef = F75E489E239AD082007BDD47 /* GothaProLig.otf */; };
 		F75E48A6239AD082007BDD47 /* GothaProBla.otf in Resources */ = {isa = PBXBuildFile; fileRef = F75E489F239AD082007BDD47 /* GothaProBla.otf */; };
 		F75E48A7239AD082007BDD47 /* GothaProBol.otf in Resources */ = {isa = PBXBuildFile; fileRef = F75E48A0239AD082007BDD47 /* GothaProBol.otf */; };
@@ -102,7 +101,6 @@
 		F762F6752465F627001B9ABC /* AboutViewController+TMBarDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F762F6742465F627001B9ABC /* AboutViewController+TMBarDataSource.swift */; };
 		F76A98AC24114D59009097C8 /* VotingViewController+TMBarDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76A98AB24114D59009097C8 /* VotingViewController+TMBarDataSource.swift */; };
 		F76AE657242E5DBC00C27F4B /* ReportsMapVC+LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76AE656242E5DBC00C27F4B /* ReportsMapVC+LocationManager.swift */; };
-		F77187C0239FAD3300AAA1C6 /* MakeReportScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77187BF239FAD3300AAA1C6 /* MakeReportScrollView.swift */; };
 		F773E4772437595800E8E978 /* IBDesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F773E4762437595800E8E978 /* IBDesignableButton.swift */; };
 		F773E4792437636900E8E978 /* SelfSizingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F773E4782437636900E8E978 /* SelfSizingTableView.swift */; };
 		F773E47B2437B61600E8E978 /* CommentsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F773E47A2437B61600E8E978 /* CommentsManager.swift */; };
@@ -155,7 +153,6 @@
 		F7A3EFE7242D655C0002C8EB /* CommentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7A3EFE6242D655C0002C8EB /* CommentView.xib */; };
 		F7A3EFE9242D65A60002C8EB /* AddressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7A3EFE8242D65A60002C8EB /* AddressView.xib */; };
 		F7A3EFEB242D65AE0002C8EB /* SelectedAddressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7A3EFEA242D65AE0002C8EB /* SelectedAddressView.xib */; };
-		F7A3EFED242D70140002C8EB /* ReportDetailsVC+ScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A3EFEC242D70140002C8EB /* ReportDetailsVC+ScrollViewDelegate.swift */; };
 		F7A3EFEF242D7C9D0002C8EB /* ReportDetailsVC+MapClusterListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A3EFEE242D7C9D0002C8EB /* ReportDetailsVC+MapClusterListener.swift */; };
 		F7A48D012481A9A500291B8B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A48D002481A9A500291B8B /* Message.swift */; };
 		F7A48D032481BD1600291B8B /* MakeReportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A48D022481BD1600291B8B /* MakeReportManager.swift */; };
@@ -242,9 +239,9 @@
 		C5A3A77223968E580006997D /* VotingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingViewController.swift; sourceTree = "<group>"; };
 		E9489D3B0AFFD2E9B4255859 /* Pods-ActiveCitizen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActiveCitizen.release.xcconfig"; path = "Target Support Files/Pods-ActiveCitizen/Pods-ActiveCitizen.release.xcconfig"; sourceTree = "<group>"; };
 		F7017996242989020048BA19 /* MediaForTest.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MediaForTest.xcassets; sourceTree = "<group>"; };
-		F7017998242995690048BA19 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		F701799A242A25470048BA19 /* UIView+FindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+FindViewController.swift"; sourceTree = "<group>"; };
 		F701799C242A63480048BA19 /* BaseViewController+HideShowNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseViewController+HideShowNavigationBar.swift"; sourceTree = "<group>"; };
+		F70212A32482F6740068B445 /* ReportDetailsVC+ScrollViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReportDetailsVC+ScrollViewDelegate.swift"; sourceTree = "<group>"; };
 		F716107923EC654100F89D26 /* MakeReport.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MakeReport.storyboard; sourceTree = "<group>"; };
 		F716107B23EC7B6100F89D26 /* EnterAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAddressViewController.swift; sourceTree = "<group>"; };
 		F716107E23ED80C500F89D26 /* EnterAddressVС+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnterAddressVС+TableViewDelegate.swift"; sourceTree = "<group>"; };
@@ -275,7 +272,6 @@
 		F756533624263F61002C4B81 /* FilterCategoriesVC+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilterCategoriesVC+TableViewDelegate.swift"; sourceTree = "<group>"; };
 		F756533A2426405D002C4B81 /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
 		F756534424267DBC002C4B81 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
-		F75E4897239AA524007BDD47 /* MakeReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeReport.swift; sourceTree = "<group>"; };
 		F75E489E239AD082007BDD47 /* GothaProLig.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothaProLig.otf; sourceTree = "<group>"; };
 		F75E489F239AD082007BDD47 /* GothaProBla.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothaProBla.otf; sourceTree = "<group>"; };
 		F75E48A0239AD082007BDD47 /* GothaProBol.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothaProBol.otf; sourceTree = "<group>"; };
@@ -289,7 +285,6 @@
 		F762F6742465F627001B9ABC /* AboutViewController+TMBarDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AboutViewController+TMBarDataSource.swift"; sourceTree = "<group>"; };
 		F76A98AB24114D59009097C8 /* VotingViewController+TMBarDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VotingViewController+TMBarDataSource.swift"; sourceTree = "<group>"; };
 		F76AE656242E5DBC00C27F4B /* ReportsMapVC+LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReportsMapVC+LocationManager.swift"; sourceTree = "<group>"; };
-		F77187BF239FAD3300AAA1C6 /* MakeReportScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeReportScrollView.swift; sourceTree = "<group>"; };
 		F773E4762437595800E8E978 /* IBDesignableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBDesignableButton.swift; sourceTree = "<group>"; };
 		F773E4782437636900E8E978 /* SelfSizingTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfSizingTableView.swift; sourceTree = "<group>"; };
 		F773E47A2437B61600E8E978 /* CommentsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsManager.swift; sourceTree = "<group>"; };
@@ -342,7 +337,6 @@
 		F7A3EFE6242D655C0002C8EB /* CommentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentView.xib; sourceTree = "<group>"; };
 		F7A3EFE8242D65A60002C8EB /* AddressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressView.xib; sourceTree = "<group>"; };
 		F7A3EFEA242D65AE0002C8EB /* SelectedAddressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectedAddressView.xib; sourceTree = "<group>"; };
-		F7A3EFEC242D70140002C8EB /* ReportDetailsVC+ScrollViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReportDetailsVC+ScrollViewDelegate.swift"; sourceTree = "<group>"; };
 		F7A3EFEE242D7C9D0002C8EB /* ReportDetailsVC+MapClusterListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReportDetailsVC+MapClusterListener.swift"; sourceTree = "<group>"; };
 		F7A48D002481A9A500291B8B /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		F7A48D022481BD1600291B8B /* MakeReportManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeReportManager.swift; sourceTree = "<group>"; };
@@ -484,8 +478,8 @@
 		C52CE65E239544CC004760EF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				F71D67242478706D00B0054C /* ImageSlider */,
 				C52CE65F239544D5004760EF /* Base */,
+				F71D67242478706D00B0054C /* ImageSlider */,
 				C52CE662239544FE004760EF /* MakeReport */,
 				C52CE6652395455B004760EF /* Members */,
 				C52CE66623954571004760EF /* More */,
@@ -536,7 +530,6 @@
 		C52CE6642395454B004760EF /* ReportsList */ = {
 			isa = PBXGroup;
 			children = (
-				F7017998242995690048BA19 /* ImageViewController.swift */,
 				C523602B239687E6002D9783 /* ReportDetailsViewController.swift */,
 				C52CE68023954AA5004760EF /* ReportsListContainerViewController.swift */,
 				C523601323964F05002D9783 /* ReportsListViewController.swift */,
@@ -588,7 +581,6 @@
 				C523600923963C2A002D9783 /* Base */,
 				C5236022239672B5002D9783 /* Cells */,
 				C523600E239641DD002D9783 /* ReusableViews */,
-				F75E4896239AA507007BDD47 /* MakeReport */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -620,7 +612,7 @@
 				F777369223FD6EED002B8746 /* ProfileVC+TMBarDataSource.swift */,
 				F7A3EFEE242D7C9D0002C8EB /* ReportDetailsVC+MapClusterListener.swift */,
 				F78C176124392A9C000200CD /* ReportDetailsVC+ReportLocationObjectListener.swift */,
-				F7A3EFEC242D70140002C8EB /* ReportDetailsVC+ScrollViewDelegate.swift */,
+				F70212A32482F6740068B445 /* ReportDetailsVC+ScrollViewDelegate.swift */,
 				F7F67E932468404300202BBF /* ReportsListContainerViewController+TMBarDataSource.swift */,
 				F792BE4F2468C529008B17ED /* ReportsListViewController+HideTabBar.swift */,
 				F7A48D042481C81300291B8B /* ReportsListViewController+SearchBarDelegate.swift */,
@@ -730,15 +722,6 @@
 				F777930A242810FC00389A0D /* Nibs */,
 			);
 			path = ViewsWithXib;
-			sourceTree = "<group>";
-		};
-		F75E4896239AA507007BDD47 /* MakeReport */ = {
-			isa = PBXGroup;
-			children = (
-				F75E4897239AA524007BDD47 /* MakeReport.swift */,
-				F77187BF239FAD3300AAA1C6 /* MakeReportScrollView.swift */,
-			);
-			path = MakeReport;
 			sourceTree = "<group>";
 		};
 		F75E489D239AD082007BDD47 /* FontFamily */ = {
@@ -1028,7 +1011,6 @@
 				F7313EC4243234EE005857EE /* CommentsDataSource.swift in Sources */,
 				F7A221FA2400473C00C11353 /* SubCategoriesVC+TableViewDelegate.swift in Sources */,
 				F773E4772437595800E8E978 /* IBDesignableButton.swift in Sources */,
-				F77187C0239FAD3300AAA1C6 /* MakeReportScrollView.swift in Sources */,
 				F785332E24675B2E00C584B7 /* SubAboutViewController.swift in Sources */,
 				C52CE68323954B01004760EF /* MembersListViewController.swift in Sources */,
 				F71D67282478715D00B0054C /* ImageSliderViewController.swift in Sources */,
@@ -1046,7 +1028,6 @@
 				F7A2220B240325AA00C11353 /* UIViewController+BackButton.swift in Sources */,
 				F773E47B2437B61600E8E978 /* CommentsManager.swift in Sources */,
 				F762F6752465F627001B9ABC /* AboutViewController+TMBarDataSource.swift in Sources */,
-				F7A3EFED242D70140002C8EB /* ReportDetailsVC+ScrollViewDelegate.swift in Sources */,
 				F7E63AB8241FCCD50017B13C /* MemberReportsTableViewCell.swift in Sources */,
 				F7E63AC024203CB90017B13C /* MembersTableViewCell.swift in Sources */,
 				F7A22213240334AD00C11353 /* SubCategoriesTableViewCell.swift in Sources */,
@@ -1071,12 +1052,12 @@
 				C52CE68D23955331004760EF /* UITabBarController+Animation.swift in Sources */,
 				F7BDE17E23F6002900B6C1D9 /* EnterAddressManuallyViewController.swift in Sources */,
 				F756532D24263A44002C4B81 /* FilterCategoriesViewController.swift in Sources */,
+				F70212A42482F6740068B445 /* ReportDetailsVC+ScrollViewDelegate.swift in Sources */,
 				F785333824678EFD00C584B7 /* SubVotingViewController.swift in Sources */,
 				C52360102396430C002D9783 /* UIView+Attributes.swift in Sources */,
 				C523601C23965D5C002D9783 /* Report.swift in Sources */,
 				F7AD212E241C0BDA0041AC2A /* MemberDetailViewController.swift in Sources */,
 				F7A2220624005C8600C11353 /* Category.swift in Sources */,
-				F7017999242995690048BA19 /* ImageViewController.swift in Sources */,
 				F7779308242810D900389A0D /* AddressView.swift in Sources */,
 				F76209C823ABA1B300BEB8DE /* NotificationsTableViewController.swift in Sources */,
 				F79A3CFE2419111800D94FD3 /* MakeReportMapVС+MapTapListener.swift in Sources */,
@@ -1106,7 +1087,6 @@
 				F7CB4799240872510087FC22 /* MakeReportMapVС+ImagePicker.swift in Sources */,
 				C5236024239672CD002D9783 /* BaseTableViewCell.swift in Sources */,
 				F7CB47A724089D200087FC22 /* MembersDataSource.swift in Sources */,
-				F75E4898239AA524007BDD47 /* MakeReport.swift in Sources */,
 				F7A2220D2403307A00C11353 /* SubCategoriesDataSource.swift in Sources */,
 				F7CB47A524089B240087FC22 /* MembersManager.swift in Sources */,
 				F7A48D032481BD1600291B8B /* MakeReportManager.swift in Sources */,

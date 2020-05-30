@@ -28,7 +28,7 @@ class LoginViewController: BaseProfileViewController {
 //            navigationController?.pushViewController(profileViewController, animated: true)
 //        }
 
-        if let url = URL(string: "https://active-citizen.ru/esia/login") {
+        if let url = URL(string: "https://esia-portal1.test.gosuslugi.ru") {
             let request = URLRequest(url: url)
             webView.load(request)
         }

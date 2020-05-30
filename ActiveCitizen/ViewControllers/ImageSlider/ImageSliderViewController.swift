@@ -22,21 +22,28 @@ class ImageSliderViewController: BaseCollectionViewController {
 //    MARK: - PROPERTIES
     var dataSource: ImageSliderDataSource?
     var photos: [Photo]?
+    var imagesToDisplay: [String]?
     
 //    MARK: - METHODS
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupDataSource()
+    }
+    
+    func setupDataSource() {
+        dataSource = ImageSliderDataSource(collectionView: self.imagesCollectionView)
         if let photos = photos {
             paginationLabel.text = "Фото 1 из \(photos.count)"
-            
-            dataSource = ImageSliderDataSource(collectionView: self.imagesCollectionView)
             dataSource?.addPhotos(with: photos)
-            dataSource?.completionHandler = { currentIndex in
-                self.paginationLabel.text = "Фото \(currentIndex) из \(photos.count)"
-            }
-        } else {
-            Alert.showAlert(on: self, style: .alert, title: "No photos", message: nil)
+        }
+        if let imagesToDisplay = imagesToDisplay {
+            paginationLabel.text = !imagesToDisplay.isEmpty ? "Фото 1 из \(imagesToDisplay.count)" : "Фото 0 из 0"
+            dataSource?.imagesToDisplay = imagesToDisplay
+            dataSource?.reload()
+        }
+        dataSource?.completionHandler = { currentIndex, total in
+            self.paginationLabel.text = "Фото \(currentIndex) из \(total)"
         }
     }
 }

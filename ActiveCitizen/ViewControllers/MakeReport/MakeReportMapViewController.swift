@@ -16,6 +16,8 @@ protocol PhotoCollectionControllerDelegate {
 
 class MakeReportMapViewController: BaseMakeReportViewController {
 
+//    MARK: - OUTLETS
+    
     @IBOutlet weak var mapView: YMKMapView!
     @IBOutlet weak var dashedSeparator: UIView!
     @IBOutlet weak var reportDescription: UITextView!
@@ -26,7 +28,7 @@ class MakeReportMapViewController: BaseMakeReportViewController {
     @IBOutlet weak var categoryIcon: UIImageView!
     @IBOutlet weak var category: UILabel!
     @IBOutlet weak var streetAddress: UILabel!
-    @IBOutlet weak var scrollView: MakeReportScrollView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -49,14 +51,11 @@ class MakeReportMapViewController: BaseMakeReportViewController {
     }
     
     @IBAction func addPhotoOnTouchUpInside(_ sender: Any) {
-//        TODO: Upload photo to server
         choosePhotoSourceAlertController()
     }
     
     @IBAction func makeReportOnTouchUpInside(_ sender: Any) {
-        print("Making report")
-        makeReport()
-//        TODO: Connect to server to make the report
+        composeMessage()
     }
     
     @IBAction func enterAddressOnTouchUpInside(_ sender: Any) {
@@ -87,6 +86,8 @@ class MakeReportMapViewController: BaseMakeReportViewController {
     }
     
     
+//    MARK: - PROPERTIES
+    
     lazy var map: YMKMap = { return self.mapView.mapWindow.map }()
     lazy var mapWindow: YMKMapWindow = { return self.mapView.mapWindow }()
     
@@ -107,6 +108,9 @@ class MakeReportMapViewController: BaseMakeReportViewController {
     var reportCoordinates: String?
     var categoryId: Int?
     var subCategoryId: Int?
+    
+    
+//    MARK: - METHODS
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -142,9 +146,7 @@ class MakeReportMapViewController: BaseMakeReportViewController {
         }
     }
     
-    
-    func makeReport() {
-        
+    func composeMessage() {
         guard let reportCoordinates = reportCoordinates else { return }
         
         var message: [String: Any] = [String: Any]()

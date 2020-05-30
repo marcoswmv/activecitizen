@@ -24,7 +24,7 @@ class ReportView: UIViewWithXib {
     
     @IBAction func showPhotosOnTouchUpInside(_ sender: UIButton) {
         if self.tag == 0 {
-            let imageViewController = ImageViewController.instantiate() as! ImageViewController
+            let imageViewController = ImageSliderViewController.instantiate() as! ImageSliderViewController
             
             imageViewController.imagesToDisplay = images
             
