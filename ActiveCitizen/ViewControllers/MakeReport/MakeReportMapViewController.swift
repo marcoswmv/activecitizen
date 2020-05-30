@@ -105,6 +105,7 @@ class MakeReportMapViewController: BaseMakeReportViewController {
     var photoCollectionControllerDelegate: PhotoCollectionControllerDelegate?
     
     let makeReportManager: MakeReportManager = MakeReportManager()
+    let imagesManager: ImagesManager = ImagesManager()
     var reportCoordinates: String?
     var categoryId: Int?
     var subCategoryId: Int?
@@ -146,7 +147,26 @@ class MakeReportMapViewController: BaseMakeReportViewController {
         }
     }
     
+    func uploadImagesToServer() {
+        var imagesDictionary: [String: Any] = [String: Any]()
+        let photos = photoCollectionDataSource.data
+        
+        _ = photos.map({ imagesDictionary.updateValue($0, forKey: "files") })
+        _ = photos.map({ imagesDictionary.updateValue($0.image.description, forKey: "description") })
+        
+        imagesManager.uploadImages(dictionary: imagesDictionary) { (result, error) in
+           if error != nil {
+               Alert.showAlert(on: self, style: .alert, title: "Error404", message: error.debugDescription)
+           } else {
+               Alert.showAlert(on: self, style: .alert, title: "Success", message: result!)
+           }
+        }
+    }
+    
     func composeMessage() {
+        
+        uploadImagesToServer()
+        
         guard let reportCoordinates = reportCoordinates else { return }
         
         var message: [String: Any] = [String: Any]()

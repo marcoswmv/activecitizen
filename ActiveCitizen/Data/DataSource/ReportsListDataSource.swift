@@ -67,8 +67,14 @@ class ReportsListDataSource: BaseDataSource {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searching {
+            if filteredData!.isEmpty {
+                addTableViewBackgroundView()
+            }
             return filteredData?.count ?? 0
         } else {
+            if data!.isEmpty {
+                addTableViewBackgroundView()
+            }
             return data?.count ?? 0
         }
     }
@@ -85,6 +91,16 @@ class ReportsListDataSource: BaseDataSource {
         cell.selectionStyle = .none
         
         return cell
+    }
+    
+    func addTableViewBackgroundView() {
+        let noDataLabel = UILabel(frame: CGRect(x: 0, y: 0,
+                                                width: tableView.bounds.size.width,
+                                                height: tableView.bounds.size.height))
+        noDataLabel.text = "Нет обращений"
+        noDataLabel.font = UIFont(name: UIFont.regularFontFmily, size: 15.0)
+        noDataLabel.textAlignment = .center
+        tableView.backgroundView = noDataLabel
     }
     
 }

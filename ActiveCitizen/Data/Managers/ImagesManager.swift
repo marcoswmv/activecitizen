@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import Alamofire
 import Kingfisher
 
-class ImagesManager {
+class ImagesManager: BaseNetworkManager {
     
     typealias FilesCompletionHandler = (_ image: RetrieveImageResult?, _ error: KingfisherError?) -> Void
+    typealias UploadImageCompletionHandler = (_ reports: String?, _ error: Error?) -> Void
     
     @discardableResult
     func getImage(with ID: String, completion: @escaping FilesCompletionHandler) -> DownloadTask? {
@@ -27,6 +29,19 @@ class ImagesManager {
                 completion(value, nil)
             case .failure(let error):
                 completion(nil, error)
+            }
+        }
+    }
+    
+    @discardableResult
+    func uploadImages(dictionary: [String: Any],completion: @escaping UploadImageCompletionHandler) -> DataRequest {
+        
+        let params = dictionary
+        return request(apiEndpoint: "utils/uploadFile", method: .post, parameters: params) { (response, error) in
+            if error != nil {
+                completion(nil, error)
+            } else {
+                completion(response as? String, nil)
             }
         }
     }
