@@ -573,14 +573,14 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VoteTableViewCell" id="y7s-05-sJg" customClass="VoteTableViewCell" customModule="ActiveCitizen" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="136" width="375" height="184"/>
+                                        <rect key="frame" x="0.0" y="136" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y7s-05-sJg" id="Vk1-sg-L99">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="184"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xhv-l3-TrC" customClass="VotingCellView" customModule="ActiveCitizen" customModuleProvider="target">
-                                                    <rect key="frame" x="12" y="12" width="351" height="160"/>
+                                                    <rect key="frame" x="12" y="12" width="351" height="252"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="160" id="cm3-y3-PpQ"/>
@@ -667,14 +667,14 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VoteTableViewCell" id="oOG-9L-tLe" customClass="VoteTableViewCell" customModule="ActiveCitizen" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="136" width="375" height="184"/>
+                                        <rect key="frame" x="0.0" y="136" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oOG-9L-tLe" id="RXF-xQ-AGG">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="184"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f3n-95-6M6" customClass="VotingCellView" customModule="ActiveCitizen" customModuleProvider="target">
-                                                    <rect key="frame" x="12" y="12" width="351" height="160"/>
+                                                    <rect key="frame" x="12" y="12" width="351" height="252"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="160" id="3Qt-JS-Fg6"/>
@@ -756,14 +756,14 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VoteTableViewCell" id="hDf-jt-Px0" customClass="VoteTableViewCell" customModule="ActiveCitizen" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="136" width="375" height="184"/>
+                                        <rect key="frame" x="0.0" y="136" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hDf-jt-Px0" id="fZb-uW-cEZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="184"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfE-bu-wFE" customClass="VotingCellView" customModule="ActiveCitizen" customModuleProvider="target">
-                                                    <rect key="frame" x="12" y="12" width="351" height="160"/>
+                                                    <rect key="frame" x="12" y="12" width="351" height="252"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="160" id="0EY-i2-bz8"/>

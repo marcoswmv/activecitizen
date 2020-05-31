@@ -29,14 +29,7 @@ class ReportView: UIViewWithXib {
             imageViewController.imagesToDisplay = images
             
             self.findViewController()?.navigationController?.pushViewController(imageViewController, animated: true)
-        } else if self.tag == 1 {
-            let memberDetailImageViewController = MemberDetailImageViewController.instantiate() as! MemberDetailImageViewController
-            
-            memberDetailImageViewController.imagesToDisplay = images
-            
-            self.findViewController()?.navigationController?.pushViewController(memberDetailImageViewController, animated: true)
         }
-        
     }
     
     

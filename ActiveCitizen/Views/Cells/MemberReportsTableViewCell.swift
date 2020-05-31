@@ -24,7 +24,7 @@ class MemberReportsTableViewCell: BaseTableViewCell {
             reportCellView.dateOfCreation.text = data?.created?.string(format: "dd.MM.yyyy")
             reportCellView.status.text = taskStatus.setStatus(statusKey: data?.status)
             reportCellView.status.textColor = taskStatus.setColor(statusKey: data?.status)
-        
+            reportCellView.images = data?.imagesIDs
             
             if data?.imagesIDs?.first == "" {
                 reportCellView.photosButton.isHidden = true

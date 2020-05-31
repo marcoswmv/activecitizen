@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -66,7 +67,7 @@
                                                                     <rect key="frame" x="82" y="0.0" width="286" height="74"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Филинков Александр  Юрьевич" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cva-Nv-Iai">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="286" height="35"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="286" height="28"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="230" id="vEt-xV-FMf"/>
                                                                             </constraints>
@@ -75,19 +76,19 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="f7D-bP-oh3">
-                                                                            <rect key="frame" x="0.0" y="43" width="286" height="31"/>
+                                                                            <rect key="frame" x="0.0" y="36" width="286" height="38"/>
                                                                             <subviews>
                                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ffk-3A-kpd">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="132.5" height="12"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="15.5"/>
                                                                                     <subviews>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Решено проблем:" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DF4-kq-tvt">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="118" height="12"/>
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="107.5" height="15.5"/>
                                                                                             <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="13"/>
                                                                                             <color key="textColor" name="User Label Gray"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2s-T4-918">
-                                                                                            <rect key="frame" x="123" y="0.0" width="9.5" height="12"/>
+                                                                                            <rect key="frame" x="112.5" y="0.0" width="7.5" height="15.5"/>
                                                                                             <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="13"/>
                                                                                             <color key="textColor" name="User Label Gray"/>
                                                                                             <nil key="highlightedColor"/>
@@ -95,16 +96,16 @@
                                                                                     </subviews>
                                                                                 </stackView>
                                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="837-Bt-ssA">
-                                                                                    <rect key="frame" x="0.0" y="19" width="65" height="12"/>
+                                                                                    <rect key="frame" x="0.0" y="22.5" width="60" height="15.5"/>
                                                                                     <subviews>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Заявок:" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CY0-Yw-zKi">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="50.5" height="12"/>
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="47.5" height="15.5"/>
                                                                                             <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="13"/>
                                                                                             <color key="textColor" name="User Label Gray"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zL2-Fh-1B9">
-                                                                                            <rect key="frame" x="55.5" y="0.0" width="9.5" height="12"/>
+                                                                                            <rect key="frame" x="52.5" y="0.0" width="7.5" height="15.5"/>
                                                                                             <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="13"/>
                                                                                             <color key="textColor" name="User Label Gray"/>
                                                                                             <nil key="highlightedColor"/>
@@ -421,7 +422,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="204"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DFJ-9E-eqI" customClass="ReportView" customModule="ActiveCitizen" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DFJ-9E-eqI" customClass="ReportView" customModule="ActiveCitizen" customModuleProvider="target">
                                                     <rect key="frame" x="12" y="12" width="390" height="180"/>
                                                 </view>
                                             </subviews>
@@ -582,53 +583,99 @@
             </objects>
             <point key="canvasLocation" x="3390" y="-760"/>
         </scene>
-        <!--Member Detail Image View Controller-->
-        <scene sceneID="pUG-MF-TOq">
+        <!--Image Slider View Controller-->
+        <scene sceneID="kLX-IX-Jr2">
             <objects>
-                <viewController storyboardIdentifier="MemberDetailImageViewController" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pv2-DS-DbH" customClass="MemberDetailImageViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="TkD-2X-ZcF" customClass="IBDesignableView" customModule="ActiveCitizen" customModuleProvider="target">
+                <viewController storyboardIdentifier="ImageSliderViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6m2-CN-CQ1" customClass="ImageSliderViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G9e-ga-3lS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фото 0 из 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jnq-0Q-zLJ">
-                                <rect key="frame" x="60" y="16.5" width="294" height="15.5"/>
-                                <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89x-IF-tBS">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WyT-Fi-siN">
+                                <rect key="frame" x="0.0" y="64" width="414" height="22"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YfB-Sb-SGl">
+                                        <rect key="frame" x="0.0" y="0.0" width="60.5" height="22"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="baseline_clear_white_18pt"/>
+                                        <connections>
+                                            <action selector="popImageSliderViewControllerOnTouchUpInside:" destination="6m2-CN-CQ1" eventType="touchUpInside" id="XFX-H4-FC6"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фото 0 из 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xsa-fO-iuA">
+                                        <rect key="frame" x="60.5" y="3.5" width="353.5" height="15.5"/>
+                                        <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="m9u-63-Rsk">
+                                <rect key="frame" x="0.0" y="86" width="414" height="746"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="i2y-XK-pTJ">
+                                    <size key="itemSize" width="375" height="400"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="18" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageSliderViewCell" id="ccK-0g-tNe" customClass="ImageSliderViewCell" customModule="ActiveCitizen" customModuleProvider="target">
+                                        <rect key="frame" x="18" y="73" width="375" height="600"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6Rh-nh-1Gk">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3fM-kW-yFh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="600" id="ZRC-lN-vya"/>
+                                                        <constraint firstAttribute="width" constant="375" id="v9x-LO-uqz"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="3fM-kW-yFh" secondAttribute="trailing" id="Cxa-9n-Xle"/>
+                                                <constraint firstAttribute="bottom" secondItem="3fM-kW-yFh" secondAttribute="bottom" id="EjC-9q-S2d"/>
+                                                <constraint firstItem="3fM-kW-yFh" firstAttribute="leading" secondItem="6Rh-nh-1Gk" secondAttribute="leading" id="T8D-J2-P4D"/>
+                                                <constraint firstItem="3fM-kW-yFh" firstAttribute="top" secondItem="6Rh-nh-1Gk" secondAttribute="top" id="mXX-kc-VSz"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageView" destination="3fM-kW-yFh" id="pjP-bm-WFy"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
                                 <connections>
-                                    <outlet property="delegate" destination="pv2-DS-DbH" id="YfO-Ld-ZPd"/>
+                                    <outlet property="delegate" destination="6m2-CN-CQ1" id="XZh-Ye-C9O"/>
                                 </connections>
-                            </scrollView>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="89x-IF-tBS" firstAttribute="top" secondItem="Jnq-0Q-zLJ" secondAttribute="bottom" constant="12" id="4uu-tx-3EA"/>
-                            <constraint firstItem="Jnq-0Q-zLJ" firstAttribute="centerX" secondItem="TkD-2X-ZcF" secondAttribute="centerX" id="BgT-7m-aD6"/>
-                            <constraint firstItem="89x-IF-tBS" firstAttribute="trailing" secondItem="Eii-9v-IRT" secondAttribute="trailing" id="LOF-l4-ETp"/>
-                            <constraint firstItem="89x-IF-tBS" firstAttribute="top" secondItem="Eii-9v-IRT" secondAttribute="top" id="dCS-lY-Lqx"/>
-                            <constraint firstItem="89x-IF-tBS" firstAttribute="bottom" secondItem="Eii-9v-IRT" secondAttribute="bottom" id="dKa-hj-MJV"/>
-                            <constraint firstItem="Jnq-0Q-zLJ" firstAttribute="leading" secondItem="Eii-9v-IRT" secondAttribute="leading" constant="60" id="ilF-d6-mu7"/>
-                            <constraint firstItem="89x-IF-tBS" firstAttribute="leading" secondItem="Eii-9v-IRT" secondAttribute="leading" id="uAk-WB-PLD"/>
+                            <constraint firstItem="WyT-Fi-siN" firstAttribute="leading" secondItem="KoS-R9-pw2" secondAttribute="leading" id="0se-nW-fVP"/>
+                            <constraint firstItem="m9u-63-Rsk" firstAttribute="trailing" secondItem="KoS-R9-pw2" secondAttribute="trailing" id="3dh-0R-Bxo"/>
+                            <constraint firstItem="WyT-Fi-siN" firstAttribute="top" secondItem="KoS-R9-pw2" secondAttribute="top" constant="20" id="5py-Ke-XT5"/>
+                            <constraint firstItem="KoS-R9-pw2" firstAttribute="bottom" secondItem="m9u-63-Rsk" secondAttribute="bottom" constant="30" id="Bss-wg-KBR"/>
+                            <constraint firstItem="m9u-63-Rsk" firstAttribute="leading" secondItem="KoS-R9-pw2" secondAttribute="leading" id="Uef-RU-rNw"/>
+                            <constraint firstItem="KoS-R9-pw2" firstAttribute="trailing" secondItem="WyT-Fi-siN" secondAttribute="trailing" id="Yve-H4-PvE"/>
+                            <constraint firstItem="m9u-63-Rsk" firstAttribute="top" secondItem="WyT-Fi-siN" secondAttribute="bottom" id="en0-8F-PBF"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Eii-9v-IRT"/>
+                        <viewLayoutGuide key="safeArea" id="KoS-R9-pw2"/>
                     </view>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="hideNavigationBar" value="YES"/>
-                    </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="pagination" destination="Jnq-0Q-zLJ" id="Vep-tn-xeo"/>
-                        <outlet property="scrollView" destination="89x-IF-tBS" id="cOz-gI-Rkb"/>
+                        <outlet property="imagesCollectionView" destination="m9u-63-Rsk" id="eqN-Y1-dhm"/>
+                        <outlet property="paginationLabel" destination="Xsa-fO-iuA" id="Aie-yG-PEJ"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qrR-nz-KxA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ls6-oc-Gjs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2729" y="-71"/>
+            <point key="canvasLocation" x="2729" y="-100"/>
         </scene>
     </scenes>
     <resources>
+        <image name="baseline_clear_white_18pt" width="18" height="18"/>
         <image name="filter-stroke" width="18" height="20.5"/>
         <image name="placeholder" width="77.5" height="77.5"/>
         <namedColor name="Search Bar Background White">
