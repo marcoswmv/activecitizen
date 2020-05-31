@@ -36,4 +36,14 @@ class BaseDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         fatalError("Not implemented")
     }
+    
+    func addTableViewBackgroundView(with text: String) {
+        let noDataLabel = UILabel(frame: CGRect(x: 0, y: 0,
+                                                width: tableView.bounds.size.width,
+                                                height: tableView.bounds.size.height))
+        noDataLabel.text = text
+        noDataLabel.font = UIFont(name: UIFont.regularFontFmily, size: 17.0)
+        noDataLabel.textAlignment = .center
+        tableView.backgroundView = noDataLabel
+    }
 }

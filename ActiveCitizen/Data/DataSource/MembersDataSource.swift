@@ -51,11 +51,17 @@ class MembersDataSource: BaseDataSource {
     // MARK: - DataSource
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       if searching {
-           return filteredData?.count ?? 0
-       } else {
-           return data?.count ?? 0
-       }
+        if searching {
+            if filteredData!.isEmpty {
+                addTableViewBackgroundView(with: "Нет участвников")
+            }
+            return filteredData?.count ?? 0
+        } else {
+            if data!.isEmpty {
+                addTableViewBackgroundView(with: "Нет участвников")
+            }
+            return data?.count ?? 0
+        }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
