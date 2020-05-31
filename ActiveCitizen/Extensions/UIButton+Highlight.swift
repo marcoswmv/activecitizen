@@ -9,6 +9,7 @@
 import UIKit
 
 extension UIButton {
+    
     override open var isHighlighted: Bool {
         didSet {
             UIView.animate(withDuration: 0.25, delay: 0, options: [.beginFromCurrentState, .allowUserInteraction], animations: {

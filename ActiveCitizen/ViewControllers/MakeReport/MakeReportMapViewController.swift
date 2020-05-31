@@ -30,6 +30,9 @@ class MakeReportMapViewController: BaseMakeReportViewController {
     @IBOutlet weak var streetAddress: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var noCategory: UILabel!
+    @IBOutlet weak var noMessage: UILabel!
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBAction func showMyPositionOnTouchUpInside(_ sender: Any) {
@@ -55,7 +58,7 @@ class MakeReportMapViewController: BaseMakeReportViewController {
     }
     
     @IBAction func makeReportOnTouchUpInside(_ sender: Any) {
-        composeMessage()
+        checkEmptyFields()
     }
     
     @IBAction func enterAddressOnTouchUpInside(_ sender: Any) {
@@ -82,6 +85,7 @@ class MakeReportMapViewController: BaseMakeReportViewController {
             self.categoryId = categoryId
             self.subCategoryId = subCategoryId
         }
+        noCategory.isHidden = true
         navigationController?.pushViewController(chooseCategoryViewController, animated: true)
     }
     
@@ -156,9 +160,9 @@ class MakeReportMapViewController: BaseMakeReportViewController {
         
         imagesManager.uploadImages(dictionary: imagesDictionary) { (result, error) in
            if error != nil {
-               Alert.showAlert(on: self, style: .alert, title: "Error404", message: error.debugDescription)
+               Alert.showAlert(on: self, style: .alert, title: "Ошибка", message: "Приносим свои извинения!\nНа данный момент сервер на доступен\nпоэтому невозможно сообщить проблему!")
            } else {
-               Alert.showAlert(on: self, style: .alert, title: "Success", message: result!)
+               Alert.showAlert(on: self, style: .alert, title: "Успешно", message: result!)
            }
         }
     }
@@ -190,10 +194,26 @@ class MakeReportMapViewController: BaseMakeReportViewController {
         
         makeReportManager.makeReport(dictionary: message) { (result, error) in
             if error != nil {
-                Alert.showAlert(on: self, style: .alert, title: "Error404", message: error.debugDescription)
+                Alert.showAlert(on: self, style: .alert, title: "Ошибка", message: "Приносим свои извинения!\nНа данный момент сервер на доступен\nпоэтому невозможно сообщить проблему!")
             } else {
-                Alert.showAlert(on: self, style: .alert, title: "Success", message: result!)
+                Alert.showAlert(on: self, style: .alert, title: "Успешно", message: result!)
             }
+        }
+    }
+    
+    func checkEmptyFields() {
+        if category.text == "Выбрать категорию" {
+            noCategory.isHidden = false
+        }
+        
+        if reportDescription.text == "Текст сообщения" {
+            noMessage.isHidden = false
+        }
+        
+        if category.text != "Выбрать категорию", reportDescription.text != "Текст сообщения" {
+            noCategory.isHidden = true
+            noMessage.isHidden = true
+            composeMessage()
         }
     }
 }

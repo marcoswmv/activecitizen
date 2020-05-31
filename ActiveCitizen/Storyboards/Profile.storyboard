@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ct7-lF-QZw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OlW-T2-WGQ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -88,7 +88,23 @@
                     <view key="view" contentMode="scaleToFill" id="yae-i1-sq9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sqI-VY-VMK">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="sqI-VY-VMK" firstAttribute="top" secondItem="haO-MB-wru" secondAttribute="top" id="CQ2-WJ-QIn"/>
+                            <constraint firstItem="haO-MB-wru" firstAttribute="trailing" secondItem="sqI-VY-VMK" secondAttribute="trailing" id="KPJ-yD-gai"/>
+                            <constraint firstItem="haO-MB-wru" firstAttribute="bottom" secondItem="sqI-VY-VMK" secondAttribute="bottom" id="Z0E-5p-ufI"/>
+                            <constraint firstItem="sqI-VY-VMK" firstAttribute="leading" secondItem="haO-MB-wru" secondAttribute="leading" id="c6f-YS-TEZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="haO-MB-wru"/>
                     </view>
                     <navigationItem key="navigationItem" id="TPD-0Z-szf"/>
@@ -99,10 +115,13 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="hideNavigationBar" value="NO"/>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="authenticationRequired" value="YES"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="webView" destination="sqI-VY-VMK" id="y64-of-QtU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UsT-ZK-pM7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-275" y="-218"/>
+            <point key="canvasLocation" x="-275.36231884057975" y="-218.30357142857142"/>
         </scene>
         <!--Reports Table View Controller-->
         <scene sceneID="lkX-gv-8OB">

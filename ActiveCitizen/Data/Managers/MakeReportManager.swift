@@ -20,12 +20,7 @@ class MakeReportManager: BaseNetworkManager {
             if error != nil {
                 completion(nil, error)
             } else {
-                
-//                var result: [Message] = []
-                
-//                if let responseDict = response as? [String: Any] {
                 completion(response as? String, nil)
-//                }
             }
         }
     }

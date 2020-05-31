@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8by-Qb-bEN">
-                                <rect key="frame" x="15" y="54" width="350" height="28"/>
+                                <rect key="frame" x="15" y="54" width="350" height="32"/>
                                 <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="17"/>
                                 <state key="normal" title="Опросы и голосования">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -33,7 +33,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6qh-ka-zH5" userLabel="Separator" customClass="Separator" customModule="ActiveCitizen" customModuleProvider="target">
-                                <rect key="frame" x="15" y="92" width="360" height="1"/>
+                                <rect key="frame" x="15" y="96" width="360" height="1"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="QS8-DI-16l"/>
@@ -48,7 +48,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yA8-ti-Tcx">
-                                <rect key="frame" x="15" y="103" width="350" height="28"/>
+                                <rect key="frame" x="15" y="107" width="350" height="32"/>
                                 <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="17"/>
                                 <state key="normal" title="О программе">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -58,7 +58,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NKC-Rs-Lfd" userLabel="Separator" customClass="Separator" customModule="ActiveCitizen" customModuleProvider="target">
-                                <rect key="frame" x="15" y="141" width="360" height="1"/>
+                                <rect key="frame" x="15" y="149" width="360" height="1"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="oQq-5E-z48"/>
@@ -573,14 +573,14 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VoteTableViewCell" id="y7s-05-sJg" customClass="VoteTableViewCell" customModule="ActiveCitizen" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="136" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="136" width="375" height="184"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y7s-05-sJg" id="Vk1-sg-L99">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="184"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xhv-l3-TrC" customClass="VotingCellView" customModule="ActiveCitizen" customModuleProvider="target">
-                                                    <rect key="frame" x="12" y="12" width="351" height="252"/>
+                                                    <rect key="frame" x="12" y="12" width="351" height="160"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="160" id="cm3-y3-PpQ"/>
@@ -667,14 +667,14 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VoteTableViewCell" id="oOG-9L-tLe" customClass="VoteTableViewCell" customModule="ActiveCitizen" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="136" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="136" width="375" height="184"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oOG-9L-tLe" id="RXF-xQ-AGG">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="184"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f3n-95-6M6" customClass="VotingCellView" customModule="ActiveCitizen" customModuleProvider="target">
-                                                    <rect key="frame" x="12" y="12" width="351" height="252"/>
+                                                    <rect key="frame" x="12" y="12" width="351" height="160"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="160" id="3Qt-JS-Fg6"/>
@@ -756,14 +756,14 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VoteTableViewCell" id="hDf-jt-Px0" customClass="VoteTableViewCell" customModule="ActiveCitizen" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="136" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="136" width="375" height="184"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hDf-jt-Px0" id="fZb-uW-cEZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="184"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfE-bu-wFE" customClass="VotingCellView" customModule="ActiveCitizen" customModuleProvider="target">
-                                                    <rect key="frame" x="12" y="12" width="351" height="252"/>
+                                                    <rect key="frame" x="12" y="12" width="351" height="160"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="160" id="0EY-i2-bz8"/>

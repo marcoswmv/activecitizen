@@ -21,7 +21,6 @@ class MembersManager: BaseNetworkManager {
         return request(apiEndpoint: apiEndPoint, method: .get, parameters: nil, completion: { (response, error) in
           
             if error != nil {
-//                print(error?.localizedDescription)
                 // Error
                 completion(nil, error)
             } else {

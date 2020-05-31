@@ -20,8 +20,8 @@ extension MakeReportMapViewController: UIImagePickerControllerDelegate, UINaviga
             } else {
                 Alert.showAlert(on: self,
                                 style: .alert,
-                                title: "Camera is unavailable",
-                                message: "Unfortunately the camera in the device is unavailable!")
+                                title: "Камера недоступна",
+                                message: "К сожалению камера на телефон недоступна сейчас\nПожалуйста попробуйте попозже!")
             }
         }
         let cancelAction = UIAlertAction(title: "Отменить", style: .cancel, handler: nil)

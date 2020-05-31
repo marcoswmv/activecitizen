@@ -27,7 +27,7 @@ class ReportDetailsView: UIViewWithXib {
     var userID: Int?
     
     @IBAction func addCommentsOnTouchUpInside(_ sender: Any) {
-        Alert.showAlert(on: UIApplication.topViewController()!, style: .alert, title: "Unavailable service", message: "In the moment it's not possible to add comments to the report from the app.")
+        Alert.showAlert(on: UIApplication.topViewController()!, style: .alert, title: "Функциональность недоступна", message: "В настоящее время невозможно добавлять комментарии")
     }
     
     @IBAction func openAutorsProfileOnTouchUpInside(_ sender: Any) {
