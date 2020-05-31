@@ -703,6 +703,9 @@
                                     <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Поиск" translatesAutoresizingMaskIntoConstraints="NO" id="zSW-Md-04T">
                                         <rect key="frame" x="8" y="4" width="359" height="56"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="myt-Af-EbS" id="e4o-t8-Cdl"/>
+                                        </connections>
                                     </searchBar>
                                 </subviews>
                                 <color key="backgroundColor" name="Search Bar Background White"/>
@@ -789,6 +792,9 @@
                                     <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Поиск" translatesAutoresizingMaskIntoConstraints="NO" id="BIM-df-KuI">
                                         <rect key="frame" x="8" y="4" width="359" height="56"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="XIg-yf-Xwg" id="wfs-xO-Pum"/>
+                                        </connections>
                                     </searchBar>
                                 </subviews>
                                 <color key="backgroundColor" name="Search Bar Background White"/>
