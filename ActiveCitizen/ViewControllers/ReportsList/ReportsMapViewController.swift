@@ -16,7 +16,7 @@ class ReportsMapViewController: BaseReportsListViewController, YMKClusterListene
     
     @IBAction func showUserLocationOnTouchUpInside(_ sender: Any) {
         
-        setCenterMapForLocation(userLocation)
+        setCenterMapForLocation(VOLGOGRAD_COORDINATES)
     }
     
     lazy var map: YMKMap = { return self.mapView.mapWindow.map }()
@@ -24,6 +24,7 @@ class ReportsMapViewController: BaseReportsListViewController, YMKClusterListene
     
     let locationManager = CLLocationManager()
     var userLocation = YMKPoint()
+    let VOLGOGRAD_COORDINATES: YMKPoint = YMKPoint(latitude: 48.7193900, longitude: 44.5018300)
     var zoom: Float = 15.0
     
     var initialZoom: Float = 6.0
@@ -67,7 +68,7 @@ class ReportsMapViewController: BaseReportsListViewController, YMKClusterListene
                 Alert.showAlert(on: self,
                                 style: .alert,
                                 title: "Ошибка",
-                                message: "Приносим свои извинения!\nНа данный момент сервер на доступен следовательно, невозможно посмотреть обращения на карте!")
+                                message: "Приносим свои извинения!\nНа данный момент сервер не доступен следовательно, невозможно посмотреть обращения на карте!")
                 return
             }
             

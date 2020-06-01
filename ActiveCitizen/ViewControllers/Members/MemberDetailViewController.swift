@@ -25,9 +25,9 @@ class MemberDetailViewController: BaseMembersViewController {
         
         filterCategoriesViewController.topViewController = "MemberDetailViewController"
         filterCategoriesViewController.completionHandler = { filter in
-            self.filterButton.setImage(UIImage(named: "filter")!, for: .normal)
-            self.setupDataSource(with: filter)
-            Alert.showAlert(on: self, style: .alert, title: "Ошибка", message: "Приносим свои извинения!\nНа данный момент сервер на доступен следовательно, невозможно применить фильрты!")
+//            self.filterButton.setImage(UIImage(named: "filter")!, for: .normal)
+//            self.setupDataSource(with: filter)
+            Alert.showAlert(on: self, style: .alert, title: "Ошибка", message: "Приносим свои извинения!\nНа данный момент сервер не доступен следовательно, невозможно применить фильрты!")
         }
         navigationController?.pushViewController(filterCategoriesViewController, animated:true)
     }

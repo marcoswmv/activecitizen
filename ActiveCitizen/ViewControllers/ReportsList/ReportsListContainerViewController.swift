@@ -64,8 +64,8 @@ class ReportsListContainerViewController: TabmanViewController {
         let filterCategoriesViewController = FilterCategoriesViewController.instantiate() as! FilterCategoriesViewController
         
         filterCategoriesViewController.completionHandler = { filter in
-            sender.image = UIImage(named: "filter")?.withRenderingMode(.alwaysOriginal)
-            Alert.showAlert(on: self, style: .alert, title: "Ошибка", message: "Приносим свои извинения!\nНа данный момент сервер на доступен следовательно, невозможно применить фильрты!")
+            Alert.showAlert(on: self, style: .alert, title: "Ошибка", message: "Приносим свои извинения!\nНа данный момент сервер не доступен следовательно, невозможно применить фильрты!")
+//            sender.image = UIImage(named: "filter")?.withRenderingMode(.alwaysOriginal)
 //            TODO: Use filter on reports list to display reports by filter.
 //            self.setupDataSource(with: filter)
         }

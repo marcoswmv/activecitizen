@@ -50,7 +50,7 @@ extension LoginViewController: WKNavigationDelegate {
             self.displayLoading(loading: false)
             Alert.showAlert(on: self, style: .alert,
                             title: "Ошибка",
-                            message: "Приносим свои извинения!\nНа данный момент сервер на доступен следовательно, невозможно пройти авторизацию")
+                            message: "Приносим свои извинения!\nНа данный момент сервер не доступен следовательно, невозможно пройти авторизацию")
         }
     }
     
