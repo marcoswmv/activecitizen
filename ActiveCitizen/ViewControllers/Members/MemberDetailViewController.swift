@@ -27,6 +27,7 @@ class MemberDetailViewController: BaseMembersViewController {
         filterCategoriesViewController.completionHandler = { filter in
             self.filterButton.setImage(UIImage(named: "filter")!, for: .normal)
             self.setupDataSource(with: filter)
+            
         }
         navigationController?.pushViewController(filterCategoriesViewController, animated:true)
     }

@@ -481,6 +481,7 @@
 			isa = PBXGroup;
 			children = (
 				C52CE65F239544D5004760EF /* Base */,
+				F7FC9489248496F800A2189E /* Filter */,
 				F71D67242478706D00B0054C /* ImageSlider */,
 				C52CE662239544FE004760EF /* MakeReport */,
 				C52CE6652395455B004760EF /* Members */,
@@ -543,8 +544,6 @@
 		C52CE6652395455B004760EF /* Members */ = {
 			isa = PBXGroup;
 			children = (
-				F756532C24263A44002C4B81 /* FilterCategoriesViewController.swift */,
-				F756533A2426405D002C4B81 /* FiltersViewController.swift */,
 				F7AD212D241C0BDA0041AC2A /* MemberDetailViewController.swift */,
 				C52CE68223954B01004760EF /* MembersListViewController.swift */,
 			);
@@ -811,6 +810,15 @@
 				F78C175E2438FFC5000200CD /* TaskStatus.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F7FC9489248496F800A2189E /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				F756532C24263A44002C4B81 /* FilterCategoriesViewController.swift */,
+				F756533A2426405D002C4B81 /* FiltersViewController.swift */,
+			);
+			path = Filter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

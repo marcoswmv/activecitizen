@@ -13,6 +13,8 @@ class LoginViewController: BaseProfileViewController {
     
     @IBOutlet weak var webView: WKWebView!
     
+    var timer: Timer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,6 +45,13 @@ extension LoginViewController: WKNavigationDelegate {
     
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         self.displayLoading(loading: true)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            self.displayLoading(loading: false)
+            Alert.showAlert(on: self, style: .alert,
+                            title: "Ошибка",
+                            message: "Приносим свои извинения!\nНа данный момент сервер на доступен следовательно, невозможно пройти авторизацию")
+        }
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {

@@ -64,7 +64,10 @@ class ReportsMapViewController: BaseReportsListViewController, YMKClusterListene
             self.displayLoading(loading: false)
             
             if error != nil {
-                print("error")
+                Alert.showAlert(on: self,
+                                style: .alert,
+                                title: "Ошибка",
+                                message: "Приносим свои извинения!\nНа данный момент сервер на доступен следовательно, невозможно посмотреть обращения на карте!")
                 return
             }
             
