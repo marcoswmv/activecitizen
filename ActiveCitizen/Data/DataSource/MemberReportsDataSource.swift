@@ -61,6 +61,9 @@ class MemberReportsDataSource: BaseDataSource {
     // MARK: - DataSource
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if data!.isEmpty {
+            addTableViewBackgroundView(with: "Нет обращений")
+        }
         return data?.count ?? 0
     }
     
