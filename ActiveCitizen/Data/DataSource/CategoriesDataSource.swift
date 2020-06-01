@@ -29,7 +29,7 @@ class CategoriesDataSource: BaseDataSource {
         var hardCodedresult: [Category] = [Category]()
         _ = DummyData.categories.map({ hardCodedresult.append(Category(dictionary: $0)) })
 
-        data = hardCodedresult
+        data = hardCodedresult.sorted(by: { $0.categoryName! < $1.categoryName! })
         tableView.reloadData()
         
 //        onLoading?(true)

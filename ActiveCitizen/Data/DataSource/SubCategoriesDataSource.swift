@@ -30,7 +30,7 @@ class SubCategoriesDataSource: BaseDataSource {
         var hardCodedresult = [SubCategory]()
         _ = DummyData.subCategories.map({ hardCodedresult.append(SubCategory(dictionary: $0)) })
 
-        data = hardCodedresult
+        data = hardCodedresult.sorted(by: { $0.subCategoryName! < $1.subCategoryName! })
         tableView.reloadData()
         
 //        onLoading?(true)

@@ -24,7 +24,7 @@ class MembersDataSource: BaseDataSource {
         var result = [Member]()
         _ = DummyData.users.map({ result.append(Member(dictionary: $0)) })
 
-        data = result
+        data = result.sorted(by: { $0.name! < $1.name! })
         tableView.reloadData()
         
 //        onLoading?(true)
