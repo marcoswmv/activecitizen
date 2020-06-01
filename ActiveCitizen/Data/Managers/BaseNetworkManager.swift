@@ -19,7 +19,6 @@ class BaseNetworkManager: NSObject {
     override init() {
         super.init()
     }
- 
     
     @discardableResult
     func request(apiEndpoint: String, method:HTTPMethod, parameters: Parameters?, completion: @escaping GenericNetworkCompletionHandler) -> DataRequest  {
@@ -56,5 +55,4 @@ class BaseNetworkManager: NSObject {
             completion(response.value, response.error)
            }
     }
-    
 }

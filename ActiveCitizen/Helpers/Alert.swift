@@ -13,7 +13,7 @@ class Alert {
                           style: UIAlertController.Style,
                           title: String?,
                           message: String?,
-                          actions: [UIAlertAction] = [UIAlertAction(title: "",
+                          actions: [UIAlertAction] = [UIAlertAction(title: "Ok",
                                                                     style: .cancel,
                                                                     handler: nil)],
                           completion: (() -> Void)? = nil) {

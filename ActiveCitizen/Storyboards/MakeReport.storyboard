@@ -469,24 +469,9 @@
             <objects>
                 <viewController storyboardIdentifier="MakeReportMapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="s57-OV-7xI" customClass="MakeReportMapViewController" customModule="ActiveCitizen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V6k-hS-4Tb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Tm-Lv-tRW" customClass="YMKMapView">
-                                <rect key="frame" x="0.0" y="88" width="375" height="225"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jf-Lk-Xqk">
-                                <rect key="frame" x="325" y="263" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="HtT-Mk-oge"/>
-                                    <constraint firstAttribute="height" constant="50" id="TEe-Ok-xZW"/>
-                                </constraints>
-                                <state key="normal" image="my_position"/>
-                                <connections>
-                                    <action selector="showMyPositionOnTouchUpInside:" destination="s57-OV-7xI" eventType="touchUpInside" id="b6A-H5-brB"/>
-                                </connections>
-                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Lq-Yr-HrM" customClass="MakeReportScrollView" customModule="ActiveCitizen" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="88" width="375" height="1112"/>
                                 <subviews>
@@ -876,6 +861,21 @@
                                     <outlet property="delegate" destination="s57-OV-7xI" id="bjE-Fr-ReD"/>
                                 </connections>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Tm-Lv-tRW" customClass="YMKMapView">
+                                <rect key="frame" x="0.0" y="88" width="375" height="225"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jf-Lk-Xqk">
+                                <rect key="frame" x="325" y="263" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="HtT-Mk-oge"/>
+                                    <constraint firstAttribute="height" constant="50" id="TEe-Ok-xZW"/>
+                                </constraints>
+                                <state key="normal" image="my_position"/>
+                                <connections>
+                                    <action selector="showMyPositionOnTouchUpInside:" destination="s57-OV-7xI" eventType="touchUpInside" id="b6A-H5-brB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>

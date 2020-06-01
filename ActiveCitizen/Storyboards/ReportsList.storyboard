@@ -86,18 +86,18 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="aHA-Y1-N73">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </view>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="6kG-qs-Zjq">
-                                    <rect key="frame" x="0.0" y="393" width="414" height="30"/>
+                                    <rect key="frame" x="0.0" y="413" width="414" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReportsListTableViewCell" rowHeight="229" id="496-iq-yVT" customClass="ReportsListTableViewCell" customModule="ActiveCitizen" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="136" width="414" height="229"/>
+                                        <rect key="frame" x="0.0" y="156" width="414" height="229"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="496-iq-yVT" id="jEX-bF-BRt">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="229"/>
@@ -125,7 +125,7 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3N9-az-tIZ">
-                                <rect key="frame" x="0.0" y="88" width="414" height="64"/>
+                                <rect key="frame" x="0.0" y="104" width="414" height="64"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Введите Nº обращения" translatesAutoresizingMaskIntoConstraints="NO" id="f1t-DM-9FN">
                                         <rect key="frame" x="8" y="4" width="398" height="56"/>
@@ -152,7 +152,7 @@
                             <constraint firstItem="DT3-6Q-Nzp" firstAttribute="leading" secondItem="Kmu-DT-9YZ" secondAttribute="leading" id="IeE-9A-ckP"/>
                             <constraint firstItem="3N9-az-tIZ" firstAttribute="leading" secondItem="Kmu-DT-9YZ" secondAttribute="leading" id="Je0-kG-hpN"/>
                             <constraint firstItem="DT3-6Q-Nzp" firstAttribute="top" secondItem="Kmu-DT-9YZ" secondAttribute="top" id="aAO-hH-sNQ"/>
-                            <constraint firstItem="3N9-az-tIZ" firstAttribute="top" secondItem="Kmu-DT-9YZ" secondAttribute="top" constant="44" id="wEZ-PP-9qc"/>
+                            <constraint firstItem="3N9-az-tIZ" firstAttribute="top" secondItem="Kmu-DT-9YZ" secondAttribute="top" constant="60" id="wEZ-PP-9qc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kmu-DT-9YZ"/>
                     </view>

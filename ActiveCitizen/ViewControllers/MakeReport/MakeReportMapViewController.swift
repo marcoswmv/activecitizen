@@ -160,7 +160,7 @@ class MakeReportMapViewController: BaseMakeReportViewController {
         
         imagesManager.uploadImages(dictionary: imagesDictionary) { (result, error) in
            if error != nil {
-               Alert.showAlert(on: self, style: .alert, title: "Ошибка", message: "Приносим свои извинения!\nНа данный момент сервер на доступен\nпоэтому невозможно сообщить проблему!")
+               Alert.showAlert(on: self, style: .alert, title: "Ошибка", message: "Приносим свои извинения!\nНа данный момент сервер на доступен следовательно, невозможно сообщить проблему!")
            } else {
                Alert.showAlert(on: self, style: .alert, title: "Успешно", message: result!)
            }
@@ -194,7 +194,7 @@ class MakeReportMapViewController: BaseMakeReportViewController {
         
         makeReportManager.makeReport(dictionary: message) { (result, error) in
             if error != nil {
-                Alert.showAlert(on: self, style: .alert, title: "Ошибка", message: "Приносим свои извинения!\nНа данный момент сервер на доступен\nпоэтому невозможно сообщить проблему!")
+                Alert.showAlert(on: self, style: .alert, title: "Ошибка", message: "Приносим свои извинения!\nНа данный момент сервер на доступен следовательно, невозможно сообщить проблему!")
             } else {
                 Alert.showAlert(on: self, style: .alert, title: "Успешно", message: result!)
             }
