@@ -31,7 +31,7 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Для определения адреса проблемы выберите более крупный масштаб" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJb-U5-kMw">
-                                <rect key="frame" x="50" y="90" width="275" height="45.666666666666657"/>
+                                <rect key="frame" x="50" y="90" width="275" height="59.666666666666657"/>
                                 <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -58,7 +58,7 @@
                                 <rect key="frame" x="0.0" y="598" width="375" height="180"/>
                                 <subviews>
                                     <view contentMode="scaleAspectFill" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="3qT-dn-kmc" userLabel="Address button">
-                                        <rect key="frame" x="18" y="17.999999999999996" width="339" height="35.666666666666657"/>
+                                        <rect key="frame" x="18" y="17.999999999999996" width="339" height="42.666666666666657"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map_pin" translatesAutoresizingMaskIntoConstraints="NO" id="xTV-4w-goo">
                                                 <rect key="frame" x="0.0" y="3" width="23" height="29"/>
@@ -68,10 +68,10 @@
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="NhF-X4-tQM">
-                                                <rect key="frame" x="33" y="0.0" width="306" height="35.666666666666664"/>
+                                                <rect key="frame" x="33" y="0.0" width="306" height="42.666666666666664"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGV-yo-34c">
-                                                        <rect key="frame" x="0.0" y="0.0" width="306" height="13.666666666666666"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="306" height="17.666666666666668"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="Город, Область, Страна">
                                                                 <attributes>
@@ -83,7 +83,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyp-WG-g0Y">
-                                                        <rect key="frame" x="0.0" y="14.666666666666629" width="306" height="21"/>
+                                                        <rect key="frame" x="0.0" y="18.666666666666629" width="306" height="24"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="Улица/Проспект, дом, корпус">
                                                                 <attributes>
@@ -386,7 +386,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="22"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nnf-BL-wRC">
-                                        <rect key="frame" x="0.0" y="0.0" width="54.666666666666664" height="22"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="60.666666666666664" height="22"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="baseline_clear_white_18pt"/>
                                         <connections>
@@ -394,7 +394,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фото 0 из 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80g-LI-EF7">
-                                        <rect key="frame" x="54.666666666666657" y="3.3333333333333295" width="320.33333333333337" height="15.333333333333336"/>
+                                        <rect key="frame" x="60.666666666666657" y="1" width="314.33333333333337" height="20"/>
                                         <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -472,9 +472,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Tm-Lv-tRW" customClass="YMKMapView">
+                                <rect key="frame" x="0.0" y="88" width="375" height="225"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="225" id="6eA-Fd-940"/>
+                                </constraints>
+                            </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Lq-Yr-HrM" customClass="MakeReportScrollView" customModule="ActiveCitizen" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="88" width="375" height="1112"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jf-Lk-Xqk">
+                                        <rect key="frame" x="312" y="170" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="HtT-Mk-oge"/>
+                                            <constraint firstAttribute="height" constant="50" id="TEe-Ok-xZW"/>
+                                        </constraints>
+                                        <state key="normal" image="my_position"/>
+                                        <connections>
+                                            <action selector="showMyPositionOnTouchUpInside:" destination="s57-OV-7xI" eventType="touchUpInside" id="b6A-H5-brB"/>
+                                        </connections>
+                                    </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L5p-b2-bCX" userLabel="Content view">
                                         <rect key="frame" x="0.0" y="225" width="375" height="763"/>
                                         <subviews>
@@ -852,7 +870,10 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="L5p-b2-bCX" firstAttribute="width" secondItem="2Lq-Yr-HrM" secondAttribute="width" id="4rF-rr-99i"/>
+                                    <constraint firstItem="0jf-Lk-Xqk" firstAttribute="leading" secondItem="2Lq-Yr-HrM" secondAttribute="leading" constant="320" id="6KB-KZ-a9V"/>
                                     <constraint firstItem="L5p-b2-bCX" firstAttribute="centerX" secondItem="2Lq-Yr-HrM" secondAttribute="centerX" id="IOI-8j-Oq8"/>
+                                    <constraint firstItem="0jf-Lk-Xqk" firstAttribute="top" secondItem="2Lq-Yr-HrM" secondAttribute="top" constant="170" id="K5L-FM-g1e"/>
+                                    <constraint firstAttribute="trailing" secondItem="0jf-Lk-Xqk" secondAttribute="trailing" constant="5" id="Ze3-Dk-nbT"/>
                                     <constraint firstAttribute="bottom" secondItem="L5p-b2-bCX" secondAttribute="bottom" id="eTP-VD-rfK"/>
                                     <constraint firstAttribute="trailing" secondItem="L5p-b2-bCX" secondAttribute="trailing" id="p95-ob-pi3"/>
                                     <constraint firstItem="L5p-b2-bCX" firstAttribute="top" secondItem="2Lq-Yr-HrM" secondAttribute="top" constant="225" id="zGX-31-azk"/>
@@ -861,34 +882,16 @@
                                     <outlet property="delegate" destination="s57-OV-7xI" id="bjE-Fr-ReD"/>
                                 </connections>
                             </scrollView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Tm-Lv-tRW" customClass="YMKMapView">
-                                <rect key="frame" x="0.0" y="88" width="375" height="225"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jf-Lk-Xqk">
-                                <rect key="frame" x="325" y="263" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="HtT-Mk-oge"/>
-                                    <constraint firstAttribute="height" constant="50" id="TEe-Ok-xZW"/>
-                                </constraints>
-                                <state key="normal" image="my_position"/>
-                                <connections>
-                                    <action selector="showMyPositionOnTouchUpInside:" destination="s57-OV-7xI" eventType="touchUpInside" id="b6A-H5-brB"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="2Lq-Yr-HrM" firstAttribute="trailing" secondItem="5Tm-Lv-tRW" secondAttribute="trailing" id="03B-6G-3uy"/>
-                            <constraint firstItem="5Tm-Lv-tRW" firstAttribute="bottom" secondItem="0jf-Lk-Xqk" secondAttribute="bottom" id="Ewv-hp-sDL"/>
                             <constraint firstItem="2Lq-Yr-HrM" firstAttribute="top" secondItem="muV-GI-mPC" secondAttribute="top" priority="999" id="J54-X2-eJR"/>
                             <constraint firstAttribute="bottom" secondItem="2Lq-Yr-HrM" secondAttribute="bottom" id="Ks8-pg-zOA"/>
-                            <constraint firstItem="muV-GI-mPC" firstAttribute="trailing" secondItem="0jf-Lk-Xqk" secondAttribute="trailing" id="Nzs-ho-aE1"/>
                             <constraint firstItem="2Lq-Yr-HrM" firstAttribute="leading" secondItem="5Tm-Lv-tRW" secondAttribute="leading" id="QwX-DI-diQ"/>
                             <constraint firstItem="2Lq-Yr-HrM" firstAttribute="trailing" secondItem="muV-GI-mPC" secondAttribute="trailing" id="ZaP-KC-2mx"/>
                             <constraint firstItem="5Tm-Lv-tRW" firstAttribute="top" secondItem="muV-GI-mPC" secondAttribute="top" id="ciF-Bg-O5w"/>
                             <constraint firstItem="2Lq-Yr-HrM" firstAttribute="leading" secondItem="muV-GI-mPC" secondAttribute="leading" id="lTC-Cb-fkT"/>
-                            <constraint firstItem="0jf-Lk-Xqk" firstAttribute="top" secondItem="muV-GI-mPC" secondAttribute="top" constant="175" id="sil-Dp-SYJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="muV-GI-mPC"/>
                     </view>
@@ -941,7 +944,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0P-JE-yUD">
-                                            <rect key="frame" x="95" y="20" width="185" height="37"/>
+                                            <rect key="frame" x="87.666666666666686" y="20" width="200" height="37"/>
                                             <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="17"/>
                                             <color key="tintColor" name="App Blue"/>
                                             <state key="normal" title="Указать адрес вручнуо">
@@ -1089,14 +1092,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Район/Округ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="W6L-FX-MgX">
-                                                    <rect key="frame" x="15.000000000000007" y="12" width="102.66666666666667" height="20"/>
+                                                    <rect key="frame" x="14.999999999999993" y="15" width="115.33333333333333" height="15.333333333333334"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="alf-0S-teY">
-                                                    <rect key="frame" x="316.66666666666669" y="12" width="43.333333333333336" height="20"/>
+                                                    <rect key="frame" x="310.66666666666669" y="15" width="49.333333333333336" height="15.333333333333334"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="17"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1113,14 +1116,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Населенный пункт" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="J23-vQ-eg9">
-                                                    <rect key="frame" x="15" y="12" width="148" height="20"/>
+                                                    <rect key="frame" x="15" y="15" width="162.33333333333334" height="15.333333333333334"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bnO-Qb-pzD">
-                                                    <rect key="frame" x="316.66666666666669" y="12" width="43.333333333333336" height="20"/>
+                                                    <rect key="frame" x="310.66666666666669" y="15" width="49.333333333333336" height="15.333333333333334"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="17"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1137,14 +1140,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Улица" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pp2-DS-ce9">
-                                                    <rect key="frame" x="15.000000000000004" y="12" width="48.333333333333336" height="20"/>
+                                                    <rect key="frame" x="15.000000000000004" y="15" width="53.333333333333336" height="15.333333333333334"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sqS-Mh-LgZ">
-                                                    <rect key="frame" x="316.66666666666669" y="12" width="43.333333333333336" height="20"/>
+                                                    <rect key="frame" x="310.66666666666669" y="15" width="49.333333333333336" height="15.333333333333334"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="17"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1161,14 +1164,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Дом" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Np4-OZ-MD1">
-                                                    <rect key="frame" x="15" y="12" width="34" height="20"/>
+                                                    <rect key="frame" x="15" y="15" width="36" height="15.333333333333334"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4Zj-3B-xW5">
-                                                    <rect key="frame" x="316.66666666666669" y="12" width="43.333333333333336" height="20"/>
+                                                    <rect key="frame" x="310.66666666666669" y="15" width="49.333333333333336" height="15.333333333333334"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="17"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

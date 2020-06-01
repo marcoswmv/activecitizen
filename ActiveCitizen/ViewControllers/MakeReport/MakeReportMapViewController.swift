@@ -88,7 +88,7 @@ class MakeReportMapViewController: BaseMakeReportViewController {
         noCategory.isHidden = true
         navigationController?.pushViewController(chooseCategoryViewController, animated: true)
     }
-    
+
     
 //    MARK: - PROPERTIES
     
