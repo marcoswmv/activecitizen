@@ -2,7 +2,7 @@
 //  RootTabBarController.swift
 //  ActiveCitizen
 //
-//  Created by Dmitry Byankin on 02.12.2019.
+//  Created by Marcos Vicente on 02.12.2019.
 //  Copyright © 2019 Antares Software. All rights reserved.
 //
 
