@@ -13,7 +13,7 @@ import Kingfisher
 class ImagesManager: BaseNetworkManager {
     
     typealias FilesCompletionHandler = (_ image: RetrieveImageResult?, _ error: KingfisherError?) -> Void
-    typealias UploadImageCompletionHandler = (_ reports: String?, _ error: Error?) -> Void
+    typealias UploadImageCompletionHandler = (_ image: String?, _ error: Error?) -> Void
     
     @discardableResult
     func getImage(with ID: String, completion: @escaping FilesCompletionHandler) -> DownloadTask? {

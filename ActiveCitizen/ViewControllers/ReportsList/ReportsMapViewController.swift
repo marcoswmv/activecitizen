@@ -68,7 +68,7 @@ class ReportsMapViewController: BaseReportsListViewController, YMKClusterListene
                 Alert.showAlert(on: self,
                                 style: .alert,
                                 title: "Ошибка",
-                                message: "Приносим свои извинения!\nНа данный момент сервер не доступен следовательно, невозможно посмотреть обращения на карте!")
+                                message: "Приносим свои извинения!\nНа данный момент сервер недоступен поэтому невозможно посмотреть обращения на карте!")
                 return
             }
             

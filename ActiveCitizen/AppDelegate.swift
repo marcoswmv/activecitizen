@@ -23,7 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.overrideUserInterfaceStyle = .light
         } else {
             // Fallback on earlier versions
-            
         }
         // TODO: production key
         YMKMapKit.setApiKey("a806cf9b-7e08-4ab3-8690-493ec0a1c973")

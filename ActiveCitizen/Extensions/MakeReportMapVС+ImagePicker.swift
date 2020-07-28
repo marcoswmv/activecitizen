@@ -42,10 +42,16 @@ extension MakeReportMapViewController: UIImagePickerControllerDelegate, UINaviga
         present(imagePickerController, animated: true, completion: nil)
     }
     
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+    
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             
+//            TO-DO: Somehow save the image as a JPG or PNG, to upload it to the server
             let image = originalImage.withRenderingMode(.alwaysOriginal)
             photoCollectionControllerDelegate?.addPhoto(with: image)
             

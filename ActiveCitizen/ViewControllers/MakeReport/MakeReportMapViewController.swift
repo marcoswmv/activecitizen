@@ -155,12 +155,15 @@ class MakeReportMapViewController: BaseMakeReportViewController {
         var imagesDictionary: [String: Any] = [String: Any]()
         let photos = photoCollectionDataSource.data
         
-        _ = photos.map({ imagesDictionary.updateValue($0, forKey: "files") })
-        _ = photos.map({ imagesDictionary.updateValue($0.image.description, forKey: "description") })
+//        TO-DO: An error is occurring due to the user being uploaded as an UIImage. Should be a image file type such as: .jpg or .png
+//        as a quick solution, I'm just uploading a fictional name
+        
+//        _ = photos.map({ imagesDictionary.updateValue($0.image as Any, forKey: "files") })
+        _ = photos.map({ _ in imagesDictionary.updateValue(UUID().uuidString, forKey: "description") })
         
         imagesManager.uploadImages(dictionary: imagesDictionary) { (result, error) in
            if error != nil {
-               Alert.showAlert(on: self, style: .alert, title: "Ошибка", message: "Приносим свои извинения!\nНа данный момент сервер не доступен следовательно, невозможно сообщить проблему!")
+               Alert.showAlert(on: self, style: .alert, title: "Ошибка", message: "Приносим свои извинения!\nНа данный момент сервер недоступен поэтому сообщить о проблеме невозможно!")
            } else {
                Alert.showAlert(on: self, style: .alert, title: "Успешно", message: result!)
            }
@@ -194,7 +197,7 @@ class MakeReportMapViewController: BaseMakeReportViewController {
         
         makeReportManager.makeReport(dictionary: message) { (result, error) in
             if error != nil {
-                Alert.showAlert(on: self, style: .alert, title: "Ошибка", message: "Приносим свои извинения!\nНа данный момент сервер не доступен следовательно, невозможно сообщить проблему!")
+                Alert.showAlert(on: self, style: .alert, title: "Ошибка", message: "Приносим свои извинения!\nНа данный момент сервер недоступен поэтому сообщить о проблеме невозможно!")
             } else {
                 Alert.showAlert(on: self, style: .alert, title: "Успешно", message: result!)
             }
