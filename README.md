@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-# activecitizen
-=======
 # Active Citizen
->>>>>>> 9f14969cf8691dd44b663c3066a7c86a40b74277
+
+## WARNING: This project is being migrated from bitbucket, so I'm adding the files step by step.
