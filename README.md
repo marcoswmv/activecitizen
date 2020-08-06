@@ -9,6 +9,7 @@
 
 - Swift
 - Xcode
+- Cocoapods
 - Yandex MapKit API - https://github.com/yandex/mapkit-ios-demo.git
 
 ## 🍏 Pods
